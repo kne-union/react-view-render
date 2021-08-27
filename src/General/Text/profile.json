@@ -1,0 +1,13 @@
+{
+  "id": "Text",
+  "name": "文本",
+  "property": {
+    "content": {
+      "label": "文本内容",
+      "input-type": "$input"
+    }
+  },
+  "children": {
+    "allow": []
+  }
+}

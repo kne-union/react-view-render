@@ -1,0 +1,16 @@
+{
+  "id": "Mapping",
+  "name": "映射",
+  "property": {
+    "resource": {
+      "input-type": "$variable",
+      "label": "数据源",
+      "required": true
+    },
+    "expression": {
+      "input-type": "$functions",
+      "label": "映射函数",
+      "required": true
+    }
+  }
+}

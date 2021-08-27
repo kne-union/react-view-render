@@ -1,0 +1,226 @@
+{
+  "variable": {
+    "$name": "我要申请",
+    "$des": "请如实填写以下信息",
+    "$sceneList": [
+      {
+        "label": "校园招聘",
+        "value": "校园招聘"
+      },
+      {
+        "label": "社会招聘",
+        "value": "社会招聘"
+      },
+      {
+        "label": "无接触招聘",
+        "value": "无接触招聘"
+      },
+      {
+        "label": "内推",
+        "value": "内推"
+      },
+      {
+        "label": "AI+招聘",
+        "value": "AI+招聘"
+      },
+      {
+        "label": "猎头解决方案",
+        "value": "猎头解决方案"
+      },
+      {
+        "label": "保温期解决方案",
+        "value": "保温期解决方案"
+      }
+    ],
+    "$scaleList": [
+      {
+        "value": "100人以下",
+        "label": "100人以下"
+      },
+      {
+        "value": "100-300人",
+        "label": "100-300人"
+      },
+      {
+        "value": "300-500人",
+        "label": "300-500人"
+      },
+      {
+        "value": "500-1000人",
+        "label": "500-1000人"
+      },
+      {
+        "value": "1000人以上",
+        "label": "1000人以上"
+      }
+    ],
+    "$requirementsList": [
+      {
+        "value": "已使用招聘系统，想再了解其它产品及方案",
+        "label": "已使用招聘系统，想再了解其它产品及方案"
+      },
+      {
+        "value": "计划使用招聘系统，多家了解对比产品及方案",
+        "label": "计划使用招聘系统，多家了解对比产品及方案"
+      },
+      {
+        "value": "暂无计划使用招聘系统，个人了解学习",
+        "label": "暂无计划使用招聘系统，个人了解学习"
+      }
+    ]
+  },
+  "functions": {
+    "$submit": "console.log(args[0]);"
+  },
+  "data": [
+    {
+      "id": "Form-0",
+      "component": "Form",
+      "props": {
+        "type": "inner",
+        "onSubmit": "$submit"
+      },
+      "children": [
+        {
+          "id": "Div-2",
+          "component": "Div",
+          "props": {
+            "style": {
+              "padding": "10px",
+              "textAlign": "center"
+            }
+          },
+          "children": [
+            {
+              "id": "Text-1",
+              "component": "Text",
+              "props": {
+                "content": "$name",
+                "style": {
+                  "fontSize": "18px",
+                  "fontWeight": "bolder"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "Div-3",
+          "component": "Div",
+          "props": {
+            "style": {
+              "padding": "10px"
+            }
+          },
+          "children": [
+            {
+              "id": "Text-4",
+              "component": "Text",
+              "props": {
+                "content": "$des"
+              }
+            },
+            {
+              "id": "CheckboxGroup-4",
+              "component": "CheckboxGroup",
+              "props": {
+                "name": "scene",
+                "label": "1.您想了解的业务场景？（多选）",
+                "options": "$sceneList",
+                "rule": "REQ"
+              }
+            },
+            {
+              "id": "Select-5",
+              "component": "Select",
+              "props": {
+                "name": "scale",
+                "label": "2.贵司公司规模？（单选）",
+                "options": "$scaleList",
+                "rule": "REQ"
+              }
+            },
+            {
+              "id": "Select-6",
+              "component": "Select",
+              "props": {
+                "name": "requirements",
+                "label": "3.贵司目前的需求阶段？（单选）",
+                "options": "$requirementsList",
+                "rule": "REQ"
+              }
+            },
+            {
+              "id": "Input-7",
+              "component": "Input",
+              "props": {
+                "name": "company",
+                "label": "4.公司全称（必填）",
+                "rule": "REQ LEN-0-100"
+              }
+            },
+            {
+              "id": "Input-8",
+              "component": "Input",
+              "props": {
+                "name": "name",
+                "label": "5.您的姓名（必填）",
+                "rule": "REQ LEN-0-20"
+              }
+            },
+            {
+              "id": "Input-9",
+              "component": "Input",
+              "props": {
+                "name": "phone",
+                "label": "6.手机（必填）",
+                "rule": "REQ TEL"
+              }
+            },
+            {
+              "id": "Input-10",
+              "component": "Input",
+              "props": {
+                "name": "email",
+                "label": "7.工作邮箱（必填）",
+                "rule": "REQ EMAIL"
+              }
+            },
+            {
+              "id": "Row-1",
+              "component": "Row",
+              "props": {
+                "gutter": 4,
+                "style": {
+                  "width": "100%"
+                }
+              },
+              "children": [
+                {
+                  "id": "Col-2",
+                  "component": "Col",
+                  "props": {
+                    "flex": 1
+                  },
+                  "children": [
+                    {
+                      "id": "SubmitButton-11",
+                      "component": "SubmitButton",
+                      "props": {
+                        "type": "primary",
+                        "block": true,
+                        "shape": "round",
+                        "size": "large"
+                      },
+                      "children": "提交"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

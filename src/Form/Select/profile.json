@@ -1,0 +1,110 @@
+{
+  "id": "Select",
+  "name": "下拉选择",
+  "property": {
+    "label": {
+      "input-type": "$input",
+      "label": "label"
+    },
+    "name": {
+      "input-type": "$input",
+      "label": "name"
+    },
+    "rule": {
+      "input-type": "$input",
+      "label": "验证规则"
+    },
+    "interceptor": {
+      "input-type": "$input",
+      "label": "拦截器"
+    },
+    "options": {
+      "input-type": "$variable",
+      "label": "选项"
+    },
+    "allowClear": {
+      "input-type": "$switch",
+      "label": "可以点击清除图标删除内容"
+    },
+    "autoClearSearchValue": {
+      "input-type": "$switch",
+      "label": "是否在选中项后清空搜索框",
+      "default-value": true
+    },
+    "defaultActiveFirstOption": {
+      "input-type": "$switch",
+      "label": "是否默认高亮第一个选项",
+      "default-value": true
+    },
+    "defaultOpen": {
+      "input-type": "$switch",
+      "label": "是否默认展开下拉菜单"
+    },
+    "dropdownClassName": {
+      "input-type": "$input",
+      "label": "下拉菜单的 className 属性"
+    },
+    "labelInValue": {
+      "input-type": "$switch",
+      "label": "是否把每个选项的 label 包装到 value 中"
+    },
+    "listHeight": {
+      "input-type": "$number",
+      "label": "设置弹窗滚动高度"
+    },
+    "loading": {
+      "input-type": "$switch",
+      "label": "加载中状态"
+    },
+    "maxTagCount": {
+      "input-type": "$number",
+      "label": "最多显示多少个 tag"
+    },
+    "maxTagPlaceholder": {
+      "input-type": "$input",
+      "label": "隐藏 tag 时显示的内容"
+    },
+    "maxTagTextLength": {
+      "input-type": "$number",
+      "label": "最大显示的 tag 文本长度"
+    },
+    "mode": {
+      "input-type": "$radio",
+      "label": "设置 Select 的模式为多选或标签",
+      "input-options": {
+        "options": [
+          {
+            "label": "多选",
+            "value": "multiple"
+          },
+          {
+            "label": "标签",
+            "value": "tags"
+          }
+        ]
+      }
+    },
+    "placeholder": {
+      "input-type": "$input",
+      "label": "选择框默认文本"
+    },
+    "showArrow": {
+      "input-type": "$switch",
+      "label": "是否显示下拉小箭头"
+    },
+    "showSearch": {
+      "input-type": "$switch",
+      "label": "使单选模式可搜索"
+    }
+  },
+  "children": {
+    "allow": [],
+    "dependence": [
+      "Form"
+    ]
+  },
+  "defaultProps": {
+    "name": "$id",
+    "label": "下拉选择"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "id": "Context",
+  "name": "上下文",
+  "property": {
+    "variable": {
+      "input-type": "$array",
+      "label": "变量声明",
+      "input-options": {
+        "children": {
+          "input-type": "$object",
+          "label": "变量",
+          "input-options": {
+            "name": {
+              "input-type": "$input",
+              "label": "变量名"
+            },
+            "defaultValue": {
+              "input-type": "$multiple",
+              "label": "默认值",
+              "input-options": {
+                "options": [
+                  {
+                    "input-type": "$number"
+                  },
+                  {
+                    "input-type": "$array"
+                  },
+                  {
+                    "input-type": "$object"
+                  },
+                  {
+                    "input-type": "$switch"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "name": {
+      "input": "$input",
+      "required": true
+    }
+  }
+}

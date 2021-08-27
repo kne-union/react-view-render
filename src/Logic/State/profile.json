@@ -1,0 +1,14 @@
+{
+  "id": "State",
+  "name": "状态",
+  "property": {
+    "initValue": {
+      "input-type": "$variable",
+      "label": "初始状态"
+    },
+    "setStateName": {
+      "input-type": "$input",
+      "label": "设置状态方法名"
+    }
+  }
+}

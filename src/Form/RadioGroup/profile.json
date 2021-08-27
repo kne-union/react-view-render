@@ -1,0 +1,36 @@
+{
+  "id": "RadioGroup",
+  "name": "单选框",
+  "property": {
+    "label": {
+      "input-type": "$input",
+      "label": "label"
+    },
+    "name": {
+      "input-type": "$input",
+      "label": "name"
+    },
+    "rule": {
+      "input-type": "$input",
+      "label": "验证规则"
+    },
+    "interceptor": {
+      "input-type": "$input",
+      "label": "拦截器"
+    },
+    "options": {
+      "input-type": "$variable",
+      "label": "选项"
+    }
+  },
+  "children": {
+    "allow": [],
+    "dependence": [
+      "Form"
+    ]
+  },
+  "defaultProps": {
+    "name": "$id",
+    "label": "单选框"
+  }
+}

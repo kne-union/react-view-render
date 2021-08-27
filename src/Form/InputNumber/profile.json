@@ -1,0 +1,82 @@
+{
+  "id": "InputNumber",
+  "name": "数字输入",
+  "property": {
+    "label": {
+      "input-type": "$input",
+      "label": "label"
+    },
+    "name": {
+      "input-type": "$input",
+      "label": "name"
+    },
+    "rule": {
+      "input-type": "$input",
+      "label": "验证规则"
+    },
+    "interceptor": {
+      "input-type": "$input",
+      "label": "拦截器"
+    },
+    "debounce": {
+      "input-type": "$number",
+      "label": "去抖动时间"
+    },
+    "bordered": {
+      "input-type": "$switch",
+      "label": "是否有边框",
+      "default-value": true
+    },
+    "decimalSeparator": {
+      "input-type": "$input",
+      "label": "小数点"
+    },
+    "formatter": {
+      "input-type": "$functions",
+      "label": "格式化"
+    },
+    "parser": {
+      "input-type": "$functions",
+      "label": "反格式化"
+    },
+    "max": {
+      "input-type": "$number",
+      "label": "最大值"
+    },
+    "min": {
+      "input-type": "$number",
+      "label": "最小值"
+    },
+    "precision": {
+      "input-type": "$number",
+      "label": "数值精度"
+    },
+    "stringMode": {
+      "input-type": "$switch",
+      "label": "字符串模式"
+    },
+    "readOnly": {
+      "input-type": "$switch",
+      "label": "只读"
+    },
+    "step": {
+      "input-type": "$number",
+      "label": "每次改变步数"
+    },
+    "disabled": {
+      "input-type": "$switch",
+      "label": "是否禁用"
+    }
+  },
+  "children": {
+    "allow": [],
+    "dependence": [
+      "Form"
+    ]
+  },
+  "defaultProps": {
+    "placeholder": "请输入",
+    "name": "$id",
+    "label": "数字输入框"
+  }
+}

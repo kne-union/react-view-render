@@ -1,0 +1,74 @@
+{
+  "id": "Space",
+  "name": "间距",
+  "property": {
+    "align": {
+      "input-type": "$radio",
+      "label": "对齐方式",
+      "input-options": {
+        "options": [
+          {
+            "label": "开始",
+            "value": "start"
+          },
+          {
+            "label": "居中",
+            "value": "center"
+          },
+          {
+            "label": "结尾",
+            "value": "end"
+          },
+          {
+            "label": "基线",
+            "value": "baseline"
+          }
+        ]
+      }
+    },
+    "direction": {
+      "input-type": "$radio",
+      "label": "间距方向",
+      "input-options": {
+        "options": [
+          {
+            "label": "水平",
+            "value": "horizontal"
+          },
+          {
+            "label": "垂直",
+            "value": "vertical"
+          }
+        ]
+      }
+    },
+    "size": {
+      "input-type": "$radio",
+      "label": "尺寸",
+      "input-options": {
+        "options": [
+          {
+            "label": "小",
+            "value": "small"
+          },
+          {
+            "label": "中",
+            "value": "middle"
+          },
+          {
+            "label": "大",
+            "value": "large"
+          }
+        ]
+      }
+    },
+    "wrap": {
+      "input-type": "$switch",
+      "label": "是否自动换行"
+    },
+    "split": {
+      "input-type": "$input",
+      "label": "拆分字符串"
+    }
+  }
+}

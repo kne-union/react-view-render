@@ -1,0 +1,35 @@
+{
+  "id": "Col",
+  "name": "网格列",
+  "property": {
+    "flex": {
+      "input-type": "$input",
+      "label": "flex布局属性"
+    },
+    "offset": {
+      "input-type": "$number",
+      "label": "左侧间隔"
+    },
+    "order": {
+      "input-type": "$number",
+      "label": "栅格顺序"
+    },
+    "pull": {
+      "input-type": "$number",
+      "label": "栅格向左移动格数"
+    },
+    "push": {
+      "input-type": "$number",
+      "label": "栅格向右移动格数"
+    },
+    "span": {
+      "input-type": "$number",
+      "label": "栅格占位格数"
+    }
+  },
+  "children": {
+    "dependence": [
+      "Row"
+    ]
+  }
+}

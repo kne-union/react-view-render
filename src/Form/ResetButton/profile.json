@@ -1,0 +1,86 @@
+{
+  "id": "ResetButton",
+  "name": "重置按钮",
+  "property": {
+    "type": {
+      "label": "按钮类型",
+      "input-type": "$select",
+      "input-options": {
+        "options": [
+          {
+            "value": "",
+            "label": "默认"
+          },
+          {
+            "value": "primary",
+            "label": "主要"
+          },
+          {
+            "value": "ghost",
+            "label": "幽灵"
+          },
+          {
+            "value": "dashed",
+            "label": "虚线"
+          },
+          {
+            "value": "link",
+            "label": "链接"
+          },
+          {
+            "value": "text",
+            "label": "文本"
+          }
+        ]
+      }
+    },
+    "size": {
+      "input-type": "$radio",
+      "label": "尺寸",
+      "input-options": {
+        "options": [
+          {
+            "label": "小",
+            "value": "small"
+          },
+          {
+            "label": "中",
+            "value": "middle"
+          },
+          {
+            "label": "大",
+            "value": "large"
+          }
+        ]
+      }
+    },
+    "block": {
+      "label": "是否是块级按钮",
+      "input-type": "$switch"
+    },
+    "danger": {
+      "label": "是否是危险按钮",
+      "input-type": "$switch"
+    },
+    "disabled": {
+      "label": "是否失效",
+      "input-type": "$switch"
+    },
+    "ghost": {
+      "label": "是否是幽灵属性",
+      "input-type": "$switch"
+    }
+  },
+  "children": {
+    "allow": [
+      "Text",
+      "Icon"
+    ],
+    "dependence": [
+      "Form"
+    ]
+  },
+  "defaultProps": {
+    "children": "提交"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "id": "Row",
+  "name": "网格行",
+  "property": {
+    "align": {
+      "input-type": "$radio",
+      "input-options": {
+        "options": [
+          {
+            "label": "顶部",
+            "value": "top"
+          },
+          {
+            "label": "中间",
+            "value": "middle"
+          },
+          {
+            "label": "底部",
+            "value": "bottom"
+          }
+        ]
+      },
+      "label": "垂直对齐"
+    },
+    "gutter": {
+      "label": "间距",
+      "input-type": "$array",
+      "jsonschema": {
+        "type": "array",
+        "items": {
+          "type": "number"
+        }
+      },
+      "input-options": {
+        "children": {
+          "input-type": "$number"
+        }
+      }
+    },
+    "justify": {
+      "input-type": "$radio",
+      "input-options": {
+        "options": [
+          {
+            "label": "起始",
+            "value": "start"
+          },
+          {
+            "label": "结束",
+            "value": "end"
+          },
+          {
+            "label": "居中",
+            "value": "center"
+          },
+          {
+            "label": "环绕",
+            "value": "space-around"
+          },
+          {
+            "label": "中间",
+            "value": "space-between"
+          }
+        ]
+      },
+      "label": "水平排列方式"
+    },
+    "wrap": {
+      "input-type": "$switch",
+      "label": "是否自动换行"
+    }
+  },
+  "children": {
+    "allow": [
+      "Col"
+    ]
+  }
+}

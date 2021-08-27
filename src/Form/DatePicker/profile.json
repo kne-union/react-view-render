@@ -1,0 +1,33 @@
+{
+  "id": "DatePicker",
+  "name": "日期选择",
+  "property": {
+    "label": {
+      "input-type": "$input",
+      "label": "label"
+    },
+    "name": {
+      "input-type": "$input",
+      "label": "name"
+    },
+    "rule": {
+      "input-type": "$input",
+      "label": "验证规则"
+    },
+    "interceptor": {
+      "input-type": "$input",
+      "label": "拦截器"
+    }
+  },
+  "children": {
+    "allow": [],
+    "dependence": [
+      "Form"
+    ]
+  },
+  "defaultProps": {
+    "placeholder": "请选择",
+    "name": "$id",
+    "label": "日期选择"
+  }
+}

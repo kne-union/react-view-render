@@ -1,0 +1,16 @@
+{
+  "id": "Condition",
+  "name": "条件",
+  "property": {
+    "resource": {
+      "input-type": "$variable",
+      "label": "数据源",
+      "required": true
+    },
+    "expression": {
+      "input-type": "$functions",
+      "label": "判断条件",
+      "required": true
+    }
+  }
+}
