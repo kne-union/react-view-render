@@ -1,0 +1,10 @@
+{
+  "id": "GroupList",
+  "name": "表单组",
+  "property": {
+    "name": {
+      "input-type": "$input",
+      "label": "name"
+    }
+  }
+}
