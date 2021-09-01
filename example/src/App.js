@@ -1,8 +1,7 @@
 import ViewRender from '@kne/react-view-render';
-import example from './example.json';
 
-const App = ()=>{
-    return <ViewRender content={example}/>;
+const App = () => {
+    return <ViewRender url="/resume/index.json"/>;
 };
 
 export default App;

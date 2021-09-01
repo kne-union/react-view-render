@@ -1,9 +1,17 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Provider, useGlobalContext} from './context';
 import components from './components';
 import ErrorBoundary from '@kne/react-error-boundary';
 import classnames from 'classnames';
+import axios from 'axios';
 import get from 'lodash/get';
+
+const ErrorMsg = ({error}) => {
+    useEffect(() => {
+        console.error(error);
+    }, [error]);
+    return <div>渲染发生错误，请检查配置或回滚操作</div>;
+};
 
 const render = (data) => {
     const target = Array.isArray(data) ? data : [data];
@@ -24,40 +32,63 @@ const render = (data) => {
             newProps.children = render(children);
         }
 
-        return <CurrentComponent {...newProps} className={classnames(newProps.className, `id_${id}`)} $id={id}
-                                 key={id}/>;
+        return <ErrorBoundary errorComponent={ErrorMsg} key={id}>
+            <CurrentComponent {...newProps} className={classnames(newProps.className, `id_${id}`)} $id={id}/>
+        </ErrorBoundary>;
     });
 };
 
-const ErrorMsg = ({error}) => {
-    useEffect(() => {
-        console.error(error);
-    }, [error]);
-    return <div>渲染发生错误，请检查配置或回滚操作</div>;
+const componentCache = {};
+
+const withRemote = (WrappedComponent) => {
+    return ({url, fetchRemote, content, fallback = null, ...props}) => {
+        const [isLoading, setIsLoading] = useState(true);
+        const [requestData, setRequestData] = useState({});
+        useEffect(() => {
+            if (url) {
+                setIsLoading(true);
+                if (!componentCache[url]) {
+                    componentCache[url] = (fetchRemote || axios.get)(url);
+                }
+                componentCache[url].then((res) => {
+                    setRequestData(res.data);
+                    setIsLoading(false);
+                });
+            }
+        }, [url]);
+
+        if (content) {
+            return <WrappedComponent {...props} content={content}/>
+        }
+
+        if (isLoading) {
+            return fallback;
+        }
+        return <WrappedComponent {...props} content={requestData} fetchRemote={fetchRemote} fallback={fallback}/>;
+    };
 };
 
-const Render = ({lib = {}, content, emitter}) => {
+const Render = withRemote(({lib = {}, content, emitter, ...renderProps}) => {
     const prevContext = useGlobalContext();
     const variable = Object.assign({}, get(prevContext, 'variable'), content.variable);
     const data = content.data || [];
     const functions = Object.assign({}, get(prevContext, 'functions'), content.functions);
-    const components = Object.assign({}, content.components);
+    const components = Object.assign({}, get(prevContext, 'components'), content.components);
     return (
-        <ErrorBoundary errorComponent={ErrorMsg}>
-            <Provider value={{
-                lib,
-                functions,
-                components,
-                data,
-                variable,
-                emitter,
-                isEditor: !!emitter
-            }}>
-                {render(data)}
-            </Provider>
-        </ErrorBoundary>
+        <Provider value={{
+            lib,
+            functions,
+            components,
+            data,
+            variable,
+            emitter,
+            renderProps,
+            isEditor: !!emitter
+        }}>
+            {render(data)}
+        </Provider>
     );
-};
+});
 
 export default Render;
 

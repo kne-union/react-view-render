@@ -1,0 +1,44 @@
+{
+  "components": {
+    "$card": "/resume/card.json",
+    "$standard": {
+      "data": [
+        {
+          "id": "Div-0",
+          "component": "Div",
+          "children": "哈哈哈哈哈"
+        }
+      ]
+    }
+  },
+  "data": [
+    {
+      "id": "Component-0",
+      "component": "Component",
+      "props": {
+        "content": "$card",
+        "title": "简历与应聘信息"
+      },
+      "children": [
+        {
+          "id": "Tabs-1",
+          "component": "Tabs",
+          "props": {
+            "tabPanes": [
+              {
+                "key": "0",
+                "tab": "标准简历",
+                "children": "$standard"
+              },
+              {
+                "key": "1",
+                "tab": "原始简历",
+                "children": "$standard"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

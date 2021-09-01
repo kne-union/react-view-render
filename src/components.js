@@ -31,7 +31,8 @@ const components = {
     GroupList: loadable(() => import('./Form/GroupList')),
     Card: loadable(() => import('./General/Card')),
     Component: loadable(() => import('./General/Component')),
-    Empty: loadable(() => import('./General/Empty'))
+    Empty: loadable(() => import('./General/Empty')),
+    Tabs: loadable(() => import('./General/Tabs'))
 };
 
 export default components;

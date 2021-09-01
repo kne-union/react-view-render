@@ -1,0 +1,63 @@
+{
+  "data": [
+    {
+      "id": "Div-0",
+      "component": "Div",
+      "props": {
+        "style": {
+          "minWidth": "900px",
+          "borderRadius": "4px",
+          "background": "#FFFFFF",
+          "paddingTop": "16px"
+        }
+      },
+      "children": [
+        {
+          "id": "Div-2",
+          "component": "Div",
+          "props": {
+            "style": {
+              "display": "inline-block",
+              "padding": "0 15px",
+              "height": "36px",
+              "lineHeight": "36px",
+              "textAlign": "center",
+              "background": "linear-gradient(90deg, #B0EAF9 0%, #6A9DFF 100%)",
+              "borderRadius": "0px 18px 18px 0px",
+              "color": "#FFFFFF",
+              "fontSize": "16px",
+              "fontWeight": "bolder"
+            }
+          },
+          "children": [
+            {
+              "id": "Text-8",
+              "component": "Text",
+              "props": {
+                "content": "$props.title"
+              }
+            }
+          ]
+        },
+        {
+          "id": "Div-3",
+          "component": "Div",
+          "props": {
+            "style": {
+              "padding": "25px"
+            }
+          },
+          "children": [
+            {
+              "id": "Component-4",
+              "component": "Component",
+              "props": {
+                "content": "$children"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

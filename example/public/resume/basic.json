@@ -1,0 +1,571 @@
+{
+  "components": {
+    "$card": "/resume/card.json",
+    "$resumeInfo": {
+      "functions": {
+        "$isExist": "return !!args[0]",
+        "$hasObjectKeys": "return args[0]&&Object.keys(args[0]).length",
+        "$recommend": "alert('智能推荐');"
+      },
+      "data": [
+        {
+          "id": "Div-0",
+          "component": "Div",
+          "props": {
+            "style": {
+              "position": "relative"
+            }
+          },
+          "children": [
+            {
+              "id": "Row-1",
+              "component": "Row",
+              "props": {
+                "align": "middle",
+                "style": {
+                  "color": "#313753"
+                },
+                "gutter": [
+                  20,
+                  0
+                ]
+              },
+              "children": [
+                {
+                  "id": "Col-2",
+                  "component": "Col",
+                  "props": {
+                  },
+                  "children": [
+                    {
+                      "id": "Div-4",
+                      "component": "Div",
+                      "props": {
+                        "style": {
+                          "display": "flex",
+                          "width": "120px",
+                          "height": "150px",
+                          "justifyItems": "center",
+                          "alignItems": "center",
+                          "border": "#C0C0C6 1px solid"
+                        }
+                      },
+                      "children": [
+                        {
+                          "id": "Img-5",
+                          "component": "Img",
+                          "props": {
+                            "src": "$resume.basic.avatar",
+                            "style": {
+                              "maxWidth": "100%",
+                              "maxHeight": "100%"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "Col-3",
+                  "component": "Col",
+                  "props": {
+                    "flex": 1
+                  },
+                  "children": [
+                    {
+                      "id": "Space-6",
+                      "component": "Space",
+                      "props": {
+                        "direction": "vertical"
+                      },
+                      "children": [
+                        {
+                          "id": "Space-7",
+                          "component": "Space",
+                          "children": [
+                            {
+                              "id": "Div-8",
+                              "component": "Div",
+                              "children": [
+                                {
+                                  "id": "Text-9",
+                                  "component": "Text",
+                                  "props": {
+                                    "content": "$resume.basic.name",
+                                    "style": {
+                                      "fontSize": "16px",
+                                      "fontWeight": "bolder"
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "Space-10",
+                              "component": "Space",
+                              "props": {
+                                "split": "/"
+                              },
+                              "children": [
+                                {
+                                  "id": "Div-11",
+                                  "component": "Div",
+                                  "children": [
+                                    {
+                                      "id": "Text-12",
+                                      "component": "Text",
+                                      "props": {
+                                        "content": "$resume.basic.gender",
+                                        "style": {
+                                          "fontSize": "16px"
+                                        }
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "Div-13",
+                                  "component": "Div",
+                                  "children": [
+                                    {
+                                      "id": "Text-14",
+                                      "component": "Text",
+                                      "props": {
+                                        "content": "$resume.basic.age",
+                                        "style": {
+                                          "fontSize": "16px"
+                                        }
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "Div-15",
+                                  "component": "Div",
+                                  "children": [
+                                    {
+                                      "id": "Text-16",
+                                      "component": "Text",
+                                      "props": {
+                                        "content": "$resume.basic.degree",
+                                        "style": {
+                                          "fontSize": "16px"
+                                        }
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "Div-17",
+                                  "component": "Div",
+                                  "children": [
+                                    {
+                                      "id": "Text-18",
+                                      "component": "Text",
+                                      "props": {
+                                        "content": "$resume.basic.experience",
+                                        "style": {
+                                          "fontSize": "16px"
+                                        }
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "Condition-19",
+                          "component": "Condition",
+                          "props": {
+                            "resource": "$resume.basic.phone",
+                            "expression": "$isExist"
+                          },
+                          "children": [
+                            {
+                              "id": "Space-20",
+                              "component": "Space",
+                              "children": [
+                                {
+                                  "id": "Div-21",
+                                  "component": "Div",
+                                  "children": [
+                                    {
+                                      "id": "Text-22",
+                                      "component": "Text",
+                                      "props": {
+                                        "content": "$resume.basic.phone"
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "Condition-23",
+                          "component": "Condition",
+                          "props": {
+                            "resource": "$resume.basic.email",
+                            "expression": "$isExist"
+                          },
+                          "children": [
+                            {
+                              "id": "Space-24",
+                              "component": "Space",
+                              "children": [
+                                {
+                                  "id": "Div-25",
+                                  "component": "Div",
+                                  "children": [
+                                    {
+                                      "id": "Text-26",
+                                      "component": "Text",
+                                      "props": {
+                                        "content": "$resume.basic.email"
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "Condition-27",
+                          "component": "Condition",
+                          "props": {
+                            "resource": "$resume.basic.desire",
+                            "expression": "$hasObjectKeys"
+                          },
+                          "children": [
+                            {
+                              "id": "Space-28",
+                              "component": "Space",
+                              "children": [
+                                {
+                                  "id": "Space-29",
+                                  "component": "Space",
+                                  "children": [
+                                    {
+                                      "id": "Text-30",
+                                      "component": "Text",
+                                      "props": {
+                                        "content": "求职意愿:"
+                                      }
+                                    },
+                                    {
+                                      "id": "Space-31",
+                                      "component": "Space",
+                                      "props": {
+                                        "split": "/"
+                                      },
+                                      "children": [
+                                        {
+                                          "id": "Condition-32",
+                                          "component": "Condition",
+                                          "props": {
+                                            "resource": "$resume.basic.desire.position",
+                                            "expression": "$isExist"
+                                          },
+                                          "children": [
+                                            {
+                                              "id": "Text-33",
+                                              "component": "Text",
+                                              "props": {
+                                                "content": "$resume.basic.desire.position"
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "id": "Condition-35",
+                                          "component": "Condition",
+                                          "props": {
+                                            "resource": "$resume.basic.desire.industry",
+                                            "expression": "$isExist"
+                                          },
+                                          "children": [
+                                            {
+                                              "id": "Text-36",
+                                              "component": "Text",
+                                              "props": {
+                                                "content": "$resume.basic.desire.industry"
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "id": "Condition-38",
+                                          "component": "Condition",
+                                          "props": {
+                                            "resource": "$resume.basic.desire.salary",
+                                            "expression": "$isExist"
+                                          },
+                                          "children": [
+                                            {
+                                              "id": "Text-39",
+                                              "component": "Text",
+                                              "props": {
+                                                "content": "$resume.basic.desire.salary"
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "Button-40",
+              "component": "Button",
+              "props": {
+                "type": "primary",
+                "onClick": "$recommend",
+                "style": {
+                  "position": "absolute",
+                  "top": 0,
+                  "right": "23px"
+                }
+              },
+              "children": "智能推荐"
+            },
+            {
+              "id": "Div-41",
+              "component": "Div",
+              "props": {
+                "style": {
+                  "position": "absolute",
+                  "right": "23px",
+                  "bottom": "0px"
+                }
+              },
+              "children": [
+                {
+                  "id": "Component-42",
+                  "component": "Component",
+                  "props": {
+                    "content": "$optionButtons"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "$resumeForm": {
+      "functions": {
+        "$saveResume": "alert(JSON.stringify(args[0]));functions.$setResumeState(true);",
+        "$returnResumeInfo": "functions.$setResumeState(true);"
+      },
+      "data": [
+        {
+          "id": "Form-0",
+          "component": "Form",
+          "props": {
+            "onSubmit": "$saveResume",
+            "data": "$resume.basic"
+          },
+          "children": [
+            {
+              "id": "Input-1",
+              "component": "Input",
+              "props": {
+                "name": "name",
+                "label": "姓名",
+                "rule": "REQ LEN-2-50"
+              }
+            },
+            {
+              "id": "Input-7",
+              "component": "Input",
+              "props": {
+                "name": "email",
+                "label": "邮箱",
+                "rule": "REQ EMAIL"
+              }
+            },
+            {
+              "id": "Row-2",
+              "component": "Row",
+              "props": {
+                "justify": "center",
+                "gutter": [
+                  40,
+                  0
+                ]
+              },
+              "children": [
+                {
+                  "id": "Col-3",
+                  "component": "Col",
+                  "children": [
+                    {
+                      "id": "SubmitButton-4",
+                      "component": "SubmitButton",
+                      "props": {
+                        "type": "primary"
+                      },
+                      "children": "保存"
+                    }
+                  ]
+                },
+                {
+                  "id": "Col-5",
+                  "component": "Col",
+                  "children": [
+                    {
+                      "id": "Button-6",
+                      "component": "Button",
+                      "props": {
+                        "onClick": "$returnResumeInfo"
+                      },
+                      "children": "返回"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "$optionButtons": {
+      "functions": {
+        "$editResume": "functions.$setResumeState(false);"
+      },
+      "data": [
+        {
+          "id": "Space-0",
+          "component": "Space",
+          "props": {
+            "align": "end"
+          },
+          "children": [
+            {
+              "id": "Button-1",
+              "component": "Button",
+              "props": {
+                "type": "link",
+                "style": {
+                  "padding": 0,
+                  "color": "#6E6D7A"
+                },
+                "onClick": "$editResume"
+              },
+              "children": "编辑"
+            },
+            {
+              "id": "Button-2",
+              "component": "Button",
+              "props": {
+                "type": "link",
+                "style": {
+                  "padding": 0,
+                  "color": "#6E6D7A"
+                }
+              },
+              "children": "文件夹"
+            },
+            {
+              "id": "Button-3",
+              "component": "Button",
+              "props": {
+                "type": "link",
+                "style": {
+                  "padding": 0,
+                  "color": "#6E6D7A"
+                }
+              },
+              "children": "收藏"
+            },
+            {
+              "id": "Button-4",
+              "component": "Button",
+              "props": {
+                "type": "link",
+                "style": {
+                  "padding": 0,
+                  "color": "#6E6D7A"
+                }
+              },
+              "children": "分享"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "functions": {
+    "$isNot": "return !args[0];"
+  },
+  "data": [
+    {
+      "id": "State-1",
+      "component": "State",
+      "props": {
+        "initValue": true,
+        "setStateName": "$setResumeState"
+      },
+      "children": [
+        {
+          "id": "Component-6",
+          "component": "Component",
+          "props": {
+            "content": "$card",
+            "title": "基本信息"
+          },
+          "children": [
+            {
+              "id": "Condition-2",
+              "component": "Condition",
+              "props": {
+                "resource": "$item"
+              },
+              "children": [
+                {
+                  "id": "Component-0",
+                  "component": "Component",
+                  "props": {
+                    "content": "$resumeInfo"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "Condition-3",
+              "component": "Condition",
+              "props": {
+                "resource": "$item",
+                "expression": "$isNot"
+              },
+              "children": [
+                {
+                  "id": "Component-5",
+                  "component": "Component",
+                  "props": {
+                    "content": "$resumeForm"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

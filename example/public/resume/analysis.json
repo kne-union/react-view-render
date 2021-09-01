@@ -1,0 +1,98 @@
+{
+  "components": {
+    "$card": "/resume/card.json",
+    "$part": {
+      "data": [
+        {
+          "id": "Condition-4",
+          "component": "Condition",
+          "props": {
+            "resource": "$props.resource"
+          },
+          "children": [
+            {
+              "id": "Div-3",
+              "component": "Div",
+              "children": [
+                {
+                  "id": "Div-1",
+                  "component": "Div",
+                  "children": [
+                    {
+                      "id": "Text-2",
+                      "component": "Text",
+                      "props": {
+                        "content": "$props.title"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "List-5",
+              "component": "List",
+              "props": {
+                "resource": "$props.resource"
+              },
+              "children": [
+                {
+                  "id": "Div-6",
+                  "component": "Div",
+                  "children": [
+                    {
+                      "id": "Text-7",
+                      "component": "Text",
+                      "props": {
+                        "content": "$item"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "data": [
+    {
+      "id": "Component-0",
+      "component": "Component",
+      "props": {
+        "content": "$card",
+        "title": "简历分析"
+      },
+      "children": [
+        {
+          "id": "Space-0",
+          "component": "Space",
+          "props": {
+            "direction": "vertical"
+          },
+          "children": [
+            {
+              "id": "Component-1",
+              "component": "Component",
+              "props": {
+                "content": "$part",
+                "title": "亮点",
+                "resource": "$resume.analysis.good"
+              }
+            },
+            {
+              "id": "Component-2",
+              "component": "Component",
+              "props": {
+                "content": "$part",
+                "title": "风险点",
+                "resource": "$resume.analysis.bad"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
