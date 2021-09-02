@@ -32,7 +32,8 @@ const components = {
     Card: loadable(() => import('./General/Card')),
     Component: loadable(() => import('./General/Component')),
     Empty: loadable(() => import('./General/Empty')),
-    Tabs: loadable(() => import('./General/Tabs'))
+    Tabs: loadable(() => import('./General/Tabs')),
+    Rename: loadable(() => import('./Logic/Rename'))
 };
 
 export default components;

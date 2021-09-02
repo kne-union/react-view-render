@@ -1,6 +1,7 @@
 {
   "components": {
     "$card": "/resume/card.json",
+    "$editInfo": "/resume/editInfo.json",
     "$resumeInfo": {
       "functions": {
         "$isExist": "return !!args[0]",
@@ -369,8 +370,8 @@
     },
     "$resumeForm": {
       "functions": {
-        "$saveResume": "alert(JSON.stringify(args[0]));functions.$setResumeState(true);",
-        "$returnResumeInfo": "functions.$setResumeState(true);"
+        "$saveResume": "alert(JSON.stringify(args[0]));functions.$setEditInfoState(true);",
+        "$returnResumeInfo": "functions.$setEditInfoState(true);"
       },
       "data": [
         {
@@ -446,7 +447,7 @@
     },
     "$optionButtons": {
       "functions": {
-        "$editResume": "functions.$setResumeState(false);"
+        "$editResume": "functions.$setEditInfoState(false);"
       },
       "data": [
         {
@@ -510,60 +511,23 @@
       ]
     }
   },
-  "functions": {
-    "$isNot": "return !args[0];"
-  },
   "data": [
     {
-      "id": "State-1",
-      "component": "State",
+      "id": "Component-1",
+      "component": "Component",
       "props": {
-        "initValue": true,
-        "setStateName": "$setResumeState"
+        "content": "$card",
+        "title": "基本信息"
       },
       "children": [
         {
-          "id": "Component-6",
+          "id": "Component-2",
           "component": "Component",
           "props": {
-            "content": "$card",
-            "title": "基本信息"
-          },
-          "children": [
-            {
-              "id": "Condition-2",
-              "component": "Condition",
-              "props": {
-                "resource": "$item"
-              },
-              "children": [
-                {
-                  "id": "Component-0",
-                  "component": "Component",
-                  "props": {
-                    "content": "$resumeInfo"
-                  }
-                }
-              ]
-            },
-            {
-              "id": "Condition-3",
-              "component": "Condition",
-              "props": {
-                "resource": "$item",
-                "expression": "$isNot"
-              },
-              "children": [
-                {
-                  "id": "Component-5",
-                  "component": "Component",
-                  "props": {
-                    "content": "$resumeForm"
-                  }
-                }
-              ]
-            }
-          ]
+            "content": "$editInfo",
+            "info": "$resumeInfo",
+            "edit": "$resumeForm"
+          }
         }
       ]
     }
