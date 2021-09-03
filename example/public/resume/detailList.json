@@ -109,6 +109,14 @@
               }
             ]
           }
+        },
+        "$empty": {
+          "data": [
+            {
+              "id": "Empty-0",
+              "component": "Empty"
+            }
+          ]
         }
       },
       "data": [
@@ -131,7 +139,8 @@
                   "id": "List-3",
                   "component": "List",
                   "props": {
-                    "resource": "$item"
+                    "resource": "$item",
+                    "empty": "$empty"
                   },
                   "children": [
                     {
