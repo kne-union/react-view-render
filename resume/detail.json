@@ -1,7 +1,7 @@
 {
   "components": {
-    "$card": "/resume/card.json",
-    "$detailList": "/resume/detailList.json",
+    "$card": "/react-view-render/resume/card.json",
+    "$detailList": "/react-view-render/resume/detailList.json",
     "$standard": {
       "components": {
         "$workForm": {

@@ -29,7 +29,7 @@
     }
   },
   "components": {
-    "$card": "/resume/card.json",
+    "$card": "/react-view-render/resume/card.json",
     "$part": {
       "data": [
         {

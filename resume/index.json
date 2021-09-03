@@ -74,9 +74,9 @@
     "$saveResume": "functions.$saveResumeState(function(old){return Object.assign({},old,args[0]);});lib.message.success('修改成功');"
   },
   "components": {
-    "$basic": "/resume/basic.json",
-    "$analysis": "/resume/analysis.json",
-    "$detail": "/resume/detail.json"
+    "$basic": "/react-view-render/resume/basic.json",
+    "$analysis": "/react-view-render/resume/analysis.json",
+    "$detail": "/react-view-render/resume/detail.json"
   },
   "data": [
     {
