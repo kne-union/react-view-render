@@ -3,6 +3,7 @@ import {useGlobalContext, Provider} from './context';
 import Render from './index';
 import get from 'lodash/get';
 import isPlainObject from 'lodash/isPlainObject';
+import omit from 'lodash/omit';
 
 const escape = (value) => {
     if (typeof value === 'string' && value.indexOf('\\$') === 0) {
@@ -70,16 +71,27 @@ export const applyVariable = (WrappedComponent) => {
                     return get(currentVariable[parsedPropsValue.name], parsedPropsValue.path);
                 }
                 if (functions.hasOwnProperty(propsValue)) {
-                    if (typeof functions[propsValue] === 'string') {
-                        return (...args) => {
-                            const newFunction = new Function('args', 'variable', 'functions', 'lib', functions[propsValue]);
-                            return newFunction(args, currentVariable, functions, otherContext.lib);
-                        };
-                    }
-                    if (typeof functions[propsValue] === 'function') {
-                        return functions[propsValue];
-                    }
-                    return;
+                    const parseFunction = (funcKey, variable, functions, lib) => {
+                        const func = functions[funcKey];
+                        if (typeof func === 'string') {
+                            return (...args) => {
+                                const newFunction = new Function('args', 'variable', 'functions', 'lib', func);
+                                const others = omit(functions, funcKey), output = {};
+
+                                Object.keys(others).forEach((key) => {
+                                    output[key] = parseFunction(key, variable, others, lib);
+                                });
+
+                                return newFunction(args, variable, output, lib);
+                            }
+                        }
+                        if (typeof func === 'function') {
+                            return func;
+                        }
+                        return;
+                    };
+
+                    return parseFunction(propsValue,currentVariable,functions,otherContext.lib);
                 }
                 if (components.hasOwnProperty(propsValue)) {
                     if (typeof components[propsValue] === "object") {

@@ -1,6 +1,6 @@
 {
   "variable": {
-    "$resume": {
+    "$initResume": {
       "basic": {
         "avatar": "https://lite.knxgalaxy.com/upload_assets/recruitment/b763afaace39e028a8a3cd450f1d8eca.jpg",
         "name": "李明",
@@ -43,11 +43,35 @@
           "duty": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；",
           "result": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；"
         }
+      ],
+      "projects": [
+        {
+          "name": "Aitx招聘系统",
+          "startTime": "2018.08",
+          "endTime": "至今",
+          "position": "产品经理",
+          "company": "上海肯耐珂萨股份有限公司",
+          "des": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；",
+          "duty": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；",
+          "result": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；"
+        },
+        {
+          "name": "薪酬系统",
+          "startTime": "2018.08",
+          "endTime": "至今",
+          "position": "产品经理",
+          "company": "上海有钱有限公司",
+          "des": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；",
+          "duty": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；",
+          "result": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；"
+        }
       ]
     }
   },
   "functions": {
-    "$isNot": "return !args[0];"
+    "$delConfirm": "lib.modal.confirm({content:'确定删除'+args[0]+'?',onOk:args[1]})",
+    "$isNot": "return !args[0];",
+    "$saveResume": "functions.$saveResumeState(function(old){return Object.assign({},old,args[0]);});lib.message.success('修改成功');"
   },
   "components": {
     "$basic": "/resume/basic.json",
@@ -56,32 +80,52 @@
   },
   "data": [
     {
-      "id": "Space-3",
-      "component": "Space",
+      "id": "State-0",
+      "component": "State",
       "props": {
-        "direction": "vertical"
+        "initValue": "$initResume",
+        "setStateName": "$saveResumeState"
       },
       "children": [
         {
-          "id": "Component-0",
-          "component": "Component",
+          "id": "Rename-1",
+          "component": "Rename",
           "props": {
-            "content": "$basic"
-          }
-        },
-        {
-          "id": "Component-1",
-          "component": "Component",
-          "props": {
-            "content": "$analysis"
-          }
-        },
-        {
-          "id": "Component-2",
-          "component": "Component",
-          "props": {
-            "content": "$detail"
-          }
+            "resource": "$item",
+            "name": "$resume"
+          },
+          "children": [
+            {
+              "id": "Space-3",
+              "component": "Space",
+              "props": {
+                "direction": "vertical"
+              },
+              "children": [
+                {
+                  "id": "Component-0",
+                  "component": "Component",
+                  "props": {
+                    "content": "$basic"
+                  }
+                },
+                {
+                  "id": "Component-1",
+                  "component": "Component",
+                  "props": {
+                    "content": "$analysis"
+                  }
+                },
+                {
+                  "id": "Component-2",
+                  "component": "Component",
+                  "props": {
+                    "content": "$detail"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     }

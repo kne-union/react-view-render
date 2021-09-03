@@ -33,7 +33,9 @@ const components = {
     Component: loadable(() => import('./General/Component')),
     Empty: loadable(() => import('./General/Empty')),
     Tabs: loadable(() => import('./General/Tabs')),
-    Rename: loadable(() => import('./Logic/Rename'))
+    Rename: loadable(() => import('./Logic/Rename')),
+    Modal: loadable(() => import('./General/Modal')),
+    FormModal: loadable(() => import('./Form/FormModal'))
 };
 
 export default components;

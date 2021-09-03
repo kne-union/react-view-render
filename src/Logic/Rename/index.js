@@ -3,9 +3,10 @@ import Context from '../Context';
 import {applyVariable} from '../../util';
 import classnames from 'classnames';
 
-const Rename = ({resource, name, children, className, ...props}) => {
+const Rename = ({resource, name, target = 'variable', children, className, ...props}) => {
+    const output = {[name]: resource};
     return <div {...props} className={classnames(className, 'view-render-rename')}>
-        <Context variable={{[name]: resource}}>{children}</Context>
+        <Context {...output}>{children}</Context>
     </div>;
 };
 

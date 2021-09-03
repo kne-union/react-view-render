@@ -370,15 +370,14 @@
     },
     "$resumeForm": {
       "functions": {
-        "$saveResume": "alert(JSON.stringify(args[0]));functions.$setEditInfoState(true);",
-        "$returnResumeInfo": "functions.$setEditInfoState(true);"
+        "$saveBasic": "functions.$saveResume({basic:Object.assign({},variable.$resume.basic,args[0])});functions.$changeInfoState();"
       },
       "data": [
         {
           "id": "Form-0",
           "component": "Form",
           "props": {
-            "onSubmit": "$saveResume",
+            "onSubmit": "$saveBasic",
             "data": "$resume.basic"
           },
           "children": [
@@ -433,7 +432,7 @@
                       "id": "Button-6",
                       "component": "Button",
                       "props": {
-                        "onClick": "$returnResumeInfo"
+                        "onClick": "$changeInfoState"
                       },
                       "children": "返回"
                     }

@@ -1,0 +1,49 @@
+{
+  "functions": {
+    "$showAddForm": "functions.$setModalVisibleState(true);",
+    "$hideAddForm": "functions.$setModalVisibleState(false);",
+    "$saveAddForm": "variable.$props.onSubmit(...args);functions.$hideAddForm();"
+  },
+  "data": [
+    {
+      "id": "State-0",
+      "component": "State",
+      "props": {
+        "initValue": false,
+        "setStateName": "$setModalVisibleState"
+      },
+      "children": [
+        {
+          "id": "FormModal-1",
+          "component": "FormModal",
+          "props": {
+            "visible": "$item",
+            "title": "$props.title",
+            "onCancel": "$hideAddForm",
+            "formProps": {
+              "type": "inner",
+              "data": "$props.data",
+              "onSubmit": "$saveAddForm"
+            }
+          },
+          "children": [
+            {
+              "id": "Component-2",
+              "component": "Component",
+              "props": {
+                "content": "$props.form"
+              }
+            }
+          ]
+        },
+        {
+          "id": "Component-3",
+          "component": "Component",
+          "props": {
+            "content": "$children"
+          }
+        }
+      ]
+    }
+  ]
+}
