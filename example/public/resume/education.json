@@ -1,0 +1,216 @@
+{
+  "description": "教育经历模块",
+  "components": {
+    "$part": {
+      "data": [
+        {
+          "id": "Div-1",
+          "component": "Div",
+          "children": [
+            {
+              "id": "Text-2",
+              "component": "Text",
+              "props": {
+                "content": "$props.title"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "$eduInfo": {
+      "description": "教育经历list-item",
+      "data": [
+        {
+          "id": "listItem1",
+          "component": "Space",
+          "props": {
+            "direction": "vertical",
+            "style": {
+              "paddingBottom": "10px",
+              "position": "relative"
+            }
+          },
+          "children": [
+            {
+              "id": "listItem2",
+              "component": "Space",
+              "props": {
+                "direction": "vertical"
+              },
+              "children": [
+                {
+                  "id": "listItem3",
+                  "component": "Div",
+                  "children": [
+                    {
+                      "id": "Text-16",
+                      "component": "Text",
+                      "props": {
+                        "content": "$edu.school"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "listItem4",
+                  "component": "Div",
+                  "children": [
+                    {
+                      "id": "listItem5",
+                      "component": "Space",
+                      "props": {
+                      },
+                      "children": [
+                        {
+                          "id": "listItem6",
+                          "component": "Text",
+                          "props": {
+                            "content": "$edu.degree"
+                          }
+                        },
+                        {
+                          "id": "listItem10",
+                          "component": "Text",
+                          "props": {
+                            "content": "/"
+                          }
+                        },
+                        {
+                          "id": "listItem7",
+                          "component": "Text",
+                          "props": {
+                            "content": "$edu.major"
+                          }
+                        },
+                        {
+                          "id": "listItem10",
+                          "component": "Text",
+                          "props": {
+                            "content": "/"
+                          }
+                        },
+                        {
+                          "id": "listItem14",
+                          "component": "Div",
+                          "children": [
+                            {
+                              "id": "listItem9",
+                              "component": "Text",
+                              "props": {
+                                "content": "$edu.start"
+                              }
+                            },
+                            {
+                              "id": "listItem12",
+                              "component": "Text",
+                              "props": {
+                                "content": "-"
+                              }
+                            },
+                            {
+                              "id": "listItem13",
+                              "component": "Text",
+                              "props": {
+                                "content": "$edu.end"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "listItem14",
+              "component": "Div",
+              "props": {
+                "style": {
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0
+                }
+              },
+              "children": [
+                {
+                  "id": "Component-23",
+                  "component": "Component",
+                  "props": {
+                    "content": "$options"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "$eduEdit": {
+      "id": "Text-111",
+      "component": "Text",
+      "props": {
+        "content": "谢谢寻"
+      }
+    },
+    "$options": {
+      "data": [
+        {
+          "id": "Space-0",
+          "component": "Space",
+          "children": [
+            {
+              "id": "Button-1",
+              "component": "Button",
+              "props": {
+                "type": "link",
+                "onClick": "$changeEditState"
+              },
+              "children": "编辑"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "data": [
+    {
+      "id": "Space-0",
+      "component": "Space",
+      "props": {
+        "direction": "vertical"
+      },
+      "children": [
+        {
+          "id": "List-3",
+          "component": "List",
+          "props": {
+            "resource": "$resume.education"
+          },
+          "children": [
+            {
+              "id": "Rename-1",
+              "component": "Rename",
+              "props": {
+                "resource": "$item",
+                "name": "$edu"
+              },
+              "children": [
+                {
+                  "id": "Component-4",
+                  "component": "Component",
+                  "props": {
+                    "content": "$editInfo",
+                    "info": "$eduInfo",
+                    "edit": "$eduEdit"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

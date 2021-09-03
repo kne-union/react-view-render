@@ -2,6 +2,8 @@
   "components": {
     "$card": "/resume/card.json",
     "$editInfo": "/resume/editInfo.json",
+    "$education": "/resume/education.json",
+    "$skill": "/resume/skill.json",
     "$resumeCard": {
       "components": {
         "$resumeCardTitle": {
@@ -508,6 +510,60 @@
               "component": "Component",
               "props": {
                 "content": "$workInfo"
+              }
+            }
+          ]
+        },
+        {
+          "id": "Component-1",
+          "component": "Component",
+          "props": {
+            "content": "$resumeCard",
+            "title": "项目经历",
+            "addFunc": "$addWork"
+          },
+          "children": [
+            {
+              "id": "Component-1",
+              "component": "Component",
+              "props": {
+                "content": "$workInfo"
+              }
+            }
+          ]
+        },
+        {
+          "id": "Component-2",
+          "component": "Component",
+          "props": {
+            "content": "$resumeCard",
+            "title": "教育经历",
+            "addFunc": "$addWork"
+          },
+          "children": [
+            {
+              "id": "Component-1",
+              "component": "Component",
+              "props": {
+                "content": "$education"
+              }
+            }
+          ]
+        },
+        {
+          "id": "Component-3",
+          "component": "Component",
+          "props": {
+            "content": "$resumeCard",
+            "title": "技能 & 资质证书",
+            "addFunc": "$addWork"
+          },
+          "children": [
+            {
+              "id": "Component-1",
+              "component": "Component",
+              "props": {
+                "content": "$skill"
               }
             }
           ]

@@ -1,0 +1,162 @@
+{
+  "description": "技能模块",
+  "components": {
+    "$part": {
+      "data": [
+        {
+          "id": "Div-1",
+          "component": "Div",
+          "children": [
+            {
+              "id": "Text-2",
+              "component": "Text",
+              "props": {
+                "content": "$props.title"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "$eduInfo": {
+      "description": "技能list-item",
+      "data": [
+        {
+          "id": "listItem1",
+          "component": "Space",
+          "props": {
+            "direction": "vertical",
+            "style": {
+              "paddingBottom": "10px",
+              "position": "relative"
+            }
+          },
+          "children": [
+            {
+              "id": "listItem2",
+              "component": "Space",
+              "props": {
+                "size": 8
+              },
+              "children": [
+                {
+                  "id": "listItem3",
+                  "component": "Div",
+                  "children": [
+                    {
+                      "id": "Text-16",
+                      "component": "Text",
+                      "props": {
+                        "style": {
+                          "font-weight": "bold"
+                        },
+                        "content": "$sk.name"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "listItem4",
+                  "component": "Div",
+                  "prop": {}
+                },
+                {
+                  "id": "listItem6",
+                  "component": "Text",
+                  "props": {
+                    "content": "$sk.time"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "listItem14",
+              "component": "Div",
+              "props": {
+                "style": {
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0
+                }
+              },
+              "children": [
+                {
+                  "id": "Component-23",
+                  "component": "Component",
+                  "props": {
+                    "content": "$options"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "$eduEdit": {
+      "id": "Text-111",
+      "component": "Text",
+      "props": {
+        "content": "谢谢寻"
+      }
+    },
+    "$options": {
+      "data": [
+        {
+          "id": "Space-0",
+          "component": "Space",
+          "children": [
+            {
+              "id": "Button-1",
+              "component": "Button",
+              "props": {
+                "type": "link",
+                "onClick": "$changeEditState"
+              },
+              "children": "编辑"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "data": [
+    {
+      "id": "Space-0",
+      "component": "Space",
+      "props": {
+        "direction": "vertical"
+      },
+      "children": [
+        {
+          "id": "List-3",
+          "component": "List",
+          "props": {
+            "resource": "$resume.skill"
+          },
+          "children": [
+            {
+              "id": "Rename-1",
+              "component": "Rename",
+              "props": {
+                "resource": "$item",
+                "name": "$sk"
+              },
+              "children": [
+                {
+                  "id": "Component-4",
+                  "component": "Component",
+                  "props": {
+                    "content": "$editInfo",
+                    "info": "$eduInfo",
+                    "edit": "$eduEdit"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
