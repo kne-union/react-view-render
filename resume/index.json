@@ -1,0 +1,133 @@
+{
+  "variable": {
+    "$initResume": {
+      "basic": {
+        "avatar": "https://lite.knxgalaxy.com/upload_assets/recruitment/b763afaace39e028a8a3cd450f1d8eca.jpg",
+        "name": "李明",
+        "gender": "男",
+        "age": "28岁",
+        "degree": "硕士",
+        "experience": "7年工作经验",
+        "phone": "13120827721",
+        "email": "sss@163.com",
+        "desire": {
+          "position": "产品经理",
+          "industry": "EHR SaaS",
+          "salary": "15-20k"
+        }
+      },
+      "analysis": {
+        "good": [
+          "研究生毕业，双一流院校；",
+          "有管理经验，EHR行业背景，熟悉招聘、薪税、绩效等业务模块；",
+          "有大厂工作经验，曾就职于美团字节跳动"
+        ],
+        "bad": [
+          "2020.8至2021.8之间，有一年空档期"
+        ]
+      },
+      "works": [
+        {
+          "company": "上海蓝天人力资源有限公司",
+          "position": "产品经理",
+          "startTime": "2012.08",
+          "endTime": "2017.06",
+          "duty": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；",
+          "result": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；"
+        },
+        {
+          "company": "上海外企人力资源有限公司",
+          "position": "产品经理",
+          "startTime": "2012.08",
+          "endTime": "2017.06",
+          "duty": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；",
+          "result": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Aitx招聘系统",
+          "startTime": "2018.08",
+          "endTime": "至今",
+          "position": "产品经理",
+          "company": "上海肯耐珂萨股份有限公司",
+          "des": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；",
+          "duty": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；",
+          "result": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；"
+        },
+        {
+          "name": "薪酬系统",
+          "startTime": "2018.08",
+          "endTime": "至今",
+          "position": "产品经理",
+          "company": "上海有钱有限公司",
+          "des": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；",
+          "duty": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；",
+          "result": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；"
+        }
+      ]
+    }
+  },
+  "functions": {
+    "$delConfirm": "lib.modal.confirm({content:'确定删除'+args[0]+'?',onOk:args[1]})",
+    "$isNot": "return !args[0];",
+    "$saveResume": "functions.$saveResumeState(function(old){return Object.assign({},old,args[0]);});lib.message.success('修改成功');"
+  },
+  "components": {
+    "$basic": "/resume/basic.json",
+    "$analysis": "/resume/analysis.json",
+    "$detail": "/resume/detail.json"
+  },
+  "data": [
+    {
+      "id": "State-0",
+      "component": "State",
+      "props": {
+        "initValue": "$initResume",
+        "setStateName": "$saveResumeState"
+      },
+      "children": [
+        {
+          "id": "Rename-1",
+          "component": "Rename",
+          "props": {
+            "resource": "$item",
+            "name": "$resume"
+          },
+          "children": [
+            {
+              "id": "Space-3",
+              "component": "Space",
+              "props": {
+                "direction": "vertical"
+              },
+              "children": [
+                {
+                  "id": "Component-0",
+                  "component": "Component",
+                  "props": {
+                    "content": "$basic"
+                  }
+                },
+                {
+                  "id": "Component-1",
+                  "component": "Component",
+                  "props": {
+                    "content": "$analysis"
+                  }
+                },
+                {
+                  "id": "Component-2",
+                  "component": "Component",
+                  "props": {
+                    "content": "$detail"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

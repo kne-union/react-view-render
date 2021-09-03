@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/index.css"],"names":[],"mappings":"AAAA,KACI,kBAAmB,CACnB,YACJ,CAEA,8BACI,UACJ","file":"main.5980ba81.chunk.css","sourcesContent":["body {\n    background: #F7F8FC;\n    padding: 24px;\n}\n\n.ant-space.ant-space-vertical {\n    width: 100%;\n}"]}
