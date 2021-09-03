@@ -23,7 +23,8 @@
               "id": "Component-2",
               "component": "Component",
               "props": {
-                "content": "$props.info"
+                "content": "$props.info",
+                "args": "$props.args"
               }
             }
           ]
@@ -40,7 +41,8 @@
               "id": "Component-4",
               "component": "Component",
               "props": {
-                "content": "$props.edit"
+                "content": "$props.edit",
+                "args": "$props.args"
               }
             }
           ]

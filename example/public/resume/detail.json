@@ -4,75 +4,111 @@
     "$editInfo": "/resume/editInfo.json",
     "$education": "/resume/education.json",
     "$skill": "/resume/skill.json",
-    "$resumeCard": {
+    "$detailList": "/resume/detailList.json",
+    "$standard": {
       "components": {
-        "$resumeCardTitle": {
+        "$workForm": {
           "data": [
             {
-              "id": "Text-0",
-              "component": "Text",
+              "id": "Row-1",
+              "component": "Row",
               "props": {
-                "content": "$props.title"
-              }
-            },
-            {
-              "id": "Button-1",
-              "component": "Button",
-              "props": {
-                "type": "text",
-                "onClick": "$visibleChange"
-              },
-              "children": ">"
-            }
-          ]
-        },
-        "$resumeCardAddButton": {
-          "data": [
-            {
-              "id": "Button-0",
-              "component": "Button",
-              "props": {
-                "type": "link",
-                "onClick": "$props.addFunc"
-              },
-              "children": "+"
-            }
-          ]
-        }
-      },
-      "functions": {
-        "$visibleChange": "functions.$setCardVisibleState(!variable.$item);"
-      },
-      "data": [
-        {
-          "id": "State-1",
-          "component": "State",
-          "props": {
-            "initValue": true,
-            "setStateName": "$setCardVisibleState"
-          },
-          "children": [
-            {
-              "id": "Card-0",
-              "component": "Card",
-              "props": {
-                "title": "$resumeCardTitle",
-                "extra": "$resumeCardAddButton",
-                "bordered": false
+                "gutter": [
+                  40,
+                  0
+                ]
               },
               "children": [
                 {
-                  "id": "Condition-3",
-                  "component": "Condition",
+                  "id": "Col-2",
+                  "component": "Col",
                   "props": {
-                    "resource": "$item"
+                    "span": 12
                   },
                   "children": [
                     {
-                      "id": "Component-2",
-                      "component": "Component",
+                      "id": "Input-3",
+                      "component": "Input",
                       "props": {
-                        "content": "$children"
+                        "name": "company",
+                        "label": "公司名称",
+                        "rule": "REQ"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "Col-3",
+                  "component": "Col",
+                  "props": {
+                    "span": 12
+                  },
+                  "children": [
+                    {
+                      "id": "Input-4",
+                      "component": "Input",
+                      "props": {
+                        "name": "position",
+                        "label": "职位",
+                        "rule": "REQ"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "Row-5",
+              "component": "Row",
+              "props": {
+                "gutter": [
+                  40,
+                  0
+                ]
+              },
+              "children": [
+                {
+                  "id": "Col-6",
+                  "component": "Col",
+                  "props": {
+                    "span": 24
+                  },
+                  "children": [
+                    {
+                      "id": "TextArea-7",
+                      "component": "TextArea",
+                      "props": {
+                        "name": "duty",
+                        "label": "工作职责"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "Row-8",
+              "component": "Row",
+              "props": {
+                "gutter": [
+                  40,
+                  0
+                ]
+              },
+              "children": [
+                {
+                  "id": "Col-9",
+                  "component": "Col",
+                  "props": {
+                    "span": 24
+                  },
+                  "children": [
+                    {
+                      "id": "TextArea-10",
+                      "component": "TextArea",
+                      "props": {
+                        "name": "result",
+                        "label": "工作成果"
                       }
                     }
                   ]
@@ -80,413 +116,572 @@
               ]
             }
           ]
-        }
-      ]
-    },
-    "$standard": {
-      "components": {
+        },
         "$workInfo": {
-          "components": {
-            "$options": {
-              "data": [
+          "data": [
+            {
+              "id": "Space-1",
+              "component": "Space",
+              "props": {
+                "direction": "vertical",
+                "style": {
+                  "paddingBottom": "10px",
+                  "position": "relative"
+                }
+              },
+              "children": [
                 {
-                  "id": "Space-0",
+                  "id": "Space-5",
                   "component": "Space",
+                  "props": {
+                    "style": {
+                      "fontSize": "16px",
+                      "fontWeight": "bold"
+                    }
+                  },
                   "children": [
                     {
-                      "id": "Button-1",
-                      "component": "Button",
+                      "id": "Div-7",
+                      "component": "Div",
+                      "children": [
+                        {
+                          "id": "Text-2",
+                          "component": "Text",
+                          "props": {
+                            "content": "$detailItem.company"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "Div-8",
+                      "component": "Div",
+                      "children": [
+                        {
+                          "id": "Text-9",
+                          "component": "Text",
+                          "props": {
+                            "content": "$detailItem.position"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "Div-10",
+                      "component": "Div",
+                      "children": [
+                        {
+                          "id": "Text-11",
+                          "component": "Text",
+                          "props": {
+                            "content": "$detailItem.startTime"
+                          }
+                        },
+                        {
+                          "id": "Text-12",
+                          "component": "Text",
+                          "props": {
+                            "content": "-"
+                          }
+                        },
+                        {
+                          "id": "Text-13",
+                          "component": "Text",
+                          "props": {
+                            "content": "$detailItem.endTime"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "Space-14",
+                  "component": "Space",
+                  "props": {
+                    "direction": "vertical"
+                  },
+                  "children": [
+                    {
+                      "id": "Div-15",
+                      "component": "Div",
+                      "children": [
+                        {
+                          "id": "Text-16",
+                          "component": "Text",
+                          "props": {
+                            "content": "岗位职责"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "Div-17",
+                      "component": "Div",
+                      "children": [
+                        {
+                          "id": "Text-18",
+                          "component": "Text",
+                          "props": {
+                            "content": "$detailItem.duty"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "Space-18",
+                  "component": "Space",
+                  "props": {
+                    "direction": "vertical"
+                  },
+                  "children": [
+                    {
+                      "id": "Div-19",
+                      "component": "Div",
+                      "children": [
+                        {
+                          "id": "Text-20",
+                          "component": "Text",
+                          "props": {
+                            "content": "工作成果"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "Div-21",
+                      "component": "Div",
+                      "children": [
+                        {
+                          "id": "Text-22",
+                          "component": "Text",
+                          "props": {
+                            "content": "$detailItem.result"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "Div-24",
+                  "component": "Div",
+                  "props": {
+                    "style": {
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "Component-23",
+                      "component": "Component",
                       "props": {
-                        "type": "link",
-                        "onClick": "$changeEditState"
-                      },
-                      "children": "编辑"
+                        "content": "$props.args.optionButton",
+                        "name": "$props.args.name"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "$projectForm": {
+          "data": [
+            {
+              "id": "Row-1",
+              "component": "Row",
+              "props": {
+                "gutter": [
+                  40,
+                  0
+                ]
+              },
+              "children": [
+                {
+                  "id": "Col-2",
+                  "component": "Col",
+                  "props": {
+                    "span": 12
+                  },
+                  "children": [
+                    {
+                      "id": "Input-3",
+                      "component": "Input",
+                      "props": {
+                        "name": "name",
+                        "label": "项目名称",
+                        "rule": "REQ"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "Col-3",
+                  "component": "Col",
+                  "props": {
+                    "span": 12
+                  },
+                  "children": [
+                    {
+                      "id": "Input-4",
+                      "component": "Input",
+                      "props": {
+                        "name": "position",
+                        "label": "职位",
+                        "rule": "REQ"
+                      }
                     }
                   ]
                 }
               ]
             },
-            "$info": {
-              "data": [
+            {
+              "id": "Row-10",
+              "component": "Row",
+              "props": {
+                "gutter": [
+                  40,
+                  0
+                ]
+              },
+              "children": [
                 {
-                  "id": "Space-1",
+                  "id": "Col-11",
+                  "component": "Col",
+                  "props": {
+                    "span": 12
+                  },
+                  "children": [
+                  ]
+                },
+                {
+                  "id": "Col-13",
+                  "component": "Col",
+                  "props": {
+                    "span": 12
+                  },
+                  "children": [
+                    {
+                      "id": "Input-14",
+                      "component": "Input",
+                      "props": {
+                        "name": "company",
+                        "label": "公司",
+                        "rule": "REQ"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "Row-15",
+              "component": "Row",
+              "props": {
+                "gutter": [
+                  40,
+                  0
+                ]
+              },
+              "children": [
+                {
+                  "id": "Col-16",
+                  "component": "Col",
+                  "props": {
+                    "span": 24
+                  },
+                  "children": [
+                    {
+                      "id": "TextArea-17",
+                      "component": "TextArea",
+                      "props": {
+                        "name": "des",
+                        "label": "项目描述"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "Row-5",
+              "component": "Row",
+              "props": {
+                "gutter": [
+                  40,
+                  0
+                ]
+              },
+              "children": [
+                {
+                  "id": "Col-6",
+                  "component": "Col",
+                  "props": {
+                    "span": 24
+                  },
+                  "children": [
+                    {
+                      "id": "TextArea-7",
+                      "component": "TextArea",
+                      "props": {
+                        "name": "duty",
+                        "label": "项目职责"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "Row-8",
+              "component": "Row",
+              "props": {
+                "gutter": [
+                  40,
+                  0
+                ]
+              },
+              "children": [
+                {
+                  "id": "Col-9",
+                  "component": "Col",
+                  "props": {
+                    "span": 24
+                  },
+                  "children": [
+                    {
+                      "id": "TextArea-10",
+                      "component": "TextArea",
+                      "props": {
+                        "name": "result",
+                        "label": "项目成果"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "$projectInfo": {
+          "data": [
+            {
+              "id": "Space-1",
+              "component": "Space",
+              "props": {
+                "direction": "vertical",
+                "style": {
+                  "paddingBottom": "10px",
+                  "position": "relative"
+                }
+              },
+              "children": [
+                {
+                  "id": "Space-5",
                   "component": "Space",
                   "props": {
-                    "direction": "vertical",
                     "style": {
-                      "paddingBottom": "10px",
-                      "position": "relative"
+                      "fontSize": "16px",
+                      "fontWeight": "bold"
                     }
                   },
                   "children": [
                     {
-                      "id": "Space-5",
-                      "component": "Space",
-                      "props": {
-                        "style": {
-                          "fontSize": "16px",
-                          "fontWeight": "bold"
-                        }
-                      },
+                      "id": "Div-7",
+                      "component": "Div",
                       "children": [
                         {
-                          "id": "Div-7",
-                          "component": "Div",
-                          "children": [
-                            {
-                              "id": "Text-2",
-                              "component": "Text",
-                              "props": {
-                                "content": "$work.company"
-                              }
-                            }
-                          ]
-                        },
-                        {
-                          "id": "Div-8",
-                          "component": "Div",
-                          "children": [
-                            {
-                              "id": "Text-9",
-                              "component": "Text",
-                              "props": {
-                                "content": "$work.position"
-                              }
-                            }
-                          ]
-                        },
-                        {
-                          "id": "Div-10",
-                          "component": "Div",
-                          "children": [
-                            {
-                              "id": "Text-11",
-                              "component": "Text",
-                              "props": {
-                                "content": "$work.startTime"
-                              }
-                            },
-                            {
-                              "id": "Text-12",
-                              "component": "Text",
-                              "props": {
-                                "content": "-"
-                              }
-                            },
-                            {
-                              "id": "Text-13",
-                              "component": "Text",
-                              "props": {
-                                "content": "$work.endTime"
-                              }
-                            }
-                          ]
+                          "id": "Text-2",
+                          "component": "Text",
+                          "props": {
+                            "content": "$detailItem.name"
+                          }
                         }
                       ]
                     },
                     {
-                      "id": "Space-14",
-                      "component": "Space",
-                      "props": {
-                        "direction": "vertical"
-                      },
+                      "id": "Div-10",
+                      "component": "Div",
                       "children": [
                         {
-                          "id": "Div-15",
-                          "component": "Div",
-                          "children": [
-                            {
-                              "id": "Text-16",
-                              "component": "Text",
-                              "props": {
-                                "content": "岗位职责"
-                              }
-                            }
-                          ]
+                          "id": "Text-11",
+                          "component": "Text",
+                          "props": {
+                            "content": "$detailItem.startTime"
+                          }
                         },
                         {
-                          "id": "Div-17",
-                          "component": "Div",
-                          "children": [
-                            {
-                              "id": "Text-18",
-                              "component": "Text",
-                              "props": {
-                                "content": "$work.duty"
-                              }
-                            }
-                          ]
+                          "id": "Text-12",
+                          "component": "Text",
+                          "props": {
+                            "content": "-"
+                          }
+                        },
+                        {
+                          "id": "Text-13",
+                          "component": "Text",
+                          "props": {
+                            "content": "$detailItem.endTime"
+                          }
                         }
                       ]
                     },
                     {
-                      "id": "Space-18",
-                      "component": "Space",
-                      "props": {
-                        "direction": "vertical"
-                      },
+                      "id": "Div-8",
+                      "component": "Div",
                       "children": [
                         {
-                          "id": "Div-19",
-                          "component": "Div",
-                          "children": [
-                            {
-                              "id": "Text-20",
-                              "component": "Text",
-                              "props": {
-                                "content": "工作成果"
-                              }
-                            }
-                          ]
-                        },
-                        {
-                          "id": "Div-21",
-                          "component": "Div",
-                          "children": [
-                            {
-                              "id": "Text-22",
-                              "component": "Text",
-                              "props": {
-                                "content": "$work.result"
-                              }
-                            }
-                          ]
+                          "id": "Text-9",
+                          "component": "Text",
+                          "props": {
+                            "content": "$detailItem.position"
+                          }
                         }
                       ]
                     },
                     {
                       "id": "Div-24",
                       "component": "Div",
-                      "props": {
-                        "style": {
-                          "position": "absolute",
-                          "right": 0,
-                          "top": 0
-                        }
-                      },
                       "children": [
                         {
-                          "id": "Component-23",
-                          "component": "Component",
+                          "id": "Text-25",
+                          "component": "Text",
                           "props": {
-                            "content": "$options"
+                            "content": "$detailItem.company"
                           }
                         }
                       ]
                     }
                   ]
-                }
-              ]
-            },
-            "$form": {
-              "data": {
-                "id": "Div-0",
-                "component": "Div",
-                "props": {
-                  "style": {
-                    "background": "#F8F8F8",
-                    "padding": "14px 16px 24px",
-                    "marginBottom": "20px"
-                  }
                 },
-                "children": [
-                  {
-                    "id": "Form-1",
-                    "component": "Form",
-                    "props": {
-                      "data": "$work"
-                    },
-                    "children": [
-                      {
-                        "id": "Row-1",
-                        "component": "Row",
-                        "props": {
-                          "gutter": [
-                            40,
-                            0
-                          ]
-                        },
-                        "children": [
-                          {
-                            "id": "Col-2",
-                            "component": "Col",
-                            "props": {
-                              "span": 12
-                            },
-                            "children": [
-                              {
-                                "id": "Input-3",
-                                "component": "Input",
-                                "props": {
-                                  "name": "company",
-                                  "label": "公司名称",
-                                  "rule": "REQ"
-                                }
-                              }
-                            ]
-                          },
-                          {
-                            "id": "Col-3",
-                            "component": "Col",
-                            "props": {
-                              "span": 12
-                            },
-                            "children": [
-                              {
-                                "id": "Input-4",
-                                "component": "Input",
-                                "props": {
-                                  "name": "position",
-                                  "label": "职位",
-                                  "rule": "REQ"
-                                }
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "id": "Row-5",
-                        "component": "Row",
-                        "props": {
-                          "gutter": [
-                            40,
-                            0
-                          ]
-                        },
-                        "children": [
-                          {
-                            "id": "Col-6",
-                            "component": "Col",
-                            "props": {
-                              "span": 24
-                            },
-                            "children": [
-                              {
-                                "id": "TextArea-7",
-                                "component": "TextArea",
-                                "props": {
-                                  "name": "duty",
-                                  "label": "工作职责"
-                                }
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "id": "Row-8",
-                        "component": "Row",
-                        "props": {
-                          "gutter": [
-                            40,
-                            0
-                          ]
-                        },
-                        "children": [
-                          {
-                            "id": "Col-9",
-                            "component": "Col",
-                            "props": {
-                              "span": 24
-                            },
-                            "children": [
-                              {
-                                "id": "TextArea-10",
-                                "component": "TextArea",
-                                "props": {
-                                  "name": "result",
-                                  "label": "工作成果"
-                                }
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      {
-                        "id": "Row-27",
-                        "component": "Row",
-                        "props": {
-                          "justify": "center",
-                          "gutter": [
-                            40,
-                            100
-                          ]
-                        },
-                        "children": [
-                          {
-                            "id": "Col-28",
-                            "component": "Col",
-                            "props": {
-                            },
-                            "children": [
-                              {
-                                "id": "SubmitButton-29",
-                                "component": "SubmitButton",
-                                "props": {
-                                  "type": "primary"
-                                },
-                                "children": "保存"
-                              }
-                            ]
-                          },
-                          {
-                            "id": "Col-30",
-                            "component": "Col",
-                            "props": {
-                            },
-                            "children": [
-                              {
-                                "id": "Button-31",
-                                "component": "Button",
-                                "props": {
-                                  "onClick": "$changeInfoState"
-                                },
-                                "children": "返回"
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            }
-          },
-          "data": [
-            {
-              "id": "Space-0",
-              "component": "Space",
-              "props": {
-                "direction": "vertical"
-              },
-              "children": [
                 {
-                  "id": "List-3",
-                  "component": "List",
+                  "id": "Space-26",
+                  "component": "Space",
                   "props": {
-                    "resource": "$resume.works"
+                    "direction": "vertical"
                   },
                   "children": [
                     {
-                      "id": "Rename-5",
-                      "component": "Rename",
-                      "props": {
-                        "resource": "$item",
-                        "name": "$work"
-                      },
+                      "id": "Div-27",
+                      "component": "Div",
                       "children": [
                         {
-                          "id": "Component-4",
-                          "component": "Component",
+                          "id": "Text-28",
+                          "component": "Text",
                           "props": {
-                            "content": "$editInfo",
-                            "info": "$info",
-                            "edit": "$form"
+                            "content": "项目描述"
                           }
                         }
                       ]
+                    },
+                    {
+                      "id": "Div-29",
+                      "component": "Div",
+                      "children": [
+                        {
+                          "id": "Text-30",
+                          "component": "Text",
+                          "props": {
+                            "content": "$detailItem.des"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "Space-14",
+                  "component": "Space",
+                  "props": {
+                    "direction": "vertical"
+                  },
+                  "children": [
+                    {
+                      "id": "Div-15",
+                      "component": "Div",
+                      "children": [
+                        {
+                          "id": "Text-16",
+                          "component": "Text",
+                          "props": {
+                            "content": "项目职责"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "Div-17",
+                      "component": "Div",
+                      "children": [
+                        {
+                          "id": "Text-18",
+                          "component": "Text",
+                          "props": {
+                            "content": "$detailItem.duty"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "Space-18",
+                  "component": "Space",
+                  "props": {
+                    "direction": "vertical"
+                  },
+                  "children": [
+                    {
+                      "id": "Div-19",
+                      "component": "Div",
+                      "children": [
+                        {
+                          "id": "Text-20",
+                          "component": "Text",
+                          "props": {
+                            "content": "项目成果"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "Div-21",
+                      "component": "Div",
+                      "children": [
+                        {
+                          "id": "Text-22",
+                          "component": "Text",
+                          "props": {
+                            "content": "$detailItem.result"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "Div-24",
+                  "component": "Div",
+                  "props": {
+                    "style": {
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "Component-23",
+                      "component": "Component",
+                      "props": {
+                        "content": "$props.args.optionButton",
+                        "name": "$props.args.name"
+                      }
                     }
                   ]
                 }
@@ -500,37 +695,29 @@
           "id": "Component-0",
           "component": "Component",
           "props": {
-            "content": "$resumeCard",
-            "title": "工作经历",
-            "addFunc": "$addWork"
-          },
-          "children": [
-            {
-              "id": "Component-1",
-              "component": "Component",
-              "props": {
-                "content": "$workInfo"
-              }
-            }
-          ]
+            "cardTitle": "工作经历",
+            "addTitle": "添加工作经历",
+            "removeTitle": "这段工作经历",
+            "form": "$workForm",
+            "info": "$workInfo",
+            "list": "$resume.works",
+            "name": "works",
+            "content": "$detailList"
+          }
         },
         {
           "id": "Component-1",
           "component": "Component",
           "props": {
-            "content": "$resumeCard",
-            "title": "项目经历",
-            "addFunc": "$addWork"
-          },
-          "children": [
-            {
-              "id": "Component-1",
-              "component": "Component",
-              "props": {
-                "content": "$workInfo"
-              }
-            }
-          ]
+            "cardTitle": "项目经历",
+            "addTitle": "添加项目经历",
+            "removeTitle": "这段项目经历",
+            "form": "$projectForm",
+            "info": "$projectInfo",
+            "list": "$resume.projects",
+            "name": "projects",
+            "content": "$detailList"
+          }
         },
         {
           "id": "Component-2",
@@ -573,10 +760,6 @@
     "$origin": {
       "data": []
     }
-  },
-  "functions": {
-    "$addWork": "alert('添加工作经历');",
-    "$addProject": "alert('添加项目经历');"
   },
   "data": [
     {

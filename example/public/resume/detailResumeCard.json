@@ -1,0 +1,79 @@
+{
+  "components": {
+    "$resumeCardTitle": {
+      "data": [
+        {
+          "id": "Text-0",
+          "component": "Text",
+          "props": {
+            "content": "$props.title"
+          }
+        },
+        {
+          "id": "Button-1",
+          "component": "Button",
+          "props": {
+            "type": "text",
+            "onClick": "$visibleChange"
+          },
+          "children": ">"
+        }
+      ]
+    },
+    "$resumeCardAddButton": {
+      "data": [
+        {
+          "id": "Button-0",
+          "component": "Button",
+          "props": {
+            "type": "link",
+            "onClick": "$props.addFunc"
+          },
+          "children": "+"
+        }
+      ]
+    }
+  },
+  "functions": {
+    "$visibleChange": "functions.$setCardVisibleState(!variable.$item);"
+  },
+  "data": [
+    {
+      "id": "State-1",
+      "component": "State",
+      "props": {
+        "initValue": true,
+        "setStateName": "$setCardVisibleState"
+      },
+      "children": [
+        {
+          "id": "Card-0",
+          "component": "Card",
+          "props": {
+            "title": "$resumeCardTitle",
+            "extra": "$resumeCardAddButton",
+            "bordered": false
+          },
+          "children": [
+            {
+              "id": "Condition-3",
+              "component": "Condition",
+              "props": {
+                "resource": "$item"
+              },
+              "children": [
+                {
+                  "id": "Component-2",
+                  "component": "Component",
+                  "props": {
+                    "content": "$children"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
