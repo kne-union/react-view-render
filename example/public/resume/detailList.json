@@ -1,8 +1,8 @@
 {
   "components": {
-    "$editInfo": "/resume/editInfo.json",
-    "$addForm": "/resume/addForm.json",
-    "$resumeCard": "/resume/detailResumeCard.json",
+    "$editInfo": "/react-view-render/resume/editInfo.json",
+    "$addForm": "/react-view-render/resume/addForm.json",
+    "$resumeCard": "/react-view-render/resume/detailResumeCard.json",
     "$list": {
       "components": {
         "$options": {

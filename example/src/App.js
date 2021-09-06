@@ -10,7 +10,7 @@ const App = () => {
             modal: {
                 confirm: Modal.confirm
             }
-        }} url="/resume/index.json"/>
+        }} url="/react-view-render/resume/index.json"/>
     </ConfigProvider>;
 };
 
