@@ -27,3 +27,4 @@ package-lock.json
 yarn-lock.json
 dist
 node_modules
+example/build

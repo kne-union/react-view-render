@@ -1,7 +1,7 @@
 {
   "components": {
-    "$card": "/resume/card.json",
-    "$editInfo": "/resume/editInfo.json",
+    "$card": "/react-view-render/resume/card.json",
+    "$editInfo": "/react-view-render/resume/editInfo.json",
     "$resumeInfo": {
       "functions": {
         "$isExist": "return !!args[0]",

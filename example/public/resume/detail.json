@@ -1,14 +1,14 @@
 {
   "components": {
-    "$card": "/resume/card.json",
-    "$editInfo": "/resume/editInfo.json",
-    "$education": "/resume/education/education.json",
-    "$editEducation": "/resume/education/editEducation.json",
-    "$editSkill": "/resume/skill/editSkill.json",
-    "$skill": "/resume/skill/skill.json",
-    "$editSocial": "/resume/social/editSocial.json",
-    "$social": "/resume/social/social.json",
-    "$detailList": "/resume/detailList.json",
+    "$editInfo": "/react-view-render/resume/editInfo.json",
+    "$education": "/react-view-render/resume/education/education.json",
+    "$editEducation": "/react-view-render/resume/education/editEducation.json",
+    "$editSkill": "/react-view-render/resume/skill/editSkill.json",
+    "$skill": "/react-view-render/resume/skill/skill.json",
+    "$editSocial": "/react-view-render/resume/social/editSocial.json",
+    "$social": "/react-view-render/resume/social/social.json",
+    "$card": "/react-view-render/resume/card.json",
+    "$detailList": "/react-view-render/resume/detailList.json",
     "$standard": {
       "components": {
         "$workForm": {

@@ -1,8 +1,8 @@
 {
   "components": {
-    "$editInfo": "/resume/editInfo.json",
-    "$addForm": "/resume/addForm.json",
-    "$resumeCard": "/resume/detailResumeCard.json",
+    "$editInfo": "/react-view-render/resume/editInfo.json",
+    "$addForm": "/react-view-render/resume/addForm.json",
+    "$resumeCard": "/react-view-render/resume/detailResumeCard.json",
     "$list": {
       "components": {
         "$options": {
@@ -109,6 +109,14 @@
               }
             ]
           }
+        },
+        "$empty": {
+          "data": [
+            {
+              "id": "Empty-0",
+              "component": "Empty"
+            }
+          ]
         }
       },
       "data": [
@@ -131,7 +139,8 @@
                   "id": "List-3",
                   "component": "List",
                   "props": {
-                    "resource": "$item"
+                    "resource": "$item",
+                    "empty": "$empty"
                   },
                   "children": [
                     {
