@@ -60,6 +60,9 @@
                       "id": "listItem5",
                       "component": "Space",
                       "props": {
+                        "style": {
+                          "color": "#6E6D7B"
+                        }
                       },
                       "children": [
                         {

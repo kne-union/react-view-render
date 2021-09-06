@@ -48,7 +48,11 @@
                       "id": "Text-9",
                       "component": "Text",
                       "props": {
-                        "content": "$detailItem.position"
+                        "style": {
+                          "fontWeight": 400,
+                          "fontSize": "14px"
+                        },
+                        "content": "$detailItem.school"
                       }
                     }
                   ]
@@ -86,27 +90,6 @@
                           "fontSize": "14px"
                         },
                         "content": "$detailItem.startTime"
-                      }
-                    },
-                    {
-                      "id": "Text-14",
-                      "component": "Text",
-                      "props": {
-                        "style": {
-                          "margin": "0 10px"
-                        },
-                        "content": "|"
-                      }
-                    },
-                    {
-                      "id": "Text-15",
-                      "component": "Text",
-                      "props": {
-                        "style": {
-                          "fontWeight": "normal",
-                          "fontSize": "14px"
-                        },
-                        "content": "$detailItem.duration"
                       }
                     }
                   ]

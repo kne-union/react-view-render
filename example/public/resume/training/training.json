@@ -1,8 +1,8 @@
 {
-  "description": "社会实践模块",
+  "description": "培训模块",
   "components": {
     "$ItemInfo": {
-      "description": "社会实践模块list-item",
+      "description": "培训模块list-item",
       "data": [
         {
           "id": "Space-1",
@@ -48,7 +48,7 @@
                       "id": "Text-9",
                       "component": "Text",
                       "props": {
-                        "content": "$detailItem.position"
+                        "content": "$detailItem.org"
                       }
                     }
                   ]
@@ -87,27 +87,6 @@
                         },
                         "content": "$detailItem.startTime"
                       }
-                    },
-                    {
-                      "id": "Text-14",
-                      "component": "Text",
-                      "props": {
-                        "style": {
-                          "margin": "0 10px"
-                        },
-                        "content": "|"
-                      }
-                    },
-                    {
-                      "id": "Text-15",
-                      "component": "Text",
-                      "props": {
-                        "style": {
-                          "fontWeight": "normal",
-                          "fontSize": "14px"
-                        },
-                        "content": "$detailItem.duration"
-                      }
                     }
                   ]
                 }
@@ -131,7 +110,7 @@
                       "id": "Text-16",
                       "component": "Text",
                       "props": {
-                        "content": "实践描述"
+                        "content": "所获证书"
                       }
                     }
                   ]
@@ -142,6 +121,88 @@
                   "children": [
                     {
                       "id": "Text-18",
+                      "component": "Text",
+                      "props": {
+                        "style": {
+                          "color": "#6E6D7B"
+                        },
+                        "content": "$detailItem.certificate"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "Space-141",
+              "component": "Space",
+              "props": {
+                "direction": "vertical",
+                "style": {
+                  "margin": "6px 0"
+                }
+              },
+              "children": [
+                {
+                  "id": "Div-151",
+                  "component": "Div",
+                  "children": [
+                    {
+                      "id": "Text-161",
+                      "component": "Text",
+                      "props": {
+                        "content": "培训课程"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "Div-171",
+                  "component": "Div",
+                  "children": [
+                    {
+                      "id": "Text-181",
+                      "component": "Text",
+                      "props": {
+                        "style": {
+                          "color": "#6E6D7B"
+                        },
+                        "content": "$detailItem.course"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "Space-142",
+              "component": "Space",
+              "props": {
+                "direction": "vertical",
+                "style": {
+                  "margin": "6px 0"
+                }
+              },
+              "children": [
+                {
+                  "id": "Div-152",
+                  "component": "Div",
+                  "children": [
+                    {
+                      "id": "Text-162",
+                      "component": "Text",
+                      "props": {
+                        "content": "培训描述"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "Div-172",
+                  "component": "Div",
+                  "children": [
+                    {
+                      "id": "Text-182",
                       "component": "Text",
                       "props": {
                         "style": {

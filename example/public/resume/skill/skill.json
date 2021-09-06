@@ -19,7 +19,7 @@
               "id": "listItem2",
               "component": "Space",
               "props": {
-                "size": 8
+                "size": 20
               },
               "children": [
                 {
@@ -44,12 +44,38 @@
                   "prop": {}
                 },
                 {
-                  "id": "listItem6",
-                  "component": "Text",
-                  "props": {
-                    "content": "$detailItem.time"
-                  }
+                  "id": "listItem5",
+                  "component": "Div",
+                  "prop": {
+                  },
+                  "children": [
+                    {
+                      "id": "listItem6",
+                      "component": "Text",
+                      "props": {
+                        "content": "$detailItem.status"
+                      }
+                    },
+                    {
+                      "id": "listItem6",
+                      "component": "Text",
+                      "props": {
+                        "style": {
+                          "margin": "0 10px"
+                        },
+                        "content": "|"
+                      }
+                    },
+                    {
+                      "id": "listItem6",
+                      "component": "Text",
+                      "props": {
+                        "content": "$detailItem.time"
+                      }
+                    }
+                  ]
                 }
+
               ]
             },
             {
