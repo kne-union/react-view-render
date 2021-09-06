@@ -1,24 +1,7 @@
 {
   "description": "技能模块",
   "components": {
-    "$part": {
-      "data": [
-        {
-          "id": "Div-1",
-          "component": "Div",
-          "children": [
-            {
-              "id": "Text-2",
-              "component": "Text",
-              "props": {
-                "content": "$props.title"
-              }
-            }
-          ]
-        }
-      ]
-    },
-    "$eduInfo": {
+    "$skillItemInfo": {
       "description": "技能list-item",
       "data": [
         {
@@ -50,7 +33,7 @@
                         "style": {
                           "font-weight": "bold"
                         },
-                        "content": "$sk.name"
+                        "content": "$detailItem.name"
                       }
                     }
                   ]
@@ -64,7 +47,7 @@
                   "id": "listItem6",
                   "component": "Text",
                   "props": {
-                    "content": "$sk.time"
+                    "content": "$detailItem.time"
                   }
                 }
               ]
@@ -84,36 +67,11 @@
                   "id": "Component-23",
                   "component": "Component",
                   "props": {
-                    "content": "$options"
+                    "content": "$props.args.optionButton",
+                    "name": "$props.args.name"
                   }
                 }
               ]
-            }
-          ]
-        }
-      ]
-    },
-    "$eduEdit": {
-      "id": "Text-111",
-      "component": "Text",
-      "props": {
-        "content": "谢谢寻"
-      }
-    },
-    "$options": {
-      "data": [
-        {
-          "id": "Space-0",
-          "component": "Space",
-          "children": [
-            {
-              "id": "Button-1",
-              "component": "Button",
-              "props": {
-                "type": "link",
-                "onClick": "$changeEditState"
-              },
-              "children": "编辑"
             }
           ]
         }
@@ -122,41 +80,11 @@
   },
   "data": [
     {
-      "id": "Space-0",
-      "component": "Space",
+      "component": "Component",
       "props": {
-        "direction": "vertical"
-      },
-      "children": [
-        {
-          "id": "List-3",
-          "component": "List",
-          "props": {
-            "resource": "$resume.skill"
-          },
-          "children": [
-            {
-              "id": "Rename-1",
-              "component": "Rename",
-              "props": {
-                "resource": "$item",
-                "name": "$sk"
-              },
-              "children": [
-                {
-                  "id": "Component-4",
-                  "component": "Component",
-                  "props": {
-                    "content": "$editInfo",
-                    "info": "$eduInfo",
-                    "edit": "$eduEdit"
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ]
+        "content": "$skillItemInfo",
+        "args": "$props.args"
+      }
     }
   ]
 }

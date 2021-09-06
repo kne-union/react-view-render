@@ -47,7 +47,7 @@
                       "id": "Text-16",
                       "component": "Text",
                       "props": {
-                        "content": "$edu.school"
+                        "content": "$detailItem.school"
                       }
                     }
                   ]
@@ -66,7 +66,7 @@
                           "id": "listItem6",
                           "component": "Text",
                           "props": {
-                            "content": "$edu.degree"
+                            "content": "$detailItem.degree"
                           }
                         },
                         {
@@ -80,7 +80,7 @@
                           "id": "listItem7",
                           "component": "Text",
                           "props": {
-                            "content": "$edu.major"
+                            "content": "$detailItem.major"
                           }
                         },
                         {
@@ -98,7 +98,7 @@
                               "id": "listItem9",
                               "component": "Text",
                               "props": {
-                                "content": "$edu.start"
+                                "content": "$detailItem.start"
                               }
                             },
                             {
@@ -112,7 +112,7 @@
                               "id": "listItem13",
                               "component": "Text",
                               "props": {
-                                "content": "$edu.end"
+                                "content": "$detailItem.end"
                               }
                             }
                           ]
@@ -138,7 +138,8 @@
                   "id": "Component-23",
                   "component": "Component",
                   "props": {
-                    "content": "$options"
+                    "content": "$props.args.optionButton",
+                    "name": "$props.args.name"
                   }
                 }
               ]
@@ -146,13 +147,6 @@
           ]
         }
       ]
-    },
-    "$eduEdit": {
-      "id": "Text-111",
-      "component": "Text",
-      "props": {
-        "content": "谢谢寻"
-      }
     },
     "$options": {
       "data": [
@@ -176,41 +170,11 @@
   },
   "data": [
     {
-      "id": "Space-0",
-      "component": "Space",
+      "component": "Component",
       "props": {
-        "direction": "vertical"
-      },
-      "children": [
-        {
-          "id": "List-3",
-          "component": "List",
-          "props": {
-            "resource": "$resume.education"
-          },
-          "children": [
-            {
-              "id": "Rename-1",
-              "component": "Rename",
-              "props": {
-                "resource": "$item",
-                "name": "$edu"
-              },
-              "children": [
-                {
-                  "id": "Component-4",
-                  "component": "Component",
-                  "props": {
-                    "content": "$editInfo",
-                    "info": "$eduInfo",
-                    "edit": "$eduEdit"
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ]
+        "content": "$eduInfo",
+        "args": "$props.args"
+      }
     }
   ]
 }

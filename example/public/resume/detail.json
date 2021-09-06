@@ -2,8 +2,12 @@
   "components": {
     "$card": "/resume/card.json",
     "$editInfo": "/resume/editInfo.json",
-    "$education": "/resume/education.json",
-    "$skill": "/resume/skill.json",
+    "$education": "/resume/education/education.json",
+    "$editEducation": "/resume/education/editEducation.json",
+    "$editSkill": "/resume/skill/editSkill.json",
+    "$skill": "/resume/skill/skill.json",
+    "$editSocial": "/resume/social/editSocial.json",
+    "$social": "/resume/social/social.json",
     "$detailList": "/resume/detailList.json",
     "$standard": {
       "components": {
@@ -134,9 +138,11 @@
                   "id": "Space-5",
                   "component": "Space",
                   "props": {
+                    "size": 32,
                     "style": {
                       "fontSize": "16px",
-                      "fontWeight": "bold"
+                      "fontWeight": 500,
+                      "color": "#313753"
                     }
                   },
                   "children": [
@@ -174,6 +180,10 @@
                           "id": "Text-11",
                           "component": "Text",
                           "props": {
+                            "style": {
+                              "fontWeight": "normal",
+                              "fontSize": "14px"
+                            },
                             "content": "$detailItem.startTime"
                           }
                         },
@@ -188,11 +198,57 @@
                           "id": "Text-13",
                           "component": "Text",
                           "props": {
+                            "style": {
+                              "fontWeight": "normal",
+                              "fontSize": "14px"
+                            },
                             "content": "$detailItem.endTime"
                           }
                         }
                       ]
                     }
+                  ]
+                },
+                {
+                  "id": "Space-147",
+                  "component": "Space",
+                  "props": {
+                    "size": [30, 24],
+                    "style": {
+                      "margin": "10px 0"
+                    }
+                  },
+                  "children": [
+                        {
+                          "id": "Text-72",
+                          "component": "Text",
+                          "props": {
+                            "content": "海外经历",
+                            "style": {
+                              "display": "inline-block",
+                              "width": "79px",
+                              "height": "30px",
+                              "background": "#F8F8F8",
+                              "border-radius": "4px",
+                              "line-height": "30px",
+                              "text-align": "center"
+                            }
+                          }
+                        },
+                        {
+                          "id": "Text-73",
+                          "component": "Text",
+                          "props": {
+                            "content": "$detailItem.endTime"
+                          }
+                        },
+                        {
+                          "id": "Text-74",
+                          "component": "Text",
+                          "props": {
+                            "content": "$detailItem.endTime"
+                          }
+                        }
                   ]
                 },
                 {
@@ -485,9 +541,9 @@
                   "id": "Space-5",
                   "component": "Space",
                   "props": {
+                    "size": 32,
                     "style": {
-                      "fontSize": "16px",
-                      "fontWeight": "bold"
+                      "fontSize": "14px"
                     }
                   },
                   "children": [
@@ -499,7 +555,11 @@
                           "id": "Text-2",
                           "component": "Text",
                           "props": {
-                            "content": "$detailItem.name"
+                            "content": "$detailItem.name",
+                            "style": {
+                              "fontSize": "16px",
+                              "fontWeight": "bold"
+                            }
                           }
                         }
                       ]
@@ -695,6 +755,7 @@
           "id": "Component-0",
           "component": "Component",
           "props": {
+            "classList": ".test{font-size: 30px;}",
             "cardTitle": "工作经历",
             "addTitle": "添加工作经历",
             "removeTitle": "这段工作经历",
@@ -702,6 +763,20 @@
             "info": "$workInfo",
             "list": "$resume.works",
             "name": "works",
+            "content": "$detailList"
+          }
+        },
+        {
+          "id": "Component-5",
+          "component": "Component",
+          "props": {
+            "cardTitle": "实习经历",
+            "addTitle": "添加实习经历",
+            "removeTitle": "这段实习经历",
+            "form": "$workForm",
+            "info": "$workInfo",
+            "list": "$resume.practice",
+            "name": "practice",
             "content": "$detailList"
           }
         },
@@ -720,40 +795,46 @@
           }
         },
         {
+          "id": "Component-4",
+          "component": "Component",
+          "props": {
+            "cardTitle": "社会实践",
+            "addTitle": "添加社会实践",
+            "removeTitle": "这段社会实践",
+            "form": "$editSocial",
+            "info": "$social",
+            "list": "$resume.works",
+            "name": "works",
+            "content": "$detailList"
+          }
+        },
+        {
           "id": "Component-2",
           "component": "Component",
           "props": {
-            "content": "$resumeCard",
-            "title": "教育经历",
-            "addFunc": "$addWork"
-          },
-          "children": [
-            {
-              "id": "Component-1",
-              "component": "Component",
-              "props": {
-                "content": "$education"
-              }
-            }
-          ]
+            "cardTitle": "教育经历",
+            "addTitle": "添加教育经历",
+            "removeTitle": "这段教育经历",
+            "form": "$editEducation",
+            "info": "$education",
+            "list": "$resume.education",
+            "name": "education",
+            "content": "$detailList"
+          }
         },
         {
           "id": "Component-3",
           "component": "Component",
           "props": {
-            "content": "$resumeCard",
-            "title": "技能 & 资质证书",
-            "addFunc": "$addWork"
-          },
-          "children": [
-            {
-              "id": "Component-1",
-              "component": "Component",
-              "props": {
-                "content": "$skill"
-              }
-            }
-          ]
+            "cardTitle": "技能 & 资质证书",
+            "addTitle": "添加项目经历",
+            "removeTitle": "这段项目经历",
+            "form": "$editSkill",
+            "info": "$skill",
+            "list": "$resume.skill",
+            "name": "skill",
+            "content": "$detailList"
+          }
         }
       ]
     },

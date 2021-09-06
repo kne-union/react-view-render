@@ -1,0 +1,90 @@
+{
+  "description": "技能模块",
+  "components": {
+    "$skillItemInfo": {
+      "description": "技能list-item",
+      "data": [
+        {
+          "id": "listItem1",
+          "component": "Space",
+          "props": {
+            "direction": "vertical",
+            "style": {
+              "paddingBottom": "10px",
+              "position": "relative"
+            }
+          },
+          "children": [
+            {
+              "id": "listItem2",
+              "component": "Space",
+              "props": {
+                "size": 8
+              },
+              "children": [
+                {
+                  "id": "listItem3",
+                  "component": "Div",
+                  "children": [
+                    {
+                      "id": "Text-16",
+                      "component": "Text",
+                      "props": {
+                        "style": {
+                          "font-weight": "bold"
+                        },
+                        "content": "$detailItem.name"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "listItem4",
+                  "component": "Div",
+                  "prop": {}
+                },
+                {
+                  "id": "listItem6",
+                  "component": "Text",
+                  "props": {
+                    "content": "$detailItem.time"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "listItem14",
+              "component": "Div",
+              "props": {
+                "style": {
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0
+                }
+              },
+              "children": [
+                {
+                  "id": "Component-23",
+                  "component": "Component",
+                  "props": {
+                    "content": "$props.args.optionButton",
+                    "name": "$props.args.name"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "data": [
+    {
+      "component": "Component",
+      "props": {
+        "content": "$workInfo",
+        "args": "$props.args"
+      }
+    }
+  ]
+}
