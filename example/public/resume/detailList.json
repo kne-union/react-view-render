@@ -189,7 +189,7 @@
   },
   "functions": {
     "$mapList": "return variable.$resume[variable.$props.name]",
-    "$addDetail": "const current = variable.$resume[variable.$props.name].slice(0);current.push(variable.$props.args.submitMapping(args[0]));functions.$saveResume({[variable.$props.name]:current});",
+    "$addDetail": "const current = variable.$resume[variable.$props.name].slice(0);current.push(variable.$props.submitMapping(args[0]));functions.$saveResume({[variable.$props.name]:current});",
     "$editDetail": "const current = variable.$resume[variable.$props.args.name].slice(0);current.splice(variable.$index,1,Object.assign({},variable[variable.$props.args.name],variable.$props.args.submitMapping(args[0])));functions.$saveResume({[variable.$props.args.name]:current});functions.$changeInfoState();",
     "$delDetailWork": "const current = variable.$resume[variable.$props.name].slice(0);current.splice(variable.$index,1);functions.$saveResume({[variable.$props.name]:current});",
     "$delDetailConfirm": "functions.$delConfirm(variable.$outerProps.removeTitle,functions.$delDetailWork)"
