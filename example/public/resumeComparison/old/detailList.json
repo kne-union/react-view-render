@@ -2,7 +2,7 @@
   "components": {
     "$editInfo": "/react-view-render/resume/editInfo.json",
     "$addForm": "/react-view-render/resume/addForm.json",
-    "$resumeCard": "/react-view-render/resume/detailResumeCard.json",
+    "$resumeCard": "/react-view-render/resumeComparison/old/detailResumeCard.json",
     "$list": {
       "components": {
         "$options": {
@@ -166,7 +166,7 @@
                                 "info": "$props.info",
                                 "edit": "$form",
                                 "args": {
-                                  "optionButton": "$options",
+                                  "optionButton_//注释掉": "$options",
                                   "name": "$props.name",
                                   "form": "$props.form",
                                   "itemMapping": "$props.itemMapping",

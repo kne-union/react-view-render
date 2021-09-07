@@ -1,0 +1,77 @@
+{
+  "components": {
+    "$resumeCardTitle": {
+      "data": [
+        {
+          "id": "Text-0121212",
+          "component": "Text",
+          "props": {
+            "style": {
+              "font-size": "16px",
+              "font-weight": 500,
+              "color": "#4e74fe"
+            },
+            "content": "$props.title"
+          }
+        }
+      ]
+    },
+    "$resumeCardAddButton": {
+      "data": [
+        {
+          "id": "Button-0",
+          "component": "Button",
+          "props": {
+            "type": "link",
+            "onClick": "$props.addFunc"
+          },
+          "children": "+"
+        }
+      ]
+    }
+  },
+  "functions": {
+    "$visibleChange": "functions.$setCardVisibleState(!variable.$item);"
+  },
+  "data": [
+    {
+      "id": "State-1",
+      "component": "State",
+      "props": {
+        "initValue": true,
+        "setStateName": "$setCardVisibleState"
+      },
+      "children": [
+        {
+          "id": "Card-012121",
+          "component": "Card",
+          "props": {
+            "className": "cardTitle",
+            "classList": ".cardTitle .ant-card-head{padding:0} .cardTitle .ant-card-body{padding-left:0;padding-right:0}",
+            "title": "$resumeCardTitle",
+            "extra": "$resumeCardAddButton",
+            "bordered": false
+          },
+          "children": [
+            {
+              "id": "Condition-3",
+              "component": "Condition",
+              "props": {
+                "resource": "$item"
+              },
+              "children": [
+                {
+                  "id": "Component-2",
+                  "component": "Component",
+                  "props": {
+                    "content": "$children"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
