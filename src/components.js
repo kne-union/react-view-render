@@ -35,6 +35,7 @@ const components = {
     Tabs: loadable(() => import('./General/Tabs')),
     Rename: loadable(() => import('./Logic/Rename')),
     Modal: loadable(() => import('./General/Modal')),
+    Icon: loadable(() => import('./General/Icon')),
     FormModal: loadable(() => import('./Form/FormModal'))
 };
 
