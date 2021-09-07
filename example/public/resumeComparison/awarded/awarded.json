@@ -1,0 +1,175 @@
+{
+  "description": "社会实践模块",
+  "components": {
+    "$ItemInfo": {
+      "description": "社会实践模块list-item",
+      "data": [
+        {
+          "id": "Space-1",
+          "component": "Space",
+          "props": {
+            "direction": "vertical",
+            "style": {
+              "paddingBottom": "44px",
+              "position": "relative"
+            }
+          },
+          "children": [
+            {
+              "id": "Space-5",
+              "component": "Space",
+              "props": {
+                "size": 32,
+                "style": {
+                  "fontSize": "16px",
+                  "fontWeight": 500,
+                  "color": "#313753"
+                }
+              },
+              "children": [
+                {
+                  "id": "Div-7",
+                  "component": "Div",
+                  "children": [
+                    {
+                      "id": "Text-2",
+                      "component": "Text",
+                      "props": {
+                        "content": "$detailItem.name"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "Div-8",
+                  "component": "Div",
+                  "children": [
+                    {
+                      "id": "Text-9",
+                      "component": "Text",
+                      "props": {
+                        "style": {
+                          "fontWeight": 400,
+                          "fontSize": "14px"
+                        },
+                        "content": "$detailItem.school"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "Div-10",
+                  "component": "Div",
+                  "children": [
+                    {
+                      "id": "Text-11",
+                      "component": "Text",
+                      "props": {
+                        "style": {
+                          "fontWeight": "normal",
+                          "fontSize": "14px"
+                        },
+                        "content": "$detailItem.startTime"
+                      }
+                    },
+                    {
+                      "id": "Text-12",
+                      "component": "Text",
+                      "props": {
+                        "style": {
+                        },
+                        "content": "-"
+                      }
+                    },
+                    {
+                      "id": "Text-13",
+                      "component": "Text",
+                      "props": {
+                        "style": {
+                          "fontWeight": "normal",
+                          "fontSize": "14px"
+                        },
+                        "content": "$detailItem.startTime"
+                      }
+                    }
+                  ]
+                }
+               ]
+            },
+            {
+              "id": "Space-14",
+              "component": "Space",
+              "props": {
+                "direction": "vertical",
+                "style": {
+                  "margin": "6px 0"
+                }
+              },
+              "children": [
+                {
+                  "id": "Div-15",
+                  "component": "Div",
+                  "children": [
+                    {
+                      "id": "Text-16",
+                      "component": "Text",
+                      "props": {
+                        "content": "实践描述"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "Div-17",
+                  "component": "Div",
+                  "children": [
+                    {
+                      "id": "Text-18",
+                      "component": "Text",
+                      "props": {
+                        "style": {
+                          "color": "#6E6D7B"
+                        },
+                        "content": "$detailItem.description"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "Div-24",
+              "component": "Div",
+              "props": {
+                "style": {
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0
+                }
+              },
+              "children": [
+                {
+                  "id": "Component-23",
+                  "component": "Component",
+                  "props": {
+                    "content": "$props.args.optionButton",
+                    "name": "$props.args.name"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "data": [
+    {
+      "component": "Component",
+      "props": {
+        "content": "$ItemInfo",
+        "args": "$props.args"
+      }
+    }
+  ]
+}
