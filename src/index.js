@@ -1,10 +1,13 @@
 import React, {useEffect, useState} from 'react';
+import {message, Modal} from 'antd';
 import {Provider, useGlobalContext} from './context';
 import components from './components';
 import ErrorBoundary from '@kne/react-error-boundary';
 import classnames from 'classnames';
 import axios from 'axios';
 import get from 'lodash/get';
+
+const currentComponents = Object.assign({}, components);
 
 const ErrorMsg = ({error}) => {
     useEffect(() => {
@@ -21,7 +24,7 @@ const render = (data) => {
             return item;
         }
         const {id, component, props, children} = item;
-        const CurrentComponent = components[component];
+        const CurrentComponent = currentComponents[component];
         if (!CurrentComponent) {
             return null;
         }
@@ -76,7 +79,16 @@ const Render = withRemote(({lib = {}, content, emitter, ...renderProps}) => {
     const components = Object.assign({}, get(prevContext, 'components'), content.components);
     return (
         <Provider value={{
-            lib,
+            lib: Object.assign({}, {
+                message,
+                modal: {
+                    confirm: Modal.confirm,
+                    info: Modal.info,
+                    success: Modal.success,
+                    error: Modal.success,
+                    warning: Modal.warning
+                }
+            }, lib),
             functions,
             components,
             data,
@@ -91,6 +103,16 @@ const Render = withRemote(({lib = {}, content, emitter, ...renderProps}) => {
 });
 
 export default Render;
+
+export const extend = (list = []) => {
+    const customComponents = {};
+    list.forEach(({component, profile}) => {
+        customComponents[profile.id] = component;
+    });
+    Object.assign(currentComponents, customComponents);
+};
+
+export {applyVariable} from './util';
 
 export {default as profile, profileMap} from './profile';
 

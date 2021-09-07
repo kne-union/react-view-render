@@ -1,6 +1,6 @@
 {
   "name": "@kne/react-view-render",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "一个可以将规定格式的JSON字符串渲染成页面的渲染器",
   "homepage": "https://github.com/kne-union/react-view-render",
   "main": "dist/index.js",
@@ -45,12 +45,14 @@
   "license": "ISC",
   "peerDependencies": {
     "@kne/react-form-antd": "1.x",
+    "@kne/antd-enhance": "0.1.x",
     "antd": "4.x",
     "prop-types": "15.x",
     "react": "16.x",
     "react-dom": "16.x"
   },
   "devDependencies": {
+    "@kne/antd-enhance": "^0.1.7",
     "@kne/react-form-antd": "^1.2.12",
     "antd": "^4.16.13",
     "axios": "^0.21.1",
@@ -66,7 +68,6 @@
     "react-scripts": "^4.0.3"
   },
   "dependencies": {
-    "@kne/antd-enhance": "^0.1.7",
     "@kne/compose": "^0.1.0",
     "@kne/react-error-boundary": "^0.1.0",
     "@loadable/component": "^5.15.0",

@@ -9,5 +9,8 @@
   },
   "children": {
     "allow": []
+  },
+  "defaultProps": {
+    "children": "请输入文本内容"
   }
 }

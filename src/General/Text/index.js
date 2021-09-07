@@ -9,8 +9,4 @@ const Text = ({ content, ...props }) => {
   );
 };
 
-Text.defaultProps = {
-  content: '请输入内容'
-};
-
 export default applyVariable(Text);
