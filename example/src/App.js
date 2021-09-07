@@ -30,7 +30,7 @@ const App = () => {
             modal: {
                 confirm: Modal.confirm
             }
-        }} url="/react-view-render/resume/index.json"/>
+        }} url="/react-view-render/resumeComparison/index.json"/>
     </ConfigProvider>;
 };
 
