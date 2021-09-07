@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../src/General/Button/index.js"],"names":["applyVariable"],"mappings":"kNAGA,G,gDAAeA,YAAf","file":"static/js/39.5fdb83cd.chunk.js","sourcesContent":["import { Button } from 'antd';\nimport { applyVariable } from '../../util';\n\nexport default applyVariable(Button);"],"sourceRoot":""}

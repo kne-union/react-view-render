@@ -1,6 +1,21 @@
 {
+  "functions": {
+    "$timeToDate": "const output = Object.assign({},args[0]);if(args[0].startTime&&args[0].endTime){output.time=[args[0].startTime,args[0].endTime]};delete output['startTime'];delete output['endTime'];return output;",
+    "$dateToTime": "const output = Object.assign({},args[0]);if(Array.isArray(args[0].time)&&args[0].time.length===2){output.startTime=args[0].time[0];output.endTime=args[0].time[1];}delete output['time'];return output;"
+  },
   "components": {
+    "$editInfo": "/react-view-render/resume/editInfo.json",
+    "$education": "/react-view-render/resume/education/education.json",
+    "$editEducation": "/react-view-render/resume/education/editEducation.json",
+    "$editSkill": "/react-view-render/resume/skill/editSkill.json",
+    "$skill": "/react-view-render/resume/skill/skill.json",
+    "$editSocial": "/react-view-render/resume/social/editSocial.json",
+    "$social": "/react-view-render/resume/social/social.json",
     "$card": "/react-view-render/resume/card.json",
+    "$editTraining": "/react-view-render/resume/training/editTraining.json",
+    "$training": "/react-view-render/resume/training/training.json",
+    "$awarded": "/react-view-render/resume/awarded/awarded.json",
+    "$editAwarded": "/react-view-render/resume/awarded/editAwarded.json",
     "$detailList": "/react-view-render/resume/detailList.json",
     "$standard": {
       "components": {
@@ -48,6 +63,36 @@
                         "name": "position",
                         "label": "职位",
                         "rule": "REQ"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "Row-11",
+              "component": "Row",
+              "props": {
+                "gutter": [
+                  40,
+                  0
+                ]
+              },
+              "children": [
+                {
+                  "id": "Col-12",
+                  "component": "Col",
+                  "props": {
+                    "span": 24
+                  },
+                  "children": [
+                    {
+                      "id": "DateRangePicker-13",
+                      "component": "DateRangePicker",
+                      "props": {
+                        "name": "time",
+                        "label": "时间",
+                        "interceptor": "string-date-range"
                       }
                     }
                   ]
@@ -122,7 +167,7 @@
               "props": {
                 "direction": "vertical",
                 "style": {
-                  "paddingBottom": "10px",
+                  "paddingBottom": "44px",
                   "position": "relative"
                 }
               },
@@ -131,9 +176,11 @@
                   "id": "Space-5",
                   "component": "Space",
                   "props": {
+                    "size": 32,
                     "style": {
                       "fontSize": "16px",
-                      "fontWeight": "bold"
+                      "fontWeight": 500,
+                      "color": "#313753"
                     }
                   },
                   "children": [
@@ -171,7 +218,11 @@
                           "id": "Text-11",
                           "component": "Text",
                           "props": {
-                            "content": "$detailItem.startTime"
+                            "content": "$detailItem.time[0]",
+                            "style": {
+                              "fontWeight": "normal",
+                              "fontSize": "14px"
+                            }
                           }
                         },
                         {
@@ -185,7 +236,115 @@
                           "id": "Text-13",
                           "component": "Text",
                           "props": {
-                            "content": "$detailItem.endTime"
+                            "content": "$detailItem.time[1]",
+                            "style": {
+                              "fontWeight": "normal",
+                              "fontSize": "14px"
+                            }
+                          }
+                        },
+                        {
+                          "id": "Text-14",
+                          "component": "Text",
+                          "props": {
+                            "style": {
+                              "margin": "0 10px"
+                            },
+                            "content": "|"
+                          }
+                        },
+                        {
+                          "id": "Text-15",
+                          "component": "Text",
+                          "props": {
+                            "style": {
+                              "fontWeight": "normal",
+                              "fontSize": "14px"
+                            },
+                            "content": "$detailItem.duration"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "Space-147",
+                  "component": "Space",
+                  "props": {
+                    "size": [
+                      30,
+                      24
+                    ],
+                    "style": {
+                      "margin": "10px 0"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "Text-72",
+                      "component": "Text",
+                      "props": {
+                        "content": "海外经历",
+                        "style": {
+                          "display": "inline-block",
+                          "width": "79px",
+                          "height": "30px",
+                          "background": "#F8F8F8",
+                          "border-radius": "4px",
+                          "line-height": "30px",
+                          "text-align": "center"
+                        }
+                      }
+                    },
+                    {
+                      "id": "Text-73",
+                      "component": "Text",
+                      "props": {
+                        "content": "$detailItem.country"
+                      }
+                    },
+                    {
+                      "id": "Text-74",
+                      "component": "Text",
+                      "props": {
+                        "content": "$detailItem.salary"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "Space-20",
+                  "component": "Space",
+                  "props": {
+                    "direction": "vertical"
+                  },
+                  "children": [
+                    {
+                      "id": "Div-15",
+                      "component": "Div",
+                      "children": [
+                        {
+                          "id": "Text-16",
+                          "component": "Text",
+                          "props": {
+                            "content": "离职原因"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "Div-17",
+                      "component": "Div",
+                      "children": [
+                        {
+                          "id": "Text-18",
+                          "component": "Text",
+                          "props": {
+                            "style": {
+                              "color": "#6E6D7B"
+                            },
+                            "content": "$detailItem.reason"
                           }
                         }
                       ]
@@ -207,7 +366,7 @@
                           "id": "Text-16",
                           "component": "Text",
                           "props": {
-                            "content": "岗位职责"
+                            "content": "工作描述"
                           }
                         }
                       ]
@@ -220,6 +379,47 @@
                           "id": "Text-18",
                           "component": "Text",
                           "props": {
+                            "style": {
+                              "color": "#6E6D7B"
+                            },
+                            "content": "$detailItem.description"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "Space-14",
+                  "component": "Space",
+                  "props": {
+                    "direction": "vertical"
+                  },
+                  "children": [
+                    {
+                      "id": "Div-15",
+                      "component": "Div",
+                      "children": [
+                        {
+                          "id": "Text-16",
+                          "component": "Text",
+                          "props": {
+                            "content": "工作职责"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "Div-17",
+                      "component": "Div",
+                      "children": [
+                        {
+                          "id": "Text-18",
+                          "component": "Text",
+                          "props": {
+                            "style": {
+                              "color": "#6E6D7B"
+                            },
                             "content": "$detailItem.duty"
                           }
                         }
@@ -242,7 +442,7 @@
                           "id": "Text-20",
                           "component": "Text",
                           "props": {
-                            "content": "工作成果"
+                            "content": "工作业绩"
                           }
                         }
                       ]
@@ -255,6 +455,9 @@
                           "id": "Text-22",
                           "component": "Text",
                           "props": {
+                            "style": {
+                              "color": "#6E6D7B"
+                            },
                             "content": "$detailItem.result"
                           }
                         }
@@ -473,7 +676,7 @@
               "props": {
                 "direction": "vertical",
                 "style": {
-                  "paddingBottom": "10px",
+                  "paddingBottom": "44px",
                   "position": "relative"
                 }
               },
@@ -482,9 +685,9 @@
                   "id": "Space-5",
                   "component": "Space",
                   "props": {
+                    "size": 32,
                     "style": {
-                      "fontSize": "16px",
-                      "fontWeight": "bold"
+                      "fontSize": "14px"
                     }
                   },
                   "children": [
@@ -496,7 +699,11 @@
                           "id": "Text-2",
                           "component": "Text",
                           "props": {
-                            "content": "$detailItem.name"
+                            "content": "$detailItem.name",
+                            "style": {
+                              "fontSize": "16px",
+                              "fontWeight": "bold"
+                            }
                           }
                         }
                       ]
@@ -524,6 +731,27 @@
                           "component": "Text",
                           "props": {
                             "content": "$detailItem.endTime"
+                          }
+                        },
+                        {
+                          "id": "Text-14",
+                          "component": "Text",
+                          "props": {
+                            "style": {
+                              "margin": "0 10px"
+                            },
+                            "content": "|"
+                          }
+                        },
+                        {
+                          "id": "Text-15",
+                          "component": "Text",
+                          "props": {
+                            "style": {
+                              "fontWeight": "normal",
+                              "fontSize": "14px"
+                            },
+                            "content": "$detailItem.duration"
                           }
                         }
                       ]
@@ -584,6 +812,9 @@
                           "id": "Text-30",
                           "component": "Text",
                           "props": {
+                            "style": {
+                              "color": "#6E6D7B"
+                            },
                             "content": "$detailItem.des"
                           }
                         }
@@ -619,6 +850,9 @@
                           "id": "Text-18",
                           "component": "Text",
                           "props": {
+                            "style": {
+                              "color": "#6E6D7B"
+                            },
                             "content": "$detailItem.duty"
                           }
                         }
@@ -654,6 +888,9 @@
                           "id": "Text-22",
                           "component": "Text",
                           "props": {
+                            "style": {
+                              "color": "#6E6D7B"
+                            },
                             "content": "$detailItem.result"
                           }
                         }
@@ -685,6 +922,52 @@
               ]
             }
           ]
+        },
+        "$selfEvaluation": {
+          "data": [
+            {
+              "id": "listItem1",
+              "component": "Space",
+              "props": {
+                "direction": "vertical",
+                "style": {
+                  "paddingBottom": "10px",
+                  "marginTop": "30px",
+                  "position": "relative"
+                }
+              },
+              "children": [
+                {
+                  "id": "listItem6",
+                  "component": "Text",
+                  "props": {
+                    "content": "$detailItem.description"
+                  }
+                },
+                {
+                  "id": "listItem14",
+                  "component": "Div",
+                  "props": {
+                    "style": {
+                      "position": "absolute",
+                      "right": 0,
+                      "top": "-40px"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "Component-23",
+                      "component": "Component",
+                      "props": {
+                        "content": "$props.args.optionButton",
+                        "name": "$props.args.name"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       },
       "data": [
@@ -692,13 +975,29 @@
           "id": "Component-0",
           "component": "Component",
           "props": {
+            "classList": ".test{font-size: 30px;}",
             "cardTitle": "工作经历",
             "addTitle": "添加工作经历",
             "removeTitle": "这段工作经历",
             "form": "$workForm",
             "info": "$workInfo",
-            "list": "$resume.works",
+            "itemMapping": "$timeToDate",
+            "submitMapping": "$dateToTime",
             "name": "works",
+            "content": "$detailList"
+          }
+        },
+        {
+          "id": "Component-5",
+          "component": "Component",
+          "props": {
+            "cardTitle": "实习经历",
+            "addTitle": "添加实习经历",
+            "removeTitle": "这段实习经历",
+            "form": "$workForm",
+            "info": "$workInfo",
+            "list": "$resume.practice",
+            "name": "practice",
             "content": "$detailList"
           }
         },
@@ -711,8 +1010,91 @@
             "removeTitle": "这段项目经历",
             "form": "$projectForm",
             "info": "$projectInfo",
-            "list": "$resume.projects",
             "name": "projects",
+            "content": "$detailList"
+          }
+        },
+        {
+          "id": "Component-4",
+          "component": "Component",
+          "props": {
+            "cardTitle": "社会实践",
+            "addTitle": "添加社会实践",
+            "removeTitle": "这段社会实践",
+            "form": "$editSocial",
+            "info": "$social",
+            "list": "$resume.social",
+            "name": "social",
+            "content": "$detailList"
+          }
+        },
+        {
+          "id": "Component-2",
+          "component": "Component",
+          "props": {
+            "cardTitle": "教育经历",
+            "addTitle": "添加教育经历",
+            "removeTitle": "这段教育经历",
+            "form": "$editEducation",
+            "info": "$education",
+            "list": "$resume.education",
+            "name": "education",
+            "content": "$detailList"
+          }
+        },
+        {
+          "id": "Component-5",
+          "component": "Component",
+          "props": {
+            "cardTitle": "培训经历",
+            "addTitle": "添加培训经历",
+            "removeTitle": "这段培训经历",
+            "form": "$editTraining",
+            "info": "$training",
+            "list": "$resume.training",
+            "name": "training",
+            "content": "$detailList"
+          }
+        },
+        {
+          "id": "Component-3",
+          "component": "Component",
+          "props": {
+            "cardTitle": "技能列表",
+            "addTitle": "添加技能",
+            "removeTitle": "该技能",
+            "form": "$editSkill",
+            "info": "$skill",
+            "list": "$resume.skill",
+            "name": "skill",
+            "content": "$detailList"
+          }
+        },
+        {
+          "id": "Component-6",
+          "component": "Component",
+          "props": {
+            "cardTitle": "获奖信息",
+            "addTitle": "添加获奖信息",
+            "removeTitle": "该获奖信息",
+            "form": "$editAwarded",
+            "info": "$awarded",
+            "list": "$resume.awarded",
+            "name": "awarded",
+            "content": "$detailList"
+          }
+        },
+        {
+          "id": "Component-7",
+          "component": "Component",
+          "props": {
+            "cardTitle": "自我评价",
+            "addTitle": "添加自我评价",
+            "removeTitle": "该自我评价",
+            "form": "$editAwarded",
+            "info": "$selfEvaluation",
+            "list": "$resume.selfEvaluation",
+            "name": "selfEvaluation",
             "content": "$detailList"
           }
         }

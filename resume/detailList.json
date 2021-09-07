@@ -131,7 +131,6 @@
               "id": "Mapping-1",
               "component": "Mapping",
               "props": {
-                "resource": "$props.name",
                 "expression": "$mapList"
               },
               "children": [
@@ -144,26 +143,38 @@
                   },
                   "children": [
                     {
-                      "id": "Rename-5",
-                      "component": "Rename",
+                      "id": "Mapping-5",
+                      "component": "Mapping",
                       "props": {
                         "resource": "$item",
-                        "name": "$detailItem"
+                        "expression": "$props.itemMapping"
                       },
                       "children": [
                         {
-                          "id": "Component-4",
-                          "component": "Component",
+                          "id": "Rename-5",
+                          "component": "Rename",
                           "props": {
-                            "content": "$editInfo",
-                            "info": "$props.info",
-                            "edit": "$form",
-                            "args": {
-                              "optionButton": "$options",
-                              "name": "$props.name",
-                              "form": "$props.form"
+                            "resource": "$item",
+                            "name": "$detailItem"
+                          },
+                          "children": [
+                            {
+                              "id": "Component-4",
+                              "component": "Component",
+                              "props": {
+                                "content": "$editInfo",
+                                "info": "$props.info",
+                                "edit": "$form",
+                                "args": {
+                                  "optionButton": "$options",
+                                  "name": "$props.name",
+                                  "form": "$props.form",
+                                  "itemMapping": "$props.itemMapping",
+                                  "submitMapping": "$props.submitMapping"
+                                }
+                              }
                             }
-                          }
+                          ]
                         }
                       ]
                     }
@@ -178,8 +189,8 @@
   },
   "functions": {
     "$mapList": "return variable.$resume[variable.$props.name]",
-    "$addWork": "const current = variable.$resume[variable.$props.name].slice(0);current.push(args[0]);functions.$saveResume({[variable.$props.name]:current});",
-    "$editDetail": "const current = variable.$resume[variable.$props.args.name].slice(0);current.splice(variable.$index,1,Object.assign({},variable[variable.$props.args.name],args[0]));functions.$saveResume({[variable.$props.args.name]:current});functions.$changeInfoState();",
+    "$addDetail": "const current = variable.$resume[variable.$props.name].slice(0);current.push(variable.$props.submitMapping(args[0]));functions.$saveResume({[variable.$props.name]:current});",
+    "$editDetail": "const current = variable.$resume[variable.$props.args.name].slice(0);current.splice(variable.$index,1,Object.assign({},variable[variable.$props.args.name],variable.$props.args.submitMapping(args[0])));functions.$saveResume({[variable.$props.args.name]:current});functions.$changeInfoState();",
     "$delDetailWork": "const current = variable.$resume[variable.$props.name].slice(0);current.splice(variable.$index,1);functions.$saveResume({[variable.$props.name]:current});",
     "$delDetailConfirm": "functions.$delConfirm(variable.$outerProps.removeTitle,functions.$delDetailWork)"
   },
@@ -199,7 +210,7 @@
             "title": "$outerProps.addTitle",
             "form": "$outerProps.form",
             "data": {},
-            "onSubmit": "$addWork",
+            "onSubmit": "$addDetail",
             "content": "$addForm"
           },
           "children": [
@@ -219,7 +230,9 @@
                     "info": "$outerProps.info",
                     "form": "$outerProps.form",
                     "content": "$list",
-                    "name": "$outerProps.name"
+                    "name": "$outerProps.name",
+                    "itemMapping": "$outerProps.itemMapping",
+                    "submitMapping": "$outerProps.submitMapping"
                   }
                 }
               ]
