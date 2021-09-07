@@ -2,6 +2,7 @@ import React, {useEffect, isValidElement} from 'react';
 import {useGlobalContext, Provider} from './context';
 import Render from './index';
 import get from 'lodash/get';
+import uniqueId from 'lodash/uniqueId';
 import isPlainObject from 'lodash/isPlainObject';
 import omit from 'lodash/omit';
 
@@ -123,8 +124,20 @@ export const applyVariable = (WrappedComponent) => {
         const newProps = transformProps(props);
 
         useEffect(() => {
+            // 添加样式
+            const uuid = uniqueId();
+            console.log('classNames>>>>>',newProps);
+            if(newProps['classList']){
+                const style = document.createElement('style');
+                style.innerHTML = newProps['classList']; //".test{font-size: 17px;}";
+                style.setAttribute('id', uuid);
+                document.head.appendChild(style);
+            }
+
             emitter && emitter.emit('component-appended', currentVariable.$id);
             return () => {
+                const styleElement = document.getElementById(uuid);
+                styleElement && document.head.removeChild(styleElement);
                 emitter && emitter.emit('component-removed', currentVariable.$id);
             };
         }, [emitter]);
