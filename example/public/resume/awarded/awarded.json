@@ -32,7 +32,7 @@
                   "component": "Div",
                   "children": [
                     {
-                      "id": "Text-2",
+                      "id": "Text-230",
                       "component": "Text",
                       "props": {
                         "content": "$detailItem.name"

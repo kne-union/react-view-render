@@ -1,6 +1,6 @@
 {
   "components": {
-    "$editInfo": "/react-view-render/resume/editInfo.json",
+    "$editInfo": "/react-view-render/resumeComparison/new/editInfo.json",
     "$addForm": "/react-view-render/resume/addForm.json",
     "$resumeCard": "/react-view-render/resumeComparison/new/detailResumeCard.json",
     "$list": {
@@ -39,8 +39,6 @@
             "component": "Div",
             "props": {
               "style": {
-                "background": "#F8F8F8",
-                "padding": "14px 16px 24px",
                 "marginBottom": "20px"
               }
             },
@@ -62,7 +60,7 @@
                   },
                   {
                     "id": "Row-27",
-                    "component": "Row",
+                    "component": "Row//隐藏了",
                     "props": {
                       "justify": "center",
                       "gutter": [
@@ -166,7 +164,7 @@
                                 "info": "$props.info",
                                 "edit": "$form",
                                 "args": {
-                                  "optionButton_//注释掉": "$options",
+                                  "optionButton": "$options",
                                   "name": "$props.name",
                                   "form": "$props.form",
                                   "itemMapping": "$props.itemMapping",

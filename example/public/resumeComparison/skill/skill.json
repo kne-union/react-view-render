@@ -5,97 +5,87 @@
       "description": "技能list-item",
       "data": [
         {
-          "id": "listItem1",
+          "id": "Space-1",
           "component": "Space",
           "props": {
             "direction": "vertical",
             "style": {
-              "paddingBottom": "10px",
+              "paddingBottom": "44px",
               "position": "relative"
             }
           },
           "children": [
             {
-              "id": "listItem2",
+              "id": "Space-5",
               "component": "Space",
               "props": {
-                "size": 20
+                "direction": "vertical",
+                "size": 32,
+                "style": {
+                  "fontSize": "14px",
+                  "fontWeight": 400,
+                  "color": "#313753"
+                }
               },
               "children": [
                 {
-                  "id": "listItem3",
-                  "component": "Div",
-                  "children": [
-                    {
-                      "id": "Text-16",
-                      "component": "Text",
-                      "props": {
-                        "style": {
-                          "font-weight": "bold"
-                        },
-                        "content": "$detailItem.name"
-                      }
-                    }
-                  ]
+                  "id": "Component-0",
+                  "component": "Component",
+                  "props": {
+                    "value": "$detailItem.name",
+                    "name": "技能名称：",
+                    "content": "$showWorkItem"
+                  }
                 },
                 {
-                  "id": "listItem4",
-                  "component": "Div",
-                  "prop": {}
+                  "id": "Component-0",
+                  "component": "Component",
+                  "props": {
+                    "value": "$detailItem.status",
+                    "name": "技能水平：",
+                    "content": "$showWorkItem"
+                  }
                 },
                 {
-                  "id": "listItem5",
-                  "component": "Div",
-                  "prop": {
+                  "id": "Div-7",
+                  "component": "Space",
+                  "props": {
+                    "direction": "vertical",
+                    "size": 16
                   },
                   "children": [
                     {
-                      "id": "listItem6",
-                      "component": "Text",
-                      "props": {
-                        "content": "$detailItem.status"
-                      }
-                    },
-                    {
-                      "id": "listItem6",
+                      "id": "Text-2",
                       "component": "Text",
                       "props": {
                         "style": {
-                          "margin": "0 10px"
+                          "fontWeight": 400,
+                          "color": "#576B95"
                         },
-                        "content": "|"
+                        "content": "使用时间："
                       }
                     },
                     {
-                      "id": "listItem6",
-                      "component": "Text",
-                      "props": {
-                        "content": "$detailItem.time"
-                      }
+                      "id": "Text-2",
+                      "component": "Div",
+                      "children": [
+                        {
+                          "id": "Text-2",
+                          "component": "Text",
+                          "props": {
+                            "content": "$detailItem.time"
+                          }
+                        },
+                        {
+                          "id": "Text-2",
+                          "component": "Text",
+                          "props": {
+                            "content": "个月"
+                          }
+                        }
+                      ]
                     }
                   ]
-                }
-
-              ]
-            },
-            {
-              "id": "listItem14",
-              "component": "Div",
-              "props": {
-                "style": {
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0
-                }
-              },
-              "children": [
-                {
-                  "id": "Component-23",
-                  "component": "Component",
-                  "props": {
-                    "content": "$props.args.optionButton",
-                    "name": "$props.args.name"
-                  }
                 }
               ]
             }
