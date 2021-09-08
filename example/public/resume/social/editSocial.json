@@ -1,5 +1,5 @@
 {
-  "description": "编辑技能表单",
+  "description": "编辑社会实践表单",
   "components": {
   },
   "data": [
@@ -25,7 +25,8 @@
               "component": "Input",
               "props": {
                 "name": "school",
-                "label": "技能名称",
+                "label": "实践名称：",
+                "placeholder": "请输入",
                 "rule": "REQ"
               }
             }
@@ -43,7 +44,8 @@
               "component": "Input",
               "props": {
                 "name": "major",
-                "label": "技能水平",
+                "label": "活动职位：",
+                "placeholder": "请输入",
                 "rule": "REQ"
               }
             }
@@ -70,11 +72,12 @@
           "children": [
             {
               "id": "DateRangePicker-11",
-              "component": "DatePicker",
+              "component": "DateRangePicker",
               "props": {
                 "name": "date",
-                "label": "使用时间",
+                "label": "实践时间范围：",
                 "rule": "REQ",
+                "interceptor": "string-date-range",
                 "className": "with100",
                 "classList": ".with100 .ant-picker{width:100%}"
               }
@@ -85,10 +88,20 @@
           "id": "Col-9",
           "component": "Col",
           "props": {
-            "span": 12
+            "span": 24
           },
           "children": [
-
+            {
+              "id": "TextArea-17",
+              "component": "TextArea",
+              "props": {
+                "name": "des",
+                "label": "实践描述：",
+                "showCount":true,
+                "maxLength":300,
+                "placeholder": "请输入"
+              }
+            }
           ]
         }
       ]

@@ -1,4 +1,16 @@
 {
+  "variable": {
+    "$twoList":[
+      {
+        "label": "是",
+        "value": 1
+      },
+      {
+        "label": "否",
+        "value": 0
+      }
+    ]
+  },
   "functions": {
     "$timeToDate": "const output = Object.assign({},args[0]);if(args[0].startTime&&args[0].endTime){output.time=[args[0].startTime,args[0].endTime]};delete output['startTime'];delete output['endTime'];return output;",
     "$dateToTime": "const output = Object.assign({},args[0]);if(Array.isArray(args[0].time)&&args[0].time.length===2){output.startTime=args[0].time[0];output.endTime=args[0].time[1];}delete output['time'];return output;"
@@ -43,7 +55,8 @@
                       "component": "Input",
                       "props": {
                         "name": "company",
-                        "label": "公司名称",
+                        "label": "公司名称：",
+                        "placeholder":"请输入",
                         "rule": "REQ"
                       }
                     }
@@ -61,8 +74,9 @@
                       "component": "Input",
                       "props": {
                         "name": "position",
-                        "label": "职位",
-                        "rule": "REQ"
+                        "label": "职位：",
+                        "rule": "REQ",
+                        "placeholder":"请输入"
                       }
                     }
                   ]
@@ -80,10 +94,28 @@
               },
               "children": [
                 {
-                  "id": "Col-12",
+                  "id": "Col-10",
                   "component": "Col",
                   "props": {
-                    "span": 24
+                    "span": 12
+                  },
+                  "children": [
+                    {
+                      "id": "Input-131",
+                      "component": "Input",
+                      "props": {
+                        "name": "department",
+                        "label": "所属部门：",
+                        "placeholder":"请输入"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "Col-121",
+                  "component": "Col",
+                  "props": {
+                    "span": 12
                   },
                   "children": [
                     {
@@ -91,8 +123,210 @@
                       "component": "DateRangePicker",
                       "props": {
                         "name": "time",
-                        "label": "时间",
-                        "interceptor": "string-date-range"
+                        "label": "在职时间：",
+                        "interceptor": "string-date-range",
+                        "classList":".ant-picker-range{width:100%}"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "Row-14",
+              "component": "Row",
+              "props": {
+                "gutter": [
+                  40,
+                  0
+                ]
+              },
+              "children": [
+                {
+                  "id": "Col-10",
+                  "component": "Col",
+                  "props": {
+                    "span": 12
+                  },
+                  "children": [
+                    {
+                      "id": "Select-131",
+                      "component": "Select",
+                      "props": {
+                        "name": "overseasExperience",
+                        "label": "是否有海外经历：",
+                        "options": "$twoList",
+                        "placeholder":"请选择"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "Col-121",
+                  "component": "Col",
+                  "props": {
+                    "span": 12
+                  },
+                  "children": [
+                    {
+                      "id": "Input-121",
+                      "component": "Input",
+                      "props": {
+                        "name": "overseasCountry",
+                        "label": "海外经历国家：",
+                        "placeholder":"请输入"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "Row-14",
+              "component": "Row",
+              "props": {
+                "gutter": [
+                  40,
+                  0
+                ]
+              },
+              "children": [
+                {
+                  "id": "Col-10",
+                  "component": "Col",
+                  "props": {
+                    "span": 12
+                  },
+                  "children": [
+                    {
+                      "id": "Space-120",
+                      "component": "Space",
+                      "props": {
+                        "direction": "vertical",
+                        "style":{
+                          "width":"100%"
+                        }
+                      },
+                      "children":[
+                        {
+                          "id":"div-3743",
+                          "component":"Div",
+                          "props": {
+                            "style": {
+                              "color":"#576B95",
+                              "fontWeight":"500"
+                            }
+                          },
+                          "children":"薪资范围："
+                        },
+                        {
+                          "id": "Row-131",
+                          "component": "Row",
+                          "children":[
+                              {
+                                "id":"Input-726",
+                                "component":"Input",
+                                "props":{
+                                  "style":{
+                                    "borderRight": 0,
+                                    "borderRadius": 0
+                                  },
+                                  "name":"salaryMin",
+                                  "placeholder":"薪资下限"
+                                }
+                              },
+                              {
+                                "id":"Input-646",
+                                "component":"Input",
+                                "props":{
+                                  "style":{
+                                    "width": 40,
+                                    "borderLeft": 0,
+                                    "borderRight": 0,
+                                    "borderRadius": 0,
+                                    "pointerEvents": "none"
+                                  },
+                                  "placeholder":"→"
+                                }
+                              },
+                              {
+                                "id":"Input-826",
+                                "component":"Input",
+                                "props":{
+                                  "style":{
+                                    "borderLeft": 0,
+                                    "borderRadius": 0
+                                  },
+                                  "name":"salaryMax",
+                                  "placeholder":"薪资上限"
+                                }
+                              }
+                            ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "Row-51",
+              "component": "Row",
+              "props": {
+                "gutter": [
+                  40,
+                  0
+                ]
+              },
+              "children": [
+                {
+                  "id": "Col-26",
+                  "component": "Col",
+                  "props": {
+                    "span": 24
+                  },
+                  "children": [
+                    {
+                      "id": "TextArea-130",
+                      "component": "TextArea",
+                      "props": {
+                        "name": "reasonsForLeaving",
+                        "label": "离职原因：",
+                        "showCount":true,
+                        "maxLength":300,
+                        "placeholder":"请输入"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "Row-31",
+              "component": "Row",
+              "props": {
+                "gutter": [
+                  40,
+                  0
+                ]
+              },
+              "children": [
+                {
+                  "id": "Col-216",
+                  "component": "Col",
+                  "props": {
+                    "span": 24
+                  },
+                  "children": [
+                    {
+                      "id": "TextArea-110",
+                      "component": "TextArea",
+                      "props": {
+                        "name": "workDes",
+                        "label": "工作描述：",
+                        "showCount":true,
+                        "maxLength":300,
+                        "placeholder":"请输入"
                       }
                     }
                   ]
@@ -121,7 +355,10 @@
                       "component": "TextArea",
                       "props": {
                         "name": "duty",
-                        "label": "工作职责"
+                        "label": "工作职责：",
+                        "showCount":true,
+                        "maxLength":300,
+                        "placeholder":"请输入"
                       }
                     }
                   ]
@@ -150,7 +387,10 @@
                       "component": "TextArea",
                       "props": {
                         "name": "result",
-                        "label": "工作成果"
+                        "label": "工作业绩：",
+                        "showCount":true,
+                        "maxLength":300,
+                        "placeholder":"请输入"
                       }
                     }
                   ]
@@ -514,7 +754,8 @@
                       "component": "Input",
                       "props": {
                         "name": "name",
-                        "label": "项目名称",
+                        "label": "项目名称：",
+                        "placeholder": "请输入",
                         "rule": "REQ"
                       }
                     }
@@ -528,12 +769,13 @@
                   },
                   "children": [
                     {
-                      "id": "Input-4",
-                      "component": "Input",
+                      "id": "DateRangePicker-13",
+                      "component": "DateRangePicker",
                       "props": {
-                        "name": "position",
-                        "label": "职位",
-                        "rule": "REQ"
+                        "name": "timeRange",
+                        "label": "项目时间范围：",
+                        "interceptor": "string-date-range",
+                        "classList":".ant-picker-range{width:100%}"
                       }
                     }
                   ]
@@ -557,6 +799,16 @@
                     "span": 12
                   },
                   "children": [
+                    {
+                      "id": "Input-4",
+                      "component": "Input",
+                      "props": {
+                        "name": "position",
+                        "label": "职位：",
+                        "placeholder": "请输入",
+                        "rule": "REQ"
+                      }
+                    }
                   ]
                 },
                 {
@@ -571,7 +823,8 @@
                       "component": "Input",
                       "props": {
                         "name": "company",
-                        "label": "公司",
+                        "label": "项目所属公司：",
+                        "placeholder": "请输入",
                         "rule": "REQ"
                       }
                     }
@@ -601,7 +854,10 @@
                       "component": "TextArea",
                       "props": {
                         "name": "des",
-                        "label": "项目描述"
+                        "label": "项目描述：",
+                        "showCount":true,
+                        "maxLength":300,
+                        "placeholder": "请输入"
                       }
                     }
                   ]
@@ -630,7 +886,10 @@
                       "component": "TextArea",
                       "props": {
                         "name": "duty",
-                        "label": "项目职责"
+                        "label": "项目职责：",
+                        "showCount":true,
+                        "maxLength":300,
+                        "placeholder": "请输入"
                       }
                     }
                   ]
@@ -659,7 +918,10 @@
                       "component": "TextArea",
                       "props": {
                         "name": "result",
-                        "label": "项目成果"
+                        "label": "项目成果：",
+                        "showCount":true,
+                        "maxLength":300,
+                        "placeholder": "请输入"
                       }
                     }
                   ]
@@ -923,6 +1185,43 @@
             }
           ]
         },
+        "$selfForm": {
+          "data": [
+
+            {
+              "id": "Row-15",
+              "component": "Row",
+              "props": {
+                "gutter": [
+                  40,
+                  0
+                ]
+              },
+              "children": [
+                {
+                  "id": "Col-16",
+                  "component": "Col",
+                  "props": {
+                    "span": 24
+                  },
+                  "children": [
+                    {
+                      "id": "TextArea-17",
+                      "component": "TextArea",
+                      "props": {
+                        "name": "description",
+                        "label": "自我评价：",
+                        "showCount":true,
+                        "maxLength":300,
+                        "placeholder": "请输入"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
         "$selfEvaluation": {
           "data": [
             {
@@ -1091,7 +1390,7 @@
             "cardTitle": "自我评价",
             "addTitle": "添加自我评价",
             "removeTitle": "该自我评价",
-            "form": "$editAwarded",
+            "form": "$selfForm",
             "info": "$selfEvaluation",
             "list": "$resume.selfEvaluation",
             "name": "selfEvaluation",
