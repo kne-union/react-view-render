@@ -36,7 +36,8 @@ const components = {
     Rename: loadable(() => import('./Logic/Rename')),
     Modal: loadable(() => import('./General/Modal')),
     Icon: loadable(() => import('./General/Icon')),
-    FormModal: loadable(() => import('./Form/FormModal'))
+    FormModal: loadable(() => import('./Form/FormModal')),
+    LoadMore: loadable(() => import('./Logic/LoadMore'))
 };
 
 export default components;
