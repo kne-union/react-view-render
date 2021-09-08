@@ -126,10 +126,9 @@ export const applyVariable = (WrappedComponent) => {
         useEffect(() => {
             // 添加样式
             const uuid = uniqueId();
-            console.log('classNames>>>>>',newProps);
             if(newProps['classList']){
                 const style = document.createElement('style');
-                style.innerHTML = newProps['classList']; //".test{font-size: 17px;}";
+                style.innerHTML = newProps['classList'];
                 style.setAttribute('id', uuid);
                 document.head.appendChild(style);
             }

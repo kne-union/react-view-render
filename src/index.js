@@ -6,6 +6,7 @@ import ErrorBoundary from '@kne/react-error-boundary';
 import classnames from 'classnames';
 import axios from 'axios';
 import get from 'lodash/get';
+import './index.scss';
 
 const currentComponents = Object.assign({}, components);
 
