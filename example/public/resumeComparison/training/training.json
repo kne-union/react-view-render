@@ -19,219 +19,110 @@
               "id": "Space-5",
               "component": "Space",
               "props": {
+                "direction": "vertical",
                 "size": 32,
                 "style": {
-                  "fontSize": "16px",
-                  "fontWeight": 500,
+                  "fontSize": "14px",
+                  "fontWeight": 400,
                   "color": "#313753"
                 }
               },
               "children": [
                 {
+                  "id": "Component-0",
+                  "component": "Component",
+                  "props": {
+                    "value": "$detailItem.name",
+                    "name": "培训名称：",
+                    "content": "$showWorkItem"
+                  }
+                },
+                {
+                  "id": "Component-0",
+                  "component": "Component",
+                  "props": {
+                    "value": "$detailItem.org",
+                    "name": "培训机构：",
+                    "content": "$showWorkItem"
+                  }
+                },
+                {
                   "id": "Div-7",
-                  "component": "Div",
+                  "component": "Space",
+                  "props": {
+                    "direction": "vertical",
+                    "size": 16
+                  },
                   "children": [
                     {
                       "id": "Text-2",
                       "component": "Text",
                       "props": {
-                        "content": "$detailItem.name"
-                      }
-                    }
-                  ]
-                },
-                {
-                  "id": "Div-8",
-                  "component": "Div",
-                  "children": [
-                    {
-                      "id": "Text-9",
-                      "component": "Text",
-                      "props": {
-                        "content": "$detailItem.org"
-                      }
-                    }
-                  ]
-                },
-                {
-                  "id": "Div-10",
-                  "component": "Div",
-                  "children": [
-                    {
-                      "id": "Text-11",
-                      "component": "Text",
-                      "props": {
                         "style": {
-                          "fontWeight": "normal",
-                          "fontSize": "14px"
+                          "fontWeight": 400,
+                          "color": "#576B95"
                         },
-                        "content": "$detailItem.startTime"
+                        "content": "培训时间："
                       }
                     },
                     {
-                      "id": "Text-12",
-                      "component": "Text",
-                      "props": {
-                        "style": {
+                      "id": "Text-2",
+                      "component": "Div",
+                      "children": [
+                        {
+                          "id": "Text-2",
+                          "component": "Text",
+                          "props": {
+                            "content": "$detailItem.time[0]"
+                          }
                         },
-                        "content": "-"
-                      }
-                    },
-                    {
-                      "id": "Text-13",
-                      "component": "Text",
-                      "props": {
-                        "style": {
-                          "fontWeight": "normal",
-                          "fontSize": "14px"
+                        {
+                          "id": "Text-2",
+                          "component": "Text",
+                          "props": {
+                            "content": "→",
+                            "style": {
+                              "color": "#9E9EA7",
+                              "margin": "0 14px"
+                            }
+                          }
                         },
-                        "content": "$detailItem.startTime"
-                      }
-                    }
-                  ]
-                }
-               ]
-            },
-            {
-              "id": "Space-14",
-              "component": "Space",
-              "props": {
-                "direction": "vertical",
-                "style": {
-                  "margin": "6px 0"
-                }
-              },
-              "children": [
-                {
-                  "id": "Div-15",
-                  "component": "Div",
-                  "children": [
-                    {
-                      "id": "Text-16",
-                      "component": "Text",
-                      "props": {
-                        "content": "所获证书"
-                      }
+                        {
+                          "id": "Text-2",
+                          "component": "Text",
+                          "props": {
+                            "content": "$detailItem.time[1]"
+                          }
+                        }
+                      ]
                     }
                   ]
                 },
                 {
-                  "id": "Div-17",
-                  "component": "Div",
-                  "children": [
-                    {
-                      "id": "Text-18",
-                      "component": "Text",
-                      "props": {
-                        "style": {
-                          "color": "#6E6D7B"
-                        },
-                        "content": "$detailItem.certificate"
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "id": "Space-141",
-              "component": "Space",
-              "props": {
-                "direction": "vertical",
-                "style": {
-                  "margin": "6px 0"
-                }
-              },
-              "children": [
-                {
-                  "id": "Div-151",
-                  "component": "Div",
-                  "children": [
-                    {
-                      "id": "Text-161",
-                      "component": "Text",
-                      "props": {
-                        "content": "培训课程"
-                      }
-                    }
-                  ]
-                },
-                {
-                  "id": "Div-171",
-                  "component": "Div",
-                  "children": [
-                    {
-                      "id": "Text-181",
-                      "component": "Text",
-                      "props": {
-                        "style": {
-                          "color": "#6E6D7B"
-                        },
-                        "content": "$detailItem.course"
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "id": "Space-142",
-              "component": "Space",
-              "props": {
-                "direction": "vertical",
-                "style": {
-                  "margin": "6px 0"
-                }
-              },
-              "children": [
-                {
-                  "id": "Div-152",
-                  "component": "Div",
-                  "children": [
-                    {
-                      "id": "Text-162",
-                      "component": "Text",
-                      "props": {
-                        "content": "培训描述"
-                      }
-                    }
-                  ]
-                },
-                {
-                  "id": "Div-172",
-                  "component": "Div",
-                  "children": [
-                    {
-                      "id": "Text-182",
-                      "component": "Text",
-                      "props": {
-                        "style": {
-                          "color": "#6E6D7B"
-                        },
-                        "content": "$detailItem.description"
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "id": "Div-24",
-              "component": "Div",
-              "props": {
-                "style": {
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0
-                }
-              },
-              "children": [
-                {
-                  "id": "Component-23",
+                  "id": "Component-1",
                   "component": "Component",
                   "props": {
-                    "content": "$props.args.optionButton",
-                    "name": "$props.args.name"
+                    "value": "$detailItem.certificate",
+                    "name": "所获证书：",
+                    "content": "$showWorkItem"
+                  }
+                },
+                {
+                  "id": "Component-1",
+                  "component": "Component",
+                  "props": {
+                    "value": "$detailItem.course",
+                    "name": "培训课程：",
+                    "content": "$showWorkItem"
+                  }
+                },
+                {
+                  "id": "Component-1",
+                  "component": "Component",
+                  "props": {
+                    "value": "$detailItem.description",
+                    "name": "培训描述：",
+                    "content": "$showWorkItem"
                   }
                 }
               ]

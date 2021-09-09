@@ -25,7 +25,8 @@
               "component": "Input",
               "props": {
                 "name": "school",
-                "label": "技能名称",
+                "label": "奖励名称：",
+                "placeholder": "请输入",
                 "rule": "REQ"
               }
             }
@@ -43,7 +44,8 @@
               "component": "Input",
               "props": {
                 "name": "major",
-                "label": "技能水平",
+                "label": "奖励颁发机构：",
+                "placeholder": "请输入",
                 "rule": "REQ"
               }
             }
@@ -73,7 +75,7 @@
               "component": "DatePicker",
               "props": {
                 "name": "date",
-                "label": "使用时间",
+                "label": "奖励颁发时间：",
                 "rule": "REQ",
                 "className": "with100",
                 "classList": ".with100 .ant-picker{width:100%}"
@@ -85,10 +87,20 @@
           "id": "Col-9",
           "component": "Col",
           "props": {
-            "span": 12
+            "span": 24
           },
           "children": [
-
+            {
+              "id": "TextArea-17",
+              "component": "TextArea",
+              "props": {
+                "name": "des",
+                "label": "获奖描述：",
+                "showCount":true,
+                "maxLength":300,
+                "placeholder": "请输入"
+              }
+            }
           ]
         }
       ]

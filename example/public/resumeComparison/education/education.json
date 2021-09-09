@@ -1,170 +1,140 @@
 {
   "description": "教育经历模块",
   "components": {
-    "$part": {
-      "data": [
-        {
-          "id": "Div-1",
-          "component": "Div",
-          "children": [
-            {
-              "id": "Text-2",
-              "component": "Text",
-              "props": {
-                "content": "$props.title"
-              }
-            }
-          ]
-        }
-      ]
-    },
     "$eduInfo": {
       "description": "教育经历list-item",
       "data": [
         {
-          "id": "listItem1",
+          "id": "Space-1",
           "component": "Space",
           "props": {
             "direction": "vertical",
             "style": {
-              "paddingBottom": "10px",
+              "paddingBottom": "44px",
               "position": "relative"
             }
           },
           "children": [
             {
-              "id": "listItem2",
+              "id": "Space-5",
               "component": "Space",
               "props": {
-                "direction": "vertical"
+                "direction": "vertical",
+                "size": 32,
+                "style": {
+                  "fontSize": "14px",
+                  "fontWeight": 400,
+                  "color": "#313753"
+                }
               },
               "children": [
                 {
-                  "id": "listItem3",
-                  "component": "Div",
-                  "children": [
-                    {
-                      "id": "Text-16",
-                      "component": "Text",
-                      "props": {
-                        "content": "$detailItem.school"
-                      }
-                    }
-                  ]
+                  "id": "Component-0",
+                  "component": "Component",
+                  "props": {
+                    "value": "$detailItem.school",
+                    "name": "学校名称：",
+                    "content": "$showWorkItem"
+                  }
                 },
                 {
-                  "id": "listItem4",
-                  "component": "Div",
+                  "id": "Space-5",
+                  "component": "Row",
+                  "props": {
+                  },
                   "children": [
                     {
-                      "id": "listItem5",
-                      "component": "Space",
+                      "id": "Component-1",
+                      "component": "Col",
                       "props": {
-                        "style": {
-                          "color": "#6E6D7B"
-                        }
+                        "span": 12
                       },
                       "children": [
                         {
-                          "id": "listItem6",
+                          "id": "Component-1",
+                          "component": "Component",
+                          "props": {
+                            "value": "$detailItem.degree",
+                            "name": "最高学历：",
+                            "content": "$showWorkItem"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "Component-1",
+                      "component": "Col",
+                      "props": {
+                        "span": 12
+                      },
+                      "children": [
+                        {
+                          "id": "Component-1",
+                          "component": "Component",
+                          "props": {
+                            "value": "$detailItem.major",
+                            "name": "专业名称：",
+                            "content": "$showWorkItem"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+
+                {
+                  "id": "Div-7",
+                  "component": "Space",
+                  "props": {
+                    "direction": "vertical",
+                    "size": 16
+                  },
+                  "children": [
+                    {
+                      "id": "Text-22",
+                      "component": "Text",
+                      "props": {
+                        "style": {
+                          "fontWeight": 400,
+                          "color": "#576B95"
+                        },
+                        "content": "在校时间："
+                      }
+                    },
+                    {
+                      "id": "Text-21",
+                      "component": "Div",
+                      "children": [
+                        {
+                          "id": "Text-23",
                           "component": "Text",
                           "props": {
-                            "content": "$detailItem.degree"
+                            "content": "$detailItem.time[0]"
                           }
                         },
                         {
-                          "id": "listItem10",
+                          "id": "Text-24",
                           "component": "Text",
                           "props": {
-                            "content": "/"
-                          }
-                        },
-                        {
-                          "id": "listItem7",
-                          "component": "Text",
-                          "props": {
-                            "content": "$detailItem.major"
-                          }
-                        },
-                        {
-                          "id": "listItem10",
-                          "component": "Text",
-                          "props": {
-                            "content": "/"
-                          }
-                        },
-                        {
-                          "id": "listItem14",
-                          "component": "Div",
-                          "children": [
-                            {
-                              "id": "listItem9",
-                              "component": "Text",
-                              "props": {
-                                "content": "$detailItem.start"
-                              }
-                            },
-                            {
-                              "id": "listItem12",
-                              "component": "Text",
-                              "props": {
-                                "content": "-"
-                              }
-                            },
-                            {
-                              "id": "listItem13",
-                              "component": "Text",
-                              "props": {
-                                "content": "$detailItem.end"
-                              }
+                            "content": "→",
+                            "style": {
+                              "color": "#9E9EA7",
+                              "margin": "0 14px"
                             }
-                          ]
+                          }
+                        },
+                        {
+                          "id": "Text-29",
+                          "component": "Text",
+                          "props": {
+                            "content": "$detailItem.time[1]"
+                          }
                         }
                       ]
                     }
                   ]
                 }
               ]
-            },
-            {
-              "id": "listItem14",
-              "component": "Div",
-              "props": {
-                "style": {
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0
-                }
-              },
-              "children": [
-                {
-                  "id": "Component-23",
-                  "component": "Component",
-                  "props": {
-                    "content": "$props.args.optionButton",
-                    "name": "$props.args.name"
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "$options": {
-      "data": [
-        {
-          "id": "Space-0",
-          "component": "Space",
-          "children": [
-            {
-              "id": "Button-1",
-              "component": "Button",
-              "props": {
-                "type": "link",
-                "onClick": "$changeEditState"
-              },
-              "children": "编辑"
             }
           ]
         }

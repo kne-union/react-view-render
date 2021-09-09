@@ -23,9 +23,13 @@
           "component": "Button",
           "props": {
             "type": "link",
-            "onClick": "$props.addFunc"
+            "onClick": "$props.addFunc",
+            "style": {
+              "position": "relative",
+              "top": "5px"
+            }
           },
-          "children": "+"
+          "children": "+ 添加"
         }
       ]
     }

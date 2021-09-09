@@ -978,6 +978,7 @@
           "props": {
             "cardTitle": "工作经历",
             "info": "$workInfo",
+            "form": "$workForm",
             "itemMapping": "$timeToDate",
             "submitMapping": "$dateToTime",
             "name": "works",

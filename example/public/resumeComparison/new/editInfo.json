@@ -8,7 +8,7 @@
       "id": "State-0",
       "component": "State",
       "props": {
-        "initValue": true,
+        "initValue": false,
         "setStateName": "$setEditInfoState"
       },
       "children": [
