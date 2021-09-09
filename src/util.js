@@ -1,6 +1,6 @@
-import React, {useEffect, isValidElement} from 'react';
+import React, {useEffect, useRef, isValidElement} from 'react';
 import {useGlobalContext, Provider} from './context';
-import Render from './index';
+import Render from './Render';
 import get from 'lodash/get';
 import uniqueId from 'lodash/uniqueId';
 import isPlainObject from 'lodash/isPlainObject';
@@ -40,6 +40,70 @@ const parseVariable = (value) => {
     };
 };
 
+const createTransformProps = ({functions, components, currentVariable, otherContext}) => {
+    const transformProps = (target) => {
+        if (typeof target === 'string') {
+            const propsValue = target, parsedPropsValue = parseVariable(target);
+            if (currentVariable.hasOwnProperty(propsValue)) {
+                return currentVariable[propsValue];
+            }
+            if (currentVariable.hasOwnProperty(parsedPropsValue.name)) {
+                return get(currentVariable[parsedPropsValue.name], parsedPropsValue.path);
+            }
+            if (functions.hasOwnProperty(propsValue)) {
+                const parseFunction = (funcKey, variable, functions, lib) => {
+                    const func = functions[funcKey];
+                    if (typeof func === 'string') {
+                        return (...args) => {
+                            const newFunction = new Function('args', 'variable', 'functions', 'lib', func);
+                            const others = omit(functions, funcKey), output = {};
+
+                            Object.keys(others).forEach((key) => {
+                                output[key] = parseFunction(key, variable, others, lib);
+                            });
+
+                            return newFunction(args, variable, output, lib);
+                        }
+                    }
+                    if (typeof func === 'function') {
+                        return func;
+                    }
+                    return;
+                };
+
+                return parseFunction(propsValue, currentVariable, functions, otherContext.lib);
+            }
+            if (components.hasOwnProperty(propsValue)) {
+                if (typeof components[propsValue] === "object") {
+                    return <Render id={`${otherContext.id}:${propsValue}`} content={components[propsValue]}
+                                   lib={otherContext.lib}
+                                   emitter={otherContext.emitter}/>;
+                }
+                if (typeof components[propsValue] === "string") {
+                    return <Render id={`${otherContext.id}:${propsValue}`} url={components[propsValue]}
+                                   lib={otherContext.lib}
+                                   emitter={otherContext.emitter} {...otherContext.renderProps}/>;
+                }
+            }
+            return escape(propsValue);
+        }
+        if (isPlainObject(target) && !isValidElement(target)) {
+            const newTarget = {};
+            Object.keys(target).forEach((key) => {
+                newTarget[key] = transformProps(target[key]);
+            });
+            return newTarget;
+        }
+        if (Array.isArray(target)) {
+            return target.map((item) => {
+                return transformProps(item);
+            });
+        }
+        return target;
+    };
+    return transformProps;
+};
+
 export const extractProps = (props = {}) => {
     const output = {
         props: {}, extract: {}
@@ -56,77 +120,20 @@ export const extractProps = (props = {}) => {
 };
 
 export const applyVariable = (WrappedComponent) => {
-    return (originProps) => {
+    const ApplyVariable = ({$taskId, ...originProps}) => {
         const {variable, functions, components, ...otherContext} = useGlobalContext();
         const {emitter} = otherContext;
         const {props, extract} = extractProps(originProps);
         const currentVariable = Object.assign({}, variable, extract);
 
-        const transformProps = (target) => {
-            if (typeof target === 'string') {
-                const propsValue = target, parsedPropsValue = parseVariable(target);
-                if (currentVariable.hasOwnProperty(propsValue)) {
-                    return currentVariable[propsValue];
-                }
-                if (currentVariable.hasOwnProperty(parsedPropsValue.name)) {
-                    return get(currentVariable[parsedPropsValue.name], parsedPropsValue.path);
-                }
-                if (functions.hasOwnProperty(propsValue)) {
-                    const parseFunction = (funcKey, variable, functions, lib) => {
-                        const func = functions[funcKey];
-                        if (typeof func === 'string') {
-                            return (...args) => {
-                                const newFunction = new Function('args', 'variable', 'functions', 'lib', func);
-                                const others = omit(functions, funcKey), output = {};
-
-                                Object.keys(others).forEach((key) => {
-                                    output[key] = parseFunction(key, variable, others, lib);
-                                });
-
-                                return newFunction(args, variable, output, lib);
-                            }
-                        }
-                        if (typeof func === 'function') {
-                            return func;
-                        }
-                        return;
-                    };
-
-                    return parseFunction(propsValue,currentVariable,functions,otherContext.lib);
-                }
-                if (components.hasOwnProperty(propsValue)) {
-                    if (typeof components[propsValue] === "object") {
-                        return <Render content={components[propsValue]} lib={otherContext.lib}
-                                       emitter={otherContext.emitter}/>;
-                    }
-                    if (typeof components[propsValue] === "string") {
-                        return <Render url={components[propsValue]} lib={otherContext.lib}
-                                       emitter={otherContext.emitter} {...otherContext.renderProps}/>;
-                    }
-                }
-                return escape(propsValue);
-            }
-            if (isPlainObject(target) && !isValidElement(target)) {
-                const newTarget = {};
-                Object.keys(target).forEach((key) => {
-                    newTarget[key] = transformProps(target[key]);
-                });
-                return newTarget;
-            }
-            if (Array.isArray(target)) {
-                return target.map((item) => {
-                    return transformProps(item);
-                });
-            }
-            return target;
-        };
+        const transformProps = createTransformProps({functions, components, currentVariable, otherContext});
 
         const newProps = transformProps(props);
 
         useEffect(() => {
             // 添加样式
             const uuid = uniqueId();
-            if(newProps['classList']){
+            if (newProps['classList']) {
                 const style = document.createElement('style');
                 style.innerHTML = newProps['classList'];
                 style.setAttribute('id', uuid);
@@ -140,6 +147,14 @@ export const applyVariable = (WrappedComponent) => {
                 emitter && emitter.emit('component-removed', currentVariable.$id);
             };
         }, [emitter]);
+
+        const componentIdRef = useRef({});
+        componentIdRef.current = $taskId;
+        useEffect(() => {
+            if (otherContext.renderProps.rootIsMount && componentIdRef.current) {
+                otherContext.renderProps.renderEvent.emit('complete-render-task', componentIdRef.current);
+            }
+        }, [otherContext.renderProps.renderEvent, otherContext.renderProps.rootIsMount]);
         if (Object.keys(extract).length > 0) {
             return <Provider
                 value={Object.assign({}, otherContext, {functions, components, variable: currentVariable})}>
@@ -148,4 +163,5 @@ export const applyVariable = (WrappedComponent) => {
         }
         return <WrappedComponent {...newProps}/>;
     };
+    return ApplyVariable;
 };
