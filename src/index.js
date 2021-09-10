@@ -2,6 +2,7 @@ import React, {useEffect, useState, useRef} from 'react';
 import Render from './Render';
 import useEvent from './useEvent';
 import reactDom from 'react-dom';
+import once from 'lodash/once';
 import './index.scss';
 
 
@@ -10,6 +11,9 @@ const RenderRoot = ({onInitComplete, ...props}) => {
     const renderEvent = useEvent();
     useEffect(() => {
         let taskList = [];
+        const complete = once(() => {
+            onInitComplete && onInitComplete();
+        });
         const sub = renderEvent.addListener('add-render-task', (path) => {
             if (taskList.indexOf(path) === -1) {
                 taskList.push(path);
@@ -21,7 +25,7 @@ const RenderRoot = ({onInitComplete, ...props}) => {
                 taskList.splice(index, 1);
             }
             if (taskList.length === 0) {
-                onInitComplete && onInitComplete();
+                complete();
             }
         });
         setRootIsMount(true);
@@ -42,18 +46,21 @@ export const renderToString = async (props) => {
             onInitComplete(ref.current.innerHTML);
         }}/></div>;
     };
-    return new Promise((resolve) => {
-        const root = document.createElement('div');
-        root.style.display = 'none';
-        document.body.appendChild(root);
+    const root = document.createElement('div');
+    root.style.display = 'none';
+    document.body.appendChild(root);
+    const output = new Promise((resolve) => {
         reactDom.render(<RenderView {...props} onInitComplete={(html) => {
-            document.body.removeChild(root);
             resolve(html);
         }}/>, root);
     });
+    output.then((html) => {
+        document.body.removeChild(root);
+        return html;
+    });
+    return output;
 };
 
 export {applyVariable} from './util';
 export {default as profile, profileMap} from './profile';
 export {default as preset} from './preset';
-
