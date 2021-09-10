@@ -1276,6 +1276,7 @@
           "props": {
             "classList": ".test{font-size: 30px;}",
             "cardTitle": "工作经历",
+            "cardTitleIcon": "icona-gongzuojinglixiangmujingli",
             "addTitle": "添加工作经历",
             "removeTitle": "这段工作经历",
             "form": "$workForm",
@@ -1291,6 +1292,7 @@
           "component": "Component",
           "props": {
             "cardTitle": "实习经历",
+            "cardTitleIcon": "icona-gongzuojinglixiangmujingli",
             "addTitle": "添加实习经历",
             "removeTitle": "这段实习经历",
             "form": "$workForm",
@@ -1305,6 +1307,7 @@
           "component": "Component",
           "props": {
             "cardTitle": "项目经历",
+            "cardTitleIcon": "icona-gongzuojinglixiangmujingli",
             "addTitle": "添加项目经历",
             "removeTitle": "这段项目经历",
             "form": "$projectForm",
@@ -1318,6 +1321,7 @@
           "component": "Component",
           "props": {
             "cardTitle": "社会实践",
+            "cardTitleIcon": "iconshehuishijian",
             "addTitle": "添加社会实践",
             "removeTitle": "这段社会实践",
             "form": "$editSocial",
@@ -1332,6 +1336,7 @@
           "component": "Component",
           "props": {
             "cardTitle": "教育经历",
+            "cardTitleIcon": "iconjiaoyujingli1",
             "addTitle": "添加教育经历",
             "removeTitle": "这段教育经历",
             "form": "$editEducation",
@@ -1346,6 +1351,7 @@
           "component": "Component",
           "props": {
             "cardTitle": "培训经历",
+            "cardTitleIcon": "icona-gongzuojinglixiangmujingli",
             "addTitle": "添加培训经历",
             "removeTitle": "这段培训经历",
             "form": "$editTraining",
@@ -1360,6 +1366,7 @@
           "component": "Component",
           "props": {
             "cardTitle": "技能列表",
+            "cardTitleIcon": "iconjinengliebiao",
             "addTitle": "添加技能",
             "removeTitle": "该技能",
             "form": "$editSkill",
@@ -1374,6 +1381,7 @@
           "component": "Component",
           "props": {
             "cardTitle": "获奖信息",
+            "cardTitleIcon": "iconhuojiangxinxi",
             "addTitle": "添加获奖信息",
             "removeTitle": "该获奖信息",
             "form": "$editAwarded",
@@ -1388,6 +1396,7 @@
           "component": "Component",
           "props": {
             "cardTitle": "自我评价",
+            "cardTitleIcon": "iconziwopingjia",
             "addTitle": "添加自我评价",
             "removeTitle": "该自我评价",
             "form": "$selfForm",
