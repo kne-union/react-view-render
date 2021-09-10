@@ -1,9 +1,23 @@
-import ViewRender from '@kne/react-view-render';
+import ViewRender, {preset} from '@kne/react-view-render';
 import {message, Modal} from 'antd';
 import {ConfigProvider} from 'antd';
 import {interceptors} from '@kne/react-form-antd';
 import zhCN from 'antd/lib/locale/zh_CN';
 import moment from 'moment';
+
+const Hello = () => {
+    return "Hello";
+};
+
+preset.components([
+    {
+        component: Hello,
+        profile: {
+            id: "Hello"
+        }
+    }
+]);
+
 
 interceptors.input.use('string-date-range', (value) => {
     const output = [];
@@ -30,7 +44,7 @@ const App = () => {
             modal: {
                 confirm: Modal.confirm
             }
-        }} url="/react-view-render/resume/index.json"/>
+        }} url="/react-view-render/test.json"/>
     </ConfigProvider>;
 };
 

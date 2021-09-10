@@ -37,7 +37,15 @@ const components = {
     Modal: loadable(() => import('./General/Modal')),
     Icon: loadable(() => import('./General/Icon')),
     FormModal: loadable(() => import('./Form/FormModal')),
-    LoadMore: loadable(() => import('./Logic/LoadMore'))
+    LoadMore: loadable(() => import('./Logic/LoadMore')),
+    Tooltip: loadable(() => import('./General/Tooltip')),
+    Affix: loadable(() => import('./General/Affix')),
+    Alert: loadable(() => import('./General/Alert')),
+    Drawer: loadable(() => import('./General/Drawer')),
+    Popconfirm: loadable(() => import('./General/Popconfirm')),
+    Progress: loadable(() => import('./General/Progress')),
+    Spin: loadable(() => import('./General/Spin')),
+    Steps: loadable(() => import('./General/Steps'))
 };
 
 export default components;
