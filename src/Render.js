@@ -4,8 +4,9 @@ import {Provider, useGlobalContext} from './context';
 import {currentComponents} from './preset';
 import ErrorBoundary from '@kne/react-error-boundary';
 import classnames from 'classnames';
-import axios from 'axios';
+import {fetchRemote as resetFetchRemote} from './preset';
 import get from 'lodash/get';
+import merge from 'lodash/merge';
 
 const ErrorMsg = ({error}) => {
     useEffect(() => {
@@ -28,7 +29,7 @@ const withRemote = (WrappedComponent) => {
                 };
                 setIsLoading(true);
                 if (!componentCache[url]) {
-                    componentCache[url] = (fetchRemote || axios.get)(url);
+                    componentCache[url] = (fetchRemote || resetFetchRemote)(url);
                 }
                 componentCache[url].then((res) => {
                     let content = res.data;
@@ -53,14 +54,14 @@ const withRemote = (WrappedComponent) => {
             }
         }, [rootIsMount]);
 
-        if (content) {
+        if (!url && content) {
             return <WrappedComponent {...props} content={content}/>
         }
 
         if (isLoading) {
             return fallback;
         }
-        return <WrappedComponent {...props} content={requestData} fetchRemote={fetchRemote} fallback={fallback}/>;
+        return <WrappedComponent {...props} content={merge({}, requestData, content)} fetchRemote={fetchRemote} fallback={fallback}/>;
     };
 };
 
