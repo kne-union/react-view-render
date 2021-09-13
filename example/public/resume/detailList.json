@@ -5,6 +5,36 @@
     "$resumeCard": "/react-view-render/resume/detailResumeCard.json",
     "$list": {
       "components": {
+        "$editIcon":{
+          "data":[
+            {
+              "id":"Icon-1",
+              "component":"Icon",
+              "props":{
+                "type":"icontouxiang-xiugai",
+                "style":{
+                  "fontSize":"15px",
+                  "marginRight":"6px"
+                }
+              }
+            }
+          ]
+        },
+        "$deleteIcon":{
+          "data":[
+            {
+              "id":"Icon-2",
+              "component":"Icon",
+              "props":{
+                "type":"iconshanchu",
+                "style":{
+                  "fontSize":"15px",
+                  "marginRight":"6px"
+                }
+              }
+            }
+          ]
+        },
         "$options": {
           "data": [
             {
@@ -16,6 +46,7 @@
                   "component": "Button",
                   "props": {
                     "type": "link",
+                    "icon": "$editIcon",
                     "onClick": "$changeEditState"
                   },
                   "children": "编辑"
@@ -25,6 +56,7 @@
                   "component": "Button",
                   "props": {
                     "type": "link",
+                    "icon": "$deleteIcon",
                     "onClick": "$delDetailConfirm"
                   },
                   "children": "删除"
@@ -220,6 +252,7 @@
               "props": {
                 "content": "$resumeCard",
                 "title": "$outerProps.cardTitle",
+                "cardTitleIcon": "$outerProps.cardTitleIcon",
                 "addFunc": "$showAddForm"
               },
               "children": [

@@ -19,6 +19,17 @@
                   "component": "Div",
                   "children": [
                     {
+                      "id":"Icon-1",
+                      "component":"Icon",
+                      "props":{
+                        "type":"$props.titleIcon",
+                        "style":{
+                          "fontSize":"15px",
+                          "marginRight":"6px"
+                        }
+                      }
+                    },
+                    {
                       "id": "Text-2",
                       "component": "Text",
                       "props": {
@@ -77,6 +88,7 @@
               "component": "Component",
               "props": {
                 "content": "$part",
+                "titleIcon":"iconliangdian",
                 "title": "亮点",
                 "resource": "$resume.analysis.good"
               }
@@ -86,6 +98,7 @@
               "component": "Component",
               "props": {
                 "content": "$part",
+                "titleIcon": "iconfengxian",
                 "title": "风险点",
                 "resource": "$resume.analysis.bad"
               }
