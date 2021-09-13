@@ -1,6 +1,6 @@
+import React, {useRef} from 'react';
 import ViewRender, {preset} from '@kne/react-view-render';
-import {message, Modal} from 'antd';
-import {ConfigProvider} from 'antd';
+import {ConfigProvider, Button} from 'antd';
 import {interceptors} from '@kne/react-form-antd';
 import zhCN from 'antd/lib/locale/zh_CN';
 import moment from 'moment';
@@ -38,13 +38,20 @@ interceptors.output.use('string-date-range', (value) => {
 });
 
 const App = () => {
+    const formContext = useRef(null);
     return <ConfigProvider autoInsertSpaceInButton={false} locale={zhCN}>
-        <ViewRender lib={{
-            message,
-            modal: {
-                confirm: Modal.confirm
+        <ViewRender url="/react-view-render/example.json" content={{
+            functions: {
+                $getFormContext: (context) => {
+                    formContext.current = context;
+                }
             }
-        }} url="/react-view-render/test.json"/>
+        }}/>
+        <Button onClick={()=>{
+            if(formContext.current){
+                formContext.current.emitter.emit('form-submit');
+            }
+        }}>提交</Button>
     </ConfigProvider>;
 };
 

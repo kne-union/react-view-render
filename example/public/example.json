@@ -389,7 +389,8 @@
     ]
   },
   "functions": {
-    "$submit": "console.log(args[0]);"
+    "$submit": "console.log(args[0]);",
+    "$setFormContext": "functions.$getFormContext(variable.$formContext);"
   },
   "data": [
     {
@@ -400,6 +401,19 @@
         "onSubmit": "$submit"
       },
       "children": [
+        {
+          "id": "FormContext-33",
+          "component": "FormContext",
+          "children": [
+            {
+              "id": "Mapping-34",
+              "component": "Mapping",
+              "props": {
+                "expression": "$setFormContext"
+              }
+            }
+          ]
+        },
         {
           "id": "Card-0",
           "component": "Card",

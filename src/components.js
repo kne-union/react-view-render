@@ -45,7 +45,8 @@ const components = {
     Popconfirm: loadable(() => import('./General/Popconfirm')),
     Progress: loadable(() => import('./General/Progress')),
     Spin: loadable(() => import('./General/Spin')),
-    Steps: loadable(() => import('./General/Steps'))
+    Steps: loadable(() => import('./General/Steps')),
+    FormContext: loadable(() => import('./Form/FormContext'))
 };
 
 export default components;
