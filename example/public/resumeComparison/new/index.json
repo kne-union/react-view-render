@@ -193,7 +193,7 @@
                   "id": "Input-121",
                   "component": "Input",
                   "props": {
-                    "name": "overseasCountry",
+                    "name": "country",
                     "label": "海外经历国家：",
                     "placeholder":"请输入"
                   }
@@ -243,11 +243,16 @@
                     {
                       "id": "Row-131",
                       "component": "Row",
+                      "props": {
+                        "className": "range",
+                        "classList": ".range .rangeItem{flex:1}"
+                      },
                       "children":[
                         {
                           "id":"Input-726",
                           "component":"Input",
                           "props":{
+                            "className": "rangeItem",
                             "style":{
                               "borderRight": 0,
                               "borderRadius": 0
@@ -274,6 +279,7 @@
                           "id":"Input-826",
                           "component":"Input",
                           "props":{
+                            "className": "rangeItem",
                             "style":{
                               "borderLeft": 0,
                               "borderRadius": 0
@@ -311,7 +317,7 @@
                   "id": "TextArea-130",
                   "component": "TextArea",
                   "props": {
-                    "name": "reasonsForLeaving",
+                    "name": "reason",
                     "label": "离职原因：",
                     "showCount":true,
                     "maxLength":300,
@@ -343,7 +349,7 @@
                   "id": "TextArea-110",
                   "component": "TextArea",
                   "props": {
-                    "name": "workDes",
+                    "name": "description",
                     "label": "工作描述：",
                     "showCount":true,
                     "maxLength":300,
@@ -585,7 +591,7 @@
                   "id": "Input-121",
                   "component": "Input",
                   "props": {
-                    "name": "overseasCountry",
+                    "name": "country",
                     "label": "海外经历国家：",
                     "placeholder":"请输入"
                   }
@@ -635,11 +641,16 @@
                     {
                       "id": "Row-131",
                       "component": "Row",
+                      "props": {
+                        "className": "range",
+                        "classList": ".range .rangeItem{flex:1}"
+                      },
                       "children":[
                         {
                           "id":"Input-726",
                           "component":"Input",
                           "props":{
+                            "className": "rangeItem",
                             "style":{
                               "borderRight": 0,
                               "borderRadius": 0
@@ -666,6 +677,7 @@
                           "id":"Input-826",
                           "component":"Input",
                           "props":{
+                            "className": "rangeItem",
                             "style":{
                               "borderLeft": 0,
                               "borderRadius": 0
@@ -703,7 +715,7 @@
                   "id": "TextArea-130",
                   "component": "TextArea",
                   "props": {
-                    "name": "reasonsForLeaving",
+                    "name": "reason",
                     "label": "离职原因：",
                     "showCount":true,
                     "maxLength":300,
@@ -735,7 +747,7 @@
                   "id": "TextArea-110",
                   "component": "TextArea",
                   "props": {
-                    "name": "workDes",
+                    "name": "description",
                     "label": "工作描述：",
                     "showCount":true,
                     "maxLength":300,
@@ -807,144 +819,6 @@
                   }
                 }
               ]
-            }
-          ]
-        }
-      ]
-    },
-    "$workForm": {
-      "data": [
-        {
-          "id": "Div-12",
-          "component": "Div",
-          "props": {
-            "style": {
-              "position": "relative"
-            }
-          },
-          "children": [
-            {
-              "id": "Row-9",
-              "component": "Row",
-              "props": {
-                "gutter": [
-                  40,
-                  0
-                ]
-              },
-              "children": [
-                {
-                  "id": "Col-10",
-                  "component": "Col",
-                  "props": {
-                    "span": 24
-                  },
-                  "children": [
-                    {
-                      "id": "DateRangePicker-11",
-                      "component": "DateRangePicker",
-                      "props": {
-                        "name": "date",
-                        "label": "在职时间",
-                        "rule": "REQ"
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "id": "Row-0",
-              "component": "Row",
-              "props": {
-                "gutter": [
-                  40,
-                  0
-                ]
-              },
-              "children": [
-                {
-                  "id": "Col-1",
-                  "component": "Col",
-                  "props": {
-                    "span": 24
-                  },
-                  "children": [
-                    {
-                      "id": "Input-2",
-                      "component": "Input",
-                      "props": {
-                        "name": "company",
-                        "label": "公司名称",
-                        "rule": "REQ"
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "id": "Row-3",
-              "component": "Row",
-              "props": {
-                "gutter": [
-                  40,
-                  0
-                ]
-              },
-              "children": [
-                {
-                  "id": "Col-4",
-                  "component": "Col",
-                  "props": {
-                    "span": 12
-                  },
-                  "children": [
-                    {
-                      "id": "Input-5",
-                      "component": "Input",
-                      "props": {
-                        "name": "position",
-                        "label": "职位名称",
-                        "rule": "REQ"
-                      }
-                    }
-                  ]
-                },
-                {
-                  "id": "Col-6",
-                  "component": "Col",
-                  "props": {
-                    "span": 12
-                  },
-                  "children": [
-                    {
-                      "id": "Input-7",
-                      "component": "Input",
-                      "props": {
-                        "name": "department",
-                        "label": "所在部门",
-                        "rule": "REQ"
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "id": "Button-13",
-              "component": "Button",
-              "props": {
-                "type": "link",
-                "danger": true,
-                "onClick": "$onRemove",
-                "style": {
-                  "position": "absolute",
-                  "right": 0,
-                  "top": 0
-                }
-              },
-              "children": "删除"
             }
           ]
         }
@@ -1193,7 +1067,7 @@
                       "id": "Input-2",
                       "component": "Input",
                       "props": {
-                        "name": "school_name",
+                        "name": "school",
                         "label": "学校名称",
                         "rule": "REQ"
                       }
@@ -1274,7 +1148,7 @@
                       "component": "DateRangePicker",
                       "props": {
                         "interceptor": "string-date-range",
-                        "name": "data",
+                        "name": "time",
                         "label": "在校时间",
                         "rule": "REQ"
                       }
@@ -1789,19 +1663,143 @@
       "degree": 1,
       "school": "清华",
       "major": "计算机",
-      "education": [
+      "work": [
         {
-          "degree": 1,
-          "school_name": "1",
-          "major": 0,
-          "des": "11",
-          "startTime": "2020-01-02",
-          "endTime": "2020-01-02"
+          "company": "上海蓝天人力资源有限公司",
+          "position": "产品经理",
+          "startTime": "2012.08",
+          "endTime": "2017.06",
+          "department": "产品部",
+          "overseasExperience": "是",
+          "duty": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；",
+          "result": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；",
+          "duration": "3年",
+          "reason": "个人发展",
+          "description": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；",
+          "country": "美国",
+          "salary": "10K-13K",
+          "salaryMin": "10K",
+          "salaryMax": "20K"
+        },
+        {
+          "company": "上海外企人力资源有限公司",
+          "position": "产品经理",
+          "department": "产品部",
+          "startTime": "2012.08",
+          "endTime": "2017.06",
+          "duty": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；",
+          "result": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；",
+          "duration": "3年",
+          "reason": "个人发展",
+          "description": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；",
+          "country": "美国",
+          "salary": "10K-13K"
         }
       ],
-      "work": [],
+      "practice": [
+        {
+          "company": "上海蓝天人力资源有限公司",
+          "position": "产品经理",
+          "startTime": "2012.08",
+          "endTime": "2017.06",
+          "duration": "3年",
+          "duty": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；",
+          "result": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；",
+          "country": "美国",
+          "salary": "10K-13K"
+        }
+      ],
+      "education": [
+        {
+          "school": "清华大学",
+          "major": "计算机科学",
+          "degree": "硕士",
+          "des": "11",
+          "startTime": "2020.04",
+          "endTime": "2025.05"
+        },
+        {
+          "school": "清华大学",
+          "major": "计算机科学",
+          "degree": "硕士",
+          "des": "11",
+          "startTime": "2020.04",
+          "endTime": "2025.05"
+        }
+      ],
+      "social": [
+        {
+          "name": "送爱心公益慈善活动",
+          "position": "宣传员",
+          "startTime": "2012.08",
+          "endTime": "2017.06",
+          "duration": "3年",
+          "description": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；"
+        }
+      ],
+      "awarded": [
+        {
+          "name": "全国大学生数学建模二等奖",
+          "school": "清华大学",
+          "startTime": "2012.08",
+          "description": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；"
+        },
+        {
+          "name": "全国大学生数学建模二等奖",
+          "school": "清华大学",
+          "startTime": "2012.08",
+          "description": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；"
+        }
+      ],
+      "skill": [
+        {
+          "name": "英语四级证书",
+          "time": "2020.04",
+          "status": "熟练"
+        },
+        {
+          "name": "英语四级证书",
+          "time": "2020.04",
+          "status": "熟练"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Aitx招聘系统",
+          "startTime": "2018.08",
+          "endTime": "至今",
+          "position": "产品经理",
+          "duration": "3年",
+          "company": "上海肯耐珂萨股份有限公司",
+          "des": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；",
+          "duty": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；",
+          "result": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；"
+        },
+        {
+          "name": "薪酬系统",
+          "startTime": "2018.08",
+          "endTime": "至今",
+          "duration": "3年",
+          "position": "产品经理",
+          "company": "上海有钱有限公司",
+          "des": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；",
+          "duty": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；",
+          "result": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；"
+        }
+      ],
+      "training": [
+        {
+          "name": "产品思维培训",
+          "org": "产品思维培训机构",
+          "startTime": "2012.08",
+          "endTime": "2017.06",
+          "description": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；",
+          "course": "产品思维培训课程产品思维培训产品思维培训产品思维培训产品思维培训产品思维培训",
+          "certificate": "产品经理证书"
+        }
+      ],
       "experience": "3-5年",
-      "self_assessment": "sss"
+      "selfEvaluation": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；"
     },
     "$twoList":[
       {
@@ -1872,7 +1870,7 @@
     "$submit": "console.log(args[0]);",
     "$timeToDate": "const output = Object.assign({},args[0]);if(args[0].startTime&&args[0].endTime){output.time=[args[0].startTime,args[0].endTime]};delete output['startTime'];delete output['endTime'];return output;",
     "$dateToTime": "const output = Object.assign({},args[0]);if(Array.isArray(args[0].time)&&args[0].time.length===2){output.startTime=args[0].time[0];output.endTime=args[0].time[1];}delete output['time'];return output;",
-    "$formatForm": "const education =  args[0]['education']&&args[0]['education'].map((it)=>{return {...it, data:[it['startTime'],it['endTime']]}});const work =  args[0]['work']&&args[0]['work'].map((it)=>{return {...it, data:[it['startTime'],it['endTime']]}});return {...args[0],education,work}"
+    "$formatForm": "const education =  args[0]['education']&&args[0]['education'].map((it)=>{return {...it, time:[it['startTime'],it['endTime']]}});const work =  args[0]['work']&&args[0]['work'].map((it)=>{return {...it, time:[it['startTime'],it['endTime']]}});return {...args[0],education,work}"
   },
   "data": [
     {
@@ -2461,7 +2459,7 @@
                               "id": "TextArea-26",
                               "component": "TextArea",
                               "props": {
-                                "name": "self_assessment",
+                                "name": "selfEvaluation",
                                 "label": "自我评价描述："
                               }
                             }
