@@ -543,7 +543,7 @@
                       "props": {
                         "name": "phone",
                         "label": "联系方式",
-                        "rule": "REQ TEL"
+                        "rule": "TEL"
                       }
                     }
                   ]
