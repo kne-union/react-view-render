@@ -28,6 +28,790 @@
         }
       ]
     },
+    "$workForm1":{
+      "data": [
+        {
+          "id": "Row-1",
+          "component": "Row",
+          "props": {
+            "gutter": [
+              40,
+              0
+            ]
+          },
+          "children": [
+            {
+              "id": "Col-2",
+              "component": "Col",
+              "props": {
+                "span": 24
+              },
+              "children": [
+                {
+                  "id": "Input-3",
+                  "component": "Input",
+                  "props": {
+                    "name": "company",
+                    "label": "公司名称：",
+                    "placeholder":"请输入",
+                    "rule": "REQ"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Row-11",
+          "component": "Row",
+          "props": {
+            "gutter": [
+              40,
+              0
+            ]
+          },
+          "children": [
+            {
+              "id": "Col-3",
+              "component": "Col",
+              "props": {
+                "span": 12
+              },
+              "children": [
+                {
+                  "id": "Input-4",
+                  "component": "Input",
+                  "props": {
+                    "name": "position",
+                    "label": "职位名称：",
+                    "rule": "REQ",
+                    "placeholder":"请输入"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "Col-10",
+              "component": "Col",
+              "props": {
+                "span": 12
+              },
+              "children": [
+                {
+                  "id": "Input-131",
+                  "component": "Input",
+                  "props": {
+                    "name": "department",
+                    "label": "所在部门：",
+                    "placeholder":"请输入"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Row-1",
+          "component": "Row",
+          "props": {
+            "gutter": [
+              40,
+              0
+            ]
+          },
+          "children": [
+            {
+              "id": "Col-121",
+              "component": "Col",
+              "props": {
+                "span": 24
+              },
+              "children": [
+                {
+                  "id": "DateRangePicker-13",
+                  "component": "DateRangePicker",
+                  "props": {
+                    "name": "time",
+                    "label": "在职时间：",
+                    "interceptor": "string-date-range",
+                    "classList":".ant-picker-range{width:100%}"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Row-14",
+          "component": "Row",
+          "props": {
+            "gutter": [
+              40,
+              0
+            ]
+          },
+          "children": [
+            {
+              "id": "Col-10",
+              "component": "Col",
+              "props": {
+                "span": 24
+              },
+              "children": [
+                {
+                  "id": "Select-131",
+                  "component": "Select",
+                  "props": {
+                    "name": "overseasExperience",
+                    "label": "是否有海外经历：",
+                    "options": "$twoList",
+                    "placeholder":"请选择"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Row-1",
+          "component": "Row",
+          "props": {
+            "gutter": [
+              40,
+              0
+            ]
+          },
+          "children": [
+            {
+              "id": "Col-121",
+              "component": "Col",
+              "props": {
+                "span": 24
+              },
+              "children": [
+                {
+                  "id": "Input-121",
+                  "component": "Input",
+                  "props": {
+                    "name": "overseasCountry",
+                    "label": "海外经历国家：",
+                    "placeholder":"请输入"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Row-14",
+          "component": "Row",
+          "props": {
+            "gutter": [
+              40,
+              0
+            ]
+          },
+          "children": [
+            {
+              "id": "Col-10",
+              "component": "Col",
+              "props": {
+                "span": 24
+              },
+              "children": [
+                {
+                  "id": "Space-120",
+                  "component": "Space",
+                  "props": {
+                    "direction": "vertical",
+                    "style":{
+                      "width":"100%"
+                    }
+                  },
+                  "children":[
+                    {
+                      "id":"div-3743",
+                      "component":"Div",
+                      "props": {
+                        "style": {
+                          "color":"#576B95",
+                          "fontWeight":"500"
+                        }
+                      },
+                      "children":"薪资范围："
+                    },
+                    {
+                      "id": "Row-131",
+                      "component": "Row",
+                      "children":[
+                        {
+                          "id":"Input-726",
+                          "component":"Input",
+                          "props":{
+                            "style":{
+                              "borderRight": 0,
+                              "borderRadius": 0
+                            },
+                            "name":"salaryMin",
+                            "placeholder":"薪资下限"
+                          }
+                        },
+                        {
+                          "id":"Input-646",
+                          "component":"Input",
+                          "props":{
+                            "style":{
+                              "width": 40,
+                              "borderLeft": 0,
+                              "borderRight": 0,
+                              "borderRadius": 0,
+                              "pointerEvents": "none"
+                            },
+                            "placeholder":"→"
+                          }
+                        },
+                        {
+                          "id":"Input-826",
+                          "component":"Input",
+                          "props":{
+                            "style":{
+                              "borderLeft": 0,
+                              "borderRadius": 0
+                            },
+                            "name":"salaryMax",
+                            "placeholder":"薪资上限"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Row-51",
+          "component": "Row",
+          "props": {
+            "gutter": [
+              40,
+              0
+            ]
+          },
+          "children": [
+            {
+              "id": "Col-26",
+              "component": "Col",
+              "props": {
+                "span": 24
+              },
+              "children": [
+                {
+                  "id": "TextArea-130",
+                  "component": "TextArea",
+                  "props": {
+                    "name": "reasonsForLeaving",
+                    "label": "离职原因：",
+                    "showCount":true,
+                    "maxLength":300,
+                    "placeholder":"请输入"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Row-31",
+          "component": "Row",
+          "props": {
+            "gutter": [
+              40,
+              0
+            ]
+          },
+          "children": [
+            {
+              "id": "Col-216",
+              "component": "Col",
+              "props": {
+                "span": 24
+              },
+              "children": [
+                {
+                  "id": "TextArea-110",
+                  "component": "TextArea",
+                  "props": {
+                    "name": "workDes",
+                    "label": "工作描述：",
+                    "showCount":true,
+                    "maxLength":300,
+                    "placeholder":"请输入"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Row-5",
+          "component": "Row",
+          "props": {
+            "gutter": [
+              40,
+              0
+            ]
+          },
+          "children": [
+            {
+              "id": "Col-6",
+              "component": "Col",
+              "props": {
+                "span": 24
+              },
+              "children": [
+                {
+                  "id": "TextArea-7",
+                  "component": "TextArea",
+                  "props": {
+                    "name": "duty",
+                    "label": "工作职责：",
+                    "showCount":true,
+                    "maxLength":300,
+                    "placeholder":"请输入"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Row-8",
+          "component": "Row",
+          "props": {
+            "gutter": [
+              40,
+              0
+            ]
+          },
+          "children": [
+            {
+              "id": "Col-9",
+              "component": "Col",
+              "props": {
+                "span": 24
+              },
+              "children": [
+                {
+                  "id": "TextArea-10",
+                  "component": "TextArea",
+                  "props": {
+                    "name": "result",
+                    "label": "工作业绩：",
+                    "showCount":true,
+                    "maxLength":300,
+                    "placeholder":"请输入"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "$practice":{
+      "data": [
+        {
+          "id": "Row-1",
+          "component": "Row",
+          "props": {
+            "gutter": [
+              40,
+              0
+            ]
+          },
+          "children": [
+            {
+              "id": "Col-2",
+              "component": "Col",
+              "props": {
+                "span": 24
+              },
+              "children": [
+                {
+                  "id": "Input-3",
+                  "component": "Input",
+                  "props": {
+                    "name": "company",
+                    "label": "公司名称：",
+                    "placeholder":"请输入",
+                    "rule": "REQ"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Row-11",
+          "component": "Row",
+          "props": {
+            "gutter": [
+              40,
+              0
+            ]
+          },
+          "children": [
+            {
+              "id": "Col-3",
+              "component": "Col",
+              "props": {
+                "span": 12
+              },
+              "children": [
+                {
+                  "id": "Input-4",
+                  "component": "Input",
+                  "props": {
+                    "name": "position",
+                    "label": "职位名称：",
+                    "rule": "REQ",
+                    "placeholder":"请输入"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "Col-10",
+              "component": "Col",
+              "props": {
+                "span": 12
+              },
+              "children": [
+                {
+                  "id": "Input-131",
+                  "component": "Input",
+                  "props": {
+                    "name": "department",
+                    "label": "所在部门：",
+                    "placeholder":"请输入"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Row-1",
+          "component": "Row",
+          "props": {
+            "gutter": [
+              40,
+              0
+            ]
+          },
+          "children": [
+            {
+              "id": "Col-121",
+              "component": "Col",
+              "props": {
+                "span": 24
+              },
+              "children": [
+                {
+                  "id": "DateRangePicker-13",
+                  "component": "DateRangePicker",
+                  "props": {
+                    "name": "time",
+                    "label": "在职时间：",
+                    "interceptor": "string-date-range",
+                    "classList":".ant-picker-range{width:100%}"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Row-14",
+          "component": "Row",
+          "props": {
+            "gutter": [
+              40,
+              0
+            ]
+          },
+          "children": [
+            {
+              "id": "Col-10",
+              "component": "Col",
+              "props": {
+                "span": 24
+              },
+              "children": [
+                {
+                  "id": "Select-131",
+                  "component": "Select",
+                  "props": {
+                    "name": "overseasExperience",
+                    "label": "是否有海外经历：",
+                    "options": "$twoList",
+                    "placeholder":"请选择"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Row-1",
+          "component": "Row",
+          "props": {
+            "gutter": [
+              40,
+              0
+            ]
+          },
+          "children": [
+            {
+              "id": "Col-121",
+              "component": "Col",
+              "props": {
+                "span": 24
+              },
+              "children": [
+                {
+                  "id": "Input-121",
+                  "component": "Input",
+                  "props": {
+                    "name": "overseasCountry",
+                    "label": "海外经历国家：",
+                    "placeholder":"请输入"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Row-14",
+          "component": "Row",
+          "props": {
+            "gutter": [
+              40,
+              0
+            ]
+          },
+          "children": [
+            {
+              "id": "Col-10",
+              "component": "Col",
+              "props": {
+                "span": 24
+              },
+              "children": [
+                {
+                  "id": "Space-120",
+                  "component": "Space",
+                  "props": {
+                    "direction": "vertical",
+                    "style":{
+                      "width":"100%"
+                    }
+                  },
+                  "children":[
+                    {
+                      "id":"div-3743",
+                      "component":"Div",
+                      "props": {
+                        "style": {
+                          "color":"#576B95",
+                          "fontWeight":"500"
+                        }
+                      },
+                      "children":"薪资范围："
+                    },
+                    {
+                      "id": "Row-131",
+                      "component": "Row",
+                      "children":[
+                        {
+                          "id":"Input-726",
+                          "component":"Input",
+                          "props":{
+                            "style":{
+                              "borderRight": 0,
+                              "borderRadius": 0
+                            },
+                            "name":"salaryMin",
+                            "placeholder":"薪资下限"
+                          }
+                        },
+                        {
+                          "id":"Input-646",
+                          "component":"Input",
+                          "props":{
+                            "style":{
+                              "width": 40,
+                              "borderLeft": 0,
+                              "borderRight": 0,
+                              "borderRadius": 0,
+                              "pointerEvents": "none"
+                            },
+                            "placeholder":"→"
+                          }
+                        },
+                        {
+                          "id":"Input-826",
+                          "component":"Input",
+                          "props":{
+                            "style":{
+                              "borderLeft": 0,
+                              "borderRadius": 0
+                            },
+                            "name":"salaryMax",
+                            "placeholder":"薪资上限"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Row-51",
+          "component": "Row",
+          "props": {
+            "gutter": [
+              40,
+              0
+            ]
+          },
+          "children": [
+            {
+              "id": "Col-26",
+              "component": "Col",
+              "props": {
+                "span": 24
+              },
+              "children": [
+                {
+                  "id": "TextArea-130",
+                  "component": "TextArea",
+                  "props": {
+                    "name": "reasonsForLeaving",
+                    "label": "离职原因：",
+                    "showCount":true,
+                    "maxLength":300,
+                    "placeholder":"请输入"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Row-31",
+          "component": "Row",
+          "props": {
+            "gutter": [
+              40,
+              0
+            ]
+          },
+          "children": [
+            {
+              "id": "Col-216",
+              "component": "Col",
+              "props": {
+                "span": 24
+              },
+              "children": [
+                {
+                  "id": "TextArea-110",
+                  "component": "TextArea",
+                  "props": {
+                    "name": "workDes",
+                    "label": "工作描述：",
+                    "showCount":true,
+                    "maxLength":300,
+                    "placeholder":"请输入"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Row-5",
+          "component": "Row",
+          "props": {
+            "gutter": [
+              40,
+              0
+            ]
+          },
+          "children": [
+            {
+              "id": "Col-6",
+              "component": "Col",
+              "props": {
+                "span": 24
+              },
+              "children": [
+                {
+                  "id": "TextArea-7",
+                  "component": "TextArea",
+                  "props": {
+                    "name": "duty",
+                    "label": "工作职责：",
+                    "showCount":true,
+                    "maxLength":300,
+                    "placeholder":"请输入"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Row-8",
+          "component": "Row",
+          "props": {
+            "gutter": [
+              40,
+              0
+            ]
+          },
+          "children": [
+            {
+              "id": "Col-9",
+              "component": "Col",
+              "props": {
+                "span": 24
+              },
+              "children": [
+                {
+                  "id": "TextArea-10",
+                  "component": "TextArea",
+                  "props": {
+                    "name": "result",
+                    "label": "工作业绩：",
+                    "showCount":true,
+                    "maxLength":300,
+                    "placeholder":"请输入"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
     "$workForm": {
       "data": [
         {
@@ -166,6 +950,217 @@
         }
       ]
     },
+    "$projectForm": {
+      "data": [
+        {
+          "id": "Row-1",
+          "component": "Row",
+          "props": {
+            "gutter": [
+              40,
+              0
+            ]
+          },
+          "children": [
+            {
+              "id": "Col-2",
+              "component": "Col",
+              "props": {
+                "span": 24
+              },
+              "children": [
+                {
+                  "id": "Input-3",
+                  "component": "Input",
+                  "props": {
+                    "name": "name",
+                    "label": "项目名称：",
+                    "placeholder": "请输入",
+                    "rule": "REQ"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Row-10",
+          "component": "Row",
+          "props": {
+            "gutter": [
+              40,
+              0
+            ]
+          },
+          "children": [
+            {
+              "id": "Col-11",
+              "component": "Col",
+              "props": {
+                "span": 12
+              },
+              "children": [
+                {
+                  "id": "Input-4",
+                  "component": "Input",
+                  "props": {
+                    "name": "position",
+                    "label": "职位名称：",
+                    "placeholder": "请输入",
+                    "rule": "REQ"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "Col-13",
+              "component": "Col",
+              "props": {
+                "span": 12
+              },
+              "children": [
+                {
+                  "id": "Input-14",
+                  "component": "Input",
+                  "props": {
+                    "name": "company",
+                    "label": "所属公司：",
+                    "placeholder": "请输入",
+                    "rule": "REQ"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Row-1",
+          "component": "Row",
+          "props": {
+            "gutter": [
+              40,
+              0
+            ]
+          },
+          "children": [
+            {
+              "id": "Col-3",
+              "component": "Col",
+              "props": {
+                "span": 24
+              },
+              "children": [
+                {
+                  "id": "DateRangePicker-13",
+                  "component": "DateRangePicker",
+                  "props": {
+                    "name": "timeRange",
+                    "label": "项目时间：",
+                    "interceptor": "string-date-range",
+                    "classList":".ant-picker-range{width:100%}"
+                  }
+                }
+              ]
+            }
+          ]},
+        {
+          "id": "Row-15",
+          "component": "Row",
+          "props": {
+            "gutter": [
+              40,
+              0
+            ]
+          },
+          "children": [
+            {
+              "id": "Col-16",
+              "component": "Col",
+              "props": {
+                "span": 24
+              },
+              "children": [
+                {
+                  "id": "TextArea-17",
+                  "component": "TextArea",
+                  "props": {
+                    "name": "des",
+                    "label": "项目描述：",
+                    "showCount":true,
+                    "maxLength":300,
+                    "placeholder": "请输入"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Row-5",
+          "component": "Row",
+          "props": {
+            "gutter": [
+              40,
+              0
+            ]
+          },
+          "children": [
+            {
+              "id": "Col-6",
+              "component": "Col",
+              "props": {
+                "span": 24
+              },
+              "children": [
+                {
+                  "id": "TextArea-7",
+                  "component": "TextArea",
+                  "props": {
+                    "name": "duty",
+                    "label": "项目职责：",
+                    "showCount":true,
+                    "maxLength":300,
+                    "placeholder": "请输入"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Row-8",
+          "component": "Row",
+          "props": {
+            "gutter": [
+              40,
+              0
+            ]
+          },
+          "children": [
+            {
+              "id": "Col-9",
+              "component": "Col",
+              "props": {
+                "span": 24
+              },
+              "children": [
+                {
+                  "id": "TextArea-10",
+                  "component": "TextArea",
+                  "props": {
+                    "name": "result",
+                    "label": "项目成果：",
+                    "showCount":true,
+                    "maxLength":300,
+                    "placeholder": "请输入"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
     "$educationForm": {
       "data": [
         {
@@ -177,36 +1172,6 @@
             }
           },
           "children": [
-            {
-              "id": "Row-9",
-              "component": "Row",
-              "props": {
-                "gutter": [
-                  40,
-                  0
-                ]
-              },
-              "children": [
-                {
-                  "id": "Col-10",
-                  "component": "Col",
-                  "props": {
-                    "span": 24
-                  },
-                  "children": [
-                    {
-                      "id": "DateRangePicker-11",
-                      "component": "DateRangePicker",
-                      "props": {
-                        "name": "date",
-                        "label": "在校时间",
-                        "rule": "REQ"
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
             {
               "id": "Row-0",
               "component": "Row",
@@ -288,7 +1253,7 @@
               ]
             },
             {
-              "id": "Row-7",
+              "id": "Row-9",
               "component": "Row",
               "props": {
                 "gutter": [
@@ -298,18 +1263,20 @@
               },
               "children": [
                 {
-                  "id": "Col-8",
+                  "id": "Col-10",
                   "component": "Col",
                   "props": {
                     "span": 24
                   },
                   "children": [
                     {
-                      "id": "TextArea-9",
-                      "component": "TextArea",
+                      "id": "DateRangePicker-11",
+                      "component": "DateRangePicker",
                       "props": {
-                        "name": "des",
-                        "label": "工作描述"
+                        "interceptor": "string-date-range",
+                        "name": "data",
+                        "label": "在校时间",
+                        "rule": "REQ"
                       }
                     }
                   ]
@@ -334,6 +1301,482 @@
           ]
         }
       ]
+    },
+    "$social": {
+      "data": [
+        {
+          "id": "Row-1",
+          "component": "Row",
+          "props": {
+            "gutter": [
+              40,
+              0
+            ]
+          },
+          "children": [
+            {
+              "id": "Col-2",
+              "component": "Col",
+              "props": {
+                "span": 24
+              },
+              "children": [
+                {
+                  "id": "Input-3",
+                  "component": "Input",
+                  "props": {
+                    "name": "school",
+                    "label": "社会实践名称：",
+                    "placeholder": "请输入",
+                    "rule": "REQ"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "Col-3",
+              "component": "Col",
+              "props": {
+                "span": 24
+              },
+              "children": [
+                {
+                  "id": "Input-4",
+                  "component": "Input",
+                  "props": {
+                    "name": "major",
+                    "label": "职位职位：",
+                    "placeholder": "请输入",
+                    "rule": "REQ"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Row-5",
+          "component": "Row",
+          "props": {
+            "gutter": [
+              40,
+              0
+            ]
+          },
+          "children": [
+            {
+              "id": "Col-6",
+              "component": "Col",
+              "props": {
+                "span": 24
+              },
+              "children": [
+                {
+                  "id": "DateRangePicker-11",
+                  "component": "DateRangePicker",
+                  "props": {
+                    "name": "date",
+                    "label": "社会实践时间：",
+                    "rule": "REQ",
+                    "interceptor": "string-date-range",
+                    "className": "with100",
+                    "classList": ".with100 .ant-picker{width:100%}"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "Col-9",
+              "component": "Col",
+              "props": {
+                "span": 24
+              },
+              "children": [
+                {
+                  "id": "TextArea-17",
+                  "component": "TextArea",
+                  "props": {
+                    "name": "des",
+                    "label": "实践描述：",
+                    "showCount":true,
+                    "maxLength":300,
+                    "placeholder": "请输入"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "$training": {
+      "data": [
+        {
+          "id": "Row-1",
+          "component": "Row",
+          "props": {
+            "gutter": [
+              40,
+              0
+            ]
+          },
+          "children": [
+            {
+              "id": "Col-2",
+              "component": "Col",
+              "props": {
+                "span": 24
+              },
+              "children": [
+                {
+                  "id": "Input-3",
+                  "component": "Input",
+                  "props": {
+                    "name": "school",
+                    "label": "培训名称：",
+                    "placeholder": "请输入",
+                    "rule": "REQ"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "Col-3",
+              "component": "Col",
+              "props": {
+                "span": 24
+              },
+              "children": [
+                {
+                  "id": "Input-4",
+                  "component": "Input",
+                  "props": {
+                    "name": "major",
+                    "label": "培训机构：",
+                    "placeholder": "请输入",
+                    "rule": "REQ"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Row-5",
+          "component": "Row",
+          "props": {
+            "gutter": [
+              40,
+              0
+            ]
+          },
+          "children": [
+            {
+              "id": "Col-6",
+              "component": "Col",
+              "props": {
+                "span": 24
+              },
+              "children": [
+                {
+                  "id": "DateRangePicker-11",
+                  "component": "DateRangePicker",
+                  "props": {
+                    "name": "date",
+                    "label": "培训时间：",
+                    "rule": "REQ",
+                    "className": "with100",
+                    "classList": ".with100 .ant-picker{width:100%}"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "Col-9",
+              "component": "Col",
+              "props": {
+                "span": 24
+              },
+              "children": [
+                {
+                  "id": "Input-12",
+                  "component": "Input",
+                  "props": {
+                    "name": "certificate",
+                    "label": "所获证书：",
+                    "placeholder": "请输入",
+                    "rule": "REQ"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Row-51",
+          "component": "Row",
+          "props": {
+            "gutter": [
+              40,
+              0
+            ]
+          },
+          "children": [
+            {
+              "id": "Col-91",
+              "component": "Col",
+              "props": {
+                "span": 24
+              },
+              "children": [
+                {
+                  "id": "TextArea-17",
+                  "component": "TextArea",
+                  "props": {
+                    "name": "course",
+                    "label": "培训课程：",
+                    "showCount":true,
+                    "maxLength":300,
+                    "placeholder": "请输入"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Row-31",
+          "component": "Row",
+          "props": {
+            "gutter": [
+              40,
+              0
+            ]
+          },
+          "children": [
+            {
+              "id": "Col-191",
+              "component": "Col",
+              "props": {
+                "span": 24
+              },
+              "children": [
+                {
+                  "id": "TextArea-117",
+                  "component": "TextArea",
+                  "props": {
+                    "name": "des",
+                    "label": "培训描述：",
+                    "showCount":true,
+                    "maxLength":300,
+                    "placeholder": "请输入"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "$skill": {
+      "data": [
+        {
+          "id": "Row-1",
+          "component": "Row",
+          "props": {
+            "gutter": [
+              40,
+              0
+            ]
+          },
+          "children": [
+            {
+              "id": "Col-2",
+              "component": "Col",
+              "props": {
+                "span": 24
+              },
+              "children": [
+                {
+                  "id": "Input-3",
+                  "component": "Input",
+                  "props": {
+                    "name": "school",
+                    "label": "技能名称：",
+                    "rule": "REQ"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "Col-3",
+              "component": "Col",
+              "props": {
+                "span": 24
+              },
+              "children": [
+                {
+                  "id": "Input-4",
+                  "component": "Input",
+                  "props": {
+                    "name": "major",
+                    "label": "技能水平：",
+                    "rule": "REQ"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Row-5",
+          "component": "Row",
+          "props": {
+            "gutter": [
+              40,
+              0
+            ]
+          },
+          "children": [
+            {
+              "id": "Col-6",
+              "component": "Col",
+              "props": {
+                "span": 24
+              },
+              "children": [
+                {
+                  "id": "DateRangePicker-11",
+                  "component": "DatePicker",
+                  "props": {
+                    "name": "date",
+                    "label": "使用时间：",
+                    "rule": "REQ",
+                    "className": "with100",
+                    "classList": ".with100 .ant-picker{width:100%}"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "Col-9",
+              "component": "Col",
+              "props": {
+                "span": 24
+              },
+              "children": [
+
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "$award": {
+      "data": [
+        {
+          "id": "Row-1",
+          "component": "Row",
+          "props": {
+            "gutter": [
+              40,
+              0
+            ]
+          },
+          "children": [
+            {
+              "id": "Col-2",
+              "component": "Col",
+              "props": {
+                "span": 24
+              },
+              "children": [
+                {
+                  "id": "Input-3",
+                  "component": "Input",
+                  "props": {
+                    "name": "school",
+                    "label": "奖励名称：",
+                    "placeholder": "请输入",
+                    "rule": "REQ"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "Col-3",
+              "component": "Col",
+              "props": {
+                "span": 24
+              },
+              "children": [
+                {
+                  "id": "Input-4",
+                  "component": "Input",
+                  "props": {
+                    "name": "major",
+                    "label": "奖励颁发机构：",
+                    "placeholder": "请输入",
+                    "rule": "REQ"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Row-5",
+          "component": "Row",
+          "props": {
+            "gutter": [
+              40,
+              0
+            ]
+          },
+          "children": [
+            {
+              "id": "Col-6",
+              "component": "Col",
+              "props": {
+                "span": 24
+              },
+              "children": [
+                {
+                  "id": "DateRangePicker-11",
+                  "component": "DatePicker",
+                  "props": {
+                    "name": "date",
+                    "label": "获奖时间：",
+                    "rule": "REQ",
+                    "className": "with100",
+                    "classList": ".with100 .ant-picker{width:100%}"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "Col-9",
+              "component": "Col",
+              "props": {
+                "span": 24
+              },
+              "children": [
+                {
+                  "id": "TextArea-17",
+                  "component": "TextArea",
+                  "props": {
+                    "name": "des",
+                    "label": "获奖描述：",
+                    "showCount":true,
+                    "maxLength":300,
+                    "placeholder": "请输入"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   },
   "variable": {
@@ -342,20 +1785,34 @@
       "phone": "17887905178",
       "email": "1212121@qq.com",
       "wechat": "xxxx",
-      "birthday": "",
+      "birthday": "2021-01-02",
       "degree": 1,
+      "school": "清华",
+      "major": "计算机",
       "education": [
         {
           "degree": 1,
           "school_name": "1",
           "major": 0,
-          "des": "11"
+          "des": "11",
+          "startTime": "2020-01-02",
+          "endTime": "2020-01-02"
         }
       ],
       "work": [],
       "experience": "3-5年",
       "self_assessment": "sss"
     },
+    "$twoList":[
+      {
+        "label": "是",
+        "value": 1
+      },
+      {
+        "label": "否",
+        "value": 0
+      }
+    ],
     "$degreeList": [
       {
         "label": "博士",
@@ -412,7 +1869,10 @@
     ]
   },
   "functions": {
-    "$submit": "console.log(args[0]);"
+    "$submit": "console.log(args[0]);",
+    "$timeToDate": "const output = Object.assign({},args[0]);if(args[0].startTime&&args[0].endTime){output.time=[args[0].startTime,args[0].endTime]};delete output['startTime'];delete output['endTime'];return output;",
+    "$dateToTime": "const output = Object.assign({},args[0]);if(Array.isArray(args[0].time)&&args[0].time.length===2){output.startTime=args[0].time[0];output.endTime=args[0].time[1];}delete output['time'];return output;",
+    "$formatForm": "const education =  args[0]['education']&&args[0]['education'].map((it)=>{return {...it, data:[it['startTime'],it['endTime']]}});const work =  args[0]['work']&&args[0]['work'].map((it)=>{return {...it, data:[it['startTime'],it['endTime']]}});return {...args[0],education,work}"
   },
   "data": [
     {
@@ -424,383 +1884,693 @@
       },
       "children": [
         {
-          "id": "Form-0",
-          "component": "Form",
+          "id": "Mapping-1",
+          "component": "Mapping",
           "props": {
-            "data": "$formData",
-            "type": "inner",
-            "onSubmit": "$submit",
-            "classList": ".cardTitleNew .ant-card-head{padding:0} .cardTitleNew .ant-card-body{padding-left:10px;padding-right:0} .cardTitleNew .ant-card-head-title{color:#4e74fe} .cardTitleNew .ant-picker{width:100%} .cardTitleNew .react-form--inner .react-form__field-label{font-weight:500}",
-            "style": {
-              "padding": "25px"
-            }
+            "resource": "$formData",
+            "expression": "$formatForm"
           },
           "children": [
             {
-              "id": "Card-0",
-              "component": "Card",
+              "id": "Form-0",
+              "component": "Form",
               "props": {
+                "data": "$item",
+                "type": "inner",
+                "onSubmit": "$submit",
+                "classList": ".cardTitleNew .ant-card-head{padding:0} .cardTitleNew .ant-card-body{padding-left:10px;padding-right:0;font-weight:400;color:#576b95} .cardTitleNew .ant-card-head-title{color:#4e74fe} .cardTitleNew .ant-picker{width:100%}",
                 "style": {
-                  "font-size": "14px",
-                  "font-weight": 500,
-                  "color": "#576B95"
-                },
-                "className": "cardTitleNew",
-                "title": "基本信息",
-                "bordered": false
-              },
-              "children": [
-                {
-                  "id": "Row-1",
-                  "component": "Row",
-                  "props": {
-                    "gutter": [
-                      40,
-                      0
-                    ]
-                  },
-                  "children": [
-                    {
-                      "id": "Col-2",
-                      "component": "Col",
-                      "props": {
-                        "span": 12
-                      },
-                      "children": [
-                        {
-                          "id": "Input-3",
-                          "component": "Input",
-                          "props": {
-                            "name": "name",
-                            "label": "姓名",
-                            "rule": "REQ"
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "id": "Col-3",
-                      "component": "Col",
-                      "props": {
-                        "span": 12
-                      },
-                      "children": [
-                        {
-                          "id": "DatePicker-4",
-                          "component": "DatePicker",
-                          "props": {
-                            "name": "birthday",
-                            "label": "生日",
-                            "rule": "REQ"
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "id": "Row-5",
-                  "component": "Row",
-                  "props": {
-                    "gutter": [
-                      40,
-                      0
-                    ]
-                  },
-                  "children": [
-                    {
-                      "id": "Col-6",
-                      "component": "Col",
-                      "props": {
-                        "span": 12
-                      },
-                      "children": [
-                        {
-                          "id": "Select-7",
-                          "component": "Select",
-                          "props": {
-                            "name": "degree",
-                            "label": "最高学历",
-                            "rule": "REQ",
-                            "options": "$degreeList"
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "id": "Col-8",
-                      "component": "Col",
-                      "props": {
-                        "span": 12
-                      },
-                      "children": [
-                        {
-                          "id": "Experience-9",
-                          "component": "Select",
-                          "props": {
-                            "name": "experience",
-                            "label": "工作经验",
-                            "rule": "REQ",
-                            "options": "$experienceList"
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "id": "Row-10",
-                  "component": "Row",
-                  "props": {
-                    "gutter": [
-                      40,
-                      0
-                    ]
-                  },
-                  "children": [
-                    {
-                      "id": "Col-11",
-                      "component": "Col",
-                      "props": {
-                        "span": 12
-                      },
-                      "children": [
-                        {
-                          "id": "Input-12",
-                          "component": "Input",
-                          "props": {
-                            "name": "phone",
-                            "label": "联系方式",
-                            "rule": "REQ TEL"
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "id": "Col-13",
-                      "component": "Col",
-                      "props": {
-                        "span": 12
-                      },
-                      "children": [
-                        {
-                          "id": "Input-14",
-                          "component": "Input",
-                          "props": {
-                            "name": "email",
-                            "label": "邮箱",
-                            "rule": "EMAIL"
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "id": "Row-15",
-                  "component": "Row",
-                  "props": {
-                    "gutter": [
-                      40,
-                      0
-                    ]
-                  },
-                  "children": [
-                    {
-                      "id": "Col-16",
-                      "component": "Col",
-                      "props": {
-                        "span": 12
-                      },
-                      "children": [
-                        {
-                          "id": "Input-17",
-                          "component": "Input",
-                          "props": {
-                            "name": "wechat",
-                            "label": "微信"
-                          }
-                        }
-                      ]
-                    }
-                  ]
+                  "padding": "25px"
                 }
-              ]
-            },
-            {
-              "id": "GroupList-17",
-              "component": "GroupList",
-              "props": {
-                "name": "work",
-                "groupItem": "$workForm",
-                "empty": "$empty"
               },
               "children": [
                 {
-                  "id": "Card-18",
+                  "id": "Card-0",
                   "component": "Card",
                   "props": {
+                    "style": {
+                      "font-size": "14px",
+                      "font-weight": 500,
+                      "color": "#576B95"
+                    },
                     "className": "cardTitleNew",
-                    "title": "工作经历",
-                    "extra": "$listTitleExtra",
+                    "title": "基本信息",
                     "bordered": false
                   },
                   "children": [
                     {
-                      "id": "Component-19",
-                      "component": "Component",
+                      "id": "Row-1",
+                      "component": "Row",
                       "props": {
-                        "content": "$groupList"
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "component": "Div",
-              "props": {
-                "style": {
-                  "height": "1px",
-                  "border-top": "1px dashed #C0C0C6",
-                  "margin-bottom": "48px"
-                }
-              }
-            },
-            {
-              "id": "GroupList-20",
-              "component": "GroupList",
-              "props": {
-                "name": "education",
-                "groupItem": "$educationForm",
-                "empty": "$empty"
-              },
-              "children": [
-                {
-                  "id": "Card-21",
-                  "component": "Card",
-                  "props": {
-                    "className": "cardTitleNew",
-                    "title": "教育经历",
-                    "extra": "$listTitleExtra",
-                    "bordered": false
-                  },
-                  "children": [
-                    {
-                      "id": "Component-22",
-                      "component": "Component",
-                      "props": {
-                        "content": "$groupList"
-                      }
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "component": "Div",
-              "props": {
-                "style": {
-                  "height": "1px",
-                  "border-top": "1px dashed #C0C0C6",
-                  "margin-bottom": "48px"
-                }
-              }
-            },
-            {
-              "id": "Card-23",
-              "component": "Card",
-              "props": {
-                "className": "cardTitleNew",
-                "title": "其他",
-                "bordered": false
-              },
-              "children": [
-                {
-                  "id": "Row-24",
-                  "component": "Row",
-                  "props": {
-                    "gutter": [
-                      40,
-                      0
-                    ]
-                  },
-                  "children": [
-                    {
-                      "id": "Col-25",
-                      "component": "Col",
-                      "props": {
-                        "span": 24
+                        "gutter": [
+                          40,
+                          0
+                        ]
                       },
                       "children": [
                         {
-                          "id": "TextArea-26",
-                          "component": "TextArea",
+                          "id": "Col-2",
+                          "component": "Col",
                           "props": {
-                            "name": "self_assessment",
-                            "label": "自我评价"
+                            "span": 12
+                          },
+                          "children": [
+                            {
+                              "id": "Input-3",
+                              "component": "Input",
+                              "props": {
+                                "name": "name",
+                                "label": "姓名：",
+                                "rule": "REQ"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "id": "Col-3",
+                          "component": "Col",
+                          "props": {
+                            "span": 12
+                          },
+                          "children": [
+                            {
+                              "id": "DatePicker-4",
+                              "component": "DatePicker",
+                              "props": {
+                                "name": "birthday",
+                                "label": "生日：",
+                                "interceptor": "string-date-range"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "Row-5",
+                      "component": "Row",
+                      "props": {
+                        "gutter": [
+                          40,
+                          0
+                        ]
+                      },
+                      "children": [
+                        {
+                          "id": "Col-6",
+                          "component": "Col",
+                          "props": {
+                            "span": 12
+                          },
+                          "children": [
+                            {
+                              "id": "Select-7",
+                              "component": "Select",
+                              "props": {
+                                "name": "degree",
+                                "label": "最高学历：",
+                                "options": "$degreeList"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "id": "Col-8",
+                          "component": "Col",
+                          "props": {
+                            "span": 12
+                          },
+                          "children": [
+                            {
+                              "id": "Experience-9",
+                              "component": "Select",
+                              "props": {
+                                "name": "experience",
+                                "label": "工作经验：",
+                                "options": "$experienceList"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "Row-10",
+                      "component": "Row",
+                      "props": {
+                        "gutter": [
+                          40,
+                          0
+                        ]
+                      },
+                      "children": [
+                        {
+                          "id": "Col-11",
+                          "component": "Col",
+                          "props": {
+                            "span": 12
+                          },
+                          "children": [
+                            {
+                              "id": "Input-12",
+                              "component": "Input",
+                              "props": {
+                                "name": "phone",
+                                "label": "联系方式：",
+                                "rule": "REQ TEL"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "id": "Col-13",
+                          "component": "Col",
+                          "props": {
+                            "span": 12
+                          },
+                          "children": [
+                            {
+                              "id": "Input-14",
+                              "component": "Input",
+                              "props": {
+                                "name": "email",
+                                "label": "邮箱：",
+                                "rule": "EMAIL"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "Row-15",
+                      "component": "Row",
+                      "props": {
+                        "gutter": [
+                          40,
+                          0
+                        ]
+                      },
+                      "children": [
+                        {
+                          "id": "Col-16",
+                          "component": "Col",
+                          "props": {
+                            "span": 12
+                          },
+                          "children": [
+                            {
+                              "id": "Input-17",
+                              "component": "Input",
+                              "props": {
+                                "name": "wechat",
+                                "label": "微信："
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "id": "Col-16",
+                          "component": "Col",
+                          "props": {
+                            "span": 12
+                          },
+                          "children": [
+                            {
+                              "id": "Input-17",
+                              "component": "Input",
+                              "props": {
+                                "name": "school",
+                                "label": "毕业院校："
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "Row-15",
+                      "component": "Row",
+                      "props": {
+                        "gutter": [
+                          40,
+                          0
+                        ]
+                      },
+                      "children": [
+                        {
+                          "id": "Col-16",
+                          "component": "Col",
+                          "props": {
+                            "span": 12
+                          },
+                          "children": [
+                            {
+                              "id": "Input-17",
+                              "component": "Input",
+                              "props": {
+                                "name": "major",
+                                "label": "专业："
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "GroupList-17",
+                  "component": "GroupList",
+                  "props": {
+                    "name": "work",
+                    "groupItem": "$workForm1",
+                    "empty": "$empty"
+                  },
+                  "children": [
+                    {
+                      "id": "Card-18",
+                      "component": "Card",
+                      "props": {
+                        "className": "cardTitleNew",
+                        "title": "工作经历",
+                        "extra": "$listTitleExtra",
+                        "bordered": false
+                      },
+                      "children": [
+                        {
+                          "id": "Component-19",
+                          "component": "Component",
+                          "props": {
+                            "itemMapping": "$timeToDate",
+                            "submitMapping": "$dateToTime",
+                            "content": "$groupList"
                           }
                         }
                       ]
                     }
                   ]
-                }
-              ]
-            },
-            {
-              "component": "Div",
-              "props": {
-                "style": {
-                  "height": "1px",
-                  "border-top": "1px dashed #C0C0C6",
-                  "margin-bottom": "48px"
-                }
-              }
-            },
-            {
-              "id": "Row-27",
-              "component": "Row",
-              "props": {
-                "justify": "center",
-                "gutter": [
-                  40,
-                  100
-                ]
-              },
-              "children": [
+                },
                 {
-                  "id": "Col-28",
-                  "component": "Col",
+                  "component": "Div",
                   "props": {
+                    "style": {
+                      "height": "1px",
+                      "border-top": "1px dashed #C0C0C6",
+                      "margin-bottom": "48px"
+                    }
+                  }
+                },
+                {
+                  "id": "GroupList-171",
+                  "component": "GroupList",
+                  "props": {
+                    "name": "work",
+                    "groupItem": "$practice",
+                    "empty": "$empty"
                   },
                   "children": [
                     {
-                      "id": "SubmitButton-29",
-                      "component": "SubmitButton",
+                      "id": "Card-181",
+                      "component": "Card",
                       "props": {
-                        "type": "primary"
+                        "className": "cardTitleNew",
+                        "title": "实习经历",
+                        "extra": "$listTitleExtra",
+                        "bordered": false
                       },
-                      "children": "保存"
+                      "children": [
+                        {
+                          "id": "Component-191",
+                          "component": "Component",
+                          "props": {
+                            "itemMapping": "$timeToDate",
+                            "submitMapping": "$dateToTime",
+                            "content": "$groupList"
+                          }
+                        }
+                      ]
                     }
                   ]
                 },
                 {
-                  "id": "Col-30",
-                  "component": "Col",
+                  "component": "Div",
                   "props": {
+                    "style": {
+                      "height": "1px",
+                      "border-top": "1px dashed #C0C0C6",
+                      "margin-bottom": "48px"
+                    }
+                  }
+                },
+                {
+                  "id": "GroupList-172",
+                  "component": "GroupList",
+                  "props": {
+                    "name": "work",
+                    "groupItem": "$projectForm",
+                    "empty": "$empty"
                   },
                   "children": [
                     {
-                      "id": "ResetButton-31",
-                      "component": "ResetButton",
-                      "children": "重置"
+                      "id": "Card-182",
+                      "component": "Card",
+                      "props": {
+                        "className": "cardTitleNew",
+                        "title": "项目经历",
+                        "extra": "$listTitleExtra",
+                        "bordered": false
+                      },
+                      "children": [
+                        {
+                          "id": "Component-192",
+                          "component": "Component",
+                          "props": {
+                            "itemMapping": "$timeToDate",
+                            "submitMapping": "$dateToTime",
+                            "content": "$groupList"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "component": "Div",
+                  "props": {
+                    "style": {
+                      "height": "1px",
+                      "border-top": "1px dashed #C0C0C6",
+                      "margin-bottom": "48px"
+                    }
+                  }
+                },
+                {
+                  "id": "GroupList-173",
+                  "component": "GroupList",
+                  "props": {
+                    "name": "work",
+                    "groupItem": "$social",
+                    "empty": "$empty"
+                  },
+                  "children": [
+                    {
+                      "id": "Card-183",
+                      "component": "Card",
+                      "props": {
+                        "className": "cardTitleNew",
+                        "title": "社会实践",
+                        "extra": "$listTitleExtra",
+                        "bordered": false
+                      },
+                      "children": [
+                        {
+                          "id": "Component-193",
+                          "component": "Component",
+                          "props": {
+                            "itemMapping": "$timeToDate",
+                            "submitMapping": "$dateToTime",
+                            "content": "$groupList"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "component": "Div",
+                  "props": {
+                    "style": {
+                      "height": "1px",
+                      "border-top": "1px dashed #C0C0C6",
+                      "margin-bottom": "48px"
+                    }
+                  }
+                },
+                {
+                  "id": "GroupList-20",
+                  "component": "GroupList",
+                  "props": {
+                    "name": "education",
+                    "groupItem": "$educationForm",
+                    "empty": "$empty"
+                  },
+                  "children": [
+                    {
+                      "id": "Card-21",
+                      "component": "Card",
+                      "props": {
+                        "className": "cardTitleNew",
+                        "title": "教育经历",
+                        "extra": "$listTitleExtra",
+                        "bordered": false
+                      },
+                      "children": [
+                        {
+                          "id": "Component-22",
+                          "component": "Component",
+                          "props": {
+                            "content": "$groupList"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "component": "Div",
+                  "props": {
+                    "style": {
+                      "height": "1px",
+                      "border-top": "1px dashed #C0C0C6",
+                      "margin-bottom": "48px"
+                    }
+                  }
+                },
+                {
+                  "id": "GroupList-174",
+                  "component": "GroupList",
+                  "props": {
+                    "name": "work",
+                    "groupItem": "$training",
+                    "empty": "$empty"
+                  },
+                  "children": [
+                    {
+                      "id": "Card-184",
+                      "component": "Card",
+                      "props": {
+                        "className": "cardTitleNew",
+                        "title": "培训经历",
+                        "extra": "$listTitleExtra",
+                        "bordered": false
+                      },
+                      "children": [
+                        {
+                          "id": "Component-194",
+                          "component": "Component",
+                          "props": {
+                            "itemMapping": "$timeToDate",
+                            "submitMapping": "$dateToTime",
+                            "content": "$groupList"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "component": "Div",
+                  "props": {
+                    "style": {
+                      "height": "1px",
+                      "border-top": "1px dashed #C0C0C6",
+                      "margin-bottom": "48px"
+                    }
+                  }
+                },
+                {
+                  "id": "GroupList-175",
+                  "component": "GroupList",
+                  "props": {
+                    "name": "work",
+                    "groupItem": "$skill",
+                    "empty": "$empty"
+                  },
+                  "children": [
+                    {
+                      "id": "Card-185",
+                      "component": "Card",
+                      "props": {
+                        "className": "cardTitleNew",
+                        "title": "所获技能",
+                        "extra": "$listTitleExtra",
+                        "bordered": false
+                      },
+                      "children": [
+                        {
+                          "id": "Component-195",
+                          "component": "Component",
+                          "props": {
+                            "itemMapping": "$timeToDate",
+                            "submitMapping": "$dateToTime",
+                            "content": "$groupList"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "component": "Div",
+                  "props": {
+                    "style": {
+                      "height": "1px",
+                      "border-top": "1px dashed #C0C0C6",
+                      "margin-bottom": "48px"
+                    }
+                  }
+                },
+                {
+                  "id": "Card-23",
+                  "component": "Card",
+                  "props": {
+                    "className": "cardTitleNew",
+                    "title": "自我评价",
+                    "bordered": false
+                  },
+                  "children": [
+                    {
+                      "id": "Row-24",
+                      "component": "Row",
+                      "props": {
+                        "gutter": [
+                          40,
+                          0
+                        ]
+                      },
+                      "children": [
+                        {
+                          "id": "Col-25",
+                          "component": "Col",
+                          "props": {
+                            "span": 24
+                          },
+                          "children": [
+                            {
+                              "id": "TextArea-26",
+                              "component": "TextArea",
+                              "props": {
+                                "name": "self_assessment",
+                                "label": "自我评价描述："
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "component": "Div",
+                  "props": {
+                    "style": {
+                      "height": "1px",
+                      "border-top": "1px dashed #C0C0C6",
+                      "margin-bottom": "48px"
+                    }
+                  }
+                },
+                {
+                  "id": "GroupList-176",
+                  "component": "GroupList",
+                  "props": {
+                    "name": "work",
+                    "groupItem": "$award",
+                    "empty": "$empty"
+                  },
+                  "children": [
+                    {
+                      "id": "Card-186",
+                      "component": "Card",
+                      "props": {
+                        "className": "cardTitleNew",
+                        "title": "获奖信息",
+                        "extra": "$listTitleExtra",
+                        "bordered": false
+                      },
+                      "children": [
+                        {
+                          "id": "Component-196",
+                          "component": "Component",
+                          "props": {
+                            "itemMapping": "$timeToDate",
+                            "submitMapping": "$dateToTime",
+                            "content": "$groupList"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "component": "Div",
+                  "props": {
+                    "style": {
+                      "height": "1px",
+                      "border-top": "1px dashed #C0C0C6",
+                      "margin-bottom": "48px"
+                    }
+                  }
+                },
+                {
+                  "id": "Row-27",
+                  "component": "Row",
+                  "props": {
+                    "justify": "center",
+                    "gutter": [
+                      40,
+                      100
+                    ]
+                  },
+                  "children": [
+                    {
+                      "id": "Col-28",
+                      "component": "Col",
+                      "props": {
+                      },
+                      "children": [
+                        {
+                          "id": "SubmitButton-29",
+                          "component": "SubmitButton",
+                          "props": {
+                            "type": "primary"
+                          },
+                          "children": "保存"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "Col-30",
+                      "component": "Col",
+                      "props": {
+                      },
+                      "children": [
+                        {
+                          "id": "ResetButton-31",
+                          "component": "ResetButton",
+                          "children": "重置"
+                        }
+                      ]
                     }
                   ]
                 }
               ]
             }
+
           ]
         }
+
       ]
     }
   ]
