@@ -1,38 +1,5 @@
 {
-  "variable": {
-    "$sexList":[
-      {
-        "label": "男",
-        "value": 1
-      },
-      {
-        "label": "女",
-        "value": 2
-      }
-    ],
-    "$degreeList": [
-      {
-        "label": "博士",
-        "value": 1
-      },
-      {
-        "label": "硕士",
-        "value": 2
-      },
-      {
-        "label": "本科",
-        "value": 3
-      },
-      {
-        "label": "专科",
-        "value": 4
-      },
-      {
-        "label": "高中",
-        "value": 5
-      }
-    ]
-  },
+  "variable": {},
   "functions": {
     "$submit": "functions.$submitForm(args[0]);console.log(args[0]);",
     "$setFormContext": "functions.$getFormContext(variable.$formContext);"
