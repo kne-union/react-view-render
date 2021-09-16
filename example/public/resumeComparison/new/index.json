@@ -1,6 +1,6 @@
 {
   "components": {
-    "$card": "/react-view-render/resumeComparison/new/card.json",
+    "$card": "/analyticalResult/card.json",
     "$empty": {
       "data": [
         {
@@ -162,7 +162,7 @@
                   "id": "Select-131",
                   "component": "Select",
                   "props": {
-                    "name": "overseasExperience",
+                    "name": "oversea",
                     "label": "是否有海外经历：",
                     "options": "$twoList",
                     "placeholder":"请选择"
@@ -193,7 +193,7 @@
                   "id": "Input-121",
                   "component": "Input",
                   "props": {
-                    "name": "country",
+                    "name": "nation",
                     "label": "海外经历国家：",
                     "placeholder":"请输入"
                   }
@@ -257,7 +257,7 @@
                               "borderRight": 0,
                               "borderRadius": 0
                             },
-                            "name":"salaryMin",
+                            "name":"salaryLow",
                             "placeholder":"薪资下限"
                           }
                         },
@@ -284,7 +284,7 @@
                               "borderLeft": 0,
                               "borderRadius": 0
                             },
-                            "name":"salaryMax",
+                            "name":"salaryHigh",
                             "placeholder":"薪资上限"
                           }
                         }
@@ -317,7 +317,7 @@
                   "id": "TextArea-130",
                   "component": "TextArea",
                   "props": {
-                    "name": "reason",
+                    "name": "leavingReason",
                     "label": "离职原因：",
                     "showCount":true,
                     "maxLength":300,
@@ -381,7 +381,7 @@
                   "id": "TextArea-7",
                   "component": "TextArea",
                   "props": {
-                    "name": "duty",
+                    "name": "responsibility",
                     "label": "工作职责：",
                     "showCount":true,
                     "maxLength":300,
@@ -413,7 +413,7 @@
                   "id": "TextArea-10",
                   "component": "TextArea",
                   "props": {
-                    "name": "result",
+                    "name": "performance",
                     "label": "工作业绩：",
                     "showCount":true,
                     "maxLength":300,
@@ -560,7 +560,7 @@
                   "id": "Select-131",
                   "component": "Select",
                   "props": {
-                    "name": "overseasExperience",
+                    "name": "oversea",
                     "label": "是否有海外经历：",
                     "options": "$twoList",
                     "placeholder":"请选择"
@@ -591,7 +591,7 @@
                   "id": "Input-121",
                   "component": "Input",
                   "props": {
-                    "name": "country",
+                    "name": "nation",
                     "label": "海外经历国家：",
                     "placeholder":"请输入"
                   }
@@ -655,7 +655,7 @@
                               "borderRight": 0,
                               "borderRadius": 0
                             },
-                            "name":"salaryMin",
+                            "name":"salaryLow",
                             "placeholder":"薪资下限"
                           }
                         },
@@ -682,7 +682,7 @@
                               "borderLeft": 0,
                               "borderRadius": 0
                             },
-                            "name":"salaryMax",
+                            "name":"salaryHigh",
                             "placeholder":"薪资上限"
                           }
                         }
@@ -715,7 +715,7 @@
                   "id": "TextArea-130",
                   "component": "TextArea",
                   "props": {
-                    "name": "reason",
+                    "name": "leavingReason",
                     "label": "离职原因：",
                     "showCount":true,
                     "maxLength":300,
@@ -779,7 +779,7 @@
                   "id": "TextArea-7",
                   "component": "TextArea",
                   "props": {
-                    "name": "duty",
+                    "name": "responsibility",
                     "label": "工作职责：",
                     "showCount":true,
                     "maxLength":300,
@@ -811,7 +811,7 @@
                   "id": "TextArea-10",
                   "component": "TextArea",
                   "props": {
-                    "name": "result",
+                    "name": "performance",
                     "label": "工作业绩：",
                     "showCount":true,
                     "maxLength":300,
@@ -958,7 +958,7 @@
                   "id": "TextArea-17",
                   "component": "TextArea",
                   "props": {
-                    "name": "des",
+                    "name": "description",
                     "label": "项目描述：",
                     "showCount":true,
                     "maxLength":300,
@@ -990,7 +990,7 @@
                   "id": "TextArea-7",
                   "component": "TextArea",
                   "props": {
-                    "name": "duty",
+                    "name": "responsibility",
                     "label": "项目职责：",
                     "showCount":true,
                     "maxLength":300,
@@ -1113,13 +1113,12 @@
                   },
                   "children": [
                     {
-                      "id": "Select-7",
-                      "component": "Select",
+                      "id": "Input-7",
+                      "component": "Input",
                       "props": {
                         "name": "major",
                         "label": "专业名称",
-                        "rule": "REQ",
-                        "options": "$majorList"
+                        "rule": "REQ"
                       }
                     }
                   ]
@@ -1199,7 +1198,7 @@
                   "id": "Input-3",
                   "component": "Input",
                   "props": {
-                    "name": "school",
+                    "name": "name",
                     "label": "社会实践名称：",
                     "placeholder": "请输入",
                     "rule": "REQ"
@@ -1218,8 +1217,8 @@
                   "id": "Input-4",
                   "component": "Input",
                   "props": {
-                    "name": "major",
-                    "label": "职位职位：",
+                    "name": "position",
+                    "label": "职位名称：",
                     "placeholder": "请输入",
                     "rule": "REQ"
                   }
@@ -1249,7 +1248,7 @@
                   "id": "DateRangePicker-11",
                   "component": "DateRangePicker",
                   "props": {
-                    "name": "date",
+                    "name": "time",
                     "label": "社会实践时间：",
                     "rule": "REQ",
                     "interceptor": "string-date-range",
@@ -1270,7 +1269,7 @@
                   "id": "TextArea-17",
                   "component": "TextArea",
                   "props": {
-                    "name": "des",
+                    "name": "description",
                     "label": "实践描述：",
                     "showCount":true,
                     "maxLength":300,
@@ -1306,7 +1305,7 @@
                   "id": "Input-3",
                   "component": "Input",
                   "props": {
-                    "name": "school",
+                    "name": "name",
                     "label": "培训名称：",
                     "placeholder": "请输入",
                     "rule": "REQ"
@@ -1325,7 +1324,7 @@
                   "id": "Input-4",
                   "component": "Input",
                   "props": {
-                    "name": "major",
+                    "name": "agency",
                     "label": "培训机构：",
                     "placeholder": "请输入",
                     "rule": "REQ"
@@ -1356,7 +1355,7 @@
                   "id": "DateRangePicker-11",
                   "component": "DateRangePicker",
                   "props": {
-                    "name": "date",
+                    "name": "time",
                     "label": "培训时间：",
                     "rule": "REQ",
                     "className": "with100",
@@ -1407,7 +1406,7 @@
                   "id": "TextArea-17",
                   "component": "TextArea",
                   "props": {
-                    "name": "course",
+                    "name": "courses",
                     "label": "培训课程：",
                     "showCount":true,
                     "maxLength":300,
@@ -1439,7 +1438,7 @@
                   "id": "TextArea-117",
                   "component": "TextArea",
                   "props": {
-                    "name": "des",
+                    "name": "description",
                     "label": "培训描述：",
                     "showCount":true,
                     "maxLength":300,
@@ -1475,7 +1474,7 @@
                   "id": "Input-3",
                   "component": "Input",
                   "props": {
-                    "name": "school",
+                    "name": "name",
                     "label": "技能名称：",
                     "rule": "REQ"
                   }
@@ -1493,7 +1492,7 @@
                   "id": "Input-4",
                   "component": "Input",
                   "props": {
-                    "name": "major",
+                    "name": "level",
                     "label": "技能水平：",
                     "rule": "REQ"
                   }
@@ -1523,7 +1522,7 @@
                   "id": "DateRangePicker-11",
                   "component": "DatePicker",
                   "props": {
-                    "name": "date",
+                    "name": "month",
                     "label": "使用时间：",
                     "rule": "REQ",
                     "className": "with100",
@@ -1569,7 +1568,7 @@
                   "id": "Input-3",
                   "component": "Input",
                   "props": {
-                    "name": "school",
+                    "name": "name",
                     "label": "奖励名称：",
                     "placeholder": "请输入",
                     "rule": "REQ"
@@ -1588,7 +1587,7 @@
                   "id": "Input-4",
                   "component": "Input",
                   "props": {
-                    "name": "major",
+                    "name": "agency",
                     "label": "奖励颁发机构：",
                     "placeholder": "请输入",
                     "rule": "REQ"
@@ -1639,7 +1638,7 @@
                   "id": "TextArea-17",
                   "component": "TextArea",
                   "props": {
-                    "name": "des",
+                    "name": "description",
                     "label": "获奖描述：",
                     "showCount":true,
                     "maxLength":300,
@@ -1654,223 +1653,23 @@
     }
   },
   "variable": {
-    "$formData": {
-      "name": "111",
-      "phone": "17887905178",
-      "email": "1212121@qq.com",
-      "wechat": "xxxx",
-      "birthday": "2021-01-02",
-      "degree": 1,
-      "school": "清华",
-      "major": "计算机",
-      "work": [
-        {
-          "company": "上海蓝天人力资源有限公司",
-          "position": "产品经理",
-          "startTime": "2012.08",
-          "endTime": "2017.06",
-          "department": "产品部",
-          "overseasExperience": "是",
-          "duty": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；",
-          "result": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；",
-          "duration": "3年",
-          "reason": "个人发展",
-          "description": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；",
-          "country": "美国",
-          "salary": "10K-13K",
-          "salaryMin": "10K",
-          "salaryMax": "20K"
-        },
-        {
-          "company": "上海外企人力资源有限公司",
-          "position": "产品经理",
-          "department": "产品部",
-          "startTime": "2012.08",
-          "endTime": "2017.06",
-          "duty": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；",
-          "result": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；",
-          "duration": "3年",
-          "reason": "个人发展",
-          "description": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；",
-          "country": "美国",
-          "salary": "10K-13K"
-        }
-      ],
-      "practice": [
-        {
-          "company": "上海蓝天人力资源有限公司",
-          "position": "产品经理",
-          "startTime": "2012.08",
-          "endTime": "2017.06",
-          "duration": "3年",
-          "duty": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；",
-          "result": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；",
-          "country": "美国",
-          "salary": "10K-13K"
-        }
-      ],
-      "education": [
-        {
-          "school": "清华大学",
-          "major": "计算机科学",
-          "degree": "硕士",
-          "des": "11",
-          "startTime": "2020.04",
-          "endTime": "2025.05"
-        },
-        {
-          "school": "清华大学",
-          "major": "计算机科学",
-          "degree": "硕士",
-          "des": "11",
-          "startTime": "2020.04",
-          "endTime": "2025.05"
-        }
-      ],
-      "social": [
-        {
-          "name": "送爱心公益慈善活动",
-          "position": "宣传员",
-          "startTime": "2012.08",
-          "endTime": "2017.06",
-          "duration": "3年",
-          "description": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；"
-        }
-      ],
-      "awarded": [
-        {
-          "name": "全国大学生数学建模二等奖",
-          "school": "清华大学",
-          "startTime": "2012.08",
-          "description": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；"
-        },
-        {
-          "name": "全国大学生数学建模二等奖",
-          "school": "清华大学",
-          "startTime": "2012.08",
-          "description": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；"
-        }
-      ],
-      "skill": [
-        {
-          "name": "英语四级证书",
-          "time": "2020.04",
-          "status": "熟练"
-        },
-        {
-          "name": "英语四级证书",
-          "time": "2020.04",
-          "status": "熟练"
-        }
-      ],
-      "projects": [
-        {
-          "name": "Aitx招聘系统",
-          "startTime": "2018.08",
-          "endTime": "至今",
-          "position": "产品经理",
-          "duration": "3年",
-          "company": "上海肯耐珂萨股份有限公司",
-          "des": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；",
-          "duty": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；",
-          "result": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；"
-        },
-        {
-          "name": "薪酬系统",
-          "startTime": "2018.08",
-          "endTime": "至今",
-          "duration": "3年",
-          "position": "产品经理",
-          "company": "上海有钱有限公司",
-          "des": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；",
-          "duty": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；",
-          "result": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；"
-        }
-      ],
-      "training": [
-        {
-          "name": "产品思维培训",
-          "org": "产品思维培训机构",
-          "startTime": "2012.08",
-          "endTime": "2017.06",
-          "description": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；",
-          "course": "产品思维培训课程产品思维培训产品思维培训产品思维培训产品思维培训产品思维培训",
-          "certificate": "产品经理证书"
-        }
-      ],
-      "experience": "3-5年",
-      "selfEvaluation": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；"
-    },
     "$twoList":[
       {
         "label": "是",
-        "value": 1
+        "value": true
       },
       {
         "label": "否",
-        "value": 0
-      }
-    ],
-    "$degreeList": [
-      {
-        "label": "博士",
-        "value": 1
-      },
-      {
-        "label": "硕士",
-        "value": 2
-      },
-      {
-        "label": "本科",
-        "value": 3
-      },
-      {
-        "label": "专科",
-        "value": 4
-      },
-      {
-        "label": "高中",
-        "value": 5
-      }
-    ],
-    "$majorList": [
-      {
-        "label": "计算机科学技术",
-        "value": 0
-      },
-      {
-        "label": "电子信息技术",
-        "value": 1
-      },
-      {
-        "label": "土木工程",
-        "value": 2
-      },
-      {
-        "label": "机械制造及其自动化",
-        "value": 3
-      }
-    ],
-    "$experienceList": [
-      {
-        "label": "0-3年",
-        "value": "0-3年"
-      },
-      {
-        "label": "3-5年",
-        "value": "3-5年"
-      },
-      {
-        "label": "5年以上",
-        "value": "5年以上"
+        "value": false
       }
     ]
   },
   "functions": {
-    "$submit": "console.log(args[0]);",
+    "$submit": "functions.$submitForm(args[0]);",
     "$timeToDate": "const output = Object.assign({},args[0]);if(args[0].startTime&&args[0].endTime){output.time=[args[0].startTime,args[0].endTime]};delete output['startTime'];delete output['endTime'];return output;",
     "$dateToTime": "const output = Object.assign({},args[0]);if(Array.isArray(args[0].time)&&args[0].time.length===2){output.startTime=args[0].time[0];output.endTime=args[0].time[1];}delete output['time'];return output;",
-    "$formatForm": "const education =  args[0]['education']&&args[0]['education'].map((it)=>{return {...it, time:[it['startTime'],it['endTime']]}});const work =  args[0]['work']&&args[0]['work'].map((it)=>{return {...it, time:[it['startTime'],it['endTime']]}});return {...args[0],education,work}"
+    "$formatForm": "const transferData = (it) => ({...it, time:it['startDate'] ? [it['startDate'] || '',it['endDate'] || ''] : []});const educations =  args[0]['educations']&&args[0]['educations'].map((it)=> transferData(it));const works =  args[0]['works']&&args[0]['works'].map((it)=>transferData(it));const trainings =  args[0]['trainings']&&args[0]['trainings'].map((it)=>transferData(it));const projects =  args[0]['projects']&&args[0]['projects'].map((it)=>transferData(it));const interns =  args[0]['interns']&&args[0]['interns'].map((it)=>transferData(it));const activities =  args[0]['activities']&&args[0]['activities'].map((it)=>transferData(it));return {...args[0],educations,works, trainings, projects, interns, activities}",
+    "$setFormContext":"functions.$getFormContext(variable.$formContext);"
   },
   "data": [
     {
@@ -1903,12 +1702,32 @@
               },
               "children": [
                 {
+                  "id": "FormContext-33",
+                  "component": "FormContext",
+                  "children": [
+                    {
+                      "id": "Mapping-34",
+                      "component": "Mapping",
+                      "props": {
+                        "expression": "$setFormContext"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id":"ResumeStatus-0",
+                  "component": "ResumeStatus",
+                  "props":{
+                    "fileData":"$fileData"
+                  }
+                },
+                {
                   "id": "Card-0",
                   "component": "Card",
                   "props": {
                     "style": {
-                      "font-size": "14px",
-                      "font-weight": 500,
+                      "fontSize": "14px",
+                      "fontWeight": 500,
                       "color": "#576B95"
                     },
                     "className": "cardTitleNew",
@@ -2003,7 +1822,7 @@
                               "id": "Experience-9",
                               "component": "Select",
                               "props": {
-                                "name": "experience",
+                                "name": "workYear",
                                 "label": "工作经验：",
                                 "options": "$experienceList"
                               }
@@ -2141,7 +1960,7 @@
                   "id": "GroupList-17",
                   "component": "GroupList",
                   "props": {
-                    "name": "work",
+                    "name": "works",
                     "groupItem": "$workForm1",
                     "empty": "$empty"
                   },
@@ -2174,8 +1993,8 @@
                   "props": {
                     "style": {
                       "height": "1px",
-                      "border-top": "1px dashed #C0C0C6",
-                      "margin-bottom": "48px"
+                      "borderTop": "1px dashed #C0C0C6",
+                      "marginBottom": "48px"
                     }
                   }
                 },
@@ -2183,7 +2002,7 @@
                   "id": "GroupList-171",
                   "component": "GroupList",
                   "props": {
-                    "name": "work",
+                    "name": "interns",
                     "groupItem": "$practice",
                     "empty": "$empty"
                   },
@@ -2216,8 +2035,8 @@
                   "props": {
                     "style": {
                       "height": "1px",
-                      "border-top": "1px dashed #C0C0C6",
-                      "margin-bottom": "48px"
+                      "borderTop": "1px dashed #C0C0C6",
+                      "marginBottom": "48px"
                     }
                   }
                 },
@@ -2225,7 +2044,7 @@
                   "id": "GroupList-172",
                   "component": "GroupList",
                   "props": {
-                    "name": "work",
+                    "name": "projects",
                     "groupItem": "$projectForm",
                     "empty": "$empty"
                   },
@@ -2258,8 +2077,8 @@
                   "props": {
                     "style": {
                       "height": "1px",
-                      "border-top": "1px dashed #C0C0C6",
-                      "margin-bottom": "48px"
+                      "borderTop": "1px dashed #C0C0C6",
+                      "marginBottom": "48px"
                     }
                   }
                 },
@@ -2267,7 +2086,7 @@
                   "id": "GroupList-173",
                   "component": "GroupList",
                   "props": {
-                    "name": "work",
+                    "name": "activities",
                     "groupItem": "$social",
                     "empty": "$empty"
                   },
@@ -2300,8 +2119,8 @@
                   "props": {
                     "style": {
                       "height": "1px",
-                      "border-top": "1px dashed #C0C0C6",
-                      "margin-bottom": "48px"
+                      "borderTop": "1px dashed #C0C0C6",
+                      "marginBottom": "48px"
                     }
                   }
                 },
@@ -2309,7 +2128,7 @@
                   "id": "GroupList-20",
                   "component": "GroupList",
                   "props": {
-                    "name": "education",
+                    "name": "educations",
                     "groupItem": "$educationForm",
                     "empty": "$empty"
                   },
@@ -2340,8 +2159,8 @@
                   "props": {
                     "style": {
                       "height": "1px",
-                      "border-top": "1px dashed #C0C0C6",
-                      "margin-bottom": "48px"
+                      "borderTop": "1px dashed #C0C0C6",
+                      "marginBottom": "48px"
                     }
                   }
                 },
@@ -2349,7 +2168,7 @@
                   "id": "GroupList-174",
                   "component": "GroupList",
                   "props": {
-                    "name": "work",
+                    "name": "trainings",
                     "groupItem": "$training",
                     "empty": "$empty"
                   },
@@ -2382,8 +2201,8 @@
                   "props": {
                     "style": {
                       "height": "1px",
-                      "border-top": "1px dashed #C0C0C6",
-                      "margin-bottom": "48px"
+                      "borderTop": "1px dashed #C0C0C6",
+                      "marginBottom": "48px"
                     }
                   }
                 },
@@ -2391,7 +2210,7 @@
                   "id": "GroupList-175",
                   "component": "GroupList",
                   "props": {
-                    "name": "work",
+                    "name": "skills",
                     "groupItem": "$skill",
                     "empty": "$empty"
                   },
@@ -2424,8 +2243,8 @@
                   "props": {
                     "style": {
                       "height": "1px",
-                      "border-top": "1px dashed #C0C0C6",
-                      "margin-bottom": "48px"
+                      "borderTop": "1px dashed #C0C0C6",
+                      "marginBottom": "48px"
                     }
                   }
                 },
@@ -2459,7 +2278,7 @@
                               "id": "TextArea-26",
                               "component": "TextArea",
                               "props": {
-                                "name": "selfEvaluation",
+                                "name": "eval",
                                 "label": "自我评价描述："
                               }
                             }
@@ -2474,8 +2293,8 @@
                   "props": {
                     "style": {
                       "height": "1px",
-                      "border-top": "1px dashed #C0C0C6",
-                      "margin-bottom": "48px"
+                      "borderTop": "1px dashed #C0C0C6",
+                      "marginBottom": "48px"
                     }
                   }
                 },
@@ -2483,7 +2302,7 @@
                   "id": "GroupList-176",
                   "component": "GroupList",
                   "props": {
-                    "name": "work",
+                    "name": "awards",
                     "groupItem": "$award",
                     "empty": "$empty"
                   },
@@ -2516,52 +2335,10 @@
                   "props": {
                     "style": {
                       "height": "1px",
-                      "border-top": "1px dashed #C0C0C6",
-                      "margin-bottom": "48px"
+                      "borderTop": "1px dashed #C0C0C6",
+                      "marginBottom": "48px"
                     }
                   }
-                },
-                {
-                  "id": "Row-27",
-                  "component": "Row",
-                  "props": {
-                    "justify": "center",
-                    "gutter": [
-                      40,
-                      100
-                    ]
-                  },
-                  "children": [
-                    {
-                      "id": "Col-28",
-                      "component": "Col",
-                      "props": {
-                      },
-                      "children": [
-                        {
-                          "id": "SubmitButton-29",
-                          "component": "SubmitButton",
-                          "props": {
-                            "type": "primary"
-                          },
-                          "children": "保存"
-                        }
-                      ]
-                    },
-                    {
-                      "id": "Col-30",
-                      "component": "Col",
-                      "props": {
-                      },
-                      "children": [
-                        {
-                          "id": "ResetButton-31",
-                          "component": "ResetButton",
-                          "children": "重置"
-                        }
-                      ]
-                    }
-                  ]
                 }
               ]
             }
