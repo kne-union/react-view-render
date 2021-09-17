@@ -1,7 +1,10 @@
 {
+  "id":"41",
+  "parentId":"44",
+  "path":"/resume/basic.json",
   "components": {
-    "$card": "/react-view-render/resume/card.json",
-    "$editInfo": "/react-view-render/resume/editInfo.json",
+    "$card": "/resume/card.json",
+    "$editInfo": "/resume/editInfo.json",
     "$resumeInfo": {
       "functions": {
         "$isExist": "return !!args[0]",

@@ -1,4 +1,7 @@
 {
+  "id":"41",
+  "parentId":"47",
+  "path":"/resume/addForm.json",
   "functions": {
     "$showAddForm": "functions.$setModalVisibleState(true);",
     "$hideAddForm": "functions.$setModalVisibleState(false);",

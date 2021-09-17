@@ -1,4 +1,7 @@
 {
+  "id":"41",
+  "parentId":"43",
+  "path":"/resume/index.json",
   "variable": {
     "$initResume": {
       "basic": {
@@ -168,9 +171,9 @@
     "$saveResume": "functions.$saveResumeState(function(old){return Object.assign({},old,args[0]);});lib.message.success('修改成功');"
   },
   "components": {
-    "$basic": "/react-view-render/resume/basic.json",
-    "$analysis": "/react-view-render/resume/analysis.json",
-    "$detail": "/react-view-render/resume/detail.json"
+    "$basic": "/resume/basic.json",
+    "$analysis": "/resume/analysis.json",
+    "$detail": "/resume/detail.json"
   },
   "data": [
     {

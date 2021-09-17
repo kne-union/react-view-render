@@ -1,6 +1,9 @@
 {
+  "id":"41",
+  "parentId":"45",
+  "path":"/resume/analysis.json",
   "components": {
-    "$card": "/react-view-render/resume/card.json",
+    "$card": "/resume/card.json",
     "$part": {
       "data": [
         {
