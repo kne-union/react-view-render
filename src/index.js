@@ -3,6 +3,7 @@ import Render from './Render';
 import useEvent from './useEvent';
 import reactDom from 'react-dom';
 import once from 'lodash/once';
+import {currentProfile} from './preset';
 import './index.scss';
 
 
@@ -62,5 +63,6 @@ export const renderToString = async (props) => {
 };
 
 export {applyVariable} from './util';
-export {default as profile, profileMap} from './profile';
+export const profile = currentProfile.profile;
+export const profileMap = currentProfile.profileMap;
 export {default as preset} from './preset';
