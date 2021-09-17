@@ -1,42 +1,11 @@
 {
-  "variable": {
-    "$sexList":[
-      {
-        "label": "男",
-        "value": 1
-      },
-      {
-        "label": "女",
-        "value": 2
-      }
-    ],
-    "$degreeList": [
-      {
-        "label": "博士",
-        "value": 1
-      },
-      {
-        "label": "硕士",
-        "value": 2
-      },
-      {
-        "label": "本科",
-        "value": 3
-      },
-      {
-        "label": "专科",
-        "value": 4
-      },
-      {
-        "label": "高中",
-        "value": 5
-      }
-    ]
+  "variable": {},
+  "functions": {
+    "$submit": "functions.$submitForm(args[0]);console.log(args[0]);",
+    "$setFormContext": "functions.$getFormContext(variable.$formContext);"
+
   },
-  "functions": {},
-  "components": {
-    "$submit": "console.log(args[0]);"
-  },
+  "components": {},
   "data": [
     {
       "id": "Form-0",
@@ -48,6 +17,19 @@
         "classList":".form_content{padding:48px 214px 0} .react-form__field-label{color: #576B95}"
       },
       "children": [
+        {
+          "id": "FormContext-33",
+          "component": "FormContext",
+          "children": [
+            {
+              "id": "Mapping-34",
+              "component": "Mapping",
+              "props": {
+                "expression": "$setFormContext"
+              }
+            }
+          ]
+        },
         {
           "id": "Row-1",
           "component": "Row",
@@ -88,7 +70,7 @@
                   "id": "Select-4",
                   "component": "Select",
                   "props": {
-                    "name": "sex",
+                    "name": "gender",
                     "label": "性别",
                     "options": "$sexList",
                     "placeholder":"请选择"

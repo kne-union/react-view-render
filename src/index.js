@@ -63,7 +63,6 @@ export const renderToString = async (props) => {
 };
 
 export {applyVariable} from './util';
-
 export const profile = currentProfile.profile;
 export const profileMap = currentProfile.profileMap;
 export {default as preset} from './preset';
