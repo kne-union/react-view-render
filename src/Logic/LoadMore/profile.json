@@ -1,0 +1,16 @@
+{
+  "id": "LoadMore",
+  "name": "下拉加载",
+  "property": {
+    "resource": {
+      "input-type": "$variable",
+      "label": "数据源",
+      "required": true
+    },
+    "distance": {
+      "input-type": "$number",
+      "label": "底部触发距离",
+      "required": true
+    }
+  }
+}

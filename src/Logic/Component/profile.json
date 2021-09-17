@@ -1,0 +1,10 @@
+{
+  "id": "Component",
+  "name": "组件",
+  "property": {
+    "content": {
+      "label": "组件内容",
+      "input-type": "$components"
+    }
+  }
+}

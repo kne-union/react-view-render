@@ -11,6 +11,6 @@
     "allow": []
   },
   "defaultProps": {
-    "children": "请输入文本内容"
+    "content": "请输入文本内容"
   }
 }
