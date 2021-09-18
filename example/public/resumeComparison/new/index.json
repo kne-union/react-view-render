@@ -230,7 +230,7 @@
           ]
         },
         {
-          "id": "Row-14",
+          "id": "Row-16",
           "component": "Row",
           "props": {
             "gutter": [
@@ -291,7 +291,7 @@
           ]
         },
         {
-          "id": "Row-14",
+          "id": "Row-17",
           "component": "Row",
           "props": {
             "gutter": [
@@ -318,65 +318,66 @@
                   },
                   "children": [
                     {
-                      "id": "div-3743",
-                      "component": "Div",
+                      "id":"div-3743",
+                      "component":"Div",
                       "props": {
                         "style": {
-                          "color": "#576B95",
-                          "fontWeight": "500"
+                          "fontSize": "14px",
+                          "marginBottom": "2px",
+                          "color":"##000",
+                          "fontWeight":"500"
                         }
                       },
-                      "children": "薪资范围："
+                      "children":"薪资范围："
                     },
                     {
                       "id": "Row-131",
                       "component": "Row",
                       "props": {
-                        "className": "range",
-                        "classList": ".range .rangeItem{flex:1}"
-                      },
-                      "children": [
-                        {
-                          "id": "Input-726",
-                          "component": "Input",
-                          "props": {
-                            "className": "rangeItem",
-                            "style": {
-                              "borderRight": 0,
-                              "borderRadius": 0
-                            },
-                            "name": "salaryLow",
-                            "placeholder": "薪资下限"
-                          }
-                        },
-                        {
-                          "id": "Input-646",
-                          "component": "Input",
-                          "props": {
-                            "style": {
-                              "width": 40,
-                              "borderLeft": 0,
-                              "borderRight": 0,
-                              "borderRadius": 0,
-                              "pointerEvents": "none"
-                            },
-                            "placeholder": "→"
-                          }
-                        },
-                        {
-                          "id": "Input-826",
-                          "component": "Input",
-                          "props": {
-                            "className": "rangeItem",
-                            "style": {
-                              "borderLeft": 0,
-                              "borderRadius": 0
-                            },
-                            "name": "salaryHigh",
-                            "placeholder": "薪资上限"
-                          }
+                        "style": {
+                          "display": "flex"
                         }
-                      ]
+                      },
+                      "children":[
+                          {
+                            "id":"Input-726",
+                            "component":"Input",
+                            "props":{
+                              "style":{
+                                "borderRight": 0,
+                                "borderRadius": 0
+                              },
+                              "name":"salaryMin",
+                              "placeholder":"薪资下限"
+                            }
+                          },
+                          {
+                            "id":"Input-646",
+                            "component":"Input",
+                            "props":{
+                              "style":{
+                                "width": 40,
+                                "borderLeft": 0,
+                                "borderRight": 0,
+                                "borderRadius": 0,
+                                "pointerEvents": "none"
+                              },
+                              "placeholder":"→"
+                            }
+                          },
+                          {
+                            "id":"Input-826",
+                            "component":"Input",
+                            "props":{
+                              "style":{
+                                "borderLeft": 0,
+                                "borderRadius": 0
+                              },
+                              "name":"salaryMax",
+                              "placeholder":"薪资上限"
+                            }
+                          }
+                        ]
                     }
                   ]
                 }
@@ -633,7 +634,7 @@
           ]
         },
         {
-          "id": "Row-14",
+          "id": "Row-18",
           "component": "Row",
           "props": {
             "gutter": [
@@ -694,7 +695,7 @@
           ]
         },
         {
-          "id": "Row-14",
+          "id": "Row-19",
           "component": "Row",
           "props": {
             "gutter": [
@@ -1048,7 +1049,7 @@
           },
           "children": [
             {
-              "id": "Col-16",
+              "id": "Col-21",
               "component": "Col",
               "props": {
                 "span": 24
@@ -2125,8 +2126,8 @@
   },
   "functions": {
     "$submit": "functions.$submitForm(args[0]);",
-    "$timeToDate": "const output = Object.assign({},args[0]);if(args[0].startTime&&args[0].endTime){output.time=[args[0].startTime,args[0].endTime]};delete output['startTime'];delete output['endTime'];return output;",
-    "$dateToTime": "const output = Object.assign({},args[0]);if(Array.isArray(args[0].time)&&args[0].time.length===2){output.startTime=args[0].time[0];output.endTime=args[0].time[1];}delete output['time'];return output;",
+    "$timeToDate": "const output = Object.assign({},args[0]);if(args[0].startDate&&args[0].endDate){output.time=[args[0].startDate,args[0].endDate]};delete output['startDate'];delete output['endDate'];return output;",
+    "$dateToTime": "const output = Object.assign({},args[0]);if(Array.isArray(args[0].time)&&args[0].time.length===2){output.startDate=args[0].time[0];output.endDate=args[0].time[1];}delete output['time'];return output;",
     "$formatForm": "const transferData = (it) => ({...it, time:it['startDate'] ? [it['startDate'] || '',it['endDate'] || ''] : []});const educations =  args[0]['educations']&&args[0]['educations'].map((it)=> transferData(it));const works =  args[0]['works']&&args[0]['works'].map((it)=>transferData(it));const trainings =  args[0]['trainings']&&args[0]['trainings'].map((it)=>transferData(it));const projects =  args[0]['projects']&&args[0]['projects'].map((it)=>transferData(it));const interns =  args[0]['interns']&&args[0]['interns'].map((it)=>transferData(it));const activities =  args[0]['activities']&&args[0]['activities'].map((it)=>transferData(it));return {...args[0],educations,works, trainings, projects, interns, activities}",
     "$setFormContext": "functions.$getFormContext(variable.$formContext);"
   },
@@ -2154,7 +2155,7 @@
                 "data": "$item",
                 "type": "inner",
                 "onSubmit": "$submit",
-                "classList": ".cardTitleNew .ant-card-head{padding:0} .cardTitleNew .ant-card-body{padding-left:10px;padding-right:0;font-weight:400;color:#576b95} .cardTitleNew .ant-card-head-title{color:#4e74fe} .cardTitleNew .ant-picker{width:100%}",
+                "classList": ".cardTitleNew .ant-card-head{padding:0} .cardTitleNew .ant-card-body{padding-left:10px;padding-right:0;fontWeight:400;color:#576b95} .cardTitleNew .ant-card-head-title{color:#4e74fe} .cardTitleNew .ant-picker{width:100%}",
                 "style": {
                   "padding": "25px"
                 }
@@ -2349,7 +2350,7 @@
                       },
                       "children": [
                         {
-                          "id": "Col-16",
+                          "id": "Col-22",
                           "component": "Col",
                           "props": {
                             "span": 12
@@ -2366,7 +2367,7 @@
                           ]
                         },
                         {
-                          "id": "Col-16",
+                          "id": "Col-23",
                           "component": "Col",
                           "props": {
                             "span": 12
@@ -2395,7 +2396,7 @@
                       },
                       "children": [
                         {
-                          "id": "Col-16",
+                          "id": "Col-24",
                           "component": "Col",
                           "props": {
                             "span": 12

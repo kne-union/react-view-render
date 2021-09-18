@@ -46,7 +46,7 @@ interceptors.output.use('string-date-range', (value) => {
 const App = () => {
     const formContext = useRef(null);
     return <ConfigProvider autoInsertSpaceInButton={false} locale={zhCN}>
-        <ViewRender url="/react-view-render/resumeComparison/index.json" content={{
+        <ViewRender url="/react-view-render/resume/index.json" content={{
             functions: {
                 $getFormContext: (context) => {
                     formContext.current = context;
