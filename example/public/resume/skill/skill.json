@@ -53,7 +53,7 @@
                       "id": "listItem8",
                       "component": "Text",
                       "props": {
-                        "content": "$detailItem.status"
+                        "content": "$detailItem.level"
                       }
                     },
                     {
@@ -70,7 +70,7 @@
                       "id": "listItem10",
                       "component": "Text",
                       "props": {
-                        "content": "$detailItem.time"
+                        "content": "$detailItem.month"
                       }
                     }
                   ]

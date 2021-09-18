@@ -26,6 +26,9 @@
   },
   "components": {
   },
+  "functions": {
+    "$saveEducation": "functions.$saveResume({education:Object.assign({},variable.$resume.education,args[0])});console.log(args[0]);functions.$changeInfoState();"
+  },
   "data": [
     {
       "id": "Row-1",
@@ -118,11 +121,10 @@
               "id": "DateRangePicker-11",
               "component": "DateRangePicker",
               "props": {
-                "name": "date",
-                "label": "在校时间",
-                "className": "with100",
-                "classList": ".with100 .ant-picker{width:100%}",
-                "rule": "REQ"
+                "name": "time",
+                "label": "在校时间：",
+                "interceptor": "string-date-range",
+                "classList":".ant-picker-range{width:100%}"
               }
             }
           ]

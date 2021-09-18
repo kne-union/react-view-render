@@ -24,7 +24,7 @@
               "id": "Input-3",
               "component": "Input",
               "props": {
-                "name": "school",
+                "name": "name",
                 "label": "培训名称：",
                 "placeholder": "请输入",
                 "rule": "REQ"
@@ -43,7 +43,7 @@
               "id": "Input-4",
               "component": "Input",
               "props": {
-                "name": "major",
+                "name": "agency",
                 "label": "培训机构：",
                 "placeholder": "请输入",
                 "rule": "REQ"
@@ -74,11 +74,10 @@
               "id": "DateRangePicker-11",
               "component": "DateRangePicker",
               "props": {
-                "name": "date",
+                "name": "time",
                 "label": "培训时间：",
-                "rule": "REQ",
-                "className": "with100",
-                "classList": ".with100 .ant-picker{width:100%}"
+                "interceptor": "string-date-range",
+                "classList":".ant-picker-range{width:100%}"
               }
             }
           ]
@@ -125,7 +124,7 @@
               "id": "TextArea-17",
               "component": "TextArea",
               "props": {
-                "name": "course",
+                "name": "courses",
                 "label": "培训课程：",
                 "showCount":true,
                 "maxLength":300,
