@@ -1,5 +1,10 @@
 {
   "description": "培训模块",
+  "id": 81,
+  "name": "training.json",
+  "type": 2,
+  "parentId": 49,
+  "path": "/resume/other/training.json",
   "components": {
     "$ItemInfo": {
       "description": "培训模块list-item",

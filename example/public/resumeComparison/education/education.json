@@ -1,5 +1,10 @@
 {
   "description": "教育经历模块",
+  "id": 75,
+  "name": "education.json",
+  "type": 2,
+  "parentId": 49,
+  "path": "/resume/other/education.json",
   "components": {
     "$eduInfo": {
       "description": "教育经历list-item",

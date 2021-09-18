@@ -1,4 +1,9 @@
 {
+  "id": 107,
+  "name": "detailList.json",
+  "type": 2,
+  "parentId": 82,
+  "path": "/resume/other/old/detailList.json",
   "components": {
     "$editInfo": "/react-view-render/resume/editInfo.json",
     "$addForm": "/react-view-render/resume/addForm.json",

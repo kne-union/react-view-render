@@ -1,4 +1,9 @@
 {
+  "id": 103,
+  "name": "detailResumeCard.json",
+  "type": 2,
+  "parentId": 82,
+  "path": "/resume/other/old/detailResumeCard.json",
   "components": {
     "$resumeCardTitle": {
       "data": [

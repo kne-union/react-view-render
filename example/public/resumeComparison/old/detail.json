@@ -1,4 +1,9 @@
 {
+  "id": 106,
+  "name": "detail.json",
+  "type": 2,
+  "parentId": 82,
+  "path": "/resume/other/old/detail.json",
   "functions": {
     "$timeToDate": "const output = Object.assign({},args[0]);if(args[0].startTime&&args[0].endTime){output.time=[args[0].startTime,args[0].endTime]};delete output['startTime'];delete output['endTime'];return output;",
     "$dateToTime": "const output = Object.assign({},args[0]);if(Array.isArray(args[0].time)&&args[0].time.length===2){output.startTime=args[0].time[0];output.endTime=args[0].time[1];}delete output['time'];return output;"

@@ -1,5 +1,10 @@
 {
   "description": "编辑技能表单",
+  "id": 76,
+  "name": "editSkill.json",
+  "type": 2,
+  "parentId": 49,
+  "path": "/resume/other/editSkill.json",
   "components": {
   },
   "data": [

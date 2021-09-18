@@ -1,5 +1,10 @@
 {
   "description": "技能模块",
+  "id": 77,
+  "name": "skill.json",
+  "type": 2,
+  "parentId": 49,
+  "path": "/resume/other/skill.json",
   "components": {
     "$skillItemInfo": {
       "description": "技能list-item",
