@@ -1206,7 +1206,8 @@
                 "gutter": [
                   40,
                   0
-                ]
+                ],
+                "data":"$detailItem"
               },
               "children": [
                 {
