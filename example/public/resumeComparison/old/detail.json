@@ -727,7 +727,7 @@
             "list": "$resume.practice",
             "itemMapping": "$timeToDate",
             "submitMapping": "$dateToTime",
-            "name": "practice",
+            "name": "intern",
             "content": "$detailInfoList"
           }
         },

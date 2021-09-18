@@ -101,7 +101,7 @@
                               "id": "listItem9",
                               "component": "Text",
                               "props": {
-                                "content": "$detailItem.start"
+                                "content": "$detailItem.startDate"
                               }
                             },
                             {
@@ -115,7 +115,7 @@
                               "id": "listItem13",
                               "component": "Text",
                               "props": {
-                                "content": "$detailItem.end"
+                                "content": "$detailItem.endDate"
                               }
                             }
                           ]

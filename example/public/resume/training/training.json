@@ -48,7 +48,7 @@
                       "id": "Text-9",
                       "component": "Text",
                       "props": {
-                        "content": "$detailItem.org"
+                        "content": "$detailItem.agency"
                       }
                     }
                   ]
@@ -167,7 +167,7 @@
                         "style": {
                           "color": "#6E6D7B"
                         },
-                        "content": "$detailItem.course"
+                        "content": "$detailItem.courses"
                       }
                     }
                   ]

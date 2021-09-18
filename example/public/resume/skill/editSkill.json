@@ -81,13 +81,10 @@
             "children": [
               {
                 "id": "DateRangePicker-11",
-                "component": "DatePicker",
+                "component": "Input",
                 "props": {
                   "name": "month",
-                  "label": "使用时间：",
-                  "rule": "REQ",
-                  "className": "with100",
-                  "classList": ".with100 .ant-picker{width:100%}"
+                  "label": "使用时间："
                 }
               }
             ]

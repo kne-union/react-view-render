@@ -52,7 +52,7 @@
                           "fontWeight": 400,
                           "fontSize": "14px"
                         },
-                        "content": "$detailItem.school"
+                        "content": "$detailItem.agency"
                       }
                     }
                   ]
@@ -63,26 +63,6 @@
                   "children": [
                     {
                       "id": "Text-11",
-                      "component": "Text",
-                      "props": {
-                        "style": {
-                          "fontWeight": "normal",
-                          "fontSize": "14px"
-                        },
-                        "content": "$detailItem.startDate"
-                      }
-                    },
-                    {
-                      "id": "Text-12",
-                      "component": "Text",
-                      "props": {
-                        "style": {
-                        },
-                        "content": "-"
-                      }
-                    },
-                    {
-                      "id": "Text-13",
                       "component": "Text",
                       "props": {
                         "style": {

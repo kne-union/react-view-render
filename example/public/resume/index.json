@@ -75,7 +75,24 @@
           "salary": "10K-13K"
         }
       ],
-      "practice": [
+      "intern": [
+        {
+          "nation": "nation",
+          "leavingReason": "leavingReason",
+          "description": "description",
+          "companyNormalized": "companyNormalized",
+          "oversea": "是",
+          "performance": "performance",
+          "responsibility": "responsibility",
+          "salaryHigh": 10,
+          "company": "company",
+          "position": "position",
+          "untilNow": true,
+          "department": "department",
+          "startDate": "2012.08",
+          "endDate": "2017.06",
+          "salaryLow": 20
+        },
         {
           "company": "上海蓝天人力资源有限公司",
           "position": "产品经理",
@@ -89,6 +106,16 @@
         }
       ],
       "education": [
+        {
+          "schoolNormalized": "schoolNormalized",
+          "startDate": "2012.08",
+          "endDate": "2017.06",
+          "degree": "degree",
+          "major": "major",
+          "highest": true,
+          "school": "school",
+          "untilNow": true
+        },
         {
           "school": "清华大学",
           "major": "计算机科学",
@@ -116,6 +143,12 @@
       ],
       "awarded": [
         {
+          "startDate": "2012-08",
+          "agency": "agency",
+          "description": "description",
+          "name": "name"
+        },
+        {
           "name": "全国大学生数学建模二等奖",
           "school": "清华大学",
           "startDate": "2012.08",
@@ -129,6 +162,11 @@
         }
       ],
       "skill": [
+        {
+          "level": "level",
+          "month": "month",
+          "name": "name"
+        },
         {
           "name": "英语四级证书",
           "time": "2020.04",
@@ -165,6 +203,15 @@
         }
       ],
       "training": [
+        {				
+          "courses": "courses",
+          "agency": "agency",
+          "certificate": "certificate",
+          "description": "description",
+          "name": "name",
+          "startDate": "2012.08",
+          "endDate": "2017.06"
+        },
         {
           "name": "产品思维培训",
           "org": "产品思维培训机构",
@@ -177,7 +224,7 @@
       ],
       "selfEvaluation": [
         {
-          "description": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；"
+          "eval": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；"
         }
       ]
     },

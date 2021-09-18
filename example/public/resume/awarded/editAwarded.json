@@ -24,7 +24,7 @@
               "id": "Input-3",
               "component": "Input",
               "props": {
-                "name": "school",
+                "name": "name",
                 "label": "奖励名称：",
                 "placeholder": "请输入",
                 "rule": "REQ"
@@ -43,7 +43,7 @@
               "id": "Input-4",
               "component": "Input",
               "props": {
-                "name": "major",
+                "name": "agency",
                 "label": "奖励颁发机构：",
                 "placeholder": "请输入",
                 "rule": "REQ"
@@ -74,9 +74,10 @@
               "id": "DateRangePicker-11",
               "component": "DatePicker",
               "props": {
-                "name": "date",
+                "name": "startDate",
                 "label": "奖励颁发时间：",
                 "rule": "REQ",
+                "interceptor": "string-date-range",
                 "className": "with100",
                 "classList": ".with100 .ant-picker{width:100%}"
               }
