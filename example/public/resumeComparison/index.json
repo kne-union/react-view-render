@@ -1,4 +1,9 @@
 {
+  "id": 108,
+  "name": "resumeComparisonIndex.json",
+  "type": 2,
+  "parentId": 49,
+  "path": "/resume/other/resumeComparisonIndex.json",
   "variable": {
     "$initResume": {
       "basic": {

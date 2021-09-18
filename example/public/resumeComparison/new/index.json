@@ -1,4 +1,9 @@
 {
+  "id": 34,
+  "name": "index",
+  "type": 1,
+  "parentId": 33,
+  "path": "/resumeComparison/new/index.json",
   "components": {
     "$card": {
       "data": [
