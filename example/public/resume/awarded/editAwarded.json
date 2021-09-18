@@ -94,7 +94,7 @@
               "id": "TextArea-17",
               "component": "TextArea",
               "props": {
-                "name": "des",
+                "name": "description",
                 "label": "获奖描述：",
                 "showCount":true,
                 "maxLength":300,
