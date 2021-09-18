@@ -157,7 +157,7 @@
               "id": "TextArea-117",
               "component": "TextArea",
               "props": {
-                "name": "des",
+                "name": "description",
                 "label": "培训描述：",
                 "showCount":true,
                 "maxLength":300,

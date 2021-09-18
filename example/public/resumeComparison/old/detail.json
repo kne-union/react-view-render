@@ -5,8 +5,8 @@
   "parentId": 82,
   "path": "/resume/other/old/detail.json",
   "functions": {
-    "$timeToDate": "const output = Object.assign({},args[0]);if(args[0].startTime&&args[0].endTime){output.time=[args[0].startTime,args[0].endTime]};delete output['startTime'];delete output['endTime'];return output;",
-    "$dateToTime": "const output = Object.assign({},args[0]);if(Array.isArray(args[0].time)&&args[0].time.length===2){output.startTime=args[0].time[0];output.endTime=args[0].time[1];}delete output['time'];return output;"
+    "$timeToDate": "const output = Object.assign({},args[0]);if(args[0].startDate&&args[0].endDate){output.time=[args[0].startDate,args[0].endDate]};delete output['startDate'];delete output['endDate'];return output;",
+    "$dateToTime": "const output = Object.assign({},args[0]);if(Array.isArray(args[0].time)&&args[0].time.length===2){output.startDate=args[0].time[0];output.endDate=args[0].time[1];}delete output['time'];return output;"
   },
   "components": {
     "$editInfo": "/react-view-render/resume/editInfo.json",
@@ -240,7 +240,7 @@
                       "id": "Component-1",
                       "component": "Component",
                       "props": {
-                        "value": "$detailItem.duty",
+                        "value": "$detailItem.responsibility",
                         "name": "工作职责：",
                         "content": "$showWorkItem"
                       }
@@ -407,7 +407,7 @@
                       "id": "Component-1",
                       "component": "Component",
                       "props": {
-                        "value": "$detailItem.duty",
+                        "value": "$detailItem.responsibility",
                         "name": "项目职责：",
                         "content": "$showWorkItem"
                       }
@@ -448,7 +448,7 @@
               "props": {
                 "style": {
                   "font-size": "14px",
-                  "font-weight": 500,
+                  "fontWeight": 500,
                   "color": "#576B95"
                 },
                 "className": "cardTitleNew",
@@ -724,7 +724,7 @@
           }
         },
         {
-          "id": "Component-5",
+          "id": "Component-7",
           "component": "Component",
           "props": {
             "cardTitle": "实习经历",
@@ -824,7 +824,7 @@
           }
         },
         {
-          "id": "Component-5",
+          "id": "Component-8",
           "component": "Component",
           "props": {
             "cardTitle": "培训经历",

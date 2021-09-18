@@ -1,4 +1,7 @@
 {
+  "id":"41",
+  "parentId":"53",
+  "path":"/resume/part.json",
   "variable": {
     "$resume": {
       "basic": {
@@ -29,7 +32,7 @@
     }
   },
   "components": {
-    "$card": "/react-view-render/resume/card.json",
+    "$card": "/resume/card.json",
     "$part": {
       "data": [
         {

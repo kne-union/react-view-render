@@ -65,7 +65,7 @@
                           "fontWeight": "normal",
                           "fontSize": "14px"
                         },
-                        "content": "$detailItem.startTime"
+                        "content": "$detailItem.startDate"
                       }
                     },
                     {
@@ -85,7 +85,7 @@
                           "fontWeight": "normal",
                           "fontSize": "14px"
                         },
-                        "content": "$detailItem.startTime"
+                        "content": "$detailItem.startDate"
                       }
                     },
                     {

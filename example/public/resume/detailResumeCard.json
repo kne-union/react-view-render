@@ -1,4 +1,7 @@
 {
+  "id":"41",
+  "parentId":"51",
+  "path":"/resume/detailResumeCard.json",
   "components": {
     "$arrowIcon":{
       "data":[

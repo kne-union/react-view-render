@@ -31,7 +31,7 @@
                       "component": "Text",
                       "props": {
                         "style": {
-                          "font-weight": "bold"
+                          "fontWeight": "bold"
                         },
                         "content": "$detailItem.name"
                       }
@@ -50,14 +50,14 @@
                   },
                   "children": [
                     {
-                      "id": "listItem6",
+                      "id": "listItem8",
                       "component": "Text",
                       "props": {
                         "content": "$detailItem.status"
                       }
                     },
                     {
-                      "id": "listItem6",
+                      "id": "listItem9",
                       "component": "Text",
                       "props": {
                         "style": {
@@ -67,7 +67,7 @@
                       }
                     },
                     {
-                      "id": "listItem6",
+                      "id": "listItem10",
                       "component": "Text",
                       "props": {
                         "content": "$detailItem.time"

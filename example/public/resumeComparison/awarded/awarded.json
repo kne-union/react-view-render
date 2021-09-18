@@ -53,7 +53,7 @@
                   "id": "Component-0",
                   "component": "Component",
                   "props": {
-                    "value": "$detailItem.startTime",
+                    "value": "$detailItem.startDate",
                     "name": "获奖时间：",
                     "content": "$showWorkItem"
                   }
