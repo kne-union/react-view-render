@@ -69,14 +69,21 @@
     "$resumeCardAddButton": {
       "data": [
         {
-          "id": "Button-0",
-          "component": "Button",
+          "id": "Condition-3",
+          "component": "Condition",
           "props": {
-            "type": "link",
-            "icon": "$addIcon",
-            "onClick": "$props.addFunc"
+            "expression":"$props.hasAdd"
           },
-          "children": "添加"
+          "children":{
+            "id": "Button-0",
+            "component": "Button",
+            "props": {
+              "type": "link",
+              "icon": "$addIcon",
+              "onClick": "$props.addFunc"
+            },
+            "children": "添加"
+          }
         }
       ]
     }

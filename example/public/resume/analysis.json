@@ -93,7 +93,7 @@
                 "content": "$part",
                 "titleIcon":"iconliangdian",
                 "title": "亮点",
-                "resource": "$resume.analysis.good"
+                "resource": "$resume.analysis.bright"
               }
             },
             {
@@ -103,7 +103,7 @@
                 "content": "$part",
                 "titleIcon": "iconfengxian",
                 "title": "风险点",
-                "resource": "$resume.analysis.bad"
+                "resource": "$resume.analysis.risk"
               }
             }
           ]

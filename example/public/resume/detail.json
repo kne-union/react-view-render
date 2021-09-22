@@ -1087,7 +1087,7 @@
                             "style": {
                               "color": "#6E6D7B"
                             },
-                            "content": "$detailItem.des"
+                            "content": "$detailItem.description"
                           }
                         }
                       ]
@@ -1206,7 +1206,8 @@
                 "gutter": [
                   40,
                   0
-                ]
+                ],
+                "data":"$detailItem"
               },
               "children": [
                 {
@@ -1295,7 +1296,8 @@
             "itemMapping": "$timeToDate",
             "submitMapping": "$dateToTime",
             "name": "works",
-            "content": "$detailList"
+            "content": "$detailList",
+            "length":10
           }
         },
         {
@@ -1311,7 +1313,8 @@
             "name": "projects",
             "content": "$detailList",
             "itemMapping": "$timeToDate",
-            "submitMapping": "$dateToTime"
+            "submitMapping": "$dateToTime",
+            "length":10
           }
         },
         {
@@ -1328,7 +1331,8 @@
             "name": "social",
             "content": "$detailList",
             "itemMapping": "$timeToDate",
-            "submitMapping": "$dateToTime"
+            "submitMapping": "$dateToTime",
+            "length":10
           }
         },
         {
@@ -1342,10 +1346,11 @@
             "form": "$workForm",
             "info": "$workInfo",
             "list": "$resume.practice",
-            "name": "intern",
+            "name": "practice",
             "content": "$detailList",
             "itemMapping": "$timeToDate",
-            "submitMapping": "$dateToTime"
+            "submitMapping": "$dateToTime",
+            "length":10
           }
         },
         {
@@ -1362,7 +1367,8 @@
             "name": "education",
             "content": "$detailList",
             "itemMapping": "$timeToDate",
-            "submitMapping": "$dateToTime"
+            "submitMapping": "$dateToTime",
+            "length":10
           }
         },
         {
@@ -1379,7 +1385,8 @@
             "name": "training",
             "content": "$detailList",
             "itemMapping": "$timeToDate",
-            "submitMapping": "$dateToTime"
+            "submitMapping": "$dateToTime",
+            "length":10
           }
         },
         {
@@ -1396,7 +1403,8 @@
             "name": "skill",
             "content": "$detailList",
             "itemMapping": "$timeToDate",
-            "submitMapping": "$dateToTime"
+            "submitMapping": "$dateToTime",
+            "length":10
           }
         },
         {
@@ -1413,7 +1421,8 @@
             "name": "awarded",
             "content": "$detailList",
             "itemMapping": "$timeToDate",
-            "submitMapping": "$dateToTime"
+            "submitMapping": "$dateToTime",
+            "length":10
           }
         },
         {
@@ -1428,7 +1437,8 @@
             "info": "$selfEvaluation",
             "list": "$resume.selfEvaluation",
             "name": "selfEvaluation",
-            "content": "$detailList"
+            "content": "$detailList",
+            "length":1
           }
         }
       ]

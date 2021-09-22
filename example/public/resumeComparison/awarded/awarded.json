@@ -44,7 +44,7 @@
                   "id": "Component-0",
                   "component": "Component",
                   "props": {
-                    "value": "$detailItem.school",
+                    "value": "$detailItem.agency",
                     "name": "奖励颁发机构：",
                     "content": "$showWorkItem"
                   }
