@@ -1296,7 +1296,8 @@
             "itemMapping": "$timeToDate",
             "submitMapping": "$dateToTime",
             "name": "works",
-            "content": "$detailList"
+            "content": "$detailList",
+            "length":10
           }
         },
         {
@@ -1312,7 +1313,8 @@
             "name": "projects",
             "content": "$detailList",
             "itemMapping": "$timeToDate",
-            "submitMapping": "$dateToTime"
+            "submitMapping": "$dateToTime",
+            "length":10
           }
         },
         {
@@ -1329,7 +1331,8 @@
             "name": "social",
             "content": "$detailList",
             "itemMapping": "$timeToDate",
-            "submitMapping": "$dateToTime"
+            "submitMapping": "$dateToTime",
+            "length":10
           }
         },
         {
@@ -1346,7 +1349,8 @@
             "name": "intern",
             "content": "$detailList",
             "itemMapping": "$timeToDate",
-            "submitMapping": "$dateToTime"
+            "submitMapping": "$dateToTime",
+            "length":10
           }
         },
         {
@@ -1363,7 +1367,8 @@
             "name": "education",
             "content": "$detailList",
             "itemMapping": "$timeToDate",
-            "submitMapping": "$dateToTime"
+            "submitMapping": "$dateToTime",
+            "length":10
           }
         },
         {
@@ -1380,7 +1385,8 @@
             "name": "training",
             "content": "$detailList",
             "itemMapping": "$timeToDate",
-            "submitMapping": "$dateToTime"
+            "submitMapping": "$dateToTime",
+            "length":10
           }
         },
         {
@@ -1397,7 +1403,8 @@
             "name": "skill",
             "content": "$detailList",
             "itemMapping": "$timeToDate",
-            "submitMapping": "$dateToTime"
+            "submitMapping": "$dateToTime",
+            "length":10
           }
         },
         {
@@ -1414,7 +1421,8 @@
             "name": "awarded",
             "content": "$detailList",
             "itemMapping": "$timeToDate",
-            "submitMapping": "$dateToTime"
+            "submitMapping": "$dateToTime",
+            "length":10
           }
         },
         {
@@ -1429,7 +1437,8 @@
             "info": "$selfEvaluation",
             "list": "$resume.selfEvaluation",
             "name": "selfEvaluation",
-            "content": "$detailList"
+            "content": "$detailList",
+            "length":1
           }
         }
       ]

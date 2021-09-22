@@ -223,6 +223,7 @@
     }
   },
   "functions": {
+    "$hasAdd":"const flag=variable.$outerProps.name==='selfEvaluation'?false:variable.$outerProps.length > variable.$resume[variable.$outerProps.name].length;return flag;",
     "$mapList": "return variable.$resume[variable.$props.name]",
     "$addDetail": "const current = variable.$resume[variable.$props.name].slice(0);current.push(variable.$props.submitMapping(args[0]));functions.$saveResume({[variable.$props.name]:current});",
     "$editDetail": "const current = variable.$resume[variable.$props.args.name].slice(0);current.splice(variable.$index,1,Object.assign({},variable[variable.$props.args.name],variable.$props.args.submitMapping(args[0])));functions.$saveResume({[variable.$props.args.name]:current});functions.$changeInfoState();",
@@ -256,7 +257,8 @@
                 "content": "$resumeCard",
                 "title": "$outerProps.cardTitle",
                 "cardTitleIcon": "$outerProps.cardTitleIcon",
-                "addFunc": "$showAddForm"
+                "addFunc": "$showAddForm",
+                "hasAdd":"$hasAdd"
               },
               "children": [
                 {
