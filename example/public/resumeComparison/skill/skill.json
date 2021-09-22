@@ -46,7 +46,7 @@
                   "id": "Component-0",
                   "component": "Component",
                   "props": {
-                    "value": "$detailItem.status",
+                    "value": "$detailItem.level",
                     "name": "技能水平：",
                     "content": "$showWorkItem"
                   }
@@ -78,7 +78,7 @@
                           "id": "Text-2",
                           "component": "Text",
                           "props": {
-                            "content": "$detailItem.time"
+                            "content": "$detailItem.month"
                           }
                         },
                         {

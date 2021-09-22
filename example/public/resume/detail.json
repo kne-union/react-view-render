@@ -1087,7 +1087,7 @@
                             "style": {
                               "color": "#6E6D7B"
                             },
-                            "content": "$detailItem.des"
+                            "content": "$detailItem.description"
                           }
                         }
                       ]
@@ -1346,7 +1346,7 @@
             "form": "$workForm",
             "info": "$workInfo",
             "list": "$resume.practice",
-            "name": "intern",
+            "name": "practice",
             "content": "$detailList",
             "itemMapping": "$timeToDate",
             "submitMapping": "$dateToTime",

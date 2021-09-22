@@ -20,12 +20,12 @@
         }
       },
       "analysis": {
-        "good": [
+        "bright": [
           "研究生毕业，双一流院校；",
           "有管理经验，EHR行业背景，熟悉招聘、薪税、绩效等业务模块；",
           "有大厂工作经验，曾就职于美团字节跳动"
         ],
-        "bad": [
+        "risk": [
           "2020.8至2021.8之间，有一年空档期"
         ]
       }
@@ -73,7 +73,7 @@
               "props": {
                 "content": "$part",
                 "title": "亮点",
-                "resource": "$resume.analysis.good"
+                "resource": "$resume.analysis.bright"
               }
             }
           ]
