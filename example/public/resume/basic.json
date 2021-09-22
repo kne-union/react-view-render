@@ -9,7 +9,7 @@
       "functions": {
         "$isExist": "return !!args[0]",
         "$hasObjectKeys": "return args[0]&&Object.keys(args[0]).length",
-        "$recommend": "alert('智能推荐');"
+        "$recommend": "variable.$SmartRecommend({libraryId:variable.$libraryId})"
       },
       "data": [
         {
@@ -842,7 +842,7 @@
     },
     "$resumeForm": {
       "functions": {
-        "$saveBasic": "functions.$saveResume({basic:Object.assign({},variable.$resume.basic,args[0])});console.log(args[0]);functions.$changeInfoState();"
+        "$saveBasic": "functions.$saveResume({basic:Object.assign({},variable.$resume.basic,args[0])});console.log(args[0]);functions.$changeInfoState();functions.$submitForm(args[0], 'basic');"
       },
       "data": [
         {
@@ -1498,6 +1498,7 @@
               "id": "FolderComponent-2",
               "component": "FolderComponent",
               "props": {
+                "libraryId": "$libraryId",
                 "icon": "$fileIcon",
                 "style": {
                   "padding": 0,
@@ -1509,6 +1510,7 @@
               "id": "CollectComponent-3",
               "component": "CollectComponent",
               "props": {
+                "libraryId": "$libraryId",
                 "icon": "$collectIcon",
                 "style": {
                   "padding": 0,

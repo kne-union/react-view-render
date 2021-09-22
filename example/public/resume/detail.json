@@ -1443,8 +1443,32 @@
         }
       ]
     },
+    "$apply": {
+      "data": [
+        {
+          "id":"ApplyRecord-0",
+          "component":"ApplyRecord",
+          "props":{}
+        }
+      ]
+    },
+    "$callRecord": {
+      "data": [
+        {
+          "id":"CallRecord-0",
+          "component":"CallRecord",
+          "props":{}
+        }
+      ]
+    },
     "$origin": {
-      "data": []
+      "data": [
+        {
+          "id":"ResumeOriginal-0",
+          "component":"ResumeOriginal",
+          "props":{}
+        }
+      ]
     }
   },
   "data": [
@@ -1470,6 +1494,16 @@
                 "key": "1",
                 "tab": "简历原件",
                 "children": "$origin"
+              },
+              {
+                "key": "2",
+                "tab": "应聘记录",
+                "children": "$apply"
+              },
+              {
+                "key": "3",
+                "tab": "外呼记录",
+                "children": "$callRecord"
               }
             ]
           }
