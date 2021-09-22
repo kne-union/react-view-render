@@ -1,6 +1,6 @@
 {
-  "id":"41",
-  "parentId":"52",
+  "id":"52",
+  "parentId":"41",
   "path":"/resume/editInfo.json",
   "functions": {
     "$changeInfoState": "functions.$setEditInfoState(true);",

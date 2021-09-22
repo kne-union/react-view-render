@@ -1,6 +1,6 @@
 {
-  "id":"41",
-  "parentId":"46",
+  "id":"46",
+  "parentId":"41",
   "path":"/resume/detail.json",
   "variable": {
     "$twoList":[
@@ -19,19 +19,19 @@
     "$dateToTime": "const output = Object.assign({},args[0]);if(Array.isArray(args[0].time)&&args[0].time.length===2){output.startDate=args[0].time[0];output.endDate=args[0].time[1];}delete output['time'];return output;"
   },
   "components": {
-    "$editInfo": "/react-view-render/resume/editInfo.json",
-    "$education": "/react-view-render/resume/education/education.json",
-    "$editEducation": "/react-view-render/resume/education/editEducation.json",
-    "$editSkill": "/react-view-render/resume/skill/editSkill.json",
-    "$skill": "/react-view-render/resume/skill/skill.json",
-    "$editSocial": "/react-view-render/resume/social/editSocial.json",
-    "$social": "/react-view-render/resume/social/social.json",
-    "$card": "/react-view-render/resume/card.json",
-    "$editTraining": "/react-view-render/resume/training/editTraining.json",
-    "$training": "/react-view-render/resume/training/training.json",
-    "$awarded": "/react-view-render/resume/awarded/awarded.json",
-    "$editAwarded": "/react-view-render/resume/awarded/editAwarded.json",
-    "$detailList": "/react-view-render/resume/detailList.json",
+    "$editInfo": "/resume/editInfo.json",
+    "$education": "/resume/components/education.json",
+    "$editEducation": "/resume/components/editEducation.json",
+    "$editSkill": "/resume/components/editSkill.json",
+    "$skill": "/resume/components/skill.json",
+    "$editSocial": "/resume/components/editSocial.json",
+    "$social": "/resume/components/social.json",
+    "$card": "/resume/card.json",
+    "$editTraining": "/resume/components/editTraining.json",
+    "$training": "/resume/components/training.json",
+    "$awarded": "/resume/components/awarded.json",
+    "$editAwarded": "/resume/components/editAwarded.json",
+    "$detailList": "/resume/detailList.json",
     "$standard": {
       "components": {
         "$workForm": {

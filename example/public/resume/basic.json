@@ -1,6 +1,6 @@
 {
-  "id":"41",
-  "parentId":"44",
+  "id":"44",
+  "parentId":"41",
   "path":"/resume/basic.json",
   "components": {
     "$card": "/resume/card.json",
@@ -1495,30 +1495,26 @@
               "children": "编辑"
             },
             {
-              "id": "Button-2",
-              "component": "Button",
+              "id": "FolderComponent-2",
+              "component": "FolderComponent",
               "props": {
-                "type": "link",
                 "icon": "$fileIcon",
                 "style": {
                   "padding": 0,
                   "color": "#6E6D7A"
                 }
-              },
-              "children": "文件夹"
+              }
             },
             {
-              "id": "Button-3",
-              "component": "Button",
+              "id": "CollectComponent-3",
+              "component": "CollectComponent",
               "props": {
-                "type": "link",
                 "icon": "$collectIcon",
                 "style": {
                   "padding": 0,
                   "color": "#6E6D7A"
                 }
-              },
-              "children": "收藏"
+              }
             },
             {
               "id": "Button-4",

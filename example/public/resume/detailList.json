@@ -1,6 +1,6 @@
 {
-  "id":"41",
-  "parentId":"50",
+  "id":"50",
+  "parentId":"41",
   "path":"/resume/detailList.json",
   "components": {
     "$editInfo": "/resume/editInfo.json",
