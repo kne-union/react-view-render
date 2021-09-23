@@ -1590,10 +1590,10 @@
     lodash "^4.17.20"
     use-debounce "^5.1.0"
 
-"@kne/react-text-escape@^0.1.1":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@kne/react-text-escape/-/react-text-escape-0.1.1.tgz#4f5947ed9716f8197d048106a5b774fcf9309d75"
-  integrity sha512-PC8/n2ZeY4jlKxRxjQBt8MCu87bYndSn92flC2VVdUDsoQSkGBZ2A8zWL8iDJdwIjBz1ljQWaRepFGSf3LGuyg==
+"@kne/react-text-escape@0.1.3":
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/@kne/react-text-escape/-/react-text-escape-0.1.3.tgz#071113503b946585911458f5df8103093ab1bb68"
+  integrity sha512-wA1kqWp6DGCjoGJvOgmz8MAN15ivxvYjWIoqk4oP8Y3NX43p9avy1IO4XmZot1ZYT0M+OM/cymIj6dnfYjJlFQ==
   dependencies:
     "@babel/runtime" "^7.7.7"
 

@@ -43,6 +43,14 @@ interceptors.output.use('string-date-range', (value) => {
     return output;
 });
 
+interceptors.input.use('string-date-picker', (value) => {
+    const date = value ? moment(value) : null;
+    return date;
+});
+interceptors.output.use('string-date-picker', (value) => {
+    const date = value ? moment(value).format() : null;
+    return date;
+});
 const App = () => {
     const formContext = useRef(null);
     return <ConfigProvider autoInsertSpaceInButton={false} locale={zhCN}>
