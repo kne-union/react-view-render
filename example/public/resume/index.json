@@ -2,6 +2,7 @@
   "id":"43",
   "parentId":"41",
   "path":"/resume/index.json",
+  "name":"resume的index.json",
   "variable": {
     "$twoList": [
       {

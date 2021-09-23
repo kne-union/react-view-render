@@ -44,8 +44,8 @@
   "author": "linzp",
   "license": "ISC",
   "peerDependencies": {
-    "@kne/react-form-antd": "1.x",
     "@kne/antd-enhance": "0.1.x",
+    "@kne/react-form-antd": "1.x",
     "antd": "4.x",
     "prop-types": "15.x",
     "react": "16.x",
@@ -71,7 +71,7 @@
   "dependencies": {
     "@kne/compose": "^0.1.0",
     "@kne/react-error-boundary": "^0.1.0",
-    "@kne/react-text-escape": "^0.1.1",
+    "@kne/react-text-escape": "0.1.3",
     "@loadable/component": "^5.15.0",
     "classnames": "^2.3.1",
     "fbemitter": "^3.0.0",

@@ -150,25 +150,6 @@
           ]
         }
       ]
-    },
-    "$options": {
-      "data": [
-        {
-          "id": "Space-0",
-          "component": "Space",
-          "children": [
-            {
-              "id": "Button-1",
-              "component": "Button",
-              "props": {
-                "type": "link",
-                "onClick": "$changeEditState"
-              },
-              "children": "编辑"
-            }
-          ]
-        }
-      ]
     }
   },
   "data": [

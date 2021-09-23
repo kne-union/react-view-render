@@ -77,7 +77,6 @@
                 "name": "startDate",
                 "label": "奖励颁发时间：",
                 "rule": "REQ",
-                "interceptor": "string-date-range",
                 "className": "with100",
                 "classList": ".with100 .ant-picker{width:100%}"
               }

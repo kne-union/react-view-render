@@ -84,6 +84,7 @@
                 "id": "Form-1",
                 "component": "Form",
                 "props": {
+                  "type":"inner",
                   "data": "$detailItem",
                   "onSubmit": "$editDetail"
                 },
