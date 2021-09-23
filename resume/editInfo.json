@@ -12,6 +12,7 @@
         "setStateName": "$setEditInfoState"
       },
       "children": [
+
         {
           "id": "Condition-1",
           "component": "Condition",

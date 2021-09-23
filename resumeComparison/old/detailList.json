@@ -2,39 +2,9 @@
   "components": {
     "$editInfo": "/react-view-render/resume/editInfo.json",
     "$addForm": "/react-view-render/resume/addForm.json",
-    "$resumeCard": "/react-view-render/resume/detailResumeCard.json",
+    "$resumeCard": "/react-view-render/resumeComparison/old/detailResumeCard.json",
     "$list": {
       "components": {
-        "$editIcon":{
-          "data":[
-            {
-              "id":"Icon-1",
-              "component":"Icon",
-              "props":{
-                "type":"icontouxiang-xiugai",
-                "style":{
-                  "fontSize":"15px",
-                  "marginRight":"6px"
-                }
-              }
-            }
-          ]
-        },
-        "$deleteIcon":{
-          "data":[
-            {
-              "id":"Icon-2",
-              "component":"Icon",
-              "props":{
-                "type":"iconshanchu",
-                "style":{
-                  "fontSize":"15px",
-                  "marginRight":"6px"
-                }
-              }
-            }
-          ]
-        },
         "$options": {
           "data": [
             {
@@ -46,7 +16,6 @@
                   "component": "Button",
                   "props": {
                     "type": "link",
-                    "icon": "$editIcon",
                     "onClick": "$changeEditState"
                   },
                   "children": "编辑"
@@ -56,7 +25,6 @@
                   "component": "Button",
                   "props": {
                     "type": "link",
-                    "icon": "$deleteIcon",
                     "onClick": "$delDetailConfirm"
                   },
                   "children": "删除"
@@ -198,7 +166,7 @@
                                 "info": "$props.info",
                                 "edit": "$form",
                                 "args": {
-                                  "optionButton": "$options",
+                                  "optionButton_//注释掉": "$options",
                                   "name": "$props.name",
                                   "form": "$props.form",
                                   "itemMapping": "$props.itemMapping",
@@ -252,7 +220,6 @@
               "props": {
                 "content": "$resumeCard",
                 "title": "$outerProps.cardTitle",
-                "cardTitleIcon": "$outerProps.cardTitleIcon",
                 "addFunc": "$showAddForm"
               },
               "children": [

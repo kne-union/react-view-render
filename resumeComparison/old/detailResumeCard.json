@@ -1,65 +1,18 @@
 {
   "components": {
-    "$arrowIcon":{
-      "data":[
-        {
-          "id":"Icon-1",
-          "component":"Icon",
-          "props":{
-            "type":"icondaohang-jiantou",
-            "style":{
-              "fontSize":"7px",
-              "color":"#C0C0C6"
-            }
-          }
-        }
-      ]
-    },
-    "$addIcon":{
-      "data":[
-        {
-          "id":"Icon-2",
-          "component":"Icon",
-          "props":{
-            "type":"icontianjia",
-            "style":{
-              "fontSize":"16px",
-              "marginRight":"4px"
-            }
-          }
-        }
-      ]
-    },
     "$resumeCardTitle": {
       "data": [
         {
-          "id":"Icon-3",
-          "component":"Icon",
-          "props":{
-            "type":"$props.cardTitleIcon",
-            "style":{
-              "fontSize":"18px",
-              "marginRight":"6px",
-              "color":"#0D0C22"
-            }
-          }
-        },
-        {
-          "id": "Text-0",
+          "id": "Text-0121212",
           "component": "Text",
           "props": {
+            "style": {
+              "font-size": "16px",
+              "font-weight": 500,
+              "color": "#4e74fe"
+            },
             "content": "$props.title"
           }
-        },
-        {
-          "id": "Button-1",
-          "component": "Button",
-          "props": {
-            "type": "text",
-            "icon": "$arrowIcon",
-            "onClick": "$visibleChange"
-          },
-          "children": ""
         }
       ]
     },
@@ -70,10 +23,9 @@
           "component": "Button",
           "props": {
             "type": "link",
-            "icon": "$addIcon",
             "onClick": "$props.addFunc"
           },
-          "children": "添加"
+          "children": "+"
         }
       ]
     }
@@ -91,11 +43,13 @@
       },
       "children": [
         {
-          "id": "Card-0",
+          "id": "Card-012121",
           "component": "Card",
           "props": {
+            "className": "cardTitleOld",
+            "classList": ".cardTitleOld .ant-card-head{padding:0} .cardTitleOld .ant-card-body{padding-left:0;padding-right:0} .cardTitleOld .ant-card-head-title{margin:2px 0}",
             "title": "$resumeCardTitle",
-            "extra": "$resumeCardAddButton",
+            "extra//注释了": "$resumeCardAddButton",
             "bordered": false
           },
           "children": [

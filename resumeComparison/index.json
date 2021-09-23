@@ -10,7 +10,9 @@
         "experience": "7年工作经验",
         "phone": "13120827721",
         "email": "sss@163.com",
-        "vx": "lixiaoming1234",
+        "wx": "xxx",
+        "school": "清华大学",
+        "major": "计算机",
         "desire": {
           "position": "产品经理",
           "industry": "EHR SaaS",
@@ -39,7 +41,8 @@
           "reason": "个人发展",
           "description": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；",
           "country": "美国",
-          "salary": "10K-13K"
+          "salary": "10K-13K",
+          "department": "研发部"
         },
         {
           "company": "上海外企人力资源有限公司",
@@ -52,7 +55,8 @@
           "reason": "个人发展",
           "description": "1.负责公司产品UX和UI设计，项目中担任部分产品职责，梳业务流程、绘制信息架构和原型图、输出高保真界面设计方案，并跟进产品的开发的工作； 2.落地、参与产品的测试，根据产品上线后的用户意见反馈，优化和迭代产品设计；",
           "country": "美国",
-          "salary": "10K-13K"
+          "salary": "10K-13K",
+          "department": "研发部"
         }
       ],
       "practice": [
@@ -73,15 +77,15 @@
           "school": "清华大学",
           "major": "计算机科学",
           "degree": "硕士",
-          "start": "2020.04",
-          "end": "2025.05"
+          "startTime": "2020.04",
+          "endTime": "2025.05"
         },
         {
           "school": "清华大学",
           "major": "计算机科学",
           "degree": "硕士",
-          "start": "2020.04",
-          "end": "2025.05"
+          "startTime": "2020.04",
+          "endTime": "2025.05"
         }
       ],
       "social": [
@@ -111,12 +115,12 @@
       "skill": [
         {
           "name": "英语四级证书",
-          "time": "2020.04",
+          "time": "5",
           "status": "熟练"
         },
         {
           "name": "英语四级证书",
-          "time": "2020.04",
+          "time": "15",
           "status": "熟练"
         }
       ],
@@ -168,9 +172,8 @@
     "$saveResume": "functions.$saveResumeState(function(old){return Object.assign({},old,args[0]);});lib.message.success('修改成功');"
   },
   "components": {
-    "$basic": "/react-view-render/resume/basic.json",
-    "$analysis": "/react-view-render/resume/analysis.json",
-    "$detail": "/react-view-render/resume/detail.json"
+    "$detail": "/react-view-render/resumeComparison/old/detail.json",
+    "$detailNew": "/react-view-render/resumeComparison/new/index.json"
   },
   "data": [
     {
@@ -191,31 +194,44 @@
           "children": [
             {
               "id": "Space-3",
-              "component": "Space",
+              "component": "Row",
               "props": {
-                "direction": "vertical"
+                "style": {
+                  "background": "#FFFFFF"
+                }
               },
               "children": [
                 {
                   "id": "Component-0",
-                  "component": "Component",
+                  "component": "Col",
                   "props": {
-                    "content": "$basic"
-                  }
+                    "span": 12
+                  },
+                  "children": [
+                    {
+                      "id": "Component-2",
+                      "component": "Component",
+                      "props": {
+                        "content": "$detail"
+                      }
+                    }
+                  ]
                 },
                 {
-                  "id": "Component-1",
-                  "component": "Component",
+                  "id": "Component-0",
+                  "component": "Col",
                   "props": {
-                    "content": "$analysis"
-                  }
-                },
-                {
-                  "id": "Component-2",
-                  "component": "Component",
-                  "props": {
-                    "content": "$detail"
-                  }
+                    "span": 12
+                  },
+                  "children": [
+                    {
+                      "id": "Text-16",
+                      "component": "Component",
+                      "props": {
+                        "content": "$detailNew"
+                      }
+                    }
+                  ]
                 }
               ]
             }

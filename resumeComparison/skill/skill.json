@@ -1,0 +1,106 @@
+{
+  "description": "技能模块",
+  "components": {
+    "$skillItemInfo": {
+      "description": "技能list-item",
+      "data": [
+        {
+          "id": "Space-1",
+          "component": "Space",
+          "props": {
+            "direction": "vertical",
+            "style": {
+              "paddingBottom": "44px",
+              "position": "relative"
+            }
+          },
+          "children": [
+            {
+              "id": "Space-5",
+              "component": "Space",
+              "props": {
+                "direction": "vertical",
+                "size": 32,
+                "style": {
+                  "fontSize": "14px",
+                  "fontWeight": 400,
+                  "color": "#313753"
+                }
+              },
+              "children": [
+                {
+                  "id": "Component-0",
+                  "component": "Component",
+                  "props": {
+                    "value": "$detailItem.name",
+                    "name": "技能名称：",
+                    "content": "$showWorkItem"
+                  }
+                },
+                {
+                  "id": "Component-0",
+                  "component": "Component",
+                  "props": {
+                    "value": "$detailItem.status",
+                    "name": "技能水平：",
+                    "content": "$showWorkItem"
+                  }
+                },
+                {
+                  "id": "Div-7",
+                  "component": "Space",
+                  "props": {
+                    "direction": "vertical",
+                    "size": 16
+                  },
+                  "children": [
+                    {
+                      "id": "Text-2",
+                      "component": "Text",
+                      "props": {
+                        "style": {
+                          "fontWeight": 400,
+                          "color": "#576B95"
+                        },
+                        "content": "使用时间："
+                      }
+                    },
+                    {
+                      "id": "Text-2",
+                      "component": "Div",
+                      "children": [
+                        {
+                          "id": "Text-2",
+                          "component": "Text",
+                          "props": {
+                            "content": "$detailItem.time"
+                          }
+                        },
+                        {
+                          "id": "Text-2",
+                          "component": "Text",
+                          "props": {
+                            "content": "个月"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "data": [
+    {
+      "component": "Component",
+      "props": {
+        "content": "$skillItemInfo",
+        "args": "$props.args"
+      }
+    }
+  ]
+}

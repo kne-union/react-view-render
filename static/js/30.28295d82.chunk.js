@@ -1,2 +1,0 @@
-(this["webpackJsonpreact-view-render-example"]=this["webpackJsonpreact-view-render-example"]||[]).push([[30],{388:function(e,t,n){"use strict";n.r(t),n.d(t,"default",(function(){return p}));var r=n(69),c=n(0),a=n.n(c),i=(n(19),n(138),n(4),n(16),n(54),n(64),n(139),["content"]),p=Object(r.d)((function(e){var t=e.content,n=Object(r.c)(e,i);return a.a.createElement("span",n,t)}))}}]);
-//# sourceMappingURL=30.28295d82.chunk.js.map

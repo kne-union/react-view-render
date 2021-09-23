@@ -32,7 +32,7 @@
                   "component": "Div",
                   "children": [
                     {
-                      "id": "Text-230",
+                      "id": "Text-2",
                       "component": "Text",
                       "props": {
                         "content": "$detailItem.name"
@@ -154,6 +154,72 @@
                   "props": {
                     "content": "$props.args.optionButton",
                     "name": "$props.args.name"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "data": [
+        {
+          "id": "Space-1",
+          "component": "Space",
+          "props": {
+            "direction": "vertical",
+            "style": {
+              "paddingBottom": "44px",
+              "position": "relative"
+            }
+          },
+          "children": [
+            {
+              "id": "Space-5",
+              "component": "Space",
+              "props": {
+                "direction": "vertical",
+                "size": 32,
+                "style": {
+                  "fontSize": "14px",
+                  "fontWeight": 400,
+                  "color": "#313753"
+                }
+              },
+              "children": [
+                {
+                  "id": "Component-0",
+                  "component": "Component",
+                  "props": {
+                    "value": "$detailItem.name",
+                    "name": "奖励名称：",
+                    "content": "$showWorkItem"
+                  }
+                },
+                {
+                  "id": "Component-0",
+                  "component": "Component",
+                  "props": {
+                    "value": "$detailItem.school",
+                    "name": "奖励颁发机构：",
+                    "content": "$showWorkItem"
+                  }
+                },
+                {
+                  "id": "Component-0",
+                  "component": "Component",
+                  "props": {
+                    "value": "$detailItem.startTime",
+                    "name": "获奖时间：",
+                    "content": "$showWorkItem"
+                  }
+                },
+                {
+                  "id": "Component-1",
+                  "component": "Component",
+                  "props": {
+                    "value": "$detailItem.description",
+                    "name": "获奖描述：",
+                    "content": "$showWorkItem"
                   }
                 }
               ]

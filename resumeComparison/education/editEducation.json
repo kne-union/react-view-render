@@ -1,5 +1,5 @@
 {
-  "description": "编辑技能表单",
+  "description": "编辑教育经历表单",
   "components": {
   },
   "data": [
@@ -25,8 +25,7 @@
               "component": "Input",
               "props": {
                 "name": "school",
-                "label": "奖励名称：",
-                "placeholder": "请输入",
+                "label": "学校名称",
                 "rule": "REQ"
               }
             }
@@ -43,9 +42,8 @@
               "id": "Input-4",
               "component": "Input",
               "props": {
-                "name": "major",
-                "label": "奖励颁发机构：",
-                "placeholder": "请输入",
+                "name": "degree",
+                "label": "最高学历",
                 "rule": "REQ"
               }
             }
@@ -71,14 +69,12 @@
           },
           "children": [
             {
-              "id": "DateRangePicker-11",
-              "component": "DatePicker",
+              "id": "TextArea-7",
+              "component": "Input",
               "props": {
-                "name": "date",
-                "label": "奖励颁发时间：",
-                "rule": "REQ",
-                "className": "with100",
-                "classList": ".with100 .ant-picker{width:100%}"
+                "name": "major",
+                "label": "专业名称",
+                "rule": "REQ"
               }
             }
           ]
@@ -87,18 +83,18 @@
           "id": "Col-9",
           "component": "Col",
           "props": {
-            "span": 24
+            "span": 12
           },
           "children": [
             {
-              "id": "TextArea-17",
-              "component": "TextArea",
+              "id": "DateRangePicker-11",
+              "component": "DateRangePicker",
               "props": {
-                "name": "des",
-                "label": "获奖描述：",
-                "showCount":true,
-                "maxLength":300,
-                "placeholder": "请输入"
+                "name": "date",
+                "label": "在校时间",
+                "className": "with100",
+                "classList": ".with100 .ant-picker{width:100%}",
+                "rule": "REQ"
               }
             }
           ]

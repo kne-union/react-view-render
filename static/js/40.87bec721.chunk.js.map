@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../src/Form/SubmitButton/index.js"],"names":["applyVariable"],"mappings":"wNAIA,G,2CAAeA,YAAf","file":"static/js/40.87bec721.chunk.js","sourcesContent":["import React from 'react';\nimport { SubmitButton } from '@kne/react-form-antd';\nimport { applyVariable } from '../../util';\n\nexport default applyVariable(SubmitButton);"],"sourceRoot":""}

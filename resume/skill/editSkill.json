@@ -25,7 +25,7 @@
               "component": "Input",
               "props": {
                 "name": "school",
-                "label": "技能名称",
+                "label": "技能名称：",
                 "rule": "REQ"
               }
             }
@@ -43,7 +43,7 @@
               "component": "Input",
               "props": {
                 "name": "major",
-                "label": "技能水平",
+                "label": "技能水平：",
                 "rule": "REQ"
               }
             }
@@ -73,7 +73,7 @@
               "component": "DatePicker",
               "props": {
                 "name": "date",
-                "label": "使用时间",
+                "label": "使用时间：",
                 "rule": "REQ",
                 "className": "with100",
                 "classList": ".with100 .ant-picker{width:100%}"

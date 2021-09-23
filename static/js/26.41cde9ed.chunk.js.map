@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../src/Layout/Col/index.js"],"names":["applyVariable"],"mappings":"mNAGA,G,gDAAeA,YAAf","file":"static/js/26.41cde9ed.chunk.js","sourcesContent":["import { Col } from 'antd';\nimport { applyVariable } from '../../util';\n\nexport default applyVariable(Col);"],"sourceRoot":""}

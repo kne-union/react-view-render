@@ -10,7 +10,7 @@
       },
       "data": [
         {
-          "id": "Div-0",
+          "id": "Div-01",
           "component": "Div",
           "props": {
             "style": {
@@ -97,6 +97,18 @@
                                     "style": {
                                       "fontSize": "16px",
                                       "fontWeight": "bolder"
+                                    }
+                                  }
+                                },
+                                {
+                                  "id": "Icon-19",
+                                  "component": "Icon",
+                                  "props": {
+                                    "type":"iconquanjuchengduishiyong-nan",
+                                    "content": "$resume.basic.name",
+                                    "style": {
+                                      "fontSize": "16px",
+                                      "marginLeft":"8px"
                                     }
                                   }
                                 }
@@ -194,6 +206,18 @@
                                   "component": "Div",
                                   "children": [
                                     {
+                                      "id": "Icon-12",
+                                      "component": "Icon",
+                                      "props": {
+                                        "type":"iconshoujihao",
+                                        "style": {
+                                          "fontSize": "14px",
+                                          "color": "#466DFF",
+                                          "marginRight":"8px"
+                                        }
+                                      }
+                                    },
+                                    {
                                       "id": "Text-22",
                                       "component": "Text",
                                       "props": {
@@ -201,33 +225,60 @@
                                       }
                                     }
                                   ]
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "id": "Condition-23",
-                          "component": "Condition",
-                          "props": {
-                            "resource": "$resume.basic.email",
-                            "expression": "$isExist"
-                          },
-                          "children": [
-                            {
-                              "id": "Space-24",
-                              "component": "Space",
-                              "children": [
+                                },
                                 {
                                   "id": "Div-25",
                                   "component": "Div",
                                   "children": [
+                                    {
+                                      "id": "Icon-11",
+                                      "component": "Icon",
+                                      "props": {
+                                        "type":"iconyouxiang",
+                                        "style": {
+                                          "fontSize": "14px",
+                                          "color": "#466DFF",
+                                          "marginRight":"8px"
+                                        }
+                                      }
+                                    },
                                     {
                                       "id": "Text-26",
                                       "component": "Text",
                                       "props": {
                                         "content": "$resume.basic.email"
                                       }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "Space-24",
+                                  "component": "Space",
+                                  "children": [
+                                    {
+                                      "id": "Div-25",
+                                      "component": "Div",
+                                      "children": [
+                                        {
+                                          "id": "Icon-11",
+                                          "component": "Icon",
+                                          "props": {
+                                            "type":"iconweixin",
+                                            "style": {
+                                              "fontSize": "14px",
+                                              "color": "#466DFF",
+                                              "marginRight":"8px"
+                                            }
+                                          }
+                                        },
+                                        {
+                                          "id": "Text-26",
+                                          "component": "Text",
+                                          "props": {
+                                            "content": "$resume.basic.vx"
+                                          }
+                                        }
+                                      ]
                                     }
                                   ]
                                 }
@@ -448,6 +499,68 @@
       "functions": {
         "$editResume": "functions.$setEditInfoState(false);"
       },
+      "components":{
+        "$editIcon":{
+          "data":[
+            {
+              "id":"Icon-1",
+              "component":"Icon",
+              "props":{
+                "type":"icontouxiang-xiugai",
+                "style":{
+                  "fontSize":"15px",
+                  "marginRight":"6px"
+                }
+              }
+            }
+          ]
+        },
+        "$fileIcon":{
+          "data":[
+            {
+              "id":"Icon-2",
+              "component":"Icon",
+              "props":{
+                "type":"iconwenjianjia",
+                "style":{
+                  "fontSize":"15px",
+                  "marginRight":"6px"
+                }
+              }
+            }
+          ]
+        },
+        "$collectIcon":{
+          "data":[
+            {
+              "id":"Icon-3",
+              "component":"Icon",
+              "props":{
+                "type":"iconshoucang",
+                "style":{
+                  "fontSize":"15px",
+                  "marginRight":"6px"
+                }
+              }
+            }
+          ]
+        },
+        "$shareIcon":{
+          "data":[
+            {
+              "id":"Icon-4",
+              "component":"Icon",
+              "props":{
+                "type":"iconfenxiang",
+                "style":{
+                  "fontSize":"15px",
+                  "marginRight":"6px"
+                }
+              }
+            }
+          ]
+        }
+      },
       "data": [
         {
           "id": "Space-0",
@@ -461,6 +574,7 @@
               "component": "Button",
               "props": {
                 "type": "link",
+                "icon": "$editIcon",
                 "style": {
                   "padding": 0,
                   "color": "#6E6D7A"
@@ -474,6 +588,7 @@
               "component": "Button",
               "props": {
                 "type": "link",
+                "icon": "$fileIcon",
                 "style": {
                   "padding": 0,
                   "color": "#6E6D7A"
@@ -486,6 +601,7 @@
               "component": "Button",
               "props": {
                 "type": "link",
+                "icon": "$collectIcon",
                 "style": {
                   "padding": 0,
                   "color": "#6E6D7A"
@@ -498,6 +614,7 @@
               "component": "Button",
               "props": {
                 "type": "link",
+                "icon": "$shareIcon",
                 "style": {
                   "padding": 0,
                   "color": "#6E6D7A"

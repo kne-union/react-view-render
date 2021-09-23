@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../src/Form/index.js"],"names":["applyVariable"],"mappings":"wNAIA,G,2CAAeA,YAAf","file":"static/js/36.516db1b6.chunk.js","sourcesContent":["import React from 'react';\nimport Form from '@kne/react-form-antd';\nimport { applyVariable } from '../util';\n\nexport default applyVariable(Form);"],"sourceRoot":""}
