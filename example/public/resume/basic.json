@@ -896,7 +896,7 @@
                         "name": "gender",
                         "label": "性别：",
                         "rule": "REQ",
-                        "options": "$genderList"
+                        "options": "$sexList"
                       }
                     }
                   ]
@@ -1255,7 +1255,7 @@
                       "props": {
                         "name": "situation",
                         "label": "当前状态：",
-                        "options":"$situationList"
+                        "options":"$currentStatusList"
                       }
                     }
                   ]

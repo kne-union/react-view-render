@@ -36,7 +36,7 @@
       "components": {
         "$workForm": {
           "functions": {
-            "$saveWork": "functions.$saveResume({work:Object.assign({},variable.$resume.work,args[0])});console.log(args[0]);functions.$changeInfoState();"
+            "$saveWork": "functions.$saveResume({work:Object.assign({},variable.$resume.work,args[0])});console.log(args[0]);functions.$changeInfoState();functions.$submitForm(args[0], 'works');"
           },
           "data":{
             "id": "Form-4",
@@ -729,7 +729,7 @@
         },
         "$projectForm": {
           "functions": {
-            "$saveProject": "functions.$saveResume({project:Object.assign({},variable.$resume.project,args[0])});console.log(args[0]);functions.$changeInfoState();"
+            "$saveProject": "functions.$saveResume({project:Object.assign({},variable.$resume.project,args[0])});console.log(args[0]);functions.$changeInfoState();functions.$submitForm(args[0], 'projects');"
           },
           "data":{
             "id": "Form-5",
@@ -1196,12 +1196,16 @@
           ]
         },
         "$selfForm": {
+          "functions": {
+            "$saveSelfEvaluation": "functions.$saveResume({selfEvaluation:Object.assign({},variable.$resume.selfEvaluation,args[0])});console.log(args[0]);functions.$changeInfoState();functions.$submitForm(args[0], 'eval');"
+          },
           "data": [
 
             {
               "id": "Row-15",
               "component": "Form",
               "props": {
+                "onSubmit": "$saveSelfEvaluation",
                 "type":"inner",
                 "gutter": [
                   40,
