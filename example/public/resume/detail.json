@@ -1448,7 +1448,9 @@
         {
           "id":"ApplyRecord-0",
           "component":"ApplyRecord",
-          "props":{}
+          "props":{
+            "libraryId": "$libraryId"
+          }
         }
       ]
     },
@@ -1457,7 +1459,9 @@
         {
           "id":"CallRecord-0",
           "component":"CallRecord",
-          "props":{}
+          "props":{
+            "libraryId":"$libraryId"
+          }
         }
       ]
     },
@@ -1466,7 +1470,11 @@
         {
           "id":"ResumeOriginal-0",
           "component":"ResumeOriginal",
-          "props":{}
+          "props":{
+            "libraryId":"$libraryId",
+            "resumeFileList":"$resumeFileList",
+            "currentFile":"$currentFile"
+          }
         }
       ]
     }
