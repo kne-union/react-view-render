@@ -6,32 +6,11 @@
   "variable": {
     "$initResume": {
       "basic": {
-        "avatar": "https://lite.knxgalaxy.com/upload_assets/recruitment/b763afaace39e028a8a3cd450f1d8eca.jpg",
+        "portraitUrl": "",
         "name": "李明",
         "gender": "男",
         "age": "28岁",
-        "degree": "硕士",
-        "workYear": "3-5年",
-        "phone": "13120827721",
-        "email": "sss@163.com",
-        "rawPositions":"产品经理",
-        "rawIndustries":"rawIndustries",
-        "wechat": "lixiaoming1234",
-        "industry": "EHR SaaS",
-        "currentSalary": "15-20k",
-        "expectSalary": "15-20k",
-        "currentSalaryMin": "15",
-        "currentSalaryMax": "20",
-        "expectSalaryMin": "15",
-        "expectSalaryMax": "20",
-        "school":"sdfdsff",
-        "major":"sdfdsf",
-        "situation":"situation",
-        "political":"political",
-        "nationality":"nationality",
-        "ethic":"ethic",
-        "ancestralHome":"ancestralHome",
-        "address":"address"
+        "degree": "硕士"
       },
       "analysis": {
         "bright": [
@@ -130,7 +109,7 @@
       ],
       "awarded": [
         {
-          "startDate": "2012-08",
+          "startDate":"",
           "agency": "agency",
           "description": "description",
           "name": "name"
@@ -223,82 +202,6 @@
       {
         "label": "否",
         "value": false
-      }
-    ],
-    "$situationList":[
-      {
-        "label": "目前不找工作",
-        "value": 1
-      }
-    ],
-    "$politicalList":[
-      {
-        "label": "党员",
-        "value": 1
-      }
-    ],
-    "$degreeList": [
-      {
-        "label": "博士",
-        "value": 1
-      },
-      {
-        "label": "硕士",
-        "value": 2
-      },
-      {
-        "label": "本科",
-        "value": 3
-      },
-      {
-        "label": "专科",
-        "value": 4
-      },
-      {
-        "label": "高中",
-        "value": 5
-      }
-    ],
-    "$genderList": [
-      {
-        "label": "男",
-        "value": "男"
-      },
-      {
-        "label": "女",
-        "value": "女"
-      }
-    ],
-    "$majorList": [
-      {
-        "label": "计算机科学技术",
-        "value": 0
-      },
-      {
-        "label": "电子信息技术",
-        "value": 1
-      },
-      {
-        "label": "土木工程",
-        "value": 2
-      },
-      {
-        "label": "机械制造及其自动化",
-        "value": 3
-      }
-    ],
-    "$experienceList": [
-      {
-        "label": "0-3年",
-        "value": "0-3年"
-      },
-      {
-        "label": "3-5年",
-        "value": "3-5年"
-      },
-      {
-        "label": "5年以上",
-        "value": "5年以上"
       }
     ]
   },
