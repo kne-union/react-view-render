@@ -306,13 +306,13 @@
                             {
                               "id": "Space-28",
                               "component": "Space",
-                              "props": {
-                                "split": "/"
-                              },
                               "children": [
                                 {
                                   "id": "Space-29",
                                   "component": "Space",
+                                  "props": {
+                                    "split": "/"
+                                  },
                                   "children": [
                                     {
                                       "id": "Text-30",
@@ -1151,9 +1151,7 @@
                               "props": {
                                 "style": {
                                   "fontSize": "14px",
-                                  "marginBottom": "2px",
-                                  "color": "#000",
-                                  "fontWeight": "500"
+                                  "marginBottom": "2px"
                                 }
                               },
                               "children": "期望薪资："
@@ -1186,7 +1184,7 @@
                                   "component": "Input",
                                   "props": {
                                     "style": {
-                                      "width": 40,
+                                      "width": 60,
                                       "borderLeft": 0,
                                       "borderRight": 0,
                                       "borderRadius": 0,
@@ -1259,7 +1257,7 @@
                                   "component": "Input",
                                   "props": {
                                     "style": {
-                                      "width": 40,
+                                      "width": 60,
                                       "borderLeft": 0,
                                       "borderRight": 0,
                                       "borderRadius": 0,
