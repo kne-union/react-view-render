@@ -2183,7 +2183,9 @@
                   "id": "ResumeStatus-0",
                   "component": "ResumeStatus",
                   "props": {
-                    "fileData": "$fileData"
+                    "fileData": "$fileData",
+                    "degreeList": "$degreeList",
+                    "experienceList": "$experienceList"
                   }
                 },
                 {
