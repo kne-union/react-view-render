@@ -222,9 +222,7 @@
                             "props": {
                               "style": {
                                 "fontSize": "14px",
-                                "marginBottom": "2px",
-                                "color":"##000",
-                                "fontWeight":"bold"
+                                "marginBottom": "2px"
                               }
                             },
                             "children":"薪资范围："
@@ -233,6 +231,8 @@
                             "id": "Row-131",
                             "component": "Row",
                             "props": {
+                              "className": "salary_row",
+                              "classList":".salary_row .react-form__field:nth-child(1),.salary_row .react-form__field:nth-child(3){flex:1}",
                               "style": {
                                 "display": "flex"
                               }
@@ -255,7 +255,7 @@
                                   "component":"Input",
                                   "props":{
                                     "style":{
-                                      "width": 40,
+                                      "width": "60px",
                                       "borderLeft": 0,
                                       "borderRight": 0,
                                       "borderRadius": 0,

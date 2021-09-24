@@ -9,7 +9,7 @@
       "functions": {
         "$isExistNation":"return args[0].nationality||args[0].ethic",
         "$isExistSchool":"return args[0].school||args[0].major",
-        "$isExistExpect":"return args[0].phone||args[0].email||args[0].wechat",
+        "$isExistExpect":"return args[0].rawPositions||args[0].rawIndustries||args[0].expectSalary",
         "$isExist": "return !!args[0]",
         "$isExistPhone": "return args[0].phone||args[0].email||args[0].wechat",
         "$hasObjectKeys": "return args[0]&&Object.keys(args[0]).length",
@@ -403,7 +403,7 @@
                                           "component": "Condition",
                                           "props": {
                                             "resource": "$resume.basic.rawPositions",
-                                            "expression": "$isExistExpect"
+                                            "expression": "$isExist"
                                           },
                                           "children": [
                                             {
@@ -461,8 +461,8 @@
                           "id": "Condition-27",
                           "component": "Condition",
                           "props": {
-                            "resource": "$resume.basic",
-                            "expression": "$hasObjectKeys"
+                            "resource": "$resume.basic.currentSalary",
+                            "expression": "$isExist"
                           },
                           "children": [
                             {
@@ -513,8 +513,8 @@
                           "id": "Condition-27",
                           "component": "Condition",
                           "props": {
-                            "resource": "$resume.basic",
-                            "expression": "$hasObjectKeys"
+                            "resource": "$resume.basic.situation",
+                            "expression": "$isExist"
                           },
                           "children": [
                             {
@@ -565,8 +565,8 @@
                           "id": "Condition-27",
                           "component": "Condition",
                           "props": {
-                            "resource": "$resume.basic",
-                            "expression": "$hasObjectKeys"
+                            "resource": "$resume.basic.politicalName",
+                            "expression": "$isExist"
                           },
                           "children": [
                             {
