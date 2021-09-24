@@ -876,8 +876,8 @@
                           "classList":".avatar_box .ant-upload.ant-upload-select-picture-card{width:120px;height:160px;margin:0;} .avatar_box .react-form-avatar .preview {width:102px;height:142px;}",
                           "editor": {
                             "open":true,
-                            "width":"102px",
-                            "height":"142px",
+                            "width":102,
+                            "height":142,
                             "text":"确定"
                           }
                         }
