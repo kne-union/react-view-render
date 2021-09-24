@@ -1209,6 +1209,8 @@
                       "id": "Select-5",
                       "component": "Select",
                       "props": {
+                        "className": "sel",
+                        "classList": ".sel .ant-select{width:100%} .sel .ant-select-selection-item{font-weight:400}",
                         "name": "degree",
                         "label": "最高学历",
                         "options": "$degreeList"
@@ -1789,281 +1791,6 @@
     }
   },
   "variable": {
-    "$formData": {
-      "basic": {
-        "name": "田磊",
-        "avatarString": null,
-        "workYear": null,
-        "degree": 16,
-        "age": 31,
-        "birthday": "1990-01-01T00:00:00.000+00:00",
-        "gender": "男",
-        "political": null,
-        "nationality": null,
-        "ancestralHome": null,
-        "address": null,
-        "ethic": null,
-        "email": "t15861876559@aliyun.com",
-        "phone": "18221332239",
-        "wechat": null
-      },
-      "status": {
-        "company": null,
-        "position": null,
-        "situation": null
-      },
-      "expectation": {
-        "rawPositions": null,
-        "rawIndustries": null,
-        "salaryHigh": null,
-        "salaryLow": null
-      },
-      "activities": [],
-      "awards": [],
-      "educations": [
-        {
-          "school": "同济大学",
-          "schoolNormalized": null,
-          "degree": "本科",
-          "major": "计算机科学与技术",
-          "startDate": null,
-          "endDate": null,
-          "untilNow": null,
-          "highest": false
-        },
-        {
-          "school": "常州信息职业技术学院",
-          "schoolNormalized": null,
-          "degree": "专科",
-          "major": "汽车电子技术",
-          "startDate": null,
-          "endDate": null,
-          "untilNow": null,
-          "highest": false
-        }
-      ],
-      "interns": [],
-      "works": [
-        {
-          "company": "上海撷芳信息科技有限公司",
-          "companyNormalized": null,
-          "position": "Java 软件工程师",
-          "department": null,
-          "startDate": null,
-          "endDate": null,
-          "nation": null,
-          "salaryHigh": null,
-          "salaryLow": null,
-          "leavingReason": null,
-          "description": "1.单点登陆管理系统接入了公司风控、监控、征信中心、计算平台等系统,提供统一登陆和权限管理.\n2. 征信中心对接接近上百家三方数据,为风控提供更准确的数据.\n3. 决策变量管理系统为风控变量实现了部分自动化操作,减轻开发效率.",
-          "responsibility": null,
-          "performance": null,
-          "untilNow": null,
-          "oversea": false
-        },
-        {
-          "company": "宝德融资租赁(上海)有限公司",
-          "companyNormalized": null,
-          "position": "java 软件工程师",
-          "department": null,
-          "startDate": null,
-          "endDate": null,
-          "nation": null,
-          "salaryHigh": null,
-          "salaryLow": null,
-          "leavingReason": null,
-          "description": "主要负责增值系统的开发",
-          "responsibility": null,
-          "performance": null,
-          "untilNow": null,
-          "oversea": false
-        },
-        {
-          "company": "上海雪橙资产管理有限公司",
-          "companyNormalized": null,
-          "position": "Java 软件开发工程师",
-          "department": null,
-          "startDate": null,
-          "endDate": null,
-          "nation": null,
-          "salaryHigh": null,
-          "salaryLow": null,
-          "leavingReason": null,
-          "description": "综合资产系统开发",
-          "responsibility": null,
-          "performance": null,
-          "untilNow": null,
-          "oversea": false
-        },
-        {
-          "company": "上海众钱信息科技有限公司",
-          "companyNormalized": null,
-          "position": "Java 软件开发工程师",
-          "department": null,
-          "startDate": null,
-          "endDate": null,
-          "nation": null,
-          "salaryHigh": null,
-          "salaryLow": null,
-          "leavingReason": null,
-          "description": null,
-          "responsibility": null,
-          "performance": null,
-          "untilNow": null,
-          "oversea": false
-        },
-        {
-          "company": "江苏世轩科技股份有限公司",
-          "companyNormalized": null,
-          "position": "java 开发工程师",
-          "department": null,
-          "startDate": null,
-          "endDate": null,
-          "nation": null,
-          "salaryHigh": null,
-          "salaryLow": null,
-          "leavingReason": null,
-          "description": null,
-          "responsibility": null,
-          "performance": null,
-          "untilNow": null,
-          "oversea": false
-        }
-      ],
-      "projects": [
-        {
-          "name": "风控(征信中心)",
-          "position": null,
-          "company": "(上海撷芳信息科技有限公司)",
-          "startDate": null,
-          "endDate": null,
-          "description": "1.风控系统主要是为公司贷款业务提供风险控制服务.2.征信中心则是风险控制的关键数据来源,通过与三方\n公司进行接口对接获取征信数据.3.不同的风控流程根据策略制定的风控方案,调用决策引擎,根据决策引擎\n返回的结果,调用对应的征信接口,然后拼装对应结构调用决策引擎返回决策结果供业务系统决定通过或者拒\n绝.",
-          "responsibility": null,
-          "result": "1.负责新接入的三方征信数据对接并为风控提供对应的查询接口.2. 迁移部分老系统中未解耦的三方征信数据\n接口.3. 提供相应的设计文档、接口文档以及与上游系统对接.4. 为三方征信数据提供相应的异常告警.5.\n配合业务、策略解决线上异常问题.",
-          "untilNow": null
-        },
-        {
-          "name": "单点登录权限管理系统",
-          "position": null,
-          "company": "(上海撷芳信息科技有限公司)",
-          "startDate": null,
-          "endDate": null,
-          "description": "单点登录权限管理系统为公司各系统提供统一的登录鉴权和权限管理.整个系统采用的技术 java 语言,\nMySql 数据库,项目整体架构采用 springboot\\Mybatis 框架.使用 zookeeper+dubbo 分布式框架实现各\n系统间的服务调用,采用 maven 技术作为项目管理工具,redis 存储缓存数据.",
-          "responsibility": null,
-          "result": "1. 提供统一登陆、登出服务,对登录账号、角色、权限、各应用系统做统一管理. 2. 接入 sso 的不同系统使\n用统一账号登陆系统,其他系统自动登录.用户只需要登录一次就可以访问所有其他内部系统. 3. 提供多渠道\n入口登陆系统,可以通过 SSO 应用登陆界面统一提供访问链接,同时也可以访问各自的系统访问.",
-          "untilNow": null
-        },
-        {
-          "name": "增值系统",
-          "position": null,
-          "company": null,
-          "startDate": null,
-          "endDate": null,
-          "description": "德易车金服主要业务为二手车贷款业务.经过信审、风控一系列流程,客户通过贷款成功买车.增值系统主要\n是为贷后车险提供服务的一套系统.\n车辆成功购买车险后,保险公司会给相应的返点给公司.增值系统主要就是对车商提供的数据,经过一系列审\n批、核对后计算应该给车商返点以及公司盈利金额.\n整个系统采用的技术 java 语言,MySql 数据库,tomcat 服务器,项目整体架构采用\nspringMVC\\spring\\Mybatis 框架.使用 zookeeper+dubbo 分布式框架实现各系统间的服务调用,采用\nmaven 技术作为项目管理工具,redis 存储缓存数据.",
-          "responsibility": "1、负责增值系统项目以及环境搭建\n2、负责增值系统的功能开发\n主要功能有:\n1车险供应商管理配置\n2地区返点方案管理\n3导入对账、提交对账、审核对账、结算对账等功能的流转,与 CRM 系统交\n互以及同步车商信息、更改对账信息、导出对账信息等功能.",
-          "result": "java 开发",
-          "untilNow": null
-        },
-        {
-          "name": "综合资产管理系统",
-          "position": null,
-          "company": null,
-          "startDate": null,
-          "endDate": null,
-          "description": "综合资产管理系统是为公司总部以及各门店提供的一款完成用户借贷的审批系统.该系统主要包括信审\n系统、门店系统、报表系统、还款系统等主要模块.完成了整个借贷的审批流程、与第三方公司标的推送等对\n接以及后期还款等\n整个系统采用的技术 java 语言,Oracle 数据库,tomcat 服务器,项目整体架构采用\nspringMVC\\spring\\Mybatis 框架.使用 zookeeper+dubbo 分布式框架实现各系统间的服务调用,采用\nmaven 技术作为项目管理工具,redis 存储缓存数据,activeMQ 作为消息中间件,quartz 实现定时任务调\n度.",
-          "responsibility": "1、主要负责门店系统开户、合同生成等模块,完成与第三方公司接口对接\n2、主要负责信审系统匹配综合费率、初审、终审审批改造\n3、主要负责后台系统组织架构功能\n4、改造报表系统查询权限,根据组织架构查询当前用户查询数据权限\n5、配合开发产品、业务人员的需求以及出现的线上问题",
-          "result": "java 软件工程师",
-          "untilNow": null
-        },
-        {
-          "name": "CTA交易系统",
-          "position": null,
-          "company": null,
-          "startDate": null,
-          "endDate": null,
-          "description": "CTA 系统是债权、交易等后台核心模块.主要包括债权匹配、开户绑卡、推送标的、放款等.\n整个系统采用的技术 java 语言,Oracle 数据库,tomcat 服务器,项目整体架构采用\nspringMVC\\spring\\Mybatis 框架.使用 zookeeper+dubbo 分布式框架实现各系统间的服务调用,采用\nmaven 技术作为项目管理工具,redis 存储缓存数据,activeMQ 作为消息中间件,quartz 实现定时任务调\n度.",
-          "responsibility": "1、对接综合资产以及第三方公司开户、绑卡等接口\n2、接收第三方公司项目状态通知\n3、负责放款、流标等操作\n4、与第三方对接合同电子签章等接口",
-          "result": "java 软件工程师",
-          "untilNow": null
-        },
-        {
-          "name": "金佳金服",
-          "position": null,
-          "company": null,
-          "startDate": null,
-          "endDate": null,
-          "description": "金佳金服是面向个人投资者的综合理财网站,联合了包括网贷理财平台,在线保险平台,信托公司,资金管理\n公司,形成以公募基金、网贷理财、保险、基金等 s 不同模块组成的综合类金融门户网站,目前接入众钱本公\n司金佳金融 P2P 产品以及常量基金,后续网贷公司以及保险业务正在洽谈.\n整个系统采用的技术 java 语言,MySql 数据库,tomcat 服务器,项目整体架构采用\nspringMVC\\spring\\Mybatis 框架.使用 zookeeper+dubbo 分布式框架实现各系统间的服务调用,采用\nmaven 技术作为项目管理工具,redis 存储缓存数据,quartz 实现定时任务调度.\n本人主要负责用户模块、金佳金融 P2P 产品查询以及购买、部分账户模块的创建以及更新、调用其他组\n员的接口完成首页、账户总览、交易记录等功能",
-          "responsibility": null,
-          "result": "java 开发",
-          "untilNow": null
-        },
-        {
-          "name": "平台运营管理系统(poms)",
-          "position": null,
-          "company": null,
-          "startDate": null,
-          "endDate": null,
-          "description": "本产品属于公司内部各部门使用,POMS 计划将已有的各产品运营系统统一整合,并增加市场与销售管\n理模块和风控管理模块,形成一个综合高效的运营管理平台, 从而支撑部门工作,并协调企业与客户之间在\n市场、销售和服务上的交互,提高 ,公司的运营与管理效率.\n整个系统采用的技术 java 语言,MySql 数据库,tomcat 服务器,项目整体架构采用\nspringMVC\\spring\\Mybatis 框架.使用 zookeeper+dubbo 分布式框架实现各系统间的服务调用,采用\nmaven 技术作为项目管理工具,redis 存储缓存数据.\n本人主要债权管理、产品管理以及注册数据的查询等其他应用需要功能进行开发,以及负责 poms 系统\n的维护",
-          "responsibility": null,
-          "result": "Java 开发",
-          "untilNow": null
-        },
-        {
-          "name": "金佳金融 P2P",
-          "position": null,
-          "company": null,
-          "startDate": null,
-          "endDate": null,
-          "description": "金佳金融是一个互联网金融理财平台,采用线下线上相结合的方式,提供活期理财、定期理财、定期活\n动等金融理财服务,低门槛高收益,让喜欢理财的朋友安全有效的投资理财.\n整个系统采用的技术 java 语言,MySql 数据库,tomcat 服务器,项目整体架构采用\nspringMVC\\spring\\Mybatis 框架.使用 zookeeper+dubbo 分布式框架实现各系统间的服务调用,采用\nmaven 技术作为项目管理工具,redis 存储缓存数据,activeMQ 作为消息中间件,quartz 实现定时任务调\n度.\n本人主要负责债权、还款计划、投资明细、交易记录等查询以及账户的创建、余额查询、收益等功\n能.",
-          "responsibility": null,
-          "result": "Java 开发",
-          "untilNow": null
-        },
-        {
-          "name": "花乐(大学生小额贷款平台)",
-          "position": null,
-          "company": null,
-          "startDate": null,
-          "endDate": null,
-          "description": "花乐是一款为基于当代大学生的基本需求,提供在校大学生小额贷款业务、个人理财的社交金融平台.\n致力于打造出一个集安全与个性化为一体的青年社区,让暂时资金紧缺的学生快速借贷.\n整个系统采用的技术 java 语言,MySql 数据库,tomcat 服务器,项目整体架构采用\nspringMVC\\spring\\Mybatis 框架.使用 zookeeper+dubbo 分布式框架实现各系统间的服务调用,采用\nmaven 技术作为项目管理工具,redis 存储缓存数据,quartz 实现定时任务调度.\n本人主要负责还款、借款、个人资料等功能.",
-          "responsibility": null,
-          "result": "Java 开发",
-          "untilNow": null
-        },
-        {
-          "name": "集成平台",
-          "position": null,
-          "company": null,
-          "startDate": null,
-          "endDate": null,
-          "description": "集成平台主要是负责各系统之间的信息交互与共享,传统模式,两个系统间数据传送都是一对一接口方\n式,但是如果系统较多,就会照成效率低、难维护、代码重复等问题,而集成平台则起到桥梁的作用,集成平\n台先从一个系统中抽取数据,另一个系统直接从平台抽取数据,效率提高.\n整个系统采用的技术 java 语言,Oracle 数据库,tomcat 服务器,项目整体架构采用\nstruts2\\spring\\Mybatis 框架.\n本人主要负责危急值管理、缓存展示管理、元数据类别等功能以及各模块的维护,bug 修改等工作",
-          "responsibility": null,
-          "result": "Java 开发",
-          "untilNow": null
-        }
-      ],
-      "trainings": [],
-      "skills": null,
-      "skillsText": null,
-      "eval": "综合能力: 责任心\n1. 熟悉 Oracle、MySQL 数据库;\n2. 熟练使用 eclipse、idea、svn 、git 等开发工具;\n3. 熟悉 zookeeper+dubbo 分布式服务框架;\n4. 熟练使用 redis、mongoDB 数据库、ActiveMQ、kafka 等消息中间件;\n5. 熟练使用 maven 项目管理工具;\n6. 熟练使用 Spring、springboot、SpringMVC、MyBatis 主流开源框架.",
-      "school": null,
-      "major": null,
-      "name": "田磊",
-      "avatarString": null,
-      "workYear": null,
-      "degree": 16,
-      "age": 31,
-      "birthday": "1990-01-01T00:00:00.000+00:00",
-      "gender": "男",
-      "political": null,
-      "nationality": null,
-      "ancestralHome": null,
-      "address": null,
-      "ethic": null,
-      "email": "t15861876559@aliyun.com",
-      "phone": "18221332239",
-      "wechat": null
-    },
     "$twoList": [
       {
         "label": "是",
@@ -2073,67 +1800,13 @@
         "label": "否",
         "value": false
       }
-    ],
-    "$degreeList": [
-      {
-        "label": "博士",
-        "value": 1
-      },
-      {
-        "label": "硕士",
-        "value": 2
-      },
-      {
-        "label": "本科",
-        "value": 3
-      },
-      {
-        "label": "专科",
-        "value": 4
-      },
-      {
-        "label": "高中",
-        "value": 5
-      }
-    ],
-    "$majorList": [
-      {
-        "label": "计算机科学技术",
-        "value": 0
-      },
-      {
-        "label": "电子信息技术",
-        "value": 1
-      },
-      {
-        "label": "土木工程",
-        "value": 2
-      },
-      {
-        "label": "机械制造及其自动化",
-        "value": 3
-      }
-    ],
-    "$experienceList": [
-      {
-        "label": "0-3年",
-        "value": "0-3年"
-      },
-      {
-        "label": "3-5年",
-        "value": "3-5年"
-      },
-      {
-        "label": "5年以上",
-        "value": "5年以上"
-      }
     ]
   },
   "functions": {
     "$submit": "functions.$submitForm(args[0]);",
     "$timeToDate": "const output = Object.assign({},args[0]);if(args[0].startDate&&args[0].endDate){output.time=[args[0].startDate,args[0].endDate]};delete output['startDate'];delete output['endDate'];return output;",
     "$dateToTime": "const output = Object.assign({},args[0]);if(Array.isArray(args[0].time)&&args[0].time.length===2){output.startDate=args[0].time[0];output.endDate=args[0].time[1];}delete output['time'];return output;",
-    "$formatForm": "const transferData = (it) => ({...it, time:it['startDate'] ? [it['startDate'] || '',it['endDate'] || ''] : []});const educations =  args[0]['educations']&&args[0]['educations'].map((it)=> transferData(it));const works =  args[0]['works']&&args[0]['works'].map((it)=>transferData(it));const trainings =  args[0]['trainings']&&args[0]['trainings'].map((it)=>transferData(it));const projects =  args[0]['projects']&&args[0]['projects'].map((it)=>transferData(it));const interns =  args[0]['interns']&&args[0]['interns'].map((it)=>transferData(it));const activities =  args[0]['activities']&&args[0]['activities'].map((it)=>transferData(it));return {...args[0],educations,works, trainings, projects, interns, activities}",
+    "$formatForm": "console.log('form_____',args[0]); const transferData = (it) => ({...it, time:it['startDate'] ? [it['startDate'] || '',it['endDate'] || ''] : []});const educations =  args[0]['educations']&&args[0]['educations'].map((it)=> transferData(it));const works =  args[0]['works']&&args[0]['works'].map((it)=>transferData(it));const trainings =  args[0]['trainings']&&args[0]['trainings'].map((it)=>transferData(it));const projects =  args[0]['projects']&&args[0]['projects'].map((it)=>transferData(it));const interns =  args[0]['interns']&&args[0]['interns'].map((it)=>transferData(it));const activities =  args[0]['activities']&&args[0]['activities'].map((it)=>transferData(it));return {...args[0],educations,works, trainings, projects, interns, activities}",
     "$setFormContext": "functions.$getFormContext(variable.$formContext);"
   },
   "data": [
@@ -2289,6 +1962,8 @@
                               "id": "Experience-9",
                               "component": "Select",
                               "props": {
+                                "className": "sel",
+                                "classList": ".ant-select{width:100%} .ant-select-selection-item{font-weight:400}",
                                 "name": "workYear",
                                 "label": "工作经验：",
                                 "options": "$experienceList"
