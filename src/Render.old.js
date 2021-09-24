@@ -16,7 +16,6 @@ const ErrorMsg = ({error}) => {
 };
 
 const componentCache = {};
-
 const withRemote = (WrappedComponent) => {
     return ({url, fetchRemote, content, fallback = null, ...props}) => {
         const {id, rootIsMount, renderEvent} = props;
@@ -76,7 +75,7 @@ const RenderTask = ({emitter, id, rootIsMount, children}) => {
     return children;
 };
 
-const Render = withRemote(({id, lib = {}, content, emitter, ...renderProps}) => {
+const RenderOld = withRemote(({id, lib = {}, content, emitter, ...renderProps}) => {
     const prevContext = useGlobalContext();
     const variable = Object.assign({}, get(prevContext, 'variable'), content.variable);
     const data = content.data || [];
@@ -93,7 +92,6 @@ const Render = withRemote(({id, lib = {}, content, emitter, ...renderProps}) => 
 
     const render = (data) => {
         const target = Array.isArray(data) ? data : [data];
-
         return target.map((item) => {
             if (typeof item === 'string') {
                 return item;
@@ -146,5 +144,5 @@ const Render = withRemote(({id, lib = {}, content, emitter, ...renderProps}) => 
     );
 });
 
-export default Render;
+export default RenderOld;
 

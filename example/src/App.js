@@ -1,23 +1,11 @@
 import React, {useRef} from 'react';
-import ViewRender, {preset} from '@kne/react-view-render';
+import ViewRender from '@kne/react-view-render';
+import '@kne/react-view-render/dist/index.css';
 import {ConfigProvider, Button} from 'antd';
 import {interceptors} from '@kne/react-form-antd';
+import '@kne/react-form-antd/dist/index.css';
 import zhCN from 'antd/lib/locale/zh_CN';
 import moment from 'moment';
-
-const Hello = () => {
-    return "Hello";
-};
-
-preset.components([
-    {
-        component: Hello,
-        profile: {
-            id: "Hello"
-        }
-    }
-]);
-
 
 interceptors.input.use('string-date-range', (value) => {
     const output = [];
@@ -46,18 +34,13 @@ interceptors.output.use('string-date-range', (value) => {
 const App = () => {
     const formContext = useRef(null);
     return <ConfigProvider autoInsertSpaceInButton={false} locale={zhCN}>
-        <ViewRender url="/react-view-render/resumeComparison/index.json" content={{
+        <ViewRender url="/react-view-render/resume/index.json" content={{
             functions: {
                 $getFormContext: (context) => {
                     formContext.current = context;
                 }
             }
         }}/>
-        <Button onClick={()=>{
-            if(formContext.current){
-                formContext.current.emitter.emit('form-submit');
-            }
-        }}>提交</Button>
     </ConfigProvider>;
 };
 

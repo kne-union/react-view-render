@@ -104,11 +104,11 @@
                                   "id": "Icon-19",
                                   "component": "Icon",
                                   "props": {
-                                    "type":"iconquanjuchengduishiyong-nan",
+                                    "type": "iconquanjuchengduishiyong-nan",
                                     "content": "$resume.basic.name",
                                     "style": {
                                       "fontSize": "16px",
-                                      "marginLeft":"8px"
+                                      "marginLeft": "8px"
                                     }
                                   }
                                 }
@@ -209,11 +209,11 @@
                                       "id": "Icon-12",
                                       "component": "Icon",
                                       "props": {
-                                        "type":"iconshoujihao",
+                                        "type": "iconshoujihao",
                                         "style": {
                                           "fontSize": "14px",
                                           "color": "#466DFF",
-                                          "marginRight":"8px"
+                                          "marginRight": "8px"
                                         }
                                       }
                                     },
@@ -234,11 +234,11 @@
                                       "id": "Icon-11",
                                       "component": "Icon",
                                       "props": {
-                                        "type":"iconyouxiang",
+                                        "type": "iconyouxiang",
                                         "style": {
                                           "fontSize": "14px",
                                           "color": "#466DFF",
-                                          "marginRight":"8px"
+                                          "marginRight": "8px"
                                         }
                                       }
                                     },
@@ -263,11 +263,11 @@
                                           "id": "Icon-11",
                                           "component": "Icon",
                                           "props": {
-                                            "type":"iconweixin",
+                                            "type": "iconweixin",
                                             "style": {
                                               "fontSize": "14px",
                                               "color": "#466DFF",
-                                              "marginRight":"8px"
+                                              "marginRight": "8px"
                                             }
                                           }
                                         },
@@ -499,62 +499,62 @@
       "functions": {
         "$editResume": "functions.$setEditInfoState(false);"
       },
-      "components":{
-        "$editIcon":{
-          "data":[
+      "components": {
+        "$editIcon": {
+          "data": [
             {
-              "id":"Icon-1",
-              "component":"Icon",
-              "props":{
-                "type":"icontouxiang-xiugai",
-                "style":{
-                  "fontSize":"15px",
-                  "marginRight":"6px"
+              "id": "Icon-1",
+              "component": "Icon",
+              "props": {
+                "type": "icontouxiang-xiugai",
+                "style": {
+                  "fontSize": "15px",
+                  "marginRight": "6px"
                 }
               }
             }
           ]
         },
-        "$fileIcon":{
-          "data":[
+        "$fileIcon": {
+          "data": [
             {
-              "id":"Icon-2",
-              "component":"Icon",
-              "props":{
-                "type":"iconwenjianjia",
-                "style":{
-                  "fontSize":"15px",
-                  "marginRight":"6px"
+              "id": "Icon-2",
+              "component": "Icon",
+              "props": {
+                "type": "iconwenjianjia",
+                "style": {
+                  "fontSize": "15px",
+                  "marginRight": "6px"
                 }
               }
             }
           ]
         },
-        "$collectIcon":{
-          "data":[
+        "$collectIcon": {
+          "data": [
             {
-              "id":"Icon-3",
-              "component":"Icon",
-              "props":{
-                "type":"iconshoucang",
-                "style":{
-                  "fontSize":"15px",
-                  "marginRight":"6px"
+              "id": "Icon-3",
+              "component": "Icon",
+              "props": {
+                "type": "iconshoucang",
+                "style": {
+                  "fontSize": "15px",
+                  "marginRight": "6px"
                 }
               }
             }
           ]
         },
-        "$shareIcon":{
-          "data":[
+        "$shareIcon": {
+          "data": [
             {
-              "id":"Icon-4",
-              "component":"Icon",
-              "props":{
-                "type":"iconfenxiang",
-                "style":{
-                  "fontSize":"15px",
-                  "marginRight":"6px"
+              "id": "Icon-4",
+              "component": "Icon",
+              "props": {
+                "type": "iconfenxiang",
+                "style": {
+                  "fontSize": "15px",
+                  "marginRight": "6px"
                 }
               }
             }

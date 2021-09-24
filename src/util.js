@@ -119,8 +119,17 @@ export const extractProps = (props = {}) => {
     return output;
 };
 
+const Debug = ({data, children}) => {
+    return <div className="view-render-debug">
+        <span className="view-render-debug-btn" onClick={() => {
+            console.log(data);
+        }}>debug</span>
+        {children}
+    </div>;
+};
+
 export const applyVariable = (WrappedComponent) => {
-    const ApplyVariable = ({$taskId, ...originProps}) => {
+    const ApplyVariable = ({_debug, $taskId, ...originProps}) => {
         const {variable, functions, components, ...otherContext} = useGlobalContext();
         const {emitter} = otherContext;
         const {props, extract} = extractProps(originProps);
@@ -155,13 +164,24 @@ export const applyVariable = (WrappedComponent) => {
                 otherContext.renderProps.renderEvent.emit('complete-render-task', componentIdRef.current);
             }
         }, [otherContext.renderProps.renderEvent, otherContext.renderProps.rootIsMount]);
-        if (Object.keys(extract).length > 0) {
-            return <Provider
-                value={Object.assign({}, otherContext, {functions, components, variable: currentVariable})}>
-                <WrappedComponent {...newProps}/>
-            </Provider>;
+
+        const inner = (() => {
+            if (Object.keys(extract).length > 0) {
+                return <Provider
+                    value={Object.assign({}, otherContext, {functions, components, variable: currentVariable})}>
+                    <WrappedComponent {...newProps}/>
+                </Provider>;
+            }
+            return <WrappedComponent {...newProps}/>;
+        })();
+
+        if (_debug === true) {
+            return <Debug data={{
+                context: Object.assign({}, otherContext, {functions, components, variable: currentVariable}),
+                props: newProps
+            }}>{inner}</Debug>
         }
-        return <WrappedComponent {...newProps}/>;
+        return inner;
     };
     return ApplyVariable;
 };

@@ -1,4 +1,4 @@
-import components from './components';
+import components from './components-sync';
 import {default as profile, profileMap} from './profile';
 import axios from 'axios';
 

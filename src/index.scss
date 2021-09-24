@@ -6,3 +6,18 @@
   overflow-scrolling: touch;
   overflow-y: scroll;
 }
+
+.view-render-debug {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+
+  > span.view-render-debug-btn {
+    background: red;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 4px;
+  }
+}
