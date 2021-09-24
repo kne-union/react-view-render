@@ -136,7 +136,7 @@
                                       "id": "Text-12",
                                       "component": "Text",
                                       "props": {
-                                        "content": "$resume.basic.gender",
+                                        "content": "$resume.basic.genderName",
                                         "style": {
                                           "fontSize": "16px"
                                         }
@@ -152,7 +152,7 @@
                                       "id": "Text-14",
                                       "component": "Text",
                                       "props": {
-                                        "content": "$resume.basic.age",
+                                        "content": "$resume.basic.ageTxt",
                                         "style": {
                                           "fontSize": "16px"
                                         }
@@ -168,7 +168,7 @@
                                       "id": "Text-16",
                                       "component": "Text",
                                       "props": {
-                                        "content": "$resume.basic.degree",
+                                        "content": "$resume.basic.degreeName",
                                         "style": {
                                           "fontSize": "16px"
                                         }
@@ -184,7 +184,7 @@
                                       "id": "Text-18",
                                       "component": "Text",
                                       "props": {
-                                        "content": "$resume.basic.workYear",
+                                        "content": "$resume.basic.workYearName",
                                         "style": {
                                           "fontSize": "16px"
                                         }
@@ -548,7 +548,7 @@
                                               "id": "Text-33",
                                               "component": "Text",
                                               "props": {
-                                                "content": "$resume.basic.situation"
+                                                "content": "$resume.basic.situationName"
                                               }
                                             }
                                           ]
@@ -592,7 +592,7 @@
                                           "id": "Condition-32",
                                           "component": "Condition",
                                           "props": {
-                                            "resource": "$resume.basic.political",
+                                            "resource": "$resume.basic.politicalName",
                                             "expression": "$isExist"
                                           },
                                           "children": [
