@@ -32,19 +32,49 @@
     "$awarded": "/resume/components/awarded.json",
     "$editAwarded": "/resume/components/editAwarded.json",
     "$detailList": "/resume/detailList.json",
+    "$showWorkItem": {
+      "data": [
+        {
+          "id": "Div-7",
+          "component": "Space",
+          "props": {
+            "direction": "vertical",
+            "size": 16
+          },
+          "children": [
+            {
+              "id": "Text-2",
+              "component": "Text",
+              "props": {
+                "style": {
+                  "fontWeight": 500,
+                  "color": "#576B95"
+                },
+                "content": "$props.name"
+              }
+            },
+            {
+              "id": "Text-2",
+              "component": "Text",
+              "props": {
+                "content": "$props.value"
+              }
+            }
+          ]
+        }
+      ]
+    },
     "$standard": {
       "components": {
         "$workForm": {
-          "functions": {
-            "$saveWork": "functions.$saveResume({work:Object.assign({},variable.$resume.work,args[0])});console.log(args[0]);functions.$changeInfoState();"
-          },
           "data":{
-            "id": "Form-4",
-            "component": "Form",
+            "id": "Div-1",
+            "component": "Div",
             "props": {
-              "onSubmit": "$saveWork",
-              "type":"inner",
-              "data":"$detailItem"
+              "gutter": [
+                40,
+                0
+              ]
             },
             "children":[
               {
@@ -728,12 +758,9 @@
           ]
         },
         "$projectForm": {
-          "functions": {
-            "$saveProject": "functions.$saveResume({project:Object.assign({},variable.$resume.project,args[0])});console.log(args[0]);functions.$changeInfoState();"
-          },
           "data":{
-            "id": "Form-5",
-            "component": "Form",
+            "id": "Div-2",
+            "component": "Div",
             "props": {
               "onSubmit": "$saveProject",
               "type":"inner",
@@ -1196,12 +1223,15 @@
           ]
         },
         "$selfForm": {
+          "functions": {
+            "$saveSelfEvaluation": "functions.$saveResume({selfEvaluation:Object.assign({},variable.$resume.selfEvaluation,args[0])});console.log(args[0]);functions.$changeInfoState();functions.$submitForm(args[0], 'eval');"
+          },
           "data": [
-
             {
-              "id": "Row-15",
-              "component": "Form",
+              "id": "Div-3",
+              "component": "Div",
               "props": {
+                "onSubmit": "$saveSelfEvaluation",
                 "type":"inner",
                 "gutter": [
                   40,
@@ -1448,7 +1478,9 @@
         {
           "id":"ApplyRecord-0",
           "component":"ApplyRecord",
-          "props":{}
+          "props":{
+            "libraryId": "$libraryId"
+          }
         }
       ]
     },
@@ -1457,7 +1489,9 @@
         {
           "id":"CallRecord-0",
           "component":"CallRecord",
-          "props":{}
+          "props":{
+            "libraryId":"$libraryId"
+          }
         }
       ]
     },
@@ -1466,7 +1500,11 @@
         {
           "id":"ResumeOriginal-0",
           "component":"ResumeOriginal",
-          "props":{}
+          "props":{
+            "libraryId":"$libraryId",
+            "resumeFileList":"$resumeFileList",
+            "currentFile":"$currentFile"
+          }
         }
       ]
     }

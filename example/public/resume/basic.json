@@ -7,7 +7,11 @@
     "$editInfo": "/resume/editInfo.json",
     "$resumeInfo": {
       "functions": {
+        "$isExistNation":"return args[0].nationality||args[0].ethic",
+        "$isExistSchool":"return args[0].school||args[0].major",
+        "$isExistExpect":"return args[0].phone||args[0].email||args[0].wechat",
         "$isExist": "return !!args[0]",
+        "$isExistPhone": "return args[0].phone||args[0].email||args[0].wechat",
         "$hasObjectKeys": "return args[0]&&Object.keys(args[0]).length",
         "$recommend": "variable.$SmartRecommend({libraryId:variable.$libraryId})"
       },
@@ -110,7 +114,8 @@
                                     "type":"iconquanjuchengduishiyong-nan",
                                     "style": {
                                       "fontSize": "16px",
-                                      "marginLeft":"8px"
+                                      "marginLeft":"8px",
+                                      "marginRight":"24px"
                                     }
                                   }
                                 }
@@ -131,7 +136,7 @@
                                       "id": "Text-12",
                                       "component": "Text",
                                       "props": {
-                                        "content": "$resume.basic.gender",
+                                        "content": "$resume.basic.genderName",
                                         "style": {
                                           "fontSize": "16px"
                                         }
@@ -147,7 +152,7 @@
                                       "id": "Text-14",
                                       "component": "Text",
                                       "props": {
-                                        "content": "$resume.basic.age",
+                                        "content": "$resume.basic.ageTxt",
                                         "style": {
                                           "fontSize": "16px"
                                         }
@@ -163,7 +168,7 @@
                                       "id": "Text-16",
                                       "component": "Text",
                                       "props": {
-                                        "content": "$resume.basic.degree",
+                                        "content": "$resume.basic.degreeName",
                                         "style": {
                                           "fontSize": "16px"
                                         }
@@ -179,7 +184,7 @@
                                       "id": "Text-18",
                                       "component": "Text",
                                       "props": {
-                                        "content": "$resume.basic.workYear",
+                                        "content": "$resume.basic.workYearName",
                                         "style": {
                                           "fontSize": "16px"
                                         }
@@ -195,13 +200,16 @@
                           "id": "Condition-19",
                           "component": "Condition",
                           "props": {
-                            "resource": "$resume.basic.phone",
-                            "expression": "$isExist"
+                            "resource": "$resume.basic",
+                            "expression": "$isExistPhone"
                           },
                           "children": [
                             {
                               "id": "Space-20",
                               "component": "Space",
+                              "props":{
+                                "size":48
+                              },
                               "children": [
                                 {
                                   "id": "Div-21",
@@ -293,12 +301,15 @@
                           "component": "Condition",
                           "props": {
                             "resource": "$resume.basic",
-                            "expression": "$hasObjectKeys"
+                            "expression": "$isExistSchool"
                           },
                           "children": [
                             {
                               "id": "Space-28",
                               "component": "Space",
+                              "props": {
+                                "split": "/"
+                              },
                               "children": [
                                 {
                                   "id": "Space-29",
@@ -314,9 +325,6 @@
                                     {
                                       "id": "Space-31",
                                       "component": "Space",
-                                      "props": {
-                                        "split": "/"
-                                      },
                                       "children": [
                                         {
                                           "id": "Condition-32",
@@ -365,7 +373,7 @@
                           "component": "Condition",
                           "props": {
                             "resource": "$resume.basic",
-                            "expression": "$hasObjectKeys"
+                            "expression": "$isExistExpect"
                           },
                           "children": [
                             {
@@ -395,7 +403,7 @@
                                           "component": "Condition",
                                           "props": {
                                             "resource": "$resume.basic.rawPositions",
-                                            "expression": "$isExist"
+                                            "expression": "$isExistExpect"
                                           },
                                           "children": [
                                             {
@@ -475,9 +483,6 @@
                                     {
                                       "id": "Space-31",
                                       "component": "Space",
-                                      "props": {
-                                        "split": "/"
-                                      },
                                       "children": [
                                         {
                                           "id": "Condition-32",
@@ -530,9 +535,6 @@
                                     {
                                       "id": "Space-31",
                                       "component": "Space",
-                                      "props": {
-                                        "split": "/"
-                                      },
                                       "children": [
                                         {
                                           "id": "Condition-32",
@@ -546,7 +548,7 @@
                                               "id": "Text-33",
                                               "component": "Text",
                                               "props": {
-                                                "content": "$resume.basic.situation"
+                                                "content": "$resume.basic.situationName"
                                               }
                                             }
                                           ]
@@ -585,15 +587,12 @@
                                     {
                                       "id": "Space-31",
                                       "component": "Space",
-                                      "props": {
-                                        "split": "/"
-                                      },
                                       "children": [
                                         {
                                           "id": "Condition-32",
                                           "component": "Condition",
                                           "props": {
-                                            "resource": "$resume.basic.political",
+                                            "resource": "$resume.basic.politicalName",
                                             "expression": "$isExist"
                                           },
                                           "children": [
@@ -619,7 +618,7 @@
                           "component": "Condition",
                           "props": {
                             "resource": "$resume.basic",
-                            "expression": "$hasObjectKeys"
+                            "expression": "$isExistNation"
                           },
                           "children": [
                             {
@@ -712,9 +711,6 @@
                                     {
                                       "id": "Space-31",
                                       "component": "Space",
-                                      "props": {
-                                        "split": "/"
-                                      },
                                       "children": [
                                         {
                                           "id": "Condition-32",
@@ -767,9 +763,6 @@
                                     {
                                       "id": "Space-31",
                                       "component": "Space",
-                                      "props": {
-                                        "split": "/"
-                                      },
                                       "children": [
                                         {
                                           "id": "Condition-32",
@@ -896,7 +889,7 @@
                         "name": "gender",
                         "label": "性别：",
                         "rule": "REQ",
-                        "options": "$genderList"
+                        "options": "$sexList"
                       }
                     }
                   ]
@@ -1113,7 +1106,7 @@
                         "style": {
                           "fontSize": "14px",
                           "marginBottom": "2px",
-                          "color":"##000",
+                          "color":"#000",
                           "fontWeight":"500"
                         }
                       },
@@ -1123,6 +1116,8 @@
                       "id": "Row-131",
                       "component": "Row",
                       "props": {
+                        "className": "salary_row",
+                        "classList":".salary_row .react-form__field:nth-child(1),.salary_row .react-form__field:nth-child(3){flex:1}",
                         "style": {
                           "display": "flex"
                         }
@@ -1195,6 +1190,8 @@
                       "id": "Row-131",
                       "component": "Row",
                       "props": {
+                        "className": "salary_row",
+                        "classList":".salary_row .react-form__field:nth-child(1),.salary_row .react-form__field:nth-child(3){flex:1}",
                         "style": {
                           "display": "flex"
                         }
@@ -1255,7 +1252,7 @@
                       "props": {
                         "name": "situation",
                         "label": "当前状态：",
-                        "options":"$situationList"
+                        "options":"$currentStatusList"
                       }
                     }
                   ]
