@@ -600,7 +600,7 @@
                                               "id": "Text-33",
                                               "component": "Text",
                                               "props": {
-                                                "content": "$resume.basic.political"
+                                                "content": "$resume.basic.politicalName"
                                               }
                                             }
                                           ]
