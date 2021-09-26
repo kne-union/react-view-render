@@ -485,7 +485,7 @@
                           "id": "Text-11",
                           "component": "Text",
                           "props": {
-                            "content": "$detailItem.startDate",
+                            "content": "lib.dayjs($detailItem.startDate).format('YYYY.MM.DD')",
                             "style": {
                               "fontWeight": "normal",
                               "fontSize": "14px"
@@ -503,7 +503,7 @@
                           "id": "Text-13",
                           "component": "Text",
                           "props": {
-                            "content": "$detailItem.endDate",
+                            "content": "lib.dayjs($detailItem.endDate).format('YYYY.MM.DD')",
                             "style": {
                               "fontWeight": "normal",
                               "fontSize": "14px"
