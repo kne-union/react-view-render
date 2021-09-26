@@ -18,7 +18,7 @@
   "functions": {
     "$delConfirm": "lib.modal.confirm({content:'确定删除'+args[0]+'?',onOk:args[1]})",
     "$isNot": "return !args[0];",
-    "$saveResume": "functions.$saveResumeState(function(old){return Object.assign({},old,args[0]);});lib.message.success('修改成功');"
+    "$saveResume": "functions.$saveResumeState(function(old){return Object.assign({},old,args[0]);});lib.message.success('修改成功');console.log('index', args[0])"
   },
   "components": {
     "$basic": "/resume/basic.json",

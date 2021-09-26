@@ -16,7 +16,9 @@
   },
   "functions": {
     "$timeToDate": "const output = Object.assign({},args[0]);if(args[0].startDate&&args[0].endDate){output.time=[args[0].startDate,args[0].endDate]};return output;",
-    "$dateToTime": "const output = Object.assign({},args[0]);if(Array.isArray(args[0].time)&&args[0].time.length===2){output.startDate=args[0].time[0];output.endDate=args[0].time[1];}delete output['time'];return output;"
+    "$dateToTime": "const output = Object.assign({},args[0]);if(Array.isArray(args[0].time)&&args[0].time.length===2){output.startDate=args[0].time[0];output.endDate=args[0].time[1];}delete output['time'];return output;",
+    "$mapTime":"let item = {sTime:'', eTime:''}; if(args[0].startDate){item.sTime = lib.dayjs(args[0].startDate).format('YYYY.MM.DD');item.eTime = lib.dayjs(args[0].endDate).format('YYYY.MM.DD');} return item",
+    "$isExist": "return !!args[0]"
   },
   "components": {
     "$editInfo": "/resume/editInfo.json",
@@ -466,7 +468,6 @@
                             "content": "$detailItem.position"
                           }
                         },
-
                         {
                           "id": "Text-10",
                           "component": "Text",
@@ -475,61 +476,90 @@
                           }
                         }
                       ]
-
                     },
                     {
                       "id": "Div-10",
                       "component": "Div",
                       "children": [
                         {
-                          "id": "Text-11",
-                          "component": "Text",
+                          "id": "Condition-32",
+                          "component": "Condition",
                           "props": {
-                            "content": "lib.dayjs($detailItem.startDate).format('YYYY.MM.DD')",
-                            "style": {
-                              "fontWeight": "normal",
-                              "fontSize": "14px"
+                            "resource": "$detailItem.startDate",
+                            "expression": "$isExist"
+                          },
+                          "children": [
+                            {
+                              "id": "Mapping-9",
+                              "component": "Mapping",
+                              "props": {
+                                "resource": "$detailItem",
+                                "expression": "$mapTime"
+                              },
+                              "children": [
+                                {
+                                  "id": "Text-11",
+                                  "component": "Text",
+                                  "props": {
+                                    "content": "$item.sTime",
+                                    "style": {
+                                      "fontWeight": "normal",
+                                      "fontSize": "14px"
+                                    }
+                                  }
+                                },
+                                {
+                                  "id": "Text-12",
+                                  "component": "Text",
+                                  "props": {
+                                    "content": "-"
+                                  }
+                                },
+                                {
+                                  "id": "Text-13",
+                                  "component": "Text",
+                                  "props": {
+                                    "content": "$item.eTime",
+                                    "style": {
+                                      "fontWeight": "normal",
+                                      "fontSize": "14px"
+                                    }
+                                  }
+                                }
+                              ]
                             }
-                          }
+                          ]
                         },
                         {
-                          "id": "Text-12",
-                          "component": "Text",
+                          "id": "Condition-32",
+                          "component": "Condition",
                           "props": {
-                            "content": "-"
-                          }
-                        },
-                        {
-                          "id": "Text-13",
-                          "component": "Text",
-                          "props": {
-                            "content": "lib.dayjs($detailItem.endDate).format('YYYY.MM.DD')",
-                            "style": {
-                              "fontWeight": "normal",
-                              "fontSize": "14px"
+                            "resource": "$detailItem.duration",
+                            "expression": "$isExist"
+                          },
+                          "children": [
+                            {
+                              "id": "Text-14",
+                              "component": "Text",
+                              "props": {
+                                "style": {
+                                  "margin": "0 10px"
+                                },
+                                "content": "|"
+                              }
+                            },
+                            {
+                              "id": "Text-15",
+                              "component": "Text",
+                              "props": {
+                                "style": {
+                                  "fontWeight": "normal",
+                                  "fontSize": "14px"
+                                },
+                                "content": "$detailItem.duration"
+                              }
                             }
-                          }
-                        },
-                        {
-                          "id": "Text-14",
-                          "component": "Text",
-                          "props": {
-                            "style": {
-                              "margin": "0 10px"
-                            },
-                            "content": "|"
-                          }
-                        },
-                        {
-                          "id": "Text-15",
-                          "component": "Text",
-                          "props": {
-                            "style": {
-                              "fontWeight": "normal",
-                              "fontSize": "14px"
-                            },
-                            "content": "$detailItem.duration"
-                          }
+                          ]
                         }
                       ]
                     }
@@ -1012,46 +1042,84 @@
                       "component": "Div",
                       "children": [
                         {
-                          "id": "Text-11",
-                          "component": "Text",
+                          "id": "Condition-32",
+                          "component": "Condition",
                           "props": {
-                            "content": "$detailItem.startDate"
-                          }
+                            "resource": "$detailItem.startDate",
+                            "expression": "$isExist"
+                          },
+                          "children": [
+                            {
+                              "id": "Mapping-9",
+                              "component": "Mapping",
+                              "props": {
+                                "resource": "$detailItem",
+                                "expression": "$mapTime"
+                              },
+                              "children": [
+                                {
+                                  "id": "Text-11",
+                                  "component": "Text",
+                                  "props": {
+                                    "content": "$item.sTime",
+                                    "style": {
+                                      "fontWeight": "normal",
+                                      "fontSize": "14px"
+                                    }
+                                  }
+                                },
+                                {
+                                  "id": "Text-12",
+                                  "component": "Text",
+                                  "props": {
+                                    "content": "-"
+                                  }
+                                },
+                                {
+                                  "id": "Text-13",
+                                  "component": "Text",
+                                  "props": {
+                                    "content": "$item.eTime",
+                                    "style": {
+                                      "fontWeight": "normal",
+                                      "fontSize": "14px"
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          ]
                         },
                         {
-                          "id": "Text-12",
-                          "component": "Text",
+                          "id": "Condition-32",
+                          "component": "Condition",
                           "props": {
-                            "content": "-"
-                          }
-                        },
-                        {
-                          "id": "Text-13",
-                          "component": "Text",
-                          "props": {
-                            "content": "$detailItem.endDate"
-                          }
-                        },
-                        {
-                          "id": "Text-14",
-                          "component": "Text",
-                          "props": {
-                            "style": {
-                              "margin": "0 10px"
+                            "resource": "$detailItem.duration",
+                            "expression": "$isExist"
+                          },
+                          "children": [
+                            {
+                              "id": "Text-14",
+                              "component": "Text",
+                              "props": {
+                                "style": {
+                                  "margin": "0 10px"
+                                },
+                                "content": "|"
+                              }
                             },
-                            "content": "|"
-                          }
-                        },
-                        {
-                          "id": "Text-15",
-                          "component": "Text",
-                          "props": {
-                            "style": {
-                              "fontWeight": "normal",
-                              "fontSize": "14px"
-                            },
-                            "content": "$detailItem.duration"
-                          }
+                            {
+                              "id": "Text-15",
+                              "component": "Text",
+                              "props": {
+                                "style": {
+                                  "fontWeight": "normal",
+                                  "fontSize": "14px"
+                                },
+                                "content": "$detailItem.duration"
+                              }
+                            }
+                          ]
                         }
                       ]
                     },
