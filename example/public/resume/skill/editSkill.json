@@ -6,13 +6,8 @@
     "$saveSkill": "functions.$saveResume({skill:Object.assign({},variable.$resume.skill,args[0])});console.log(args[0]);functions.$changeInfoState();"
   },
   "data":{
-    "id": "Form-4",
-    "component": "Form",
-    "props": {
-      "onSubmit": "$saveSkill",
-      "type":"inner",
-      "data":"$detailItem"
-    },
+    "id": "Div-4",
+    "component": "Div",
     "children":[
       {
         "id": "Row-1",

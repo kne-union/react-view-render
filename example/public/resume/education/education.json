@@ -87,35 +87,47 @@
                           }
                         },
                         {
-                          "id": "listItem10",
-                          "component": "Text",
+                          "id": "Mapping-9",
+                          "component": "Mapping",
                           "props": {
-                            "content": "/"
-                          }
-                        },
-                        {
-                          "id": "listItem14",
-                          "component": "Div",
+                            "resource": "$detailItem",
+                            "expression": "$mapTime"
+                          },
                           "children": [
                             {
-                              "id": "listItem9",
+                              "id": "listItem10",
                               "component": "Text",
                               "props": {
-                                "content": "$detailItem.startDate"
+                                "content": "/"
                               }
                             },
                             {
-                              "id": "listItem12",
+                              "id": "Text-11",
+                              "component": "Text",
+                              "props": {
+                                "content": "$item.sTime",
+                                "style": {
+                                  "fontWeight": "normal",
+                                  "fontSize": "14px"
+                                }
+                              }
+                            },
+                            {
+                              "id": "Text-12",
                               "component": "Text",
                               "props": {
                                 "content": "-"
                               }
                             },
                             {
-                              "id": "listItem13",
+                              "id": "Text-13",
                               "component": "Text",
                               "props": {
-                                "content": "$detailItem.endDate"
+                                "content": "$item.eTime",
+                                "style": {
+                                  "fontWeight": "normal",
+                                  "fontSize": "14px"
+                                }
                               }
                             }
                           ]

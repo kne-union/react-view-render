@@ -2,17 +2,9 @@
   "description": "编辑社会实践表单",
   "components": {
   },
-  "functions": {
-    "$saveSocial": "functions.$saveResume({social:Object.assign({},variable.$resume.social,args[0])});console.log(args[0]);functions.$changeInfoState();"
-  },
   "data":{
-    "id": "Form-4",
-    "component": "Form",
-    "props": {
-      "onSubmit": "$saveSocial",
-      "type":"inner",
-      "data":"$detailItem"
-    },
+    "id": "Div-4",
+    "component": "Div",
     "children":[
       {
         "id": "Row-1",

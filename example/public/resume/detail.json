@@ -1430,7 +1430,8 @@
             "content": "$detailList",
             "itemMapping": "$timeToDate",
             "submitMapping": "$dateToTime",
-            "length":10
+            "length":10,
+            "$mapTime":"$mapTime"
           }
         },
         {
