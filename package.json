@@ -1,6 +1,6 @@
 {
   "name": "@kne/react-view-render",
-  "version": "0.2.0-alpha.0.4",
+  "version": "0.2.0-alpha.0.7",
   "description": "一个可以将规定格式的JSON字符串渲染成页面的渲染器",
   "homepage": "https://github.com/kne-union/react-view-render",
   "main": "dist/index.js",

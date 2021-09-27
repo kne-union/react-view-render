@@ -4,9 +4,9 @@ import {applyVariable} from '../../util';
 import classnames from 'classnames';
 
 const Rename = ({resource, name, target = 'variable', children, className, ...props}) => {
-    const output = {[name]: resource};
+    const output = {['$' + name]: resource};
     return <div {...props} className={classnames(className, 'view-render-rename')}>
-        <Context {...output}>{children}</Context>
+        <Context {...{[target]: output}}>{children}</Context>
     </div>;
 };
 
