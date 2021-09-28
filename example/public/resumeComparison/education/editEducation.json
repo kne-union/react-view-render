@@ -1,5 +1,10 @@
 {
   "description": "编辑教育经历表单",
+  "id": 72,
+  "name": "editEducation.json",
+  "type": 2,
+  "parentId": 49,
+  "path": "/resume/other/editEducation.json",
   "components": {
   },
   "data": [

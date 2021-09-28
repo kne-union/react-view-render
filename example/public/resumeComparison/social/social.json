@@ -1,5 +1,11 @@
 {
   "description": "社会实践模块",
+  "id": 79,
+  "name": "social.json",
+  "type": 2,
+  "parentId": 49,
+  "path": "/resume/other/social.json",
+  "createBy": 352,
   "components": {
     "$ItemInfo": {
       "description": "社会实践模块list-item",

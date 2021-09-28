@@ -52,7 +52,7 @@
                           "fontWeight": 400,
                           "fontSize": "14px"
                         },
-                        "content": "$detailItem.school"
+                        "content": "$detailItem.agency"
                       }
                     }
                   ]
@@ -69,27 +69,7 @@
                           "fontWeight": "normal",
                           "fontSize": "14px"
                         },
-                        "content": "$detailItem.startTime"
-                      }
-                    },
-                    {
-                      "id": "Text-12",
-                      "component": "Text",
-                      "props": {
-                        "style": {
-                        },
-                        "content": "-"
-                      }
-                    },
-                    {
-                      "id": "Text-13",
-                      "component": "Text",
-                      "props": {
-                        "style": {
-                          "fontWeight": "normal",
-                          "fontSize": "14px"
-                        },
-                        "content": "$detailItem.startTime"
+                        "content": "$detailItem.startDate"
                       }
                     }
                   ]

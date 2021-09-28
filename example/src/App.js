@@ -31,10 +31,18 @@ interceptors.output.use('string-date-range', (value) => {
     return output;
 });
 
+interceptors.input.use('string-date-picker', (value) => {
+    const date = value ? moment(value) : null;
+    return date;
+});
+interceptors.output.use('string-date-picker', (value) => {
+    const date = value ? moment(value).format() : null;
+    return date;
+});
 const App = () => {
     const formContext = useRef(null);
     return <ConfigProvider autoInsertSpaceInButton={false} locale={zhCN}>
-        <ViewRender url="/react-view-render/resumeTest.json" content={{
+        <ViewRender url="/react-view-render/resume/index.json" content={{
             functions: {
                 $getFormContext: (context) => {
                     formContext.current = context;

@@ -1,4 +1,9 @@
 {
+  "id": 105,
+  "name": "card",
+  "type": 2,
+  "parentId": 82,
+  "path": "/resume/other/old/card.json",
   "data": [
     {
       "id": "Div-02",
@@ -38,10 +43,10 @@
                   "width": "4px",
                   "height": "19px",
                   "background": "#466DFF",
-                  "border-radius": "2px",
+                  "borderRadius": "2px",
                   "position": "relative",
                   "top": "4px",
-                  "margin-right": "9px"
+                  "marginRight": "9px"
                 }
               }
             },

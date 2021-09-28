@@ -1,5 +1,10 @@
 {
   "description": "编辑技能表单",
+  "id": 78,
+  "name": "editSocial.json",
+  "type": 2,
+  "parentId": 49,
+  "path": "/resume/other/editSocial.json",
   "components": {
   },
   "data": [

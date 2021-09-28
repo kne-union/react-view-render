@@ -1,0 +1,54 @@
+//resume 的detail的本地路径
+"$editInfo": "/react-view-render/resume/editInfo.json",
+"$education": "/react-view-render/resume/education/education.json",
+"$editEducation": "/react-view-render/resume/education/editEducation.json",
+"$editSkill": "/react-view-render/resume/skill/editSkill.json",
+"$skill": "/react-view-render/resume/skill/skill.json",
+"$editSocial": "/react-view-render/resume/social/editSocial.json",
+"$social": "/react-view-render/resume/social/social.json",
+"$card": "/react-view-render/resume/card.json",
+"$editTraining": "/react-view-render/resume/training/editTraining.json",
+"$training": "/react-view-render/resume/training/training.json",
+"$awarded": "/react-view-render/resume/awarded/awarded.json",
+"$editAwarded": "/react-view-render/resume/awarded/editAwarded.json",
+"$detailList": "/react-view-render/resume/detailList.json",
+
+
+//resume 的detail的线上路径
+    "$editInfo": "/resume/editInfo.json",
+    "$education": "/resume/components/education.json",
+    "$editEducation": "/resume/components/editEducation.json",
+    "$editSkill": "/resume/components/editSkill.json",
+    "$skill": "/resume/components/skill.json",
+    "$editSocial": "/resume/components/editSocial.json",
+    "$social": "/resume/components/social.json",
+    "$card": "/resume/card.json",
+    "$editTraining": "/resume/components/editTraining.json",
+    "$training": "/resume/components/training.json",
+    "$awarded": "/resume/components/awarded.json",
+    "$editAwarded": "/resume/components/editAwarded.json",
+    "$detailList": "/resume/detailList.json",
+
+//resumeComparison index.json里面的线上
+    "$detail": "/resume/other/old/detail.json",
+    "$detailNew": "/resumeComparison/new/index.json"
+
+//    old detail.json
+    "$editInfo": "/resume/editInfo.json",
+    "$card": "/resume/other/old/card.json",
+    "$education": "/resume/other/education.json",
+    "$editEducation": "/resume/other/editEducation.json",
+    "$editSkill": "/resume/other/editSkill.json",
+    "$skill": "/resume/other/skill.json",
+    "$editSocial": "/resume/other/editSocial.json",
+    "$social": "/resume/other/social.json",
+    "$editTraining": "/resume/other/editTraining.json",
+    "$training": "/resume/other/training.json",
+    "$awarded": "/resume/other/awarded.json",
+    "$editAwarded": "/resume/other/editAwarded.json",
+    "$detailInfoList": "/resume/other/old/detailList.json",
+
+//old/detaillist.json
+    "$editInfo": "/resume/editInfo.json",
+    "$addForm": "/resume/addForm.json",
+    "$resumeCard": "/resume/other/old/detailResumeCard.json",

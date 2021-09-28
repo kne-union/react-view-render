@@ -46,6 +46,7 @@
   "peerDependencies": {
     "@kne/react-form-antd": "2.x",
     "@kne/antd-enhance": "0.1.x",
+    "@kne/react-form-antd": "1.x",
     "antd": "4.x",
     "prop-types": "15.x",
     "react": "16.x",
@@ -72,7 +73,11 @@
   "dependencies": {
     "@kne/compose": "^0.1.0",
     "@kne/react-error-boundary": "^0.1.0",
+<<<<<<< HEAD
     "@kne/react-text-escape": "^0.1.3",
+=======
+    "@kne/react-text-escape": "0.1.3",
+>>>>>>> 69920a821d86a5570cdcafde5101a7be37047dad
     "@loadable/component": "^5.15.0",
     "classnames": "^2.3.1",
     "fbemitter": "^3.0.0",

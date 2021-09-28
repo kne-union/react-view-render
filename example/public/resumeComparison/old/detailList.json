@@ -1,8 +1,13 @@
 {
+  "id": 107,
+  "name": "detailList.json",
+  "type": 2,
+  "parentId": 82,
+  "path": "/resume/other/old/detailList.json",
   "components": {
-    "$editInfo": "/react-view-render/resume/editInfo.json",
-    "$addForm": "/react-view-render/resume/addForm.json",
-    "$resumeCard": "/react-view-render/resumeComparison/old/detailResumeCard.json",
+    "$editInfo": "/resume/editInfo.json",
+    "$addForm": "/resume/addForm.json",
+    "$resumeCard": "/resume/other/old/detailResumeCard.json",
     "$list": {
       "components": {
         "$options": {

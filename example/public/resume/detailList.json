@@ -1,8 +1,11 @@
 {
+  "id":"50",
+  "parentId":"41",
+  "path":"/resume/detailList.json",
   "components": {
-    "$editInfo": "/react-view-render/resume/editInfo.json",
-    "$addForm": "/react-view-render/resume/addForm.json",
-    "$resumeCard": "/react-view-render/resume/detailResumeCard.json",
+    "$editInfo": "/resume/editInfo.json",
+    "$addForm": "/resume/addForm.json",
+    "$resumeCard": "/resume/detailResumeCard.json",
     "$list": {
       "components": {
         "$editIcon":{
@@ -81,6 +84,7 @@
                 "id": "Form-1",
                 "component": "Form",
                 "props": {
+                  "type":"inner",
                   "data": "$detailItem",
                   "onSubmit": "$editDetail"
                 },
@@ -220,9 +224,10 @@
     }
   },
   "functions": {
+    "$hasAdd":"const flag=variable.$outerProps.name==='selfEvaluation'?false:variable.$outerProps.length > variable.$resume[variable.$outerProps.name].length;return flag;",
     "$mapList": "return variable.$resume[variable.$props.name]",
-    "$addDetail": "const current = variable.$resume[variable.$props.name].slice(0);current.push(variable.$props.submitMapping(args[0]));functions.$saveResume({[variable.$props.name]:current});",
-    "$editDetail": "const current = variable.$resume[variable.$props.args.name].slice(0);current.splice(variable.$index,1,Object.assign({},variable[variable.$props.args.name],variable.$props.args.submitMapping(args[0])));functions.$saveResume({[variable.$props.args.name]:current});functions.$changeInfoState();",
+    "$addDetail": "const current = variable.$resume[variable.$props.name].slice(0);current.push(variable.$props.submitMapping(args[0]));functions.$saveResume({[variable.$props.name]:current});console.log('addDetail', current);functions.$submitForm(current, variable.$props.name);",
+    "$editDetail": "const current = variable.$resume[variable.$props.args.name].slice(0);current.splice(variable.$index,1,Object.assign({},variable[variable.$props.args.name],variable.$props.args.submitMapping(args[0])));functions.$saveResume({[variable.$props.args.name]:current});functions.$changeInfoState();functions.$submitForm(current, variable.$props.args.name);",
     "$delDetailWork": "const current = variable.$resume[variable.$props.name].slice(0);current.splice(variable.$index,1);functions.$saveResume({[variable.$props.name]:current});",
     "$delDetailConfirm": "functions.$delConfirm(variable.$outerProps.removeTitle,functions.$delDetailWork)"
   },
@@ -253,7 +258,8 @@
                 "content": "$resumeCard",
                 "title": "$outerProps.cardTitle",
                 "cardTitleIcon": "$outerProps.cardTitleIcon",
-                "addFunc": "$showAddForm"
+                "addFunc": "$showAddForm",
+                "hasAdd":"$hasAdd"
               },
               "children": [
                 {

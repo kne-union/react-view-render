@@ -1,23 +1,27 @@
 {
+  "id": 106,
+  "name": "detail.json",
+  "type": 2,
+  "parentId": 82,
+  "path": "/resume/other/old/detail.json",
   "functions": {
-    "$timeToDate": "const output = Object.assign({},args[0]);if(args[0].startTime&&args[0].endTime){output.time=[args[0].startTime,args[0].endTime]};delete output['startTime'];delete output['endTime'];return output;",
-    "$dateToTime": "const output = Object.assign({},args[0]);if(Array.isArray(args[0].time)&&args[0].time.length===2){output.startTime=args[0].time[0];output.endTime=args[0].time[1];}delete output['time'];return output;"
+    "$timeToDate": "const output = Object.assign({},args[0]);if(args[0].startDate&&args[0].endDate){output.time=[args[0].startDate,args[0].endDate]};delete output['startDate'];delete output['endDate'];return output;",
+    "$dateToTime": "const output = Object.assign({},args[0]);if(Array.isArray(args[0].time)&&args[0].time.length===2){output.startDate=args[0].time[0];output.endDate=args[0].time[1];}delete output['time'];return output;"
   },
   "components": {
-    "$editInfo": "/react-view-render/resume/editInfo.json",
-    "$card": "/react-view-render/resumeComparison/old/card.json",
-    "$education": "/react-view-render/resumeComparison/education/education.json",
-    "$editEducation": "/react-view-render/resumeComparison/education/editEducation.json",
-    "$editSkill": "/react-view-render/resumeComparison/skill/editSkill.json",
-    "$skill": "/react-view-render/resumeComparison/skill/skill.json",
-    "$editSocial": "/react-view-render/resumeComparison/social/editSocial.json",
-    "$social": "/react-view-render/resumeComparison/social/social.json",
-    "$editTraining": "/react-view-render/resumeComparison/training/editTraining.json",
-    "$training": "/react-view-render/resumeComparison/training/training.json",
-    "$awarded": "/react-view-render/resumeComparison/awarded/awarded.json",
-    "$editAwarded": "/react-view-render/resumeComparison/awarded/editAwarded.json",
-    "$detailList": "/react-view-render/resume/detailList.json",
-    "$detailInfoList": "/react-view-render/resumeComparison/old/detailList.json",
+    "$editInfo": "/resume/editInfo.json",
+    "$card": "/resume/other/old/card.json",
+    "$education": "/resume/other/education.json",
+    "$editEducation": "/resume/other/editEducation.json",
+    "$editSkill": "/resume/other/editSkill.json",
+    "$skill": "/resume/other/skill.json",
+    "$editSocial": "/resume/other/editSocial.json",
+    "$social": "/resume/other/social.json",
+    "$editTraining": "/resume/other/editTraining.json",
+    "$training": "/resume/other/training.json",
+    "$awarded": "/resume/other/awarded.json",
+    "$editAwarded": "/resume/other/editAwarded.json",
+    "$detailInfoList": "/resume/other/old/detailList.json",
     "$standard": {
       "components": {
         "$showWorkItem": {
@@ -190,7 +194,7 @@
                       "id": "Component-1",
                       "component": "Component",
                       "props": {
-                        "value": "",
+                        "value": "$detailItem.oversea",
                         "name": "有海外经历",
                         "content": "$showWorkItem"
                       }
@@ -199,7 +203,7 @@
                       "id": "Component-1",
                       "component": "Component",
                       "props": {
-                        "value": "$detailItem.country",
+                        "value": "$detailItem.nation",
                         "name": "海外经历国家：",
                         "content": "$showWorkItem"
                       }
@@ -217,7 +221,7 @@
                       "id": "Component-1",
                       "component": "Component",
                       "props": {
-                        "value": "$detailItem.reason",
+                        "value": "$detailItem.leavingReason",
                         "name": "离职原因：",
                         "content": "$showWorkItem"
                       }
@@ -235,7 +239,7 @@
                       "id": "Component-1",
                       "component": "Component",
                       "props": {
-                        "value": "$detailItem.duty",
+                        "value": "$detailItem.responsibility",
                         "name": "工作职责：",
                         "content": "$showWorkItem"
                       }
@@ -244,7 +248,7 @@
                       "id": "Component-1",
                       "component": "Component",
                       "props": {
-                        "value": "$detailItem.result",
+                        "value": "$detailItem.performance",
                         "name": "工作业绩：",
                         "content": "$showWorkItem"
                       }
@@ -393,7 +397,7 @@
                       "id": "Component-1",
                       "component": "Component",
                       "props": {
-                        "value": "$detailItem.des",
+                        "value": "$detailItem.description",
                         "name": "项目描述：",
                         "content": "$showWorkItem"
                       }
@@ -402,7 +406,7 @@
                       "id": "Component-1",
                       "component": "Component",
                       "props": {
-                        "value": "$detailItem.duty",
+                        "value": "$detailItem.responsibility",
                         "name": "项目职责：",
                         "content": "$showWorkItem"
                       }
@@ -428,7 +432,7 @@
               "id": "Component-0",
               "component": "Component",
               "props": {
-                "value": "$detailItem.description",
+                "value": "$detailItem.eval",
                 "name": "自我评价描述：",
                 "content": "$showWorkItem"
               }
@@ -443,7 +447,7 @@
               "props": {
                 "style": {
                   "font-size": "14px",
-                  "font-weight": 500,
+                  "fontWeight": 500,
                   "color": "#576B95"
                 },
                 "className": "cardTitleNew",
@@ -554,7 +558,7 @@
                                   "id": "Component-1",
                                   "component": "Component",
                                   "props": {
-                                    "value": "$initResume.basic.experience",
+                                    "value": "$initResume.basic.workYear",
                                     "name": "工作经验：",
                                     "content": "$showWorkItem"
                                   }
@@ -624,7 +628,7 @@
                                   "id": "Component-1",
                                   "component": "Component",
                                   "props": {
-                                    "value": "$initResume.basic.wx",
+                                    "value": "$initResume.basic.wechat",
                                     "name": "微信：",
                                     "content": "$showWorkItem"
                                   }
@@ -719,7 +723,7 @@
           }
         },
         {
-          "id": "Component-5",
+          "id": "Component-7",
           "component": "Component",
           "props": {
             "cardTitle": "实习经历",
@@ -819,7 +823,7 @@
           }
         },
         {
-          "id": "Component-5",
+          "id": "Component-8",
           "component": "Component",
           "props": {
             "cardTitle": "培训经历",

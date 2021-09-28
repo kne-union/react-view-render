@@ -1,12 +1,19 @@
 {
+  "id": "44",
+  "parentId": "41",
+  "path": "/resume/basic.json",
   "components": {
-    "$card": "/react-view-render/resume/card.json",
-    "$editInfo": "/react-view-render/resume/editInfo.json",
+    "$card": "/resume/card.json",
+    "$editInfo": "/resume/editInfo.json",
     "$resumeInfo": {
       "functions": {
+        "$isExistNation": "return args[0].nationality||args[0].ethic",
+        "$isExistSchool": "return args[0].school||args[0].major",
+        "$isExistExpect": "return args[0].rawPositions||args[0].rawIndustries||args[0].expectSalary",
         "$isExist": "return !!args[0]",
+        "$isExistPhone": "return args[0].phone||args[0].email||args[0].wechat",
         "$hasObjectKeys": "return args[0]&&Object.keys(args[0]).length",
-        "$recommend": "alert('智能推荐');"
+        "$recommend": "variable.$SmartRecommend({libraryId:variable.$libraryId})"
       },
       "data": [
         {
@@ -35,8 +42,7 @@
                 {
                   "id": "Col-2",
                   "component": "Col",
-                  "props": {
-                  },
+                  "props": {},
                   "children": [
                     {
                       "id": "Div-4",
@@ -45,10 +51,10 @@
                         "style": {
                           "display": "flex",
                           "width": "120px",
-                          "height": "150px",
-                          "justifyItems": "center",
-                          "alignItems": "center",
-                          "border": "#C0C0C6 1px solid"
+                          "height": "160px",
+                          "border": "#C0C0C6 1px solid",
+                          "justifyContent": "center",
+                          "alignItems": "center"
                         }
                       },
                       "children": [
@@ -56,7 +62,7 @@
                           "id": "Img-5",
                           "component": "Img",
                           "props": {
-                            "src": "$resume.basic.avatar",
+                            "src": "$resume.basic.portraitUrl",
                             "style": {
                               "maxWidth": "100%",
                               "maxHeight": "100%"
@@ -105,10 +111,10 @@
                                   "component": "Icon",
                                   "props": {
                                     "type": "iconquanjuchengduishiyong-nan",
-                                    "content": "$resume.basic.name",
                                     "style": {
                                       "fontSize": "16px",
-                                      "marginLeft": "8px"
+                                      "marginLeft": "8px",
+                                      "marginRight": "24px"
                                     }
                                   }
                                 }
@@ -129,7 +135,7 @@
                                       "id": "Text-12",
                                       "component": "Text",
                                       "props": {
-                                        "content": "$resume.basic.gender",
+                                        "content": "$resume.basic.genderName",
                                         "style": {
                                           "fontSize": "16px"
                                         }
@@ -145,7 +151,7 @@
                                       "id": "Text-14",
                                       "component": "Text",
                                       "props": {
-                                        "content": "$resume.basic.age",
+                                        "content": "$resume.basic.ageTxt",
                                         "style": {
                                           "fontSize": "16px"
                                         }
@@ -161,7 +167,7 @@
                                       "id": "Text-16",
                                       "component": "Text",
                                       "props": {
-                                        "content": "$resume.basic.degree",
+                                        "content": "$resume.basic.degreeName",
                                         "style": {
                                           "fontSize": "16px"
                                         }
@@ -177,7 +183,7 @@
                                       "id": "Text-18",
                                       "component": "Text",
                                       "props": {
-                                        "content": "$resume.basic.experience",
+                                        "content": "$resume.basic.workYearName",
                                         "style": {
                                           "fontSize": "16px"
                                         }
@@ -193,13 +199,16 @@
                           "id": "Condition-19",
                           "component": "Condition",
                           "props": {
-                            "resource": "$resume.basic.phone",
-                            "expression": "$isExist"
+                            "resource": "$resume.basic",
+                            "expression": "$isExistPhone"
                           },
                           "children": [
                             {
                               "id": "Space-20",
                               "component": "Space",
+                              "props": {
+                                "size": 48
+                              },
                               "children": [
                                 {
                                   "id": "Div-21",
@@ -275,7 +284,7 @@
                                           "id": "Text-26",
                                           "component": "Text",
                                           "props": {
-                                            "content": "$resume.basic.vx"
+                                            "content": "$resume.basic.wechat"
                                           }
                                         }
                                       ]
@@ -290,8 +299,80 @@
                           "id": "Condition-27",
                           "component": "Condition",
                           "props": {
-                            "resource": "$resume.basic.desire",
-                            "expression": "$hasObjectKeys"
+                            "resource": "$resume.basic",
+                            "expression": "$isExistSchool"
+                          },
+                          "children": [
+                            {
+                              "id": "Space-28",
+                              "component": "Space",
+                              "children": [
+                                {
+                                  "id": "Space-29",
+                                  "component": "Space",
+                                  "props": {
+                                    "split": "/"
+                                  },
+                                  "children": [
+                                    {
+                                      "id": "Text-30",
+                                      "component": "Text",
+                                      "props": {
+                                        "content": "院校专业:"
+                                      }
+                                    },
+                                    {
+                                      "id": "Space-31",
+                                      "component": "Space",
+                                      "children": [
+                                        {
+                                          "id": "Condition-32",
+                                          "component": "Condition",
+                                          "props": {
+                                            "resource": "$resume.basic.school",
+                                            "expression": "$isExist"
+                                          },
+                                          "children": [
+                                            {
+                                              "id": "Text-33",
+                                              "component": "Text",
+                                              "props": {
+                                                "content": "$resume.basic.school"
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "id": "Condition-35",
+                                          "component": "Condition",
+                                          "props": {
+                                            "resource": "$resume.basic.major",
+                                            "expression": "$isExist"
+                                          },
+                                          "children": [
+                                            {
+                                              "id": "Text-36",
+                                              "component": "Text",
+                                              "props": {
+                                                "content": "$resume.basic.major"
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "Condition-27",
+                          "component": "Condition",
+                          "props": {
+                            "resource": "$resume.basic",
+                            "expression": "$isExistExpect"
                           },
                           "children": [
                             {
@@ -320,7 +401,7 @@
                                           "id": "Condition-32",
                                           "component": "Condition",
                                           "props": {
-                                            "resource": "$resume.basic.desire.position",
+                                            "resource": "$resume.basic.rawPositions",
                                             "expression": "$isExist"
                                           },
                                           "children": [
@@ -328,7 +409,7 @@
                                               "id": "Text-33",
                                               "component": "Text",
                                               "props": {
-                                                "content": "$resume.basic.desire.position"
+                                                "content": "$resume.basic.rawPositions"
                                               }
                                             }
                                           ]
@@ -337,7 +418,7 @@
                                           "id": "Condition-35",
                                           "component": "Condition",
                                           "props": {
-                                            "resource": "$resume.basic.desire.industry",
+                                            "resource": "$resume.basic.rawIndustries",
                                             "expression": "$isExist"
                                           },
                                           "children": [
@@ -345,7 +426,7 @@
                                               "id": "Text-36",
                                               "component": "Text",
                                               "props": {
-                                                "content": "$resume.basic.desire.industry"
+                                                "content": "$resume.basic.rawIndustries"
                                               }
                                             }
                                           ]
@@ -354,7 +435,7 @@
                                           "id": "Condition-38",
                                           "component": "Condition",
                                           "props": {
-                                            "resource": "$resume.basic.desire.salary",
+                                            "resource": "$resume.basic.expectSalary",
                                             "expression": "$isExist"
                                           },
                                           "children": [
@@ -362,7 +443,339 @@
                                               "id": "Text-39",
                                               "component": "Text",
                                               "props": {
-                                                "content": "$resume.basic.desire.salary"
+                                                "content": "$resume.basic.expectSalary"
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "Condition-27",
+                          "component": "Condition",
+                          "props": {
+                            "resource": "$resume.basic.currentSalary",
+                            "expression": "$isExist"
+                          },
+                          "children": [
+                            {
+                              "id": "Space-28",
+                              "component": "Space",
+                              "children": [
+                                {
+                                  "id": "Space-29",
+                                  "component": "Space",
+                                  "children": [
+                                    {
+                                      "id": "Text-30",
+                                      "component": "Text",
+                                      "props": {
+                                        "content": "目前薪资:"
+                                      }
+                                    },
+                                    {
+                                      "id": "Space-31",
+                                      "component": "Space",
+                                      "children": [
+                                        {
+                                          "id": "Condition-32",
+                                          "component": "Condition",
+                                          "props": {
+                                            "resource": "$resume.basic.currentSalary",
+                                            "expression": "$isExist"
+                                          },
+                                          "children": [
+                                            {
+                                              "id": "Text-33",
+                                              "component": "Text",
+                                              "props": {
+                                                "content": "$resume.basic.currentSalary"
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "Condition-27",
+                          "component": "Condition",
+                          "props": {
+                            "resource": "$resume.basic.situation",
+                            "expression": "$isExist"
+                          },
+                          "children": [
+                            {
+                              "id": "Space-28",
+                              "component": "Space",
+                              "children": [
+                                {
+                                  "id": "Space-29",
+                                  "component": "Space",
+                                  "children": [
+                                    {
+                                      "id": "Text-30",
+                                      "component": "Text",
+                                      "props": {
+                                        "content": "当前状态:"
+                                      }
+                                    },
+                                    {
+                                      "id": "Space-31",
+                                      "component": "Space",
+                                      "children": [
+                                        {
+                                          "id": "Condition-32",
+                                          "component": "Condition",
+                                          "props": {
+                                            "resource": "$resume.basic.situation",
+                                            "expression": "$isExist"
+                                          },
+                                          "children": [
+                                            {
+                                              "id": "Text-33",
+                                              "component": "Text",
+                                              "props": {
+                                                "content": "$resume.basic.situationName"
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "Condition-27",
+                          "component": "Condition",
+                          "props": {
+                            "resource": "$resume.basic.politicalName",
+                            "expression": "$isExist"
+                          },
+                          "children": [
+                            {
+                              "id": "Space-28",
+                              "component": "Space",
+                              "children": [
+                                {
+                                  "id": "Space-29",
+                                  "component": "Space",
+                                  "children": [
+                                    {
+                                      "id": "Text-30",
+                                      "component": "Text",
+                                      "props": {
+                                        "content": "政治面貌:"
+                                      }
+                                    },
+                                    {
+                                      "id": "Space-31",
+                                      "component": "Space",
+                                      "children": [
+                                        {
+                                          "id": "Condition-32",
+                                          "component": "Condition",
+                                          "props": {
+                                            "resource": "$resume.basic.politicalName",
+                                            "expression": "$isExist"
+                                          },
+                                          "children": [
+                                            {
+                                              "id": "Text-33",
+                                              "component": "Text",
+                                              "props": {
+                                                "content": "$resume.basic.politicalName"
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "Condition-27",
+                          "component": "Condition",
+                          "props": {
+                            "resource": "$resume.basic",
+                            "expression": "$isExistNation"
+                          },
+                          "children": [
+                            {
+                              "id": "Space-28",
+                              "component": "Space",
+                              "children": [
+                                {
+                                  "id": "Space-29",
+                                  "component": "Space",
+                                  "children": [
+                                    {
+                                      "id": "Text-30",
+                                      "component": "Text",
+                                      "props": {
+                                        "content": "国籍民族:"
+                                      }
+                                    },
+                                    {
+                                      "id": "Space-31",
+                                      "component": "Space",
+                                      "props": {
+                                        "split": "/"
+                                      },
+                                      "children": [
+                                        {
+                                          "id": "Condition-32",
+                                          "component": "Condition",
+                                          "props": {
+                                            "resource": "$resume.basic.nationality",
+                                            "expression": "$isExist"
+                                          },
+                                          "children": [
+                                            {
+                                              "id": "Text-33",
+                                              "component": "Text",
+                                              "props": {
+                                                "content": "$resume.basic.nationality"
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "id": "Condition-32",
+                                          "component": "Condition",
+                                          "props": {
+                                            "resource": "$resume.basic.ethic",
+                                            "expression": "$isExist"
+                                          },
+                                          "children": [
+                                            {
+                                              "id": "Text-33",
+                                              "component": "Text",
+                                              "props": {
+                                                "content": "$resume.basic.ethic"
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "Condition-27",
+                          "component": "Condition",
+                          "props": {
+                            "resource": "$resume.basic",
+                            "expression": "$hasObjectKeys"
+                          },
+                          "children": [
+                            {
+                              "id": "Space-28",
+                              "component": "Space",
+                              "children": [
+                                {
+                                  "id": "Space-29",
+                                  "component": "Space",
+                                  "children": [
+                                    {
+                                      "id": "Text-30",
+                                      "component": "Text",
+                                      "props": {
+                                        "content": "籍贯:"
+                                      }
+                                    },
+                                    {
+                                      "id": "Space-31",
+                                      "component": "Space",
+                                      "children": [
+                                        {
+                                          "id": "Condition-32",
+                                          "component": "Condition",
+                                          "props": {
+                                            "resource": "$resume.basic.ancestralHome",
+                                            "expression": "$isExist"
+                                          },
+                                          "children": [
+                                            {
+                                              "id": "Text-33",
+                                              "component": "Text",
+                                              "props": {
+                                                "content": "$resume.basic.ancestralHome"
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "Condition-27",
+                          "component": "Condition",
+                          "props": {
+                            "resource": "$resume.basic",
+                            "expression": "$hasObjectKeys"
+                          },
+                          "children": [
+                            {
+                              "id": "Space-28",
+                              "component": "Space",
+                              "children": [
+                                {
+                                  "id": "Space-29",
+                                  "component": "Space",
+                                  "children": [
+                                    {
+                                      "id": "Text-30",
+                                      "component": "Text",
+                                      "props": {
+                                        "content": "现居地:"
+                                      }
+                                    },
+                                    {
+                                      "id": "Space-31",
+                                      "component": "Space",
+                                      "children": [
+                                        {
+                                          "id": "Condition-32",
+                                          "component": "Condition",
+                                          "props": {
+                                            "resource": "$resume.basic.address",
+                                            "expression": "$isExist"
+                                          },
+                                          "children": [
+                                            {
+                                              "id": "Text-33",
+                                              "component": "Text",
+                                              "props": {
+                                                "content": "$resume.basic.address"
                                               }
                                             }
                                           ]
@@ -421,7 +834,7 @@
     },
     "$resumeForm": {
       "functions": {
-        "$saveBasic": "functions.$saveResume({basic:Object.assign({},variable.$resume.basic,args[0])});functions.$changeInfoState();"
+        "$saveBasic": "functions.$saveResume({basic:Object.assign({},variable.$resume.basic,args[0])});console.log(args[0]);functions.$changeInfoState();functions.$submitForm(args[0], 'basic');"
       },
       "data": [
         {
@@ -429,63 +842,604 @@
           "component": "Form",
           "props": {
             "onSubmit": "$saveBasic",
-            "data": "$resume.basic"
+            "data": "$resume.basic",
+            "type": "inner"
           },
           "children": [
             {
-              "id": "Input-1",
-              "component": "Input",
+              "id": "Div-1",
+              "component": "Div",
               "props": {
-                "name": "name",
-                "label": "姓名",
-                "rule": "REQ LEN-2-50"
-              }
-            },
-            {
-              "id": "Input-7",
-              "component": "Input",
-              "props": {
-                "name": "email",
-                "label": "邮箱",
-                "rule": "REQ EMAIL"
-              }
-            },
-            {
-              "id": "Row-2",
-              "component": "Row",
-              "props": {
-                "justify": "center",
-                "gutter": [
-                  40,
-                  0
-                ]
+                "style":{
+                  "display":"flex"
+                }
               },
               "children": [
                 {
-                  "id": "Col-3",
-                  "component": "Col",
+                  "id": "Div-21",
+                  "component": "Div",
+                  "props": {
+                    "style":{
+                      "marginRight":"24px"
+                    }
+                  },
                   "children": [
                     {
-                      "id": "SubmitButton-4",
-                      "component": "SubmitButton",
-                      "props": {
-                        "type": "primary"
-                      },
-                      "children": "保存"
+                      "id": "Div-4",
+                      "component": "Div",
+                      "children": [{
+                        "id":"Avatar-1",
+                        "component": "Avatar",
+                        "props":{
+                          "name":"portraitUrl",
+                          "className":"avatar_box",
+                          "classList":".avatar_box .ant-upload.ant-upload-select-picture-card{width:120px;height:160px;margin:0;} .avatar_box .react-form-avatar .preview {width:102px;height:142px;}",
+                          "editor": {
+                            "open":true,
+                            "width":102,
+                            "height":142,
+                            "text":"确定"
+                          }
+                        }
+                      }]
                     }
                   ]
                 },
                 {
-                  "id": "Col-5",
-                  "component": "Col",
+                  "id": "Div-22",
+                  "component": "Div",
+                  "props": {
+                    "span": 20
+                  },
                   "children": [
                     {
-                      "id": "Button-6",
-                      "component": "Button",
+                      "id": "Row-1",
+                      "component": "Row",
                       "props": {
-                        "onClick": "$changeInfoState"
+                        "gutter": [
+                          40,
+                          0
+                        ]
                       },
-                      "children": "返回"
+                      "children": [
+                        {
+                          "id": "Col-2",
+                          "component": "Col",
+                          "props": {
+                            "span": 12
+                          },
+                          "children": [
+                            {
+                              "id": "Input-3",
+                              "component": "Input",
+                              "props": {
+                                "name": "name",
+                                "label": "姓名：",
+                                "rule": "REQ"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "id": "Col-3",
+                          "component": "Col",
+                          "props": {
+                            "span": 12
+                          },
+                          "children": [
+                            {
+                              "id": "input-4",
+                              "component": "Select",
+                              "props": {
+                                "name": "gender",
+                                "label": "性别：",
+                                "rule": "REQ",
+                                "options": "$sexList"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "id": "Col-6",
+                          "component": "Col",
+                          "props": {
+                            "span": 12
+                          },
+                          "children": [
+                            {
+                              "id": "input-11",
+                              "component": "Input",
+                              "props": {
+                                "name": "age",
+                                "label": "年龄："
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "id": "Col-6",
+                          "component": "Col",
+                          "props": {
+                            "span": 12
+                          },
+                          "children": [
+                            {
+                              "id": "Select-11",
+                              "component": "Select",
+                              "props": {
+                                "name": "degree",
+                                "label": "最高学历：",
+                                "options": "$degreeList"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "id": "Col-8",
+                          "component": "Col",
+                          "props": {
+                            "span": 12
+                          },
+                          "children": [
+                            {
+                              "id": "Experience-9",
+                              "component": "Select",
+                              "props": {
+                                "name": "workYear",
+                                "label": "工作经验：",
+                                "options": "$experienceList",
+                                "optionLabelProp": "label"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "id": "Row-8",
+                          "component": "Div",
+                          "props": {
+                            "style": {
+                              "width": "100%",
+                              "height": "1px",
+                              "margin": "16px",
+                              "backgroundColor": "#efefef"
+                            }
+                          }
+                        },
+                        {
+                          "id": "Col-13",
+                          "component": "Col",
+                          "props": {
+                            "span": 12
+                          },
+                          "children": [
+                            {
+                              "id": "Input-17",
+                              "component": "Input",
+                              "props": {
+                                "name": "phone",
+                                "label": "手机号：",
+                                "rule": "TEL"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "id": "Col-13",
+                          "component": "Col",
+                          "props": {
+                            "span": 12
+                          },
+                          "children": [
+                            {
+                              "id": "Input-14",
+                              "component": "Input",
+                              "props": {
+                                "name": "email",
+                                "label": "邮箱：",
+                                "rule": "EMAIL"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "id": "Col-17",
+                          "component": "Col",
+                          "props": {
+                            "span": 12
+                          },
+                          "children": [
+                            {
+                              "id": "Input-17",
+                              "component": "Input",
+                              "props": {
+                                "name": "wechat",
+                                "label": "微信号："
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "id": "Row-8",
+                          "component": "Div",
+                          "props": {
+                            "style": {
+                              "width": "100%",
+                              "height": "1px",
+                              "margin": "16px",
+                              "backgroundColor": "#efefef"
+                            }
+                          }
+                        },
+                        {
+                          "id": "Col-19",
+                          "component": "Col",
+                          "props": {
+                            "span": 12
+                          },
+                          "children": [
+                            {
+                              "id": "Input-17",
+                              "component": "Input",
+                              "props": {
+                                "name": "school",
+                                "label": "最高毕业院校："
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "id": "Col-18",
+                          "component": "Col",
+                          "props": {
+                            "span": 12
+                          },
+                          "children": [
+                            {
+                              "id": "Input-17",
+                              "component": "Input",
+                              "props": {
+                                "name": "major",
+                                "label": "专业："
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "id": "Col-18",
+                          "component": "Col",
+                          "props": {
+                            "span": 12
+                          },
+                          "children": [
+                            {
+                              "id": "Input-17",
+                              "component": "Input",
+                              "props": {
+                                "name": "rawPositions",
+                                "label": "意向职位："
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "id": "Col-18",
+                          "component": "Col",
+                          "props": {
+                            "span": 12
+                          },
+                          "children": [
+                            {
+                              "id": "Input-17",
+                              "component": "Input",
+                              "props": {
+                                "name": "rawIndustries",
+                                "label": "意向行业："
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "id": "Col-18",
+                          "component": "Col",
+                          "props": {
+                            "span": 12
+                          },
+                          "children": [
+                            {
+                              "id": "div-3743",
+                              "component": "Div",
+                              "props": {
+                                "style": {
+                                  "fontSize": "14px",
+                                  "marginBottom": "2px"
+                                }
+                              },
+                              "children": "期望薪资："
+                            },
+                            {
+                              "id": "Row-131",
+                              "component": "Row",
+                              "props": {
+                                "className": "salary_row",
+                                "classList": ".salary_row .react-form__field:nth-child(1),.salary_row .react-form__field:nth-child(3){flex:1}",
+                                "style": {
+                                  "display": "flex"
+                                }
+                              },
+                              "children": [
+                                {
+                                  "id": "Input-726",
+                                  "component": "Input",
+                                  "props": {
+                                    "style": {
+                                      "borderRight": 0,
+                                      "borderRadius": 0
+                                    },
+                                    "name": "expectSalaryMin",
+                                    "placeholder": "薪资下限"
+                                  }
+                                },
+                                {
+                                  "id": "Input-646",
+                                  "component": "Input",
+                                  "props": {
+                                    "style": {
+                                      "width": 60,
+                                      "borderLeft": 0,
+                                      "borderRight": 0,
+                                      "borderRadius": 0,
+                                      "pointerEvents": "none"
+                                    },
+                                    "placeholder": "→"
+                                  }
+                                },
+                                {
+                                  "id": "Input-826",
+                                  "component": "Input",
+                                  "props": {
+                                    "style": {
+                                      "borderLeft": 0,
+                                      "borderRadius": 0
+                                    },
+                                    "name": "expectSalaryMax",
+                                    "placeholder": "薪资上限"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "Col-18",
+                          "component": "Col",
+                          "props": {
+                            "span": 12
+                          },
+                          "children": [
+                            {
+                              "id": "div-3743",
+                              "component": "Div",
+                              "props": {
+                                "style": {
+                                  "fontSize": "14px",
+                                  "marginBottom": "2px",
+                                  "color": "##000",
+                                  "fontWeight": "500"
+                                }
+                              },
+                              "children": "目前薪资："
+                            },
+                            {
+                              "id": "Row-131",
+                              "component": "Row",
+                              "props": {
+                                "className": "salary_row",
+                                "classList": ".salary_row .react-form__field:nth-child(1),.salary_row .react-form__field:nth-child(3){flex:1}",
+                                "style": {
+                                  "display": "flex"
+                                }
+                              },
+                              "children": [
+                                {
+                                  "id": "Input-726",
+                                  "component": "Input",
+                                  "props": {
+                                    "style": {
+                                      "borderRight": 0,
+                                      "borderRadius": 0
+                                    },
+                                    "name": "currentSalaryMin",
+                                    "placeholder": "薪资下限"
+                                  }
+                                },
+                                {
+                                  "id": "Input-646",
+                                  "component": "Input",
+                                  "props": {
+                                    "style": {
+                                      "width": 60,
+                                      "borderLeft": 0,
+                                      "borderRight": 0,
+                                      "borderRadius": 0,
+                                      "pointerEvents": "none"
+                                    },
+                                    "placeholder": "→"
+                                  }
+                                },
+                                {
+                                  "id": "Input-826",
+                                  "component": "Input",
+                                  "props": {
+                                    "style": {
+                                      "borderLeft": 0,
+                                      "borderRadius": 0
+                                    },
+                                    "name": "currentSalaryMax",
+                                    "placeholder": "薪资上限"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "Col-20",
+                          "component": "Col",
+                          "props": {
+                            "span": 12
+                          },
+                          "children": [
+                            {
+                              "id": "Select-17",
+                              "component": "Select",
+                              "props": {
+                                "name": "situation",
+                                "label": "当前状态：",
+                                "options": "$currentStatusList"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "id": "Row-8",
+                          "component": "Div",
+                          "props": {
+                            "style": {
+                              "width": "100%",
+                              "height": "1px",
+                              "margin": "16px",
+                              "backgroundColor": "#efefef"
+                            }
+                          }
+                        },
+                        {
+                          "id": "Col-20",
+                          "component": "Col",
+                          "props": {
+                            "span": 12
+                          },
+                          "children": [
+                            {
+                              "id": "Select-18",
+                              "component": "Select",
+                              "props": {
+                                "name": "political",
+                                "label": "政治面貌：",
+                                "options": "$politicalList"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "id": "Col-20",
+                          "component": "Col",
+                          "props": {
+                            "span": 12
+                          },
+                          "children": [
+                            {
+                              "id": "Input-18",
+                              "component": "Input",
+                              "props": {
+                                "name": "nationality",
+                                "label": "国籍："
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "id": "Col-20",
+                          "component": "Col",
+                          "props": {
+                            "span": 12
+                          },
+                          "children": [
+                            {
+                              "id": "Input-18",
+                              "component": "Input",
+                              "props": {
+                                "name": "ethic",
+                                "label": "民族："
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "id": "Col-20",
+                          "component": "Col",
+                          "props": {
+                            "span": 12
+                          },
+                          "children": [
+                            {
+                              "id": "Input-18",
+                              "component": "Input",
+                              "props": {
+                                "name": "ancestralHome",
+                                "label": "籍贯："
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "id": "Col-20",
+                          "component": "Col",
+                          "props": {
+                            "span": 12
+                          },
+                          "children": [
+                            {
+                              "id": "Input-18",
+                              "component": "Input",
+                              "props": {
+                                "name": "address",
+                                "label": "现居地："
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "Row-2",
+                      "component": "Row",
+                      "props": {
+                        "justify": "center",
+                        "gutter": [
+                          40,
+                          0
+                        ]
+                      },
+                      "children": [
+                        {
+                          "id": "Col-3",
+                          "component": "Col",
+                          "children": [
+                            {
+                              "id": "SubmitButton-4",
+                              "component": "SubmitButton",
+                              "props": {
+                                "type": "primary"
+                              },
+                              "children": "保存"
+                            }
+                          ]
+                        },
+                        {
+                          "id": "Col-5",
+                          "component": "Col",
+                          "children": [
+                            {
+                              "id": "Button-6",
+                              "component": "Button",
+                              "props": {
+                                "onClick": "$changeInfoState"
+                              },
+                              "children": "返回"
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }
@@ -584,30 +1538,28 @@
               "children": "编辑"
             },
             {
-              "id": "Button-2",
-              "component": "Button",
+              "id": "FolderComponent-2",
+              "component": "FolderComponent",
               "props": {
-                "type": "link",
+                "libraryId": "$libraryId",
                 "icon": "$fileIcon",
                 "style": {
                   "padding": 0,
                   "color": "#6E6D7A"
                 }
-              },
-              "children": "文件夹"
+              }
             },
             {
-              "id": "Button-3",
-              "component": "Button",
+              "id": "CollectComponent-3",
+              "component": "CollectComponent",
               "props": {
-                "type": "link",
+                "libraryId": "$libraryId",
                 "icon": "$collectIcon",
                 "style": {
                   "padding": 0,
                   "color": "#6E6D7A"
                 }
-              },
-              "children": "收藏"
+              }
             },
             {
               "id": "Button-4",

@@ -1,6 +1,9 @@
 {
+  "id":"45",
+  "parentId":"41",
+  "path":"/resume/analysis.json",
   "components": {
-    "$card": "/react-view-render/resume/card.json",
+    "$card": "/resume/card.json",
     "$part": {
       "data": [
         {
@@ -90,7 +93,7 @@
                 "content": "$part",
                 "titleIcon":"iconliangdian",
                 "title": "亮点",
-                "resource": "$resume.analysis.good"
+                "resource": "$resume.analysis.bright"
               }
             },
             {
@@ -100,7 +103,7 @@
                 "content": "$part",
                 "titleIcon": "iconfengxian",
                 "title": "风险点",
-                "resource": "$resume.analysis.bad"
+                "resource": "$resume.analysis.risk"
               }
             }
           ]

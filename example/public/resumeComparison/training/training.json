@@ -1,5 +1,10 @@
 {
   "description": "培训模块",
+  "id": 81,
+  "name": "training.json",
+  "type": 2,
+  "parentId": 49,
+  "path": "/resume/other/training.json",
   "components": {
     "$ItemInfo": {
       "description": "培训模块list-item",
@@ -41,7 +46,7 @@
                   "id": "Component-0",
                   "component": "Component",
                   "props": {
-                    "value": "$detailItem.org",
+                    "value": "$detailItem.agency",
                     "name": "培训机构：",
                     "content": "$showWorkItem"
                   }
@@ -111,7 +116,7 @@
                   "id": "Component-1",
                   "component": "Component",
                   "props": {
-                    "value": "$detailItem.course",
+                    "value": "$detailItem.courses",
                     "name": "培训课程：",
                     "content": "$showWorkItem"
                   }

@@ -3,7 +3,7 @@
     "$companyInfo": {
       "bgImg": "http://static.knxgalaxy.com/upload_assets/app-manager/184ecc23bfb32314c7f574b913aa72d4.jpeg",
       "name": "中石化",
-      "des": "中国石油化工集团有限公司（以下简称公司）的前身是成立于1983年7月的中国石油化工总公司。\n1998年7月，按照党中央关于实施石油石化行业战略性重组的部署，在原中国石油化工总公司基础上重组成立中国石油化工集团公司"
+      "description": "中国石油化工集团有限公司（以下简称公司）的前身是成立于1983年7月的中国石油化工总公司。\n1998年7月，按照党中央关于实施石油石化行业战略性重组的部署，在原中国石油化工总公司基础上重组成立中国石油化工集团公司"
     }
   },
   "components": {
@@ -228,7 +228,7 @@
                   "id": "Text-6",
                   "component": "Text",
                   "props": {
-                    "content": "$companyInfo.des"
+                    "content": "$companyInfo.description"
                   }
                 }
               ]
