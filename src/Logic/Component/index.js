@@ -3,7 +3,7 @@ import Context from "../Context";
 import {applyVariable} from '../../util';
 import classname from 'classnames';
 
-const Component = ({className, content, children, propsMap = {}, functionsMap, ...props}) => {
+const Component = ({className, shadowDom, content, children, propsMap = {}, functionsMap = {}, ...props}) => {
     const others = {}, funcs = {};
     Object.keys(propsMap).forEach((key) => {
         if (/^\$/.test(key)) {
@@ -15,8 +15,12 @@ const Component = ({className, content, children, propsMap = {}, functionsMap, .
             funcs[key] = props[functionsMap[key]];
         }
     });
-    return <div className={classname('view-render-component', className)}><Context
-        variable={{...others, $props: props, $children: children}} functions={...funcs}>{content}</Context>
+
+    const inner = <Context variable={{...others, $props: props, $children: children}}
+                           functions={funcs}>{content}</Context>;
+
+    return shadowDom ? inner : <div className={classname('view-render-component', className)}>
+        {inner}
     </div>;
 };
 

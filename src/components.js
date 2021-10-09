@@ -46,7 +46,8 @@ const components = {
     Progress: loadable(() => import('./General/Progress')),
     Spin: loadable(() => import('./General/Spin')),
     Steps: loadable(() => import('./General/Steps')),
-    FormContext: loadable(() => import('./Form/FormContext'))
+    FormContext: loadable(() => import('./Form/FormContext')),
+    Iframe: loadable(() => import('./General/Iframe'))
 };
 
 export default components;

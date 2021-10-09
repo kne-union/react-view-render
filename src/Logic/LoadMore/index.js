@@ -1,10 +1,10 @@
-import React, {useState, useEffect, useCallback, useRef} from 'react';
+import React, {useState, useEffect, useCallback, useRef, Fragment} from 'react';
 import Context from '../Context';
 import {Spin, Result} from 'antd';
 import {applyVariable} from '../../util';
 import classnames from 'classnames';
 
-const LoadMore = ({resource, distance, spin = {}, children, className, ...props}) => {
+const LoadMore = ({resource, shadowDom, distance, spin = {}, children, className, ...props}) => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
     const [data, setData] = useState([]);
@@ -52,10 +52,15 @@ const LoadMore = ({resource, distance, spin = {}, children, className, ...props}
         return <Result status="error" title="加载异常" subTitle={error}/>;
     }
 
-    return <div {...props} className={classnames(className, 'view-render-load-more')} onScroll={scrollHandler}>
+    const inner = <Fragment>
         <Context variable={{$item: data}}>{children}</Context>
         {loading ? <Spin {...spin}/> : null}
-    </div>;
+    </Fragment>
+
+    return shadowDom ? inner :
+        <div {...props} className={classnames(className, 'view-render-load-more')} onScroll={scrollHandler}>
+            {inner}
+        </div>;
 };
 
 export default applyVariable(LoadMore);

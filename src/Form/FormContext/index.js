@@ -4,14 +4,17 @@ import classnames from 'classnames';
 import Context from '../../Logic/Context';
 import {applyVariable} from '../../util';
 
-const FormContext = ({className, children, ...props}) => {
+const FormContext = ({className, shadowDom, children, ...props}) => {
     const formContext = useFormContext();
-    return <div {...props} className={classnames(className, 'view-render-form-context')}>
-        <Context variable={{
-            $formContext: formContext
-        }}>
-            {children}
-        </Context>
+
+    const inner = <Context variable={{
+        $formContext: formContext
+    }}>
+        {children}
+    </Context>;
+
+    return shadowDom ? inner : <div {...props} className={classnames(className, 'view-render-form-context')}>
+        {inner}
     </div>;
 };
 

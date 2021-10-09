@@ -55,14 +55,19 @@ const createTransformProps = ({functions, components, currentVariable, otherCont
                     const func = functions[funcKey];
                     if (typeof func === 'string') {
                         return (...args) => {
-                            const newFunction = new Function('args', 'variable', 'functions', 'lib', func);
-                            const others = omit(functions, funcKey), output = {};
+                            try {
+                                const newFunction = new Function('args', 'variable', 'functions', 'lib', func);
+                                const others = omit(functions, funcKey), output = {};
 
-                            Object.keys(others).forEach((key) => {
-                                output[key] = parseFunction(key, variable, others, lib);
-                            });
+                                Object.keys(others).forEach((key) => {
+                                    output[key] = parseFunction(key, variable, others, lib);
+                                });
 
-                            return newFunction(args, variable, output, lib);
+                                return newFunction(args, variable, output, lib);
+                            } catch (e) {
+                                console.error(`${funcKey}函数执行出现错误:\n${func}`);
+                                throw e;
+                            }
                         }
                     }
                     if (typeof func === 'function') {
@@ -137,14 +142,14 @@ export const applyVariable = (WrappedComponent) => {
 
         const transformProps = createTransformProps({functions, components, currentVariable, otherContext});
 
-        const newProps = transformProps(props);
+        const {classList, ...newProps} = transformProps(props);
 
         useEffect(() => {
             // 添加样式
             const uuid = uniqueId();
-            if (newProps['classList']) {
+            if (classList) {
                 const style = document.createElement('style');
-                style.innerHTML = newProps['classList'];
+                style.innerHTML = classList;
                 style.setAttribute('id', uuid);
                 document.head.appendChild(style);
             }
