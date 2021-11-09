@@ -44,6 +44,8 @@ import Progress from './General/Progress';
 import Spin from './General/Spin';
 import Steps from './General/Steps';
 import FormContext from './Form/FormContext';
+import Iframe from './General/Iframe';
+import Table from "./General/Table";
 
 const components = {
     List,
@@ -91,7 +93,9 @@ const components = {
     Progress,
     Spin,
     Steps,
-    FormContext
+    FormContext,
+    Iframe,
+    Table
 };
 
 export default components;

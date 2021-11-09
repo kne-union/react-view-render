@@ -27,6 +27,7 @@ const Render = withRemote(({id, lib = {}, content, emitter, ...renderProps}) => 
             id,
             lib: Object.assign({}, {
                 message,
+                react: React,
                 modal: {
                     confirm: Modal.confirm,
                     info: Modal.info,
