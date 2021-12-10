@@ -40,13 +40,14 @@ import spin from './General/Spin/profile.json';
 import steps from './General/Steps/profile.json';
 import tooltip from './General/Tooltip/profile.json';
 import iframe from './General/Iframe/profile.json';
+import table from './General/Table/profile.json';
 
 
 const profile = {
     'general': {
         id: 'general',
         label: '通用',
-        components: [button, text, img, tabs, icon, empty, card, affix, alert, drawer, modal, popconfirm, progress, spin, steps, tooltip, iframe]
+        components: [button, text, img, tabs, icon, empty, card, affix, alert, drawer, modal, popconfirm, progress, spin, steps, tooltip, iframe, table]
     },
     'layout': {
         id: 'layout',
@@ -114,5 +115,6 @@ export const profileMap = {
     [spin.id]: spin,
     [steps.id]: steps,
     [tooltip.id]: tooltip,
-    [iframe.id]: iframe
+    [iframe.id]: iframe,
+    [table.id]: table
 };

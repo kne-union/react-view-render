@@ -48,7 +48,8 @@ const components = {
     Spin: loadable(() => import('./General/Spin')),
     Steps: loadable(() => import('./General/Steps')),
     FormContext: loadable(() => import('./Form/FormContext')),
-    Iframe: loadable(() => import('./General/Iframe'))
+    Iframe: loadable(() => import('./General/Iframe')),
+    Table:loadable(()=>import('./General/Table'))
 };
 
 export default components;

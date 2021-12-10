@@ -1,0 +1,14 @@
+{
+  "data": [
+    {
+      "component": "Iframe",
+      "props": {
+        "src": "http://www.hao123.com"
+      }
+    },
+    {
+      "component": "Button",
+      "children": "按钮"
+    }
+  ]
+}

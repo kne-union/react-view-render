@@ -42,7 +42,7 @@ interceptors.output.use('string-date-picker', (value) => {
 const App = () => {
     const formContext = useRef(null);
     return <ConfigProvider autoInsertSpaceInButton={false} locale={zhCN}>
-        <ViewRender url="/react-view-render/resume/index.json" content={{
+        <ViewRender url="/react-view-render/iframe.json" content={{
             functions: {
                 $getFormContext: (context) => {
                     formContext.current = context;

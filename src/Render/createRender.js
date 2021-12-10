@@ -1,5 +1,4 @@
 import React, {useState, useEffect, createElement} from 'react';
-import classnames from 'classnames';
 import {currentComponents} from "../preset";
 import ErrorBoundary from '@kne/react-error-boundary';
 import RenderTask from './RenderTask';
@@ -33,8 +32,7 @@ const createRender = ({renderIdRef, renderProps}) => {
             return <RenderTask id={taskId} emitter={renderProps.renderEvent}
                                rootIsMount={renderProps.rootIsMount} key={id}>
                 <ErrorBoundary errorComponent={ErrorMsg}>
-                    <CurrentComponent {...newProps} className={classnames(newProps.className, `id_${id}`)} $id={id}
-                                      $taskId={taskId}/>
+                    <CurrentComponent {...newProps}  $id={id} $taskId={taskId}/>
                 </ErrorBoundary>
             </RenderTask>;
         });

@@ -7,12 +7,12 @@ const Component = ({className, shadowDom, content, children, propsMap = {}, func
     const others = {}, funcs = {};
     Object.keys(propsMap).forEach((key) => {
         if (/^\$/.test(key)) {
-            others[key] = props[propsMap[key]];
+            others[key] = props.hasOwnProperty(propsMap[key]) ? props[propsMap[key]] : propsMap[key];
         }
     });
     Object.keys(functionsMap).forEach((key) => {
         if (/^\$/.test(key)) {
-            funcs[key] = props[functionsMap[key]];
+            funcs[key] = props.hasOwnProperty(functionsMap[key]) ? props[functionsMap[key]] : functionsMap[key];
         }
     });
 

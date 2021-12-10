@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useCallback} from 'react';
 import Context from '../Context';
 import {Spin, Result} from 'antd';
 import {applyVariable} from '../../util';
@@ -8,7 +8,8 @@ const Remote = ({resource, spin = {}, shadowDom, children, className, ...props})
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
     const [data, setData] = useState(null);
-    useEffect(() => {
+
+    const loadData = useCallback(() => {
         setLoading(true);
         Promise.resolve(typeof resource === 'function' ? resource() : null).then((data) => {
             setData(data);
@@ -19,6 +20,10 @@ const Remote = ({resource, spin = {}, shadowDom, children, className, ...props})
             setLoading(false);
         });
     }, [resource]);
+
+    useEffect(() => {
+        loadData();
+    }, [loadData]);
     if (loading) {
         return <Spin {...spin}/>;
     }
@@ -26,7 +31,9 @@ const Remote = ({resource, spin = {}, shadowDom, children, className, ...props})
         return <Result status="error" title="加载异常" subTitle={error}/>;
     }
 
-    const inner = <Context variable={{$item: data}}>{children}</Context>;
+    const inner = <Context variable={{$item: data}} functions={{
+        $refreshRemote: loadData
+    }}>{children}</Context>;
 
     return shadowDom ? inner : <div {...props} className={classnames(className, 'view-render-remote')}>
         {inner}

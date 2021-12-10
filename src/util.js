@@ -5,6 +5,7 @@ import get from 'lodash/get';
 import uniqueId from 'lodash/uniqueId';
 import isPlainObject from 'lodash/isPlainObject';
 import omit from 'lodash/omit';
+import classnames from 'classnames';
 
 const escape = (value) => {
     if (typeof value === 'string' && value.indexOf('\\$') === 0) {
@@ -174,10 +175,10 @@ export const applyVariable = (WrappedComponent) => {
             if (Object.keys(extract).length > 0) {
                 return <Provider
                     value={Object.assign({}, otherContext, {functions, components, variable: currentVariable})}>
-                    <WrappedComponent {...newProps}/>
+                    <WrappedComponent {...newProps} className={classnames(newProps.className, `id_${currentVariable.$id}`)}/>
                 </Provider>;
             }
-            return <WrappedComponent {...newProps}/>;
+            return <WrappedComponent {...newProps} className={classnames(newProps.className, `id_${currentVariable.$id}`)}/>;
         })();
 
         if (_debug === true) {
