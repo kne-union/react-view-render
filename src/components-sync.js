@@ -12,6 +12,7 @@ import Select from './Form/Select';
 import Switch from './Form/Switch';
 import DatePicker from './Form/DatePicker';
 import DateRangePicker from './Form/DateRangePicker';
+import TreeSelect from './Form/TreeSelect';
 import Cascader from './Form/Cascader';
 import Carousel from './General/Carousel'
 import TextArea from './Form/TextArea';
@@ -65,6 +66,7 @@ const components = {
     Switch,
     DatePicker,
     DateRangePicker,
+    TreeSelect,
     Cascader,
     Carousel,
     TextArea,

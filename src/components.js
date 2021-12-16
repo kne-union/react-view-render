@@ -15,6 +15,7 @@ const components = {
     Switch: loadable(() => import('./Form/Switch')),
     DatePicker: loadable(() => import('./Form/DatePicker')),
     DateRangePicker: loadable(() => import('./Form/DateRangePicker')),
+    TreeSelect: loadable(() => import('./Form/TreeSelect')),
     Cascader: loadable(() => import('./Form/Cascader')),
     Carousel: loadable(() => import('./Form/Carousel')),
     TextArea: loadable(() => import('./Form/TextArea')),

@@ -54,7 +54,7 @@
   "devDependencies": {
     "@kne/antd-enhance": "^0.1.7",
     "@kne/react-fetch": "^0.1.12",
-    "@kne/react-form-antd": "^2.0.0-alpha.0.0",
+    "@kne/react-form-antd": "^2.0.0-alpha.0.4",
     "antd": "^4.16.13",
     "axios": "^0.21.1",
     "cross-env": "^7.0.3",
