@@ -12,6 +12,7 @@ import avatar from './Form/Avatar/profile.json';
 import cascader from './Form/Cascader/profile.json';
 import datePicker from './Form/DatePicker/profile.json';
 import checkboxGroup from './Form/CheckboxGroup/profile.json';
+import treeSelect from './Form/TreeSelect/profile.json';
 import inputNumber from './Form/InputNumber/profile.json';
 import radioGroup from './Form/RadioGroup/profile.json';
 import resetButton from './Form/ResetButton/profile.json';
@@ -57,7 +58,7 @@ const profile = {
     'form': {
         id: 'form',
         label: '表单',
-        components: [form, input, submitButton, resetButton, avatar, cascader, checkboxGroup, datePicker, inputNumber, radioGroup, select, textArea, upload]
+        components: [form, input, submitButton, resetButton, avatar, cascader, checkboxGroup, datePicker, inputNumber, radioGroup, select, textArea, upload, treeSelect]
     },
     'logic': {
         id: 'logic',
@@ -116,5 +117,6 @@ export const profileMap = {
     [steps.id]: steps,
     [tooltip.id]: tooltip,
     [iframe.id]: iframe,
-    [table.id]: table
+    [table.id]: table,
+    [treeSelect.id]: treeSelect
 };
