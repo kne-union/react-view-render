@@ -2,6 +2,7 @@ import button from './General/Button/profile.json';
 import text from './General/Text/profile.json';
 import row from './Layout/Row/profile.json';
 import img from './General/Img/profile.json';
+import video from './General/Video/profile.json';
 import col from './Layout/Col/profile.json';
 import list from './Logic/List/profile.json';
 import condition from './Logic/Condition/profile.json';
@@ -10,6 +11,7 @@ import input from './Form/Input/profile.json';
 import submitButton from './Form/SubmitButton/profile.json';
 import avatar from './Form/Avatar/profile.json';
 import cascader from './Form/Cascader/profile.json';
+import carousel from './General/Carousel/profile.json';
 import datePicker from './Form/DatePicker/profile.json';
 import checkboxGroup from './Form/CheckboxGroup/profile.json';
 import inputNumber from './Form/InputNumber/profile.json';
@@ -41,13 +43,14 @@ import steps from './General/Steps/profile.json';
 import tooltip from './General/Tooltip/profile.json';
 import iframe from './General/Iframe/profile.json';
 import table from './General/Table/profile.json';
+import pagination from "./General/Pagination/profile.json";
 
 
 const profile = {
     'general': {
         id: 'general',
         label: '通用',
-        components: [button, text, img, tabs, icon, empty, card, affix, alert, drawer, modal, popconfirm, progress, spin, steps, tooltip, iframe, table]
+        components: [button, text, img, video, tabs, icon, empty, card, affix, alert, carousel, drawer, modal, popconfirm, progress, spin, steps, tooltip, iframe, table, pagination]
     },
     'layout': {
         id: 'layout',
@@ -84,6 +87,7 @@ export const profileMap = {
     [form.id]: form,
     [avatar.id]: avatar,
     [cascader.id]: cascader,
+    [carousel.id]: carousel,
     [checkboxGroup.id]: checkboxGroup,
     [datePicker.id]: datePicker,
     [inputNumber.id]: inputNumber,
@@ -94,6 +98,7 @@ export const profileMap = {
     [submitButton.id]: submitButton,
     [resetButton.id]: resetButton,
     [img.id]: img,
+    [video.id]: video,
     [remote.id]: remote,
     [mapping.id]: mapping,
     [state.id]: state,

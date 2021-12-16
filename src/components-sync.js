@@ -13,6 +13,7 @@ import Switch from './Form/Switch';
 import DatePicker from './Form/DatePicker';
 import DateRangePicker from './Form/DateRangePicker';
 import Cascader from './Form/Cascader';
+import Carousel from './General/Carousel'
 import TextArea from './Form/TextArea';
 import Avatar from './Form/Avatar';
 import Upload from './Form/Upload';
@@ -25,6 +26,7 @@ import Mapping from './Logic/Mapping';
 import State from './Logic/State';
 import Button from './General/Button';
 import Img from './General/Img';
+import Video from './General/Video';
 import Div from './Layout/Div';
 import Card from './General/Card';
 import Component from './Logic/Component';
@@ -46,6 +48,7 @@ import Steps from './General/Steps';
 import FormContext from './Form/FormContext';
 import Iframe from './General/Iframe';
 import Table from "./General/Table";
+import Pagination from './General/Pagination';
 
 const components = {
     List,
@@ -63,6 +66,7 @@ const components = {
     DatePicker,
     DateRangePicker,
     Cascader,
+    Carousel,
     TextArea,
     Avatar,
     Upload,
@@ -74,6 +78,7 @@ const components = {
     State,
     Button,
     Img,
+    Video,
     Div,
     GroupList,
     Card,
@@ -95,7 +100,8 @@ const components = {
     Steps,
     FormContext,
     Iframe,
-    Table
+    Table,
+    Pagination
 };
 
 export default components;

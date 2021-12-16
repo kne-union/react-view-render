@@ -16,6 +16,7 @@ const components = {
     DatePicker: loadable(() => import('./Form/DatePicker')),
     DateRangePicker: loadable(() => import('./Form/DateRangePicker')),
     Cascader: loadable(() => import('./Form/Cascader')),
+    Carousel: loadable(() => import('./Form/Carousel')),
     TextArea: loadable(() => import('./Form/TextArea')),
     Avatar: loadable(() => import('./Form/Avatar')),
     Upload: loadable(() => import('./Form/Upload')),
@@ -27,6 +28,7 @@ const components = {
     State: loadable(() => import('./Logic/State')),
     Button: loadable(() => import('./General/Button')),
     Img: loadable(() => import('./General/Img')),
+    Video: loadable(() => import('./General/Video')),
     Div: loadable(() => import('./Layout/Div')),
     GroupList: loadable(() => import('./Form/GroupList')),
     Card: loadable(() => import('./General/Card')),
@@ -48,7 +50,8 @@ const components = {
     Steps: loadable(() => import('./General/Steps')),
     FormContext: loadable(() => import('./Form/FormContext')),
     Iframe: loadable(() => import('./General/Iframe')),
-    Table:loadable(()=>import('./General/Table'))
+    Table: loadable(() => import('./General/Table')),
+    Pagination: loadable(() => import('./General/Pagination'))
 };
 
 export default components;

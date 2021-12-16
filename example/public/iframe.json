@@ -7,6 +7,12 @@
       }
     },
     {
+      "component": "Video",
+      "props": {
+        "src": "http://www.baidu.com"
+      }
+    },
+    {
       "component": "Button",
       "children": "按钮"
     }
