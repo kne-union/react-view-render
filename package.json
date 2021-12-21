@@ -1,6 +1,6 @@
 {
   "name": "@kne/react-view-render",
-  "version": "0.2.0-alpha.0.27",
+  "version": "0.2.0",
   "description": "一个可以将规定格式的JSON字符串渲染成页面的渲染器",
   "homepage": "https://github.com/kne-union/react-view-render",
   "main": "dist/index.js",
@@ -54,7 +54,7 @@
   "devDependencies": {
     "@kne/antd-enhance": "^0.1.8",
     "@kne/react-fetch": "^0.1.15",
-    "@kne/react-form-antd": "^2.0.0-alpha.0.5",
+    "@kne/react-form-antd": "^2.0.1",
     "antd": "^4.16.13",
     "axios": "^0.21.1",
     "cross-env": "^7.0.3",
