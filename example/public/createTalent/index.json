@@ -1,0 +1,187 @@
+{
+  "variable": {},
+  "functions": {
+    "$submit": "functions.$submitForm(args[0]);console.log(args[0]);",
+    "$setFormContext": "functions.$getFormContext(variable.$formContext);"
+
+  },
+  "components": {},
+  "data": [
+    {
+      "id": "Form-0",
+      "component": "Form",
+      "props": {
+        "type": "inner",
+        "onSubmit": "$submit",
+        "className": "form_content",
+        "classList":".form_content{padding:48px 214px 0} .react-form__field-label{color: #576B95}"
+      },
+      "children": [
+        {
+          "id": "FormContext-33",
+          "component": "FormContext",
+          "children": [
+            {
+              "id": "Mapping-34",
+              "component": "Mapping",
+              "props": {
+                "expression": "$setFormContext"
+              }
+            }
+          ]
+        },
+        {
+          "id": "Row-1",
+          "component": "Row",
+          "props": {
+            "gutter": [
+              24,
+              0
+            ]
+          },
+          "children": [
+            {
+              "id": "Col-2",
+              "component": "Col",
+              "props": {
+                "span": 12
+              },
+              "children": [
+                {
+                  "id": "Input-3",
+                  "component": "Input",
+                  "props": {
+                    "name": "name",
+                    "label": "姓名",
+                    "rule": "REQ",
+                    "placeholder":"请输入"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "Col-3",
+              "component": "Col",
+              "props": {
+                "span": 12
+              },
+              "children": [
+                {
+                  "id": "Select-4",
+                  "component": "Select",
+                  "props": {
+                    "name": "gender",
+                    "label": "性别",
+                    "options": "$sexList",
+                    "placeholder":"请选择"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Row-2",
+          "component": "Row",
+          "props": {
+            "gutter": [
+              24,
+              0
+            ]
+          },
+          "children": [
+            {
+              "id": "Col-4",
+              "component": "Col",
+              "props": {
+                "span": 12
+              },
+              "children": [
+                {
+                  "id": "Input-34",
+                  "component": "Input",
+                  "props": {
+                    "name": "phone",
+                    "label": "联系方式",
+                    "rule": "REQ",
+                    "placeholder":"请输入"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "Col-5",
+              "component": "Col",
+              "props": {
+                "span": 12
+              },
+              "children": [
+                {
+                  "id": "Input-14",
+                  "component": "Input",
+                  "props": {
+                    "name": "email",
+                    "label": "邮箱",
+                    "rule": "REQ",
+                    "placeholder":"请输入"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Row-3",
+          "component": "Row",
+          "props": {
+            "gutter": [
+              24,
+              0
+            ]
+          },
+          "children": [
+            {
+              "id": "Col-6",
+              "component": "Col",
+              "props": {
+                "span": 12
+              },
+              "children": [
+                {
+                  "id": "DatePicker-31",
+                  "component": "DatePicker",
+                  "props": {
+                    "name": "birthday",
+                    "label": "出生日期",
+                    "rule": "REQ",
+                    "className": "with100",
+                    "classList": ".with100 .ant-picker{width:100%}"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "Col-7",
+              "component": "Col",
+              "props": {
+                "span": 12
+              },
+              "children": [
+                {
+                  "id": "Select-41",
+                  "component": "Select",
+                  "props": {
+                    "name": "degree",
+                    "label": "学历",
+                    "options": "$degreeList",
+                    "placeholder":"请选择"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

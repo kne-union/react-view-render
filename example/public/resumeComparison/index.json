@@ -1,0 +1,84 @@
+{
+  "id": 108,
+  "name": "resumeComparisonIndex.json",
+  "type": 2,
+  "parentId": 49,
+  "path": "/resume/other/resumeComparisonIndex.json",
+  "variable": {
+ 
+  },
+  "functions": {
+    "$delConfirm": "lib.modal.confirm({content:'确定删除'+args[0]+'?',onOk:args[1]})",
+    "$isNot": "return !args[0];",
+    "$saveResume": "functions.$saveResumeState(function(old){return Object.assign({},old,args[0]);});lib.message.success('修改成功');"
+  },
+  "components": {
+    "$detail": "/resume/other/old/detail.json",
+    "$detailNew": "/resumeComparison/new/index.json"
+  },
+  "data": [
+    {
+      "id": "State-0",
+      "component": "State",
+      "props": {
+        "initValue": "$initResume",
+        "setStateName": "$saveResumeState"
+      },
+      "children": [
+        {
+          "id": "Rename-1",
+          "component": "Rename",
+          "props": {
+            "resource": "$item",
+            "name": "$resume"
+          },
+          "children": [
+            {
+              "id": "Space-3",
+              "component": "Row",
+              "props": {
+                "style": {
+                  "background": "#FFFFFF"
+                }
+              },
+              "children": [
+                {
+                  "id": "Component-0",
+                  "component": "Col",
+                  "props": {
+                    "span": 12
+                  },
+                  "children": [
+                    {
+                      "id": "Component-2",
+                      "component": "Component",
+                      "props": {
+                        "content": "$detail"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "Component-0",
+                  "component": "Col",
+                  "props": {
+                    "span": 12
+                  },
+                  "children": [
+                    {
+                      "id": "Text-16",
+                      "component": "Component",
+                      "props": {
+                        "content": "$detailNew"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

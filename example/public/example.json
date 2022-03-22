@@ -304,7 +304,7 @@
                       "id": "TextArea-9",
                       "component": "TextArea",
                       "props": {
-                        "name": "des",
+                        "name": "description",
                         "label": "工作描述"
                       }
                     }
@@ -333,6 +333,7 @@
     }
   },
   "variable": {
+    "$city": [{"id": "0", "value":"leaf", "title":"leaf", "disabled": true},{"value":"leaf1", "title":"leaf1", "pId": "0", "id": "1"}],
     "$degreeList": [
       {
         "label": "博士",
@@ -389,7 +390,8 @@
     ]
   },
   "functions": {
-    "$submit": "console.log(args[0]);"
+    "$submit": "console.log(args[0]);",
+    "$setFormContext": "functions.$getFormContext(variable.$formContext);"
   },
   "data": [
     {
@@ -400,6 +402,19 @@
         "onSubmit": "$submit"
       },
       "children": [
+        {
+          "id": "FormContext-33",
+          "component": "FormContext",
+          "children": [
+            {
+              "id": "Mapping-34",
+              "component": "Mapping",
+              "props": {
+                "expression": "$setFormContext"
+              }
+            }
+          ]
+        },
         {
           "id": "Card-0",
           "component": "Card",
@@ -432,6 +447,23 @@
                         "name": "name",
                         "label": "姓名",
                         "rule": "REQ"
+                      }
+                    },
+                    {
+                      "component": "TreeSelect",
+                      "props": {
+                        "_debug": true,
+                        "treeData": "$city",
+                        "name": "name1",
+                        "label": "xxx",
+                        "rule": "REQ",
+                        "showSearch": true,
+                        "treeDataSimpleMode": true,
+                        "multiple": true,
+                        "dropdownStyle":{ "maxHeight": 400, "overflow": "auto" },
+                        "placeholder":"Please select",
+                        "allowClear": true,
+                        "treeDefaultExpandAll": true
                       }
                     }
                   ]
@@ -529,7 +561,7 @@
                       "props": {
                         "name": "phone",
                         "label": "联系方式",
-                        "rule": "REQ TEL"
+                        "rule": "TEL"
                       }
                     }
                   ]

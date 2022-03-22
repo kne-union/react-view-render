@@ -1,0 +1,295 @@
+{
+  "variable": {
+    "$companyInfo": {
+      "bgImg": "http://static.knxgalaxy.com/upload_assets/app-manager/184ecc23bfb32314c7f574b913aa72d4.jpeg",
+      "name": "中石化",
+      "description": "中国石油化工集团有限公司（以下简称公司）的前身是成立于1983年7月的中国石油化工总公司。\n1998年7月，按照党中央关于实施石油石化行业战略性重组的部署，在原中国石油化工总公司基础上重组成立中国石油化工集团公司"
+    }
+  },
+  "components": {
+    "$positionCard": {
+      "functions": {
+        "$gotoDetail": "const search = lib.qs(window.location.search.slice(1));functions.$goto(`/operating/detail?id=${variable.$props.data.id}&tenantId=${search.tenantId}`);"
+      },
+      "data": [
+        {
+          "id": "Div-1",
+          "component": "Div",
+          "props": {
+            "onClick": "$gotoDetail",
+            "style": {
+              "background": "#F8F8F8",
+              "borderRadius": "2px",
+              "padding": "20px 16px",
+              "marginBottom": "10px"
+            }
+          },
+          "children": [
+            {
+              "id": "Space-2",
+              "component": "Space",
+              "props": {
+                "direction": "vertical"
+              },
+              "children": [
+                {
+                  "id": "Row-6",
+                  "component": "Row",
+                  "props": {
+                    "gutter": 10,
+                    "wrap": false,
+                    "style": {
+                      "fontSize": "18px",
+                      "fontWeight": "bold"
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "Col-7",
+                      "component": "Col",
+                      "props": {
+                        "flex": 1
+                      },
+                      "children": [
+                        {
+                          "id": "Text-8",
+                          "component": "Text",
+                          "props": {
+                            "content": "$props.data.name"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "Col-9",
+                      "component": "Col",
+                      "children": [
+                        {
+                          "id": "Text-10",
+                          "component": "Text",
+                          "props": {
+                            "style": {
+                              "color": "#FF5F2E"
+                            },
+                            "content": "$props.data.salary"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "Div-3",
+                  "component": "Div",
+                  "children": [
+                    {
+                      "id": "Text-4",
+                      "component": "Text",
+                      "props": {
+                        "content": "$props.data.publishTime"
+                      }
+                    },
+                    {
+                      "id": "Text-5",
+                      "component": "Text",
+                      "props": {
+                        "content": "发布"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "$shareButtons": {
+      "data": [
+        {
+          "id": "Row-1",
+          "component": "Row",
+          "props": {
+            "gutter": 4,
+            "style": {
+              "position": "fixed",
+              "bottom": "10px",
+              "left": 0,
+              "width": "100%"
+            }
+          },
+          "children": [
+            {
+              "id": "Col-2",
+              "component": "Col",
+              "props": {
+                "flex": 1
+              },
+              "children": [
+                {
+                  "id": "Button-3",
+                  "component": "Button",
+                  "props": {
+                    "type": "primary",
+                    "block": true,
+                    "shape": "round",
+                    "size": "large",
+                    "onClick": "$gotoDeliver"
+                  },
+                  "children": "我要投递"
+                }
+              ]
+            },
+            {
+              "id": "Col-4",
+              "component": "Col",
+              "props": {
+                "flex": 1
+              },
+              "children": [
+                {
+                  "id": "Button-5",
+                  "component": "Button",
+                  "props": {
+                    "block": true,
+                    "shape": "round",
+                    "size": "large",
+                    "onClick": "$sharePosition"
+                  },
+                  "children": "立即分享"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "functions": {
+    "$sharePosition": "functions.$doShare({templateIndex:-1})",
+    "$mapPosition": "const origin = args[0];const output = {id:origin.id,name:origin.name,salary:'面议',publishTime:origin.ReleaseDate||''};try{const salary = JSON.parse(origin.Salary);output.salary = salary.name;}catch(e){};return output;",
+    "$loadingPosition": "const search = lib.qs.parse(window.location.search.slice(1));return lib.axios.post(`/api/v1/interview/getOpeningJobs?tenantId=${search.tenantId}`,{pagenum:args[0],pagesize:5}).then(({data})=>{if(data.code===0){return {list:data.data.dataList,hasNext:data.data.total>data.data.pageNum*data.data.pageSize};}})",
+    "$gotoDeliver": "const search = lib.qs.parse(window.location.search.slice(1));window.location.href=`https://lite.knxgalaxy.com/springboard/?tenantId=${search.tenantId}&list=1`;"
+  },
+  "data": [
+    {
+      "id": "LoadMore-7",
+      "component": "LoadMore",
+      "props": {
+        "resource": "$loadingPosition",
+        "style": {
+          "maxHeight": "100vh"
+        }
+      },
+      "children": [
+        {
+          "id": "Space-4",
+          "component": "Space",
+          "props": {
+            "direction": "vertical"
+          },
+          "children": [
+            {
+              "id": "Div-1",
+              "component": "Div",
+              "children": [
+                {
+                  "id": "Img-2",
+                  "component": "Img",
+                  "props": {
+                    "src": "$companyInfo.bgImg",
+                    "style": {
+                      "width": "100%"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "Div-3",
+              "component": "Div",
+              "children": [
+                {
+                  "id": "Text-4",
+                  "component": "Text",
+                  "props": {
+                    "content": "$companyInfo.name"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "Div-5",
+              "component": "Div",
+              "props": {
+              },
+              "children": [
+                {
+                  "id": "Text-6",
+                  "component": "Text",
+                  "props": {
+                    "content": "$companyInfo.description"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "Div-11",
+              "component": "Div",
+              "props": {
+                "style": {
+                  "padding": "10px 10px 60px"
+                }
+              },
+              "children": [
+                {
+                  "id": "List-7",
+                  "component": "List",
+                  "props": {
+                    "resource": "$item"
+                  },
+                  "children": [
+                    {
+                      "id": "List-8",
+                      "component": "List",
+                      "props": {
+                        "resource": "$item"
+                      },
+                      "children": [
+                        {
+                          "id": "Mapping-9",
+                          "component": "Mapping",
+                          "props": {
+                            "resource": "$item",
+                            "expression": "$mapPosition"
+                          },
+                          "children": [
+                            {
+                              "id": "Component-10",
+                              "component": "Component",
+                              "props": {
+                                "content": "$positionCard",
+                                "data": "$item"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Component-11",
+      "component": "Component",
+      "props": {
+        "content": "$shareButtons"
+      }
+    }
+  ]
+}

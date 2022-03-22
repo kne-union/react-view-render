@@ -1,0 +1,102 @@
+{
+  "description": "编辑技能表单",
+  "id": 76,
+  "name": "editSkill.json",
+  "type": 2,
+  "parentId": 49,
+  "path": "/resume/other/editSkill.json",
+  "components": {
+  },
+  "data": [
+    {
+      "id": "Row-1",
+      "component": "Row",
+      "props": {
+        "gutter": [
+          40,
+          0
+        ]
+      },
+      "children": [
+        {
+          "id": "Col-2",
+          "component": "Col",
+          "props": {
+            "span": 12
+          },
+          "children": [
+            {
+              "id": "Input-3",
+              "component": "Input",
+              "props": {
+                "name": "school",
+                "label": "技能名称",
+                "rule": "REQ"
+              }
+            }
+          ]
+        },
+        {
+          "id": "Col-3",
+          "component": "Col",
+          "props": {
+            "span": 12
+          },
+          "children": [
+            {
+              "id": "Input-4",
+              "component": "Input",
+              "props": {
+                "name": "major",
+                "label": "技能水平",
+                "rule": "REQ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Row-5",
+      "component": "Row",
+      "props": {
+        "gutter": [
+          40,
+          0
+        ]
+      },
+      "children": [
+        {
+          "id": "Col-6",
+          "component": "Col",
+          "props": {
+            "span": 12
+          },
+          "children": [
+            {
+              "id": "DateRangePicker-11",
+              "component": "DatePicker",
+              "props": {
+                "name": "date",
+                "label": "使用时间",
+                "rule": "REQ",
+                "className": "with100",
+                "classList": ".with100 .ant-picker{width:100%}"
+              }
+            }
+          ]
+        },
+        {
+          "id": "Col-9",
+          "component": "Col",
+          "props": {
+            "span": 12
+          },
+          "children": [
+
+          ]
+        }
+      ]
+    }
+  ]
+}

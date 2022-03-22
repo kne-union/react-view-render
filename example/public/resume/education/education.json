@@ -66,7 +66,7 @@
                       },
                       "children": [
                         {
-                          "id": "listItem6",
+                          "id": "listItem7",
                           "component": "Text",
                           "props": {
                             "content": "$detailItem.degree"
@@ -87,35 +87,47 @@
                           }
                         },
                         {
-                          "id": "listItem10",
-                          "component": "Text",
+                          "id": "Mapping-9",
+                          "component": "Mapping",
                           "props": {
-                            "content": "/"
-                          }
-                        },
-                        {
-                          "id": "listItem14",
-                          "component": "Div",
+                            "resource": "$detailItem",
+                            "expression": "$mapTime"
+                          },
                           "children": [
                             {
-                              "id": "listItem9",
+                              "id": "listItem10",
                               "component": "Text",
                               "props": {
-                                "content": "$detailItem.start"
+                                "content": "/"
                               }
                             },
                             {
-                              "id": "listItem12",
+                              "id": "Text-11",
+                              "component": "Text",
+                              "props": {
+                                "content": "$item.sTime",
+                                "style": {
+                                  "fontWeight": "normal",
+                                  "fontSize": "14px"
+                                }
+                              }
+                            },
+                            {
+                              "id": "Text-12",
                               "component": "Text",
                               "props": {
                                 "content": "-"
                               }
                             },
                             {
-                              "id": "listItem13",
+                              "id": "Text-13",
                               "component": "Text",
                               "props": {
-                                "content": "$detailItem.end"
+                                "content": "$item.eTime",
+                                "style": {
+                                  "fontWeight": "normal",
+                                  "fontSize": "14px"
+                                }
                               }
                             }
                           ]
@@ -146,25 +158,6 @@
                   }
                 }
               ]
-            }
-          ]
-        }
-      ]
-    },
-    "$options": {
-      "data": [
-        {
-          "id": "Space-0",
-          "component": "Space",
-          "children": [
-            {
-              "id": "Button-1",
-              "component": "Button",
-              "props": {
-                "type": "link",
-                "onClick": "$changeEditState"
-              },
-              "children": "编辑"
             }
           ]
         }

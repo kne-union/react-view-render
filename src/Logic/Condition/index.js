@@ -2,7 +2,7 @@ import React from 'react';
 import {applyVariable} from '../../util';
 import classnames from 'classnames';
 
-const Condition = ({resource, expression, children, className, ...props}) => {
+const Condition = ({resource, shadowDom, expression, children, className, ...props}) => {
     const target = (() => {
         const flag = (() => {
             if (typeof expression === 'function') {
@@ -16,7 +16,9 @@ const Condition = ({resource, expression, children, className, ...props}) => {
         }
         return null;
     })();
-    return <div {...props} className={classnames(className, 'view-render-condition')}>{target}</div>;
+
+    return shadowDom ? target :
+        <div {...props} className={classnames(className, 'view-render-condition')}>{target}</div>;
 };
 
 export default applyVariable(Condition);

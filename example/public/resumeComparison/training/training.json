@@ -1,0 +1,149 @@
+{
+  "description": "培训模块",
+  "id": 81,
+  "name": "training.json",
+  "type": 2,
+  "parentId": 49,
+  "path": "/resume/other/training.json",
+  "components": {
+    "$ItemInfo": {
+      "description": "培训模块list-item",
+      "data": [
+        {
+          "id": "Space-1",
+          "component": "Space",
+          "props": {
+            "direction": "vertical",
+            "style": {
+              "paddingBottom": "44px",
+              "position": "relative"
+            }
+          },
+          "children": [
+            {
+              "id": "Space-5",
+              "component": "Space",
+              "props": {
+                "direction": "vertical",
+                "size": 32,
+                "style": {
+                  "fontSize": "14px",
+                  "fontWeight": 400,
+                  "color": "#313753"
+                }
+              },
+              "children": [
+                {
+                  "id": "Component-0",
+                  "component": "Component",
+                  "props": {
+                    "value": "$detailItem.name",
+                    "name": "培训名称：",
+                    "content": "$showWorkItem"
+                  }
+                },
+                {
+                  "id": "Component-0",
+                  "component": "Component",
+                  "props": {
+                    "value": "$detailItem.agency",
+                    "name": "培训机构：",
+                    "content": "$showWorkItem"
+                  }
+                },
+                {
+                  "id": "Div-7",
+                  "component": "Space",
+                  "props": {
+                    "direction": "vertical",
+                    "size": 16
+                  },
+                  "children": [
+                    {
+                      "id": "Text-2",
+                      "component": "Text",
+                      "props": {
+                        "style": {
+                          "fontWeight": 400,
+                          "color": "#576B95"
+                        },
+                        "content": "培训时间："
+                      }
+                    },
+                    {
+                      "id": "Text-2",
+                      "component": "Div",
+                      "children": [
+                        {
+                          "id": "Text-2",
+                          "component": "Text",
+                          "props": {
+                            "content": "$detailItem.time[0]"
+                          }
+                        },
+                        {
+                          "id": "Text-2",
+                          "component": "Text",
+                          "props": {
+                            "content": "→",
+                            "style": {
+                              "color": "#9E9EA7",
+                              "margin": "0 14px"
+                            }
+                          }
+                        },
+                        {
+                          "id": "Text-2",
+                          "component": "Text",
+                          "props": {
+                            "content": "$detailItem.time[1]"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "Component-1",
+                  "component": "Component",
+                  "props": {
+                    "value": "$detailItem.certificate",
+                    "name": "所获证书：",
+                    "content": "$showWorkItem"
+                  }
+                },
+                {
+                  "id": "Component-1",
+                  "component": "Component",
+                  "props": {
+                    "value": "$detailItem.courses",
+                    "name": "培训课程：",
+                    "content": "$showWorkItem"
+                  }
+                },
+                {
+                  "id": "Component-1",
+                  "component": "Component",
+                  "props": {
+                    "value": "$detailItem.description",
+                    "name": "培训描述：",
+                    "content": "$showWorkItem"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "data": [
+    {
+      "component": "Component",
+      "props": {
+        "content": "$ItemInfo",
+        "args": "$props.args"
+      }
+    }
+  ]
+}

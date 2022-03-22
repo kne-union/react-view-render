@@ -1,0 +1,32 @@
+{
+  "id": "Rename",
+  "name": "重命名",
+  "property": {
+    "resource": {
+      "input-type": "$variable",
+      "label": "数据源",
+      "required": true
+    },
+    "name": {
+      "input-type": "$input",
+      "label": "名称",
+      "required": true
+    },
+    "target": {
+      "input-type": "$radio",
+      "label": "类型",
+      "input-options": {
+        "options": [
+          {
+            "label": "变量",
+            "value": "variable"
+          },
+          {
+            "label": "方法",
+            "value": "functions"
+          }
+        ]
+      }
+    }
+  }
+}

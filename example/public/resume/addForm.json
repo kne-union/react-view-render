@@ -1,4 +1,7 @@
 {
+  "id":"47",
+  "parentId":"41",
+  "path":"/resume/addForm.json",
   "functions": {
     "$showAddForm": "functions.$setModalVisibleState(true);",
     "$hideAddForm": "functions.$setModalVisibleState(false);",
@@ -19,7 +22,12 @@
           "props": {
             "visible": "$item",
             "title": "$props.title",
+            "width": "1000px",
             "onCancel": "$hideAddForm",
+            "bodyStyle": {
+              "height": "100%",
+              "padding":"0 0 21px"
+            },
             "formProps": {
               "type": "inner",
               "data": "$props.data",
@@ -31,7 +39,9 @@
               "id": "Component-2",
               "component": "Component",
               "props": {
-                "content": "$props.form"
+                "content": "$props.form",
+                "className": "form_content",
+                "classList":".ant-modal-body{padding:24px 80px;height: 500px;} .react-form__field-label{color: #576B95}"
               }
             }
           ]

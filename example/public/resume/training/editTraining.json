@@ -1,5 +1,5 @@
 {
-  "description": "编辑技能表单",
+  "description": "编辑培训经历表单",
   "components": {
   },
   "data": [
@@ -24,8 +24,9 @@
               "id": "Input-3",
               "component": "Input",
               "props": {
-                "name": "school",
-                "label": "技能名称",
+                "name": "name",
+                "label": "培训名称：",
+                "placeholder": "请输入",
                 "rule": "REQ"
               }
             }
@@ -42,8 +43,9 @@
               "id": "Input-4",
               "component": "Input",
               "props": {
-                "name": "major",
-                "label": "技能水平",
+                "name": "agency",
+                "label": "培训机构：",
+                "placeholder": "请输入",
                 "rule": "REQ"
               }
             }
@@ -70,13 +72,12 @@
           "children": [
             {
               "id": "DateRangePicker-11",
-              "component": "DatePicker",
+              "component": "DateRangePicker",
               "props": {
-                "name": "date",
-                "label": "使用时间",
-                "rule": "REQ",
-                "className": "with100",
-                "classList": ".with100 .ant-picker{width:100%}"
+                "name": "time",
+                "label": "培训时间：",
+                "interceptor": "string-date-range",
+                "classList":".ant-picker-range{width:100%}"
               }
             }
           ]
@@ -88,7 +89,80 @@
             "span": 12
           },
           "children": [
-
+            {
+              "id": "Input-12",
+              "component": "Input",
+              "props": {
+                "name": "certificate",
+                "label": "所获证书：",
+                "placeholder": "请输入",
+                "rule": "REQ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Row-51",
+      "component": "Row",
+      "props": {
+        "gutter": [
+          40,
+          0
+        ]
+      },
+      "children": [
+        {
+          "id": "Col-91",
+          "component": "Col",
+          "props": {
+            "span": 24
+          },
+          "children": [
+            {
+              "id": "TextArea-17",
+              "component": "TextArea",
+              "props": {
+                "name": "courses",
+                "label": "培训课程：",
+                "showCount":true,
+                "maxLength":300,
+                "placeholder": "请输入"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Row-31",
+      "component": "Row",
+      "props": {
+        "gutter": [
+          40,
+          0
+        ]
+      },
+      "children": [
+        {
+          "id": "Col-191",
+          "component": "Col",
+          "props": {
+            "span": 24
+          },
+          "children": [
+            {
+              "id": "TextArea-117",
+              "component": "TextArea",
+              "props": {
+                "name": "description",
+                "label": "培训描述：",
+                "showCount":true,
+                "maxLength":300,
+                "placeholder": "请输入"
+              }
+            }
           ]
         }
       ]

@@ -1,6 +1,9 @@
 {
+  "id":"45",
+  "parentId":"41",
+  "path":"/resume/analysis.json",
   "components": {
-    "$card": "/react-view-render/resume/card.json",
+    "$card": "/resume/card.json",
     "$part": {
       "data": [
         {
@@ -18,6 +21,17 @@
                   "id": "Div-1",
                   "component": "Div",
                   "children": [
+                    {
+                      "id":"Icon-1",
+                      "component":"Icon",
+                      "props":{
+                        "type":"$props.titleIcon",
+                        "style":{
+                          "fontSize":"15px",
+                          "marginRight":"6px"
+                        }
+                      }
+                    },
                     {
                       "id": "Text-2",
                       "component": "Text",
@@ -77,8 +91,9 @@
               "component": "Component",
               "props": {
                 "content": "$part",
+                "titleIcon":"iconliangdian",
                 "title": "亮点",
-                "resource": "$resume.analysis.good"
+                "resource": "$resume.analysis.bright"
               }
             },
             {
@@ -86,8 +101,9 @@
               "component": "Component",
               "props": {
                 "content": "$part",
+                "titleIcon": "iconfengxian",
                 "title": "风险点",
-                "resource": "$resume.analysis.bad"
+                "resource": "$resume.analysis.risk"
               }
             }
           ]

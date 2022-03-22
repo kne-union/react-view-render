@@ -1,12 +1,11 @@
 import React from 'react';
-import { applyVariable } from '../../util';
+import TextEscape from '@kne/react-text-escape';
+import {applyVariable} from '../../util';
 
-const Text = ({ content, ...props }) => {
-  return (
-    <span {...props}>
-      {content}
-    </span>
-  );
+const Text = ({content = '', ...props}) => {
+    return (
+        <TextEscape text={content} {...props} />
+    );
 };
 
 export default applyVariable(Text);

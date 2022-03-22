@@ -1,0 +1,82 @@
+{
+  "id": 105,
+  "name": "card",
+  "type": 2,
+  "parentId": 82,
+  "path": "/resume/other/old/card.json",
+  "data": [
+    {
+      "id": "Div-02",
+      "component": "Div",
+      "props": {
+        "style": {
+          "padding": "25px 52px",
+          "position": "relative",
+          "borderRight": "1px #F1F1F1 solid"
+        }
+      },
+      "children": [
+        {
+          "id": "Div-2",
+          "component": "Div",
+          "props": {
+            "style": {
+              "display": "inline-block",
+              "height": "36px",
+              "lineHeight": "25px",
+              "textAlign": "center",
+              "color": "#313753",
+              "fontSize": "18px",
+              "fontWeight": "bolder"
+            }
+          },
+          "children": [
+            {
+              "id": "Text-8",
+              "component": "Div",
+              "props": {
+                "content": "",
+                "style": {
+                  "display": "inline-block",
+                  "fontSize": "18px",
+                  "fontWeight": "bolder",
+                  "width": "4px",
+                  "height": "19px",
+                  "background": "#466DFF",
+                  "borderRadius": "2px",
+                  "position": "relative",
+                  "top": "4px",
+                  "marginRight": "9px"
+                }
+              }
+            },
+            {
+              "id": "Text-8",
+              "component": "Text",
+              "props": {
+                "content": "$props.title"
+              }
+            }
+          ]
+        },
+        {
+          "id": "Div-3",
+          "component": "Div",
+          "props": {
+            "style": {
+            }
+          },
+          "children": [
+            {
+              "id": "Component-4",
+              "component": "Component",
+              "props": {
+                "content": "$children"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

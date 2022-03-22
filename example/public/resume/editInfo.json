@@ -1,4 +1,7 @@
 {
+  "id":"52",
+  "parentId":"41",
+  "path":"/resume/editInfo.json",
   "functions": {
     "$changeInfoState": "functions.$setEditInfoState(true);",
     "$changeEditState": "functions.$setEditInfoState(false);"
@@ -12,6 +15,7 @@
         "setStateName": "$setEditInfoState"
       },
       "children": [
+
         {
           "id": "Condition-1",
           "component": "Condition",

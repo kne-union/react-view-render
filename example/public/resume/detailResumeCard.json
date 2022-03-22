@@ -1,7 +1,52 @@
 {
+  "id":"51",
+  "parentId":"41",
+  "path":"/resume/detailResumeCard.json",
   "components": {
+    "$arrowIcon":{
+      "data":[
+        {
+          "id":"Icon-1",
+          "component":"Icon",
+          "props":{
+            "type":"icondaohang-jiantou",
+            "style":{
+              "fontSize":"7px",
+              "color":"#C0C0C6"
+            }
+          }
+        }
+      ]
+    },
+    "$addIcon":{
+      "data":[
+        {
+          "id":"Icon-2",
+          "component":"Icon",
+          "props":{
+            "type":"icontianjia",
+            "style":{
+              "fontSize":"16px",
+              "marginRight":"4px"
+            }
+          }
+        }
+      ]
+    },
     "$resumeCardTitle": {
       "data": [
+        {
+          "id":"Icon-3",
+          "component":"Icon",
+          "props":{
+            "type":"$props.cardTitleIcon",
+            "style":{
+              "fontSize":"18px",
+              "marginRight":"6px",
+              "color":"#0D0C22"
+            }
+          }
+        },
         {
           "id": "Text-0",
           "component": "Text",
@@ -14,22 +59,31 @@
           "component": "Button",
           "props": {
             "type": "text",
+            "icon": "$arrowIcon",
             "onClick": "$visibleChange"
           },
-          "children": ">"
+          "children": ""
         }
       ]
     },
     "$resumeCardAddButton": {
       "data": [
         {
-          "id": "Button-0",
-          "component": "Button",
+          "id": "Condition-3",
+          "component": "Condition",
           "props": {
-            "type": "link",
-            "onClick": "$props.addFunc"
+            "expression":"$props.hasAdd"
           },
-          "children": "+"
+          "children":{
+            "id": "Button-0",
+            "component": "Button",
+            "props": {
+              "type": "link",
+              "icon": "$addIcon",
+              "onClick": "$props.addFunc"
+            },
+            "children": "添加"
+          }
         }
       ]
     }

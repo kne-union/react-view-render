@@ -1,6 +1,33 @@
 {
   "description": "编辑教育经历表单",
+  "variable": {
+    "$degreeList": [
+      {
+        "label": "博士",
+        "value": 1
+      },
+      {
+        "label": "硕士",
+        "value": 2
+      },
+      {
+        "label": "本科",
+        "value": 3
+      },
+      {
+        "label": "专科",
+        "value": 4
+      },
+      {
+        "label": "高中",
+        "value": 5
+      }
+    ]
+  },
   "components": {
+  },
+  "functions": {
+    "$saveEducation": "functions.$saveResume({education:Object.assign({},variable.$resume.education,args[0])});console.log(args[0]);functions.$changeInfoState();"
   },
   "data": [
     {
@@ -26,6 +53,7 @@
               "props": {
                 "name": "school",
                 "label": "学校名称",
+                "placeholder": "请输入",
                 "rule": "REQ"
               }
             }
@@ -39,11 +67,13 @@
           },
           "children": [
             {
-              "id": "Input-4",
-              "component": "Input",
+              "id": "Select-4",
+              "component": "Select",
               "props": {
                 "name": "degree",
                 "label": "最高学历",
+                "options": "$degreeList",
+                "placeholder": "请选择",
                 "rule": "REQ"
               }
             }
@@ -74,6 +104,7 @@
               "props": {
                 "name": "major",
                 "label": "专业名称",
+                "placeholder": "请输入",
                 "rule": "REQ"
               }
             }
@@ -90,11 +121,10 @@
               "id": "DateRangePicker-11",
               "component": "DateRangePicker",
               "props": {
-                "name": "date",
-                "label": "在校时间",
-                "className": "with100",
-                "classList": ".with100 .ant-picker{width:100%}",
-                "rule": "REQ"
+                "name": "time",
+                "label": "在校时间：",
+                "interceptor": "string-date-range",
+                "classList":".ant-picker-range{width:100%}"
               }
             }
           ]
